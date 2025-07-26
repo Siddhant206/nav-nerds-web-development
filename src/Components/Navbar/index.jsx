@@ -27,10 +27,10 @@ function Navbar() {
                     <Image
                         src={"/logoWhite.webp"}
                         alt={"logo of offbeattrek"}
-                        width={200}
+                        width={400}
                         height={200}
                         priority
-                        className='object-cover h-20 w-20'
+                        className='object-contain h-20 w-60'
                     />
                 </Link>
 
@@ -43,7 +43,7 @@ function Navbar() {
                         <Link href="/about" className="hover:underline">About Us</Link>
                     </li>
 
-                    {/* --- JOURNEYS DROPDOWN --- */}
+                    {/* --- SERVICES DROPDOWN --- */}
                     <li
                         className="relative"
                         onMouseEnter={() => setIsDropdownOpen(true)}
@@ -54,7 +54,7 @@ function Navbar() {
                             aria-haspopup="true"
                             aria-expanded={isDropdownOpen}
                         >
-                            Journeys
+                            Services
                             <svg
                                 width="14"
                                 height="10"
@@ -72,20 +72,20 @@ function Navbar() {
                             >
                                 <li>
                                     <Link
-                                        href="/treks"
+                                        href="/Integration"
                                         className="block px-4 py-2 hover:bg-gray-100"
                                         role="menuitem"
                                     >
-                                        Treks
+                                     Integration
                                     </Link>
                                 </li>
                                 <li>
                                     <Link
-                                        href="/walks-and-hikes"
+                                        href="/business-central"
                                         className="block px-4 py-2 hover:bg-gray-100"
                                         role="menuitem"
                                     >
-                                        Walks And Hikes
+                                        Business Central
                                     </Link>
                                 </li>
                                 <li>
@@ -169,7 +169,7 @@ function Navbar() {
                                 className="w-full text-left px-6 py-3 hover:bg-gray-100 flex items-center justify-between"
                                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                             >
-                                Journeys
+                                Services
                                 <svg
                                     width="14"
                                     height="10"
@@ -196,38 +196,38 @@ function Navbar() {
                                     </li>
                                     <li>
                                         <Link
-                                            href="/walks-and-hikes"
+                                            href="/business-central"
                                             className="block px-8 py-2 hover:bg-gray-200"
                                             onClick={() => {
                                                 setIsMobileMenuOpen(false);
                                                 setIsDropdownOpen(false);
                                             }}
                                         >
-                                            Walks And Hikes
+                                            Business Central
                                         </Link>
                                     </li>
                                     <li>
                                         <Link
-                                            href="/camping"
+                                            href="/migration"
                                             className="block px-8 py-2 hover:bg-gray-200"
                                             onClick={() => {
                                                 setIsMobileMenuOpen(false);
                                                 setIsDropdownOpen(false);
                                             }}
                                         >
-                                            Camping
+                                            Migration
                                         </Link>
                                     </li>
                                     <li>
                                         <Link
-                                            href="/women"
+                                            href="/support"
                                             className="block px-8 py-2 hover:bg-gray-200"
                                             onClick={() => {
                                                 setIsMobileMenuOpen(false);
                                                 setIsDropdownOpen(false);
                                             }}
                                         >
-                                            Women Treks
+                                            Support
                                         </Link>
                                     </li>
                                 </ul>

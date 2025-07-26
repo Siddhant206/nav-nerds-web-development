@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "OffbeatTreks",
-  description: "A Product of Offbeat Pixels & Back To Basics",
+  title: "NavNerds",
+  description: "NavNerds A Micorsoft Business 365 services provider.",
 };
 
 export default  function RootLayout({ children }) {
