@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from "next/image"; 
 
 const AnimatedLink = ({ href, children, onClick }) => (
   <Link href={href} onClick={onClick} className="relative inline-block group">
@@ -15,13 +16,13 @@ function Footer() {
   const companyLinks = [
     { href: "/", text: "Home" },
     { href: "/about", text: "About Us" },
-    { href: "/blogs", text: "Article & Blogs" },
+    // { href: "/blogs", text: "Article & Blogs" },
     { href: "/privacy-policy", text: "Privacy Policy" },
     { href: "/terms", text: "Terms and Conditions" }
   ];
 
-  const seasons = ["Summer Treks", "Monsoon Treks", "Autumn Treks", "Winter Treks"];
-  const difficulties = ["Easy", "Moderate", "Difficult"];
+  const services = ["Implementation", "Integration", "Customization", "Dedicated Resources", "Business Central", "Support", "Migration ", "Training",  ];
+  const industry = ["Construction", "E-Commerce", "Manufacturing", "Finance", "Education","Travel",];
 
   const socialLinks = [
     { href: "https://www.facebook.com/people/Offbeat-Treks/61576611342708/", label: "Facebook", color: "hover:text-blue-600", path: "M22.675 0h-21.35C.595 0 0 .592 0 1.326v21.348C0 23.408.595 24 1.325 24h11.495v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116C23.406 24 24 23.408 24 22.674V1.326C24 .592 23.406 0 22.675 0" },
@@ -31,8 +32,20 @@ function Footer() {
   ];
 
   return (
-    <footer role="contentinfo" className="bg-[url(/FooterBg.webp)] bg-cover bg-top bg-blend-d text-gray-800 min-h-fit py-20">
-      <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+    <footer role="contentinfo" className="bg-[url(/FooterBg.webp)] bg-cover bg-top bg-blend-d text-gray-800 min-h-fit">
+    <div className='max-w-3xl mx-auto text-center space-y-4 pt-20'>
+      <h3 className='text-xl sm:text-2xl lg:text-4xl font-bold'>Get In Touch</h3>
+        <p className='text-sm sm:text-base lg:text-xl'>Contact Us For your needs we have the best team and right minds to deliver projects end-to-end.</p>
+        <Link
+          href={"/contact"}
+          className="px-6 py-3 md:px-12 md:py-2 rounded-3xl border border-gray-400   hover:text-white bg-white hover:bg-black text-black transition-colors duration-300 mt-4 md:mt-8"
+        >
+          Contact Us
+        </Link>
+    </div>
+    
+    
+      <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 py-28">
 
         {/* Company Section - Remain same */}
         <div>
@@ -50,12 +63,12 @@ function Footer() {
 
         {/* Fixed Treks by Season */}
         <div>
-          <h2 className="text-lg font-semibold mb-4">Treks by Season</h2>
+          <h2 className="text-lg font-semibold mb-4">Services</h2>
           <nav aria-label="Treks by Season">
             <ul className="space-y-2">
-              {seasons.map((season) => (
+              {services.map((season) => (
                 <li key={season}>
-                  <AnimatedLink href={`/treks?category=${encodeURIComponent(season)}`}>
+                  <AnimatedLink href={`/services?category=${encodeURIComponent(services)}`}>
                     {season}
                   </AnimatedLink>
                 </li>
@@ -64,15 +77,15 @@ function Footer() {
           </nav>
         </div>
 
-        {/* Fixed Treks by Difficulty */}
+        {/* Industry */}
         <div>
-          <h2 className="text-lg font-semibold mb-4">Treks by Difficulty</h2>
-          <nav aria-label="Treks by Difficulty">
+          <h2 className="text-lg font-semibold mb-4">Industry</h2>
+          <nav aria-label="Industry Specilaization">
             <ul className="space-y-2">
-              {difficulties.map((difficulty) => (
-                <li key={difficulty}>
-                  <AnimatedLink href={`/treks?difficulty=${encodeURIComponent(difficulty)}`}>
-                    {difficulty}
+              {industry.map((industry) => (
+                <li key={industry}>
+                  <AnimatedLink href={`/treks?industry=${encodeURIComponent(industry)}`}>
+                    {industry}
                   </AnimatedLink>
                 </li>
               ))}
@@ -84,8 +97,8 @@ function Footer() {
         <div>
           <h2 className="text-lg font-semibold mb-4">Contact Us</h2>
           <address className="not-italic space-y-2">
-            <p><span className="font-medium">Phone:</span> <a href="tel:+918477800887" className="hover:underline">+91 8477800887</a></p>
-            <p><span className="font-medium">Email:</span> <a href="mailto:info@offbeattreks.com" className="hover:underline">info@offbeattreks.com</a></p>
+            <p><span className="font-medium">Phone:</span> <a href="tel:+911234567890" className="hover:underline">+91 1234567890</a></p>
+            <p><span className="font-medium">Email:</span> <a href="mailto:info@navnerds.com" className="hover:underline">info@navnerds.com</a></p>
           </address>
 
           <div>
@@ -104,19 +117,9 @@ function Footer() {
       </div>
 
       {/* Copyright - Remain same */}
-      <div className="mt-10 text-center text-sm text-gray-800 border-t border-gray-300 pt-4">
+      <div className="py-5 text-center text-sm text-gray-800 border-t border-gray-300 pt-4">
         <p>
-          &copy; {new Date().getFullYear()} <strong>Offbeat Treks</strong>. A product of {' '}
-          <Link href="https://offbeatpixels.com" passHref target='_blank' className="text-blue-600 hover:underline">
-          
-            Offbeat Pixels  
-
-          </Link> & {" "}
-          <Link href="https://thebacktobasics.com" passHref target='_blank' className="text-blue-600 hover:underline">
-          
-              Back To Basics
-           
-          </Link>. All rights reserved.
+          &copy; {new Date().getFullYear()} <strong>NavNerds</strong>. All rights reserved.  
         </p>
       </div>
     </footer>

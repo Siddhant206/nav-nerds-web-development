@@ -17,13 +17,13 @@ export default function Banner() {
                 ></video>
             </div>
             <div className="relative flex flex-col items-center justify-center space-y-2 px-4 text-center  ">
-                <h1 className={`${h1Text} text-white`}>NavNerds</h1>
+                <h1 className={`${h1Text} text-white`}>Welcome To NavNerds</h1>
                 <p className="text-lg md:text-xl text-white">Your Complete Business  Solution Partner.</p>
                 <Link
-                    href={"/treks"}
-                    className="px-6 py-3 md:px-4 md:py-2 rounded-3xl border border-gray-200 bg-transparent text-white hover:bg-white hover:text-black transition-colors duration-300 mt-4 md:mt-8"
+                    href={"/contact"}
+                    className="px-6 py-3 md:px-12 md:py-2 rounded-3xl border border-gray-200 bg-transparent text-white hover:bg-white hover:text-black transition-colors duration-300 mt-4 md:mt-8"
                 >
-                    Upcoming Treks
+                    Contact Us
                 </Link>
             </div>
         </section>

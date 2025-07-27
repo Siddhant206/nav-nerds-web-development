@@ -60,9 +60,9 @@ export default function PricingPage() {
     ];
 
     return (
-        <main className="bg-white text-gray-800 font-sans">
+        <main className="bg-[url(/HomePageBg.webp)]  bg-cover bg-no-repeat bg-top text-gray-800 font-sans">
             {/* HERO */}
-            <section className="py-16 px-6 text-center bg-gradient-to-br from-white via-blue-50 to-white">
+            <section className="max-w-4xl mx-auto pt-40 px-6 text-center ">
                 <h1 className="text-4xl md:text-5xl font-bold mb-4">Pricing</h1>
                 <p className="max-w-2xl mx-auto text-lg md:text-xl mb-4">
                     At Navnerds, we understand that trusting a new team takes time—so we’ve created a Trust & Trial Package to let you experience our expertise in{" "}
@@ -76,7 +76,7 @@ export default function PricingPage() {
             </section>
 
             {/* PRICING CARDS */}
-            <section className="py-20 px-6 bg-white">
+            <section className="py-20 px-6 ">
                 <div className="text-center mb-12">
                     <h2 className="text-3xl font-bold">ERP Made Easy</h2>
                     <p className="text-sm text-gray-500">Powered by Navnerds</p>
@@ -103,11 +103,7 @@ export default function PricingPage() {
                     ))}
                 </div>
             </section>
-
-            {/* FOOTER */}
-            <footer className="text-center py-8 text-xs text-gray-500 border-t border-gray-200">
-                &copy; {new Date().getFullYear()} Navnerds — ERP Services Powered by Dynamics 365 Business Central.
-            </footer>
+ 
         </main>
     );
 }

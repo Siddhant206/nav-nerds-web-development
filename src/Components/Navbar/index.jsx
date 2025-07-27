@@ -72,7 +72,7 @@ function Navbar() {
                             >
                                 <li>
                                     <Link
-                                        href="/Integration"
+                                        href="/services/integration"
                                         className="block px-4 py-2 hover:bg-gray-100"
                                         role="menuitem"
                                     >
@@ -81,7 +81,7 @@ function Navbar() {
                                 </li>
                                 <li>
                                     <Link
-                                        href="/business-central"
+                                        href="/services/business-central"
                                         className="block px-4 py-2 hover:bg-gray-100"
                                         role="menuitem"
                                     >
@@ -90,20 +90,20 @@ function Navbar() {
                                 </li>
                                 <li>
                                     <Link
-                                        href="/camping"
+                                        href="/services/implementation"
                                         className="block px-4 py-2 hover:bg-gray-100"
                                         role="menuitem"
                                     >
-                                        Camping
+                                        Implementation
                                     </Link>
                                 </li>
                                 <li>
                                     <Link
-                                        href="/women"
+                                        href="/services/migration"
                                         className="block px-4 py-2 hover:bg-gray-100"
                                         role="menuitem"
                                     >
-                                        Women
+                                        Migration
                                     </Link>
                                 </li>
                             </ul>
@@ -196,7 +196,7 @@ function Navbar() {
                                     </li>
                                     <li>
                                         <Link
-                                            href="/business-central"
+                                            href="/services/business-central"
                                             className="block px-8 py-2 hover:bg-gray-200"
                                             onClick={() => {
                                                 setIsMobileMenuOpen(false);
@@ -208,7 +208,7 @@ function Navbar() {
                                     </li>
                                     <li>
                                         <Link
-                                            href="/migration"
+                                            href="/services/migration"
                                             className="block px-8 py-2 hover:bg-gray-200"
                                             onClick={() => {
                                                 setIsMobileMenuOpen(false);
@@ -220,7 +220,7 @@ function Navbar() {
                                     </li>
                                     <li>
                                         <Link
-                                            href="/support"
+                                            href="/services/support"
                                             className="block px-8 py-2 hover:bg-gray-200"
                                             onClick={() => {
                                                 setIsMobileMenuOpen(false);

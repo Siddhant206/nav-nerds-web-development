@@ -2,8 +2,7 @@
 import { h2Text } from '@/Components/Styles'
 import React, { useRef, useState, useEffect } from 'react'
 import Image from 'next/image';
-import FAQ from '@/Components/FAQ';
-import VotingSystem from '@/Components/Voting';
+import FAQ from '@/Components/FAQ'; 
 
 export default function Page() {
     const videoRef = useRef()
