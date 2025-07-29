@@ -1,8 +1,4 @@
 "use client"
-import { h2Text } from '@/components/styles'
-import React, { useRef, useState, useEffect } from 'react'
-import Image from 'next/image';
-import FAQ from '@/components/faq';
 import Link from 'next/link';
 import { typography } from '@/components/ui/fonts';
 
