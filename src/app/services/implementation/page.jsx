@@ -1,222 +1,164 @@
-import { MoveRight, ChevronRight } from 'lucide-react';
+
 import React from 'react'
 import Image from "next/image";
-import { BannerPixels } from '@/components/ui/decorativeElements';
 import { ServiceCard } from '@/components/ui/serviceCard';
-import { typography } from "@/components/ui/fonts";
+import { typography } from '@/components/ui/fonts';
 
-const services = [
+
+const features = [
     {
-        icon: "/icons/ui-ux-design.svg", // was brandDevLogo3.svg
-        title: "Website UI/UX",
-        bgColor: "bg-blue-50",
+        id: 1,
+        title: "Unify What's Broken",
+        description: "No more scattered spreadsheets, manual processes, or duplicated work. One smart system, one source of truth — finally everything just connects."
     },
     {
-        icon: "/icons/conference-books.svg", // was brandDevLogo4.svg
-        title: "Conference Books",
-        bgColor: "bg-white",
+        id: 2,
+        title: "Automate the Chaos",
+        description: "From lead capture to project delivery, we handle the chaos so you don't have to. From freelance to fulfillment, we design automation that feels like magic."
     },
     {
-        icon: "/icons/product-presentation.svg", // was brandDevLogo5.svg
-        title: "Product Presentation",
-        bgColor: "bg-amber-50",
+        id: 3,
+        title: "Grow Without Barriers",
+        description: "Scale isn't scary when your systems grow with you. Flexibility, scalability, and future-readiness built right in."
     },
     {
-        icon: "/icons/social-media-building.svg", // was brandDevLogo6.svg
-        title: "Social media page building",
-        bgColor: "bg-white",
-    },
-    {
-        icon: "/icons/explainer-video.svg", // was brandDevLogo7.svg
-        title: "Explainer video",
-        bgColor: "bg-orange-50",
-    },
-    {
-        icon: "/icons/prototyping.svg", // was brandDevLogo8.svg
-        title: "Prototyping",
-        bgColor: "bg-green-50",
-    },
-    {
-        icon: "/icons/concept-designing.svg", // was brandDevLogo9.svg
-        title: "Concept based designing",
-        bgColor: "bg-purple-50",
-    },
-    {
-        icon: "/icons/content-creation.svg", // was brandDevLogo10.svg
-        title: "Content creation",
-        bgColor: "bg-white",
-    },
-    {
-        icon: "/icons/artworks.svg", // was brandDevLogo11.svg
-        title: "Artworks",
-        bgColor: "bg-blue-50",
-    },
-    {
-        icon: "/icons/flyers-brochures.svg", // was brandDevLogo12.svg
-        title: "Flyers, Brochures & Standees",
-        bgColor: "bg-yellow-50",
-    },
+        id: 4,
+        title: "Feel the Shift",
+        description: "It's not just efficiency — it's a mindset shift when operations align, data flows, and decisions get sharper. It's not just better. It's business reborn."
+    }
 ];
+const TrendIcon = () => (
+    <svg width="67" height="67" viewBox="0 0 67 67"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="0"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className=" ">
+        <g filter="url(#filter0_d_47_5752)">
+            <rect x="2.70898" width="62.1544" height="62.1544" rx="31.0772" fill="white" />
+            <path d="M27.9274 44.2293L30.0097 38.7742L30.8075 36.0239C31.0119 35.3195 30.0212 34.9273 29.688 35.5806L26.3833 41.3525C26.0381 41.9554 25.4049 42.3359 24.7106 42.3578L17.9757 42.5701C16.4494 42.6182 15.4344 41.007 16.1368 39.6511L24.4205 23.6603C25.1573 22.238 27.1837 22.2157 27.9516 23.6215L39.5163 44.7924C40.274 46.1795 42.2655 46.181 43.0253 44.7949L49.6321 32.7419L55.4282 19.9547C56.0283 18.6307 55.0602 17.129 53.6066 17.129H48.0237H41.5064C40.6059 17.129 39.8164 17.7309 39.5778 18.5992L36.7649 28.8387C36.5884 29.5202 37.5359 29.8859 37.863 29.2626L42.0935 21.2022C42.3773 20.6614 42.9378 20.3226 43.5486 20.3226H49.625C51.1088 20.3226 52.076 21.8815 51.4169 23.2109L43.3072 39.5688C42.5864 41.0227 40.5254 41.0581 39.755 39.6298L28.2173 18.2374C27.4647 16.842 25.4653 16.8352 24.7032 18.2255L18.1076 30.2581L12.1019 42.6435C11.4578 43.9718 12.4253 45.5161 13.9015 45.5161H26.0589C26.8883 45.5161 27.6317 45.0042 27.9274 44.2293Z" fill="black" />
+        </g>
+        <defs>
+            <filter id="filter0_d_47_5752" x="0.708984" y="0" width="66.1543" height="66.1543" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                <feFlood floodOpacity="0" result="BackgroundImageFix" />
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                <feOffset dy="2" />
+                <feGaussianBlur stdDeviation="1" />
+                <feComposite in2="hardAlpha" operator="out" />
+                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0" />
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_47_5752" />
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_47_5752" result="shape" />
+            </filter>
+        </defs>
+    </svg>
+);
 
-const services1 = [
-    {
-        icon: "/icons/seo.svg",
-        title: "SEO",
-    },
-    {
-        icon: "/icons/smm.svg",
-        title: "SMM",
-    },
-    {
-        icon: "/icons/sem.svg",
-        title: "SEM",
-    },
-    {
-        icon: "/icons/email-marketing.svg",
-        title: "E-Mail Marketing",
-    },
-    {
-        icon: "/icons/ppc.svg",
-        title: "PPC",
-    },
-    {
-        icon: "/icons/ui-ux-design.svg",
-        title: "UI & UX Designing",
-    },
-    {
-        icon: "/icons/web-development.svg",
-        title: "Website Development",
-    },
-];
-
-
-function DigitalMarketing() {
+function Page() {
     return (
-        <section id="services" className="relative text-black overflow-hidden">
+        <section id="services" className="relative  text-black overflow-hidden">
             {/* Hero Section */}
-            <section className=" bg-[url(/digitalMarketingBgMobile.png)] md:bg-[url(/digitalMarketingBg.png)]  bg-contain 2xl:bg-cover bg-top bg-no-repeat flex items-center justify-center lg:py-14 flex-col w-full text-black relative overflow-hidden min-h-36  lg:min-h-72 2xl:min-h-[17rem] 3xl:min-h-96  " >
-                <div className="relative flex flex-col w-fit z-10">
-                    <h1 className={`${typography.heading}`}>
-                        Our Services
+            <section className="relative bg-white bg-[url(/ImplementationBG.webp)]  bg-contain bg-no-repeat  bg-center md:bg-bottom   flex items-center justify-center lg:py-14 max-lg:px-4  flex-col w-full text-black  overflow-hidden h-[50vh] md:h-[100dvh] " >
+                <div className='absolute inset-0 bg-black/30 ' />
+                <div className="relative flex flex-col w-fit">
+                    <h1 className={`${typography.heading} text-white max-w-xl text-center`}>
+                        Implementation Services with Navnerds
                     </h1>
-
-
-                    <div className="w-fit items-center flex text-xl font-bold mx-auto ">
-                        <a href="/" className=" ">
-                            Home
-                        </a>
-                        <ChevronRight />
-                        <span className=" ">Digital Marketing</span>
-                    </div>
-                </div>
-                <div className="absolute w-full  max-sm:top-4 -top-8 lg:top-3 2xl:inset-10">
-
-                    <BannerPixels />
                 </div>
             </section>
 
             {/* Content Section */}
-            <section className="w-full  py-10    z-10">
-                {/* <Dots /> */}
-                <h1 className={`${typography.heading}  text-center mb-4`}>Digital Marketing </h1>
-                <p className={`max-w-5xl ${typography.paragraph} max-sm:px-2 sm:px-4 lg:px-0 text-justify font-semibold mx-auto mb-14`}>
-                    Digital marketing is not just about being seen — it’s about being found by the right audience, at the right time, with the right message. We specialize in crafting end-to-end digital marketing solutions that help businesses build visibility, drive engagement, and deliver measurable results.
+            <section className="bg-[url(/HomePageBg.webp)]  bg-cover bg-no-repeat bg-top w-full  py-10  10">
+
+                <h1 className={`${typography.subheading} text-black text-center mb-2`}>Scaling Efficently? </h1>
+                <p className={`max-w-4xl ${typography.paragraph} max-sm:px-2 sm:px-4 lg:px-0 text-center font-semibold mx-auto mb-14`}>
+                    When growth kicks in, so do operational challenges. Our Business Central implementation simplifies what’s becoming too complex — automating workflows, enhancing customer visibility, and giving your teams the tools to move faster. We keep your systems lean while your business goes big.
                 </p>
                 <ServiceCard
-                    title="Search Engine Optimization (SEO)"
-                    description="At Offbeat Pixels, we don’t just market—we create digital marketing success stories. 
-Whether you want to rank higher on search engines, having targeted lead generation, attract customers with paid ads boosting your ranking or present your product online, we’ve got it all covered!
+                    title="Starting fresh? "
+                    description="You deserve a solution built for today’s speed and tomorrow’s scale. At Navnerds, we help first-time ERP adopters launch with confidence. With Business Central, you’ll gain a future-ready system that adapts as you grow — without overwhelming complexity. Start smart. Start strong.
 "
-                    imageSrc="/images/SEO-DM.png"
-                    imageAlt="SEO concept illustration"
-                    bgColor="bg-white"
-                    imagePosition="left"
-                />
-
-                <ServiceCard
-                    title="Online Reputation Management (ORM)"
-                    description="We believe that your reputation is your greatest asset, hence, we monitor, manage, and improve your digital image, ensuring that your customers never miss the facts. With Digital PR, we create a strong and positive buzz around your brand and ensure that no negative review or missed customer interaction can impact your brand. "
-                    imageSrc="/images/ORM-DM.png"
-                    imageAlt="Online Reputation Management illustration"
-                    bgColor="bg-[#1a4e68]"
-                    textColor="text-white"
+                    imageSrc="/Implementation/StartingFresh.png"
+                    imageAlt="Starting fresh illustration"
+                    bgColor="bg-[#36E3EE]"
                     imagePosition="right"
                 />
 
                 <ServiceCard
-                    title="Social Media Marketing (SMM)"
-                    description="We make strategies to make your brand stand out and grow. Our Social Media Marketing services include both organic and paid promotions strategies to ensure your brand stays relevant and reaches the right audience by building engaging campaigns and communities. With Meta Campaigns we create impactful and result-driven ads that communicate the right message to your customers."
-                    imageSrc="/images/SMM-DM.png"
+                    title="Stuck with Legacy Systems?"
+                    description="If your current ERP feels like a burden instead of a solution, it’s time to move forward. Outdated platforms slow down innovation, create silos, and risk compliance. With Navnerds and Business Central, you get a modern, connected, cloud-based system that empowers your business with real-time data and security you can trust. "
+                    imageSrc="/Implementation/Frustration.png"
+                    imageAlt="Stuck with Legacy Systems illustration"
+                    bgColor="bg-white"
+                    textColor="text-black"
+                    imagePosition="left"
+                />
+
+                <ServiceCard
+                    title="Upgrade To Business Central"
+                    description="You’ve outgrown your old system — and that’s a good thing. Whether it’s poor integrations, slow performance, or scattered data, we help you transition smoothly to Business Central. Our migration process is clean, strategic, and tailored to your needs — no disruption, just evolution."
+                    imageSrc="/Implementation/upgradingBusinessCentral.png"
                     imageAlt="Social Media Marketing illustration"
-                    bgColor="bg-white"
-                    imagePosition="left"
-                />
-
-                <ServiceCard
-                    title="Brand Collaterals"
-                    description="A brand is not your logo; it is not your punchline or even the colours that you use – it is just a reflection of the promise that you make to your customer. In short - 'A brand is a promise that has been made to the customer'. Creating a brand is as important as selling a product, at Offbeat Pixels we understand that the overlapping roles of marketing & branding can get overwhelming for a business owner. Leave it to us. Your product needs more of your attention."
-                    imageSrc="/images/BRAND-DM.png"
-                    imageAlt="Brand Collaterals illustration"
-                    bgColor="bg-[#1a4e68]"
-                    textColor="text-white"
+                    bgColor="bg-[#36E3EE]"
                     imagePosition="right"
                 />
-                <ServiceCard
-                    title="Content Creation Marketing"
-                    description="Whether it’s a compelling brand story, a promotional video, or an attractive graphic, we create content that connects and engages with your customers. With video marketing, we bring your brand to life through immersive storytelling, while our photography & video production ensures that every post is visually striking and conversion-driven."
-                    imageSrc="/images/CCM-DM.png"
-                    imageAlt="Content Creation Marketing illustration"
-                    bgColor="bg-white"
-                    imagePosition="left"
-                />
-                <ServiceCard
-                    title=" Web Development"
-                    description="Our focus is to design websites with purpose, ensuring that from the very first scroll, your audience immediately understands who you are, what you do, and why it matters. It should be aligned with your Go-To-Market (GTM) strategy, showcasing your unique value proposition, ensuring every element aligns with your brand’s promise and making sure your audience can find you through SEO optimized content with the right keywords."
-                    imageSrc="/images/WEB-DM.png"
-                    imageAlt="Web Development illustration"
-                    bgColor="bg-[#1a4e68]"
-                    textColor="text-white"
-                    imagePosition="right"
-                />
-                <ServiceCard
-                    title="Performance marketing"
-                    description={
-                        <div>
-                            <p className="mb-4">
-                                Performance marketing is the art & science of showing up in front of the right person at the right time and process of running profitable campaigns to grow a business.
-                                It is not only paid marketing and we really don’t want to burden you with the business thinking involved in it along with problem solving, paid advertising, analytics, value props, conversion optimization, attribution, copy writing technology, content assets, UX & UI and some more. We offer the following services: -
 
-                            </p>
 
-                            <div className="flex flex-wrap max-w-[25rem] 2xl:w-[30rem] gap-2">
-                                {[
-                                    "SEO",
-                                    "SMM",
-                                    "SEM",
-                                    "PPC",
-                                    "E-Mail Marketing",
-                                    "UI UX Designing",
-                                    "Website Development",
-                                ].map((service, i) => (
-                                    <span
-                                        key={i}
-                                        className="px-3 py-1 text-sm 2xl:text-base rounded-xl bg-gray-100 text-[#215773] font-medium shadow-sm"
-                                    >
-                                        <span className="text-black text-lg ">•</span> {service}
-                                    </span>
-                                ))}
+                <section className="max-w-7xl mx-auto bg-white mt-14 py-14 px-8">
+                    {/* Header */}
+                    <div className="text-center mb-8 md:mb-16">
+                        <h2 className={`${typography.subheading} text-gray-900 leading-tight`}>
+                            What Happens When You Implement with Navnerds
+                        </h2>
+                    </div>
+
+                    {/* Features Grid */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        {features.map((feature) => (
+                            <div
+                                key={feature.id}
+                                className="relative p-12 sm:p-5 md:p-6 z-[1] rounded-xl bg-white  "
+                            >
+                                {/* Background SVG */}
+                                <svg
+                                    width="274"
+                                    height="256"
+                                    viewBox="0 0 274 256"
+                                    fill="none"
+                                    className="absolute inset-0 w-full h-full -z-10"
+                                    preserveAspectRatio="xMidYMid meet"
+                                >
+                                    <path
+                                        d="M19.7041 0.5H188.003C198.641 0.500059 207.207 8.55025 207.207 18.4102V39.4004C207.207 49.8755 216.285 58.3105 227.411 58.3105H254.296C264.725 58.3105 273.16 66.0458 273.489 75.6387V237.59C273.489 247.45 264.924 255.5 254.285 255.5H19.7041C9.06549 255.5 0.5 247.45 0.5 237.59V18.4102C0.5 8.55021 9.06549 0.5 19.7041 0.5Z"
+                                        fill="none"
+                                        stroke="#DDDDDD"
+                                    />
+                                </svg>
+
+                                {/* Icon */}
+                                <div className="mb-3">
+                                    <TrendIcon className="w-8 h-8 text-[#1CCBD7]" />
+                                </div>
+
+                                {/* Title */}
+                                <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-3 leading-snug">
+                                    {feature.title}
+                                </h3>
+
+                                {/* Description */}
+                                <p className="text-gray-600 text-sm md:text-base leading-relaxed">
+                                    {feature.description}
+                                </p>
                             </div>
-                        </div>
-                    }
-                    imageSrc="/images/PM-DM.png"
-                    imageAlt="Performance marketing illustration"
-                    bgColor="bg-white"
-                    imagePosition="left"
-                />
+                        ))}
+                    </div>
+
+                </section>
+
 
             </section>
         </section>
     );
 }
 
-export default DigitalMarketing;
+export default Page;

@@ -21,7 +21,8 @@ function Navbar() {
     }, []);
 
     return (
-        <nav className="absolute top-0 left-0 w-full flex justify-between items-center  md:h-22 z-10 md:border-b border-gray-300">
+        // <nav className="absolute top-0 left-0  w-full flex justify-between items-center  md:h-22 z-10 md:border-b border-gray-300">
+        <nav className="sticky top-0 left-0 bg-[#1CCBD7] w-full flex justify-between items-center  md:h-22 z-10 ">
             <div className="flex items-center justify-between w-full max-w-7xl mx-auto px-4">
                 <Link href={"/"} className='w-fit'>
                     <Image
@@ -35,12 +36,12 @@ function Navbar() {
                 </Link>
 
                 {/* Desktop Menu */}
-                <ul className="hidden md:flex space-x-6 text-white relative">
+                <ul className="hidden md:flex space-x-6 font-semibold text-base text-white relative">
                     <li>
                         <Link href="/" className="hover:underline">Home</Link>
                     </li>
                     <li>
-                        <Link href="/about" className="hover:underline">About Us</Link>
+                        <Link href="/about-us" className="hover:underline">About Us</Link>
                     </li>
 
                     {/* --- SERVICES DROPDOWN --- */}
@@ -50,7 +51,7 @@ function Navbar() {
                         onMouseLeave={() => setIsDropdownOpen(false)}
                     >
                         <button
-                            className="hover:underline focus:outline-none flex items-center gap-2"
+                            className="hover:underline focus:outline-none  flex items-center gap-2"
                             aria-haspopup="true"
                             aria-expanded={isDropdownOpen}
                         >
@@ -67,19 +68,9 @@ function Navbar() {
                         </button>
                         {isDropdownOpen && (
                             <ul
-                                className="absolute left-0 top-full  w-48 bg-white text-black shadow-lg rounded-md overflow-hidden z-20 transition-all duration-300 ease-in-out opacity-100 translate-y-0 pointer-events-auto"
+                                className="absolute left-0 top-full  font-medium w-48 bg-white text-black shadow-lg rounded-md overflow-hidden z-20 transition-all duration-300 ease-in-out opacity-100 translate-y-0 pointer-events-auto"
                                 role="menu"
-                            >
-                                <li>
-                                    <Link
-                                        href="/services/integration"
-                                        className="block px-4 py-2 hover:bg-gray-100"
-                                        role="menuitem"
-                                    >
-                                     Integration
-                                    </Link>
-                                </li>
-                                <li>
+                            > <li>
                                     <Link
                                         href="/services/business-central"
                                         className="block px-4 py-2 hover:bg-gray-100"
@@ -88,6 +79,8 @@ function Navbar() {
                                         Business Central
                                     </Link>
                                 </li>
+                              
+                               
                                 <li>
                                     <Link
                                         href="/services/implementation"
@@ -95,6 +88,15 @@ function Navbar() {
                                         role="menuitem"
                                     >
                                         Implementation
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link
+                                        href="/services/integration"
+                                        className="block px-4 py-2 hover:bg-gray-100"
+                                        role="menuitem"
+                                    >
+                                        Integration
                                     </Link>
                                 </li>
                                 <li>
@@ -111,10 +113,10 @@ function Navbar() {
                     </li>
 
                     <li>
-                        <Link href="/blogs" className="hover:underline">Blogs</Link>
+                        <Link href="/pricing" className="hover:underline">Pricing</Link>
                     </li>
                     <li>
-                        <Link href="/contact" className="hover:underline">Contact Us</Link>
+                        <Link href="/contact-us" className="hover:underline">Contact Us</Link>
                     </li>
                 </ul>
 
@@ -155,7 +157,7 @@ function Navbar() {
                         </li>
                         <li>
                             <Link
-                                href="/about"
+                                href="/about-us"
                                 className="block px-6 py-3 hover:bg-gray-100 border-b border-gray-200"
                                 onClick={() => setIsMobileMenuOpen(false)}
                             >
@@ -182,18 +184,7 @@ function Navbar() {
                             </button>
                             {isDropdownOpen && (
                                 <ul className="bg-gray-50">
-                                    <li>
-                                        <Link
-                                            href="/treks"
-                                            className="block px-8 py-2 hover:bg-gray-200"
-                                            onClick={() => {
-                                                setIsMobileMenuOpen(false);
-                                                setIsDropdownOpen(false);
-                                            }}
-                                        >
-                                            Treks
-                                        </Link>
-                                    </li>
+                                  
                                     <li>
                                         <Link
                                             href="/services/business-central"
@@ -208,14 +199,14 @@ function Navbar() {
                                     </li>
                                     <li>
                                         <Link
-                                            href="/services/migration"
+                                            href="/services/implementation"
                                             className="block px-8 py-2 hover:bg-gray-200"
                                             onClick={() => {
                                                 setIsMobileMenuOpen(false);
                                                 setIsDropdownOpen(false);
                                             }}
                                         >
-                                            Migration
+                                            implementation
                                         </Link>
                                     </li>
                                     <li>
@@ -236,16 +227,16 @@ function Navbar() {
 
                         <li>
                             <Link
-                                href="/blogs"
+                                href="/pricing"
                                 className="block px-6 py-3 hover:bg-gray-100 border-b border-gray-200"
                                 onClick={() => setIsMobileMenuOpen(false)}
                             >
-                                Blogs
+                                Pricing
                             </Link>
                         </li>
                         <li>
                             <Link
-                                href="/contact"
+                                href="/contact-us"
                                 className="block px-6 py-3 hover:bg-gray-100"
                                 onClick={() => setIsMobileMenuOpen(false)}
                             >

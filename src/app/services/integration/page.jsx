@@ -1,6 +1,7 @@
 import React from 'react'
-import Image from "next/image";  
-import { ServiceCard } from '@/Components/ui/serviceCard';
+import Image from "next/image";
+import { ServiceCard } from '@/components/ui/serviceCard';
+import { typography } from '@/components/ui/fonts';
 const services = [
     {
         icon: "/icons/ui-ux-design.svg", // was brandDevLogo3.svg
@@ -101,14 +102,14 @@ function DigitalMarketing() {
                         <a href="/" className=" ">
                             Home
                         </a>
-                        <svg   width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" >
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" stroke-linejoin="round" >
                             <path d="M5 12h14" />
                             <path d="m12 5 7 7-7 7" />
-                            </svg>
+                        </svg>
                         <span className=" ">Digital Marketing</span>
                     </div>
                 </div>
-                
+
             </section>
 
             {/* Content Section */}

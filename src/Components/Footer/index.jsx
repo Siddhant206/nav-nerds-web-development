@@ -6,8 +6,8 @@ import Image from "next/image";
 
 const AnimatedLink = ({ href, children, onClick }) => (
   <Link href={href} onClick={onClick} className="relative inline-block group">
-    <span className="relative z-10">{children}</span>
-    <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-current transition-all duration-500 group-hover:w-full"></span>
+    <span className="relative  ">{children}</span>
+    <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-current transition-all duration-500 group-hover:w-full"/>
   </Link>
 );
 
@@ -15,13 +15,21 @@ function Footer() {
   // Company links, social links, seasons, difficulties arrays - Remain same
   const companyLinks = [
     { href: "/", text: "Home" },
-    { href: "/about", text: "About Us" },
-    // { href: "/blogs", text: "Article & Blogs" },
+    { href: "/about-us", text: "About Us" },
+    { href: "/pricing", text: "Pricing" },
     { href: "/privacy-policy", text: "Privacy Policy" },
     { href: "/terms", text: "Terms and Conditions" }
   ];
 
-  const services = ["Implementation", "Integration", "Customization", "Dedicated Resources", "Business Central", "Support", "Migration ", "Training",  ];
+  const services = [
+    "Implementation", 
+    "Integration",
+     "Customization", 
+    "Dedicated Resources", 
+    "Business Central", 
+    "Support",
+     "Migration ",
+      "Training",  ];
   const industry = ["Construction", "E-Commerce", "Manufacturing", "Finance", "Education","Travel",];
 
   const socialLinks = [
@@ -32,12 +40,12 @@ function Footer() {
   ];
 
   return (
-    <footer role="contentinfo" className="bg-[url(/FooterBg.webp)] bg-cover bg-top bg-blend-d text-gray-800 min-h-fit">
+    <footer role="contentinfo" className="bg-[url(/FooterBg.webp)] bg-cover bg-top bg-blend-d text-gray-800 min-h-fit max-lg:px-4">
     <div className='max-w-3xl mx-auto text-center space-y-4 pt-20'>
       <h3 className='text-xl sm:text-2xl lg:text-4xl font-bold'>Get In Touch</h3>
         <p className='text-sm sm:text-base lg:text-xl'>Contact Us For your needs we have the best team and right minds to deliver projects end-to-end.</p>
         <Link
-          href={"/contact"}
+          href={"/contact-us"}
           className="px-6 py-3 md:px-12 md:py-2 rounded-3xl border border-gray-400   hover:text-white bg-white hover:bg-black text-black transition-colors duration-300 mt-4 md:mt-8"
         >
           Contact Us
@@ -45,12 +53,12 @@ function Footer() {
     </div>
     
     
-      <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 py-28">
+      <div className="max-w-7xl mx-auto px-4 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8 py-28">
 
         {/* Company Section - Remain same */}
         <div>
           <h2 className="text-lg font-semibold mb-4">Company</h2>
-          <nav aria-label="Company">
+          <nav aria-label="Company Links">
             <ul className="space-y-2">
               {companyLinks.map(({ href, text }) => (
                 <li key={href}>
@@ -61,18 +69,19 @@ function Footer() {
           </nav>
         </div>
 
-        {/* Fixed Treks by Season */}
+        {/* Services */}
         <div>
           <h2 className="text-lg font-semibold mb-4">Services</h2>
-          <nav aria-label="Treks by Season">
+          <nav aria-label="Our Services">
             <ul className="space-y-2">
-              {services.map((season) => (
-                <li key={season}>
-                  <AnimatedLink href={`/services?category=${encodeURIComponent(services)}`}>
-                    {season}
+              {services.map((service) => (
+                <li key={service}>
+                  <AnimatedLink href={`/services/${encodeURIComponent(service.toLowerCase().replace(/\s+/g, '-'))}`}>
+                    {service}
                   </AnimatedLink>
                 </li>
               ))}
+
             </ul>
           </nav>
         </div>
@@ -80,15 +89,15 @@ function Footer() {
         {/* Industry */}
         <div>
           <h2 className="text-lg font-semibold mb-4">Industry</h2>
-          <nav aria-label="Industry Specilaization">
+          <nav aria-label="Industries We Serve">
             <ul className="space-y-2">
               {industry.map((industry) => (
-                <li key={industry}>
-                  <AnimatedLink href={`/treks?industry=${encodeURIComponent(industry)}`}>
-                    {industry}
-                  </AnimatedLink>
+                <li key={industry} className="group relative w-fit cursor-default">
+                  <span className="relative ">{industry}</span>
+                  <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-current transition-all duration-500 group-hover:w-full"></span>
                 </li>
               ))}
+
             </ul>
           </nav>
         </div>

@@ -41,7 +41,7 @@ export default function Packages() {
   const [hoveredIndex, setHoveredIndex] = useState (null);
 
   return (
-    <section className="  py-16 px-6">
+    <section className="py-10 md:py-16 px-6">
       <div className="max-w-7xl mx-auto">
         
         <div className="max-w-2xl mr-auto text-black pb-4 space-y-4 text-left">
@@ -51,7 +51,7 @@ export default function Packages() {
 
 
 {/* Packages Card */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4  gap-6">
           {plans.map((plan, index) => (
             <div
               key={index}
@@ -60,7 +60,7 @@ export default function Packages() {
               // className={`rounded-xl bg-white shadow-md transition-all duration-300 ease-in-out overflow-hidden
               //   ${hoveredIndex === index ? "scale-[1.02] shadow-lg" : "hover:scale-[1.02]"}
               // `}
-              className="relative max-w-80 h-96 "
+              className="relative max-w-80 h-80 md:h-96 "
             >
               <Image
                 src={plan.image}
@@ -69,12 +69,12 @@ export default function Packages() {
                 height={300}
                 className='object-cover rounded-lg'
               />
-              <div className="absolute top-44 left-0 right-0 border h-48 bg-white rounded-3xl p-4 overflow-yscroll scrollbar-hide">
+              <div className="absolute top-44 left-0 right-0 border h-40 bg-white rounded-3xl p-4 overflow-yscroll scrollbar-hide">
 
-                <h4 className="font-bold text-xl mt-6  text-gray-900">
+                <h4 className="font-bold text-lg  text-gray-900">
                   {plan.title}
                 </h4>
-                <p className="font-bold text-lg text-center mb-12 text-gray-900">
+                <p className="font-bold text-lg text-center mb-10 text-gray-900">
                   -"{plan.subtitle}"</p>
                
                 {/* Badge */}
@@ -89,14 +89,14 @@ export default function Packages() {
                 <div className="flex justify-between items-center ">
                   <div>
                     {plan.price && (
-                      <p className="font-bold text-black text-lg">
+                      <p className="font-bold text-black text-base">
                         ${plan.price.toLocaleString()}
                       </p>
                     )}
                   </div>
                   <Link
                     href={"/pricing"}
-                    className='px-3 py-1.5 bg-gray-100 hover:bg-black text-black hover:text-white transition-colors duration-500 transform-fill rounded-full border border-gray-200'
+                    className='px-2 py-1 text-sm bg-gray-100 hover:bg-black text-black hover:text-white transition-colors duration-500 transform-fill rounded-full border border-gray-200'
                   >
                     View Details
                   </Link>

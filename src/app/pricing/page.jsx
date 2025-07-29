@@ -62,21 +62,16 @@ export default function PricingPage() {
     return (
         <main className="bg-[url(/HomePageBg.webp)]  bg-cover bg-no-repeat bg-top text-gray-800 font-sans">
             {/* HERO */}
-            <section className="max-w-4xl mx-auto pt-40 px-6 text-center ">
+            <header className="max-w-4xl mx-auto pt-40 px-6 text-center ">
                 <h1 className="text-4xl md:text-5xl font-bold mb-4">Pricing</h1>
                 <p className="max-w-2xl mx-auto text-lg md:text-xl mb-4">
                     At Navnerds, we understand that trusting a new team takes time—so we’ve created a Trust & Trial Package to let you experience our expertise in{" "}
                     <span className="text-blue-600 font-semibold">Microsoft Dynamics 365 Business Central</span> without long-term commitments.
-                </p>
-                <hr className="my-6 max-w-xs mx-auto border-blue-200" />
-                <p className="text-sm text-gray-500">
-                    Call: <a href="tel:+919068476495" className="text-blue-600 font-medium">+91 9068476495</a> |{" "}
-                    <a href="mailto:info@navnerds.com" className="text-blue-600 font-medium">info@navnerds.com</a>
-                </p>
-            </section>
+                </p>  
+            </header>
 
             {/* PRICING CARDS */}
-            <section className="py-20 px-6 ">
+            <section className="py-10 px-6 ">
                 <div className="text-center mb-12">
                     <h2 className="text-3xl font-bold">ERP Made Easy</h2>
                     <p className="text-sm text-gray-500">Powered by Navnerds</p>
@@ -85,7 +80,7 @@ export default function PricingPage() {
                     {plans.map((plan, index) => (
                         <div
                             key={index}
-                            className="flex flex-col justify-between border border-gray-400 p-6 rounded-xl shadow-sm hover:shadow-md transition"
+                            className="flex flex-col hover:bg-white   dura justify-between border border-gray-400 ease-in-out duration-200 p-6 rounded-xl shadow-sm hover:shadow-md transition"
                         >
                             <div> <h3 className="text-xl font-bold text-gray-800 mb-2">{plan.title}</h3>
                                 <div className="text-2xl font-bold text-blue-700 mb-2">{plan.price}</div>
@@ -96,9 +91,9 @@ export default function PricingPage() {
                                     ))}
                                 </ul>
                                 </div>
-                            <button className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">
+                            <Link href={"/contact-us"} className="w-full text-center bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">
                                 {plan.cta}
-                            </button>
+                            </Link>
                         </div>
                     ))}
                 </div>

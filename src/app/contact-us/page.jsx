@@ -1,8 +1,8 @@
 "use client";
 import { useState, useEffect, use } from "react";
 import Image from "next/image";
-import Link from "next/link"; 
-import { h1Text } from "@/Components/Styles";
+import Link from "next/link";
+import { h1Text } from "@/components/styles";
 
 
 export default function page() {
@@ -14,7 +14,7 @@ export default function page() {
     iam: "",
     interest: "",
     callback: [],
-    description: "",
+    query: "",
     newsletter: false,
   });
 
@@ -65,13 +65,13 @@ export default function page() {
       iam: formData.iam,
       interest: formData.interest,
       callback: formData.callback.join(', '),
-      description: formData.description,
+      query: formData.query,
       newsletter: formData.newsletter ? 'Yes' : 'No',
       submittedAt: new Date().toISOString(),
     };
 
     try {
-      const response = await fetch("https://all-websiteformsdata.offbeatpixels.workers.dev/", {
+      const response = await fetch("https://all-websiteformsdata.workers.dev/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -91,7 +91,7 @@ export default function page() {
           iam: "",
           interest: "",
           callback: [],
-          description: "",
+          query: "",
           newsletter: false,
         });
       } else {
@@ -105,12 +105,12 @@ export default function page() {
     }
   };
 
- 
+
 
   return (
-    <section className="min-h-screen text-black">
+    <section className=" bg-[url(/HomePageBg.webp)]  bg-cover bg-no-repeat bg-top min-h-screen text-black">
       {/* Hero Section */}
-      <section className="relative h-[50dvh] flex items-center justify-center overflow-clip">
+      {/* <section className="relative h-[50dvh] flex items-center justify-center overflow-clip">
         <div className="absolute inset-0">
           <Image
             src="/BG/ContactUs.webp"
@@ -123,11 +123,18 @@ export default function page() {
         <div className="relative flex flex-col items-center max-w-7xl mx-auto justify-center space-y-2 text-white">
           <h1 className={`${h1Text} w-fit`}>Contact Us</h1>
         </div>
-      </section>
+      </section> */}
+      {/* HERO */}
+      <header className="max-w-4xl mx-auto py-20 xl:py-40 px-6 text-center ">
+        <h1 className="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
+        <p className="max-w-2xl mx-auto text-lg md:text-xl">
+          At Navnerds, we understand that trusting a new team takes time—so we’ve created a Trust & Trial Package to let you experience our expertise in{" "}
+          <span className="text-blue-600 font-semibold">Microsoft Dynamics 365 Business Central</span> without long-term commitments.
+        </p>
 
-      <main className="bg-[url(/HomePageBg.webp)] bg-cover bg-top min-h-screen">
+      </header> 
         {/* Contact Info Cards */}
-        <div className="max-w-6xl w-full mx-auto px-4 space-y-10 -mt-16 relative z10">
+        <main className="max-w-6xl w-full mx-auto px-4 space-y-10 -mt-16 relative z10">
           <div className="bg-white rounded-xl h-full sm:h-40 lg:h-52 border border-gray-200 px-16 flex max-md:flex-col gap-4 justify-between items-center">
             <address className="flex flex-col items-center justify-center gap-3 mt-3 p-2 md:h-20 rounded-xl not-italic" >
               <div >
@@ -146,18 +153,18 @@ export default function page() {
               <div >
                 <svg width="46" height="46" viewBox="0 0 46 46" fill="none">
                   <path d="M42.0469 19.1367L25.3359 2.51562C25.0365 2.21614 24.6771 1.97656 24.2578 1.79688C23.8385 1.61719 23.4193 1.52734 23 1.52734C22.5807 1.52734 22.1615 1.61719 21.7422 1.79688C21.3229 1.97656 20.9635 2.21614 20.6641 2.51562L16.9805 6.10938H11.5V11.6797L3.86328 19.3164V44.4727H42.1367V19.3164L42.0469 19.1367ZM40.4297 19.7656L34.5 25.6953V13.8359L40.4297 19.7656ZM21.7422 3.59375C22.1016 3.23438 22.5208 3.05469 23 3.05469C23.4792 3.05469 23.8984 3.23438 24.2578 3.59375L26.7734 6.10938H19.2266L21.7422 3.59375ZM28.3906 7.63672L32.9727 12.3086V27.2227L29.3789 30.8164L25.3359 26.6836C25.0365 26.3841 24.6771 26.1445 24.2578 25.9648C23.8385 25.7852 23.4193 25.6953 23 25.6953C22.5807 25.6953 22.1615 25.7852 21.7422 25.9648C21.3229 26.1445 20.9635 26.3841 20.6641 26.6836L16.5312 30.8164L13.0273 27.3125V7.63672H28.3906ZM6.28906 19.0469L11.5 13.8359V25.7852L5.48047 19.8555L6.28906 19.0469ZM5.39062 23.0898V21.832L15.4531 31.8945L15.3633 32.0742L5.39062 41.957V23.0898ZM6.55859 42.9453L7.45703 42.1367L21.7422 27.7617C22.1016 27.4622 22.5208 27.3125 23 27.3125C23.4792 27.3125 23.8984 27.4622 24.2578 27.7617L39.4414 42.9453H6.55859ZM40.6094 22.1016V41.957L30.457 31.8945L40.6094 21.7422V22.1016ZM17.6094 12.3086H28.3906V13.8359H17.6094V12.3086ZM17.6094 21.4727H28.3906V23H17.6094V21.4727ZM17.6094 16.8906H25.3359V18.418H17.6094V16.8906Z" fill="black" />
-                </svg> 
+                </svg>
               </div>
               <div className="text-center">
                 <h3 className="font-semibold text-lg"> Email address</h3>
-                <Link href={"mailto:info@offbeattreks.com"} className="text-sm">info@offbeattreks.com</Link>
+                <Link href={"mailto:info@navnerds.com"} className="text-sm">info@navnerds.com</Link>
               </div>
             </div>
             <div className="flex flex-col items-center justify-center gap-3 p-2 md:h-20 rounded-xl not-italic" >
               <div >
                 <svg width="46" height="46" viewBox="0 0 46 46" fill="none">
                   <path d="M34.0527 2.33594H13.748C13.4486 2.33594 13.1641 2.38086 12.8945 2.4707C12.625 2.56055 12.4004 2.69531 12.2207 2.875C12.041 3.11458 11.9062 3.35417 11.8164 3.59375C11.7266 3.83333 11.6816 4.10286 11.6816 4.40234V41.5977C11.6816 41.8971 11.7266 42.1667 11.8164 42.4062C11.9062 42.6458 12.041 42.8854 12.2207 43.125C12.4004 43.3047 12.625 43.4395 12.8945 43.5293C13.1641 43.6191 13.4486 43.6641 13.748 43.6641H34.0527C34.3522 43.6641 34.6367 43.6191 34.9062 43.5293C35.1758 43.4395 35.4004 43.3047 35.5801 43.125C35.7598 42.8854 35.8945 42.6458 35.9844 42.4062C36.0742 42.1667 36.1191 41.8971 36.1191 41.5977V4.40234C36.1191 4.10286 36.0742 3.83333 35.9844 3.59375C35.8945 3.35417 35.7598 3.11458 35.5801 2.875C35.4004 2.69531 35.1758 2.56055 34.9062 2.4707C34.6367 2.38086 34.3522 2.33594 34.0527 2.33594ZM34.5918 41.5977C34.5918 41.7773 34.5469 41.9121 34.457 42.002C34.3672 42.0918 34.2324 42.1367 34.0527 42.1367H13.748C13.5684 42.1367 13.4336 42.0918 13.3438 42.002C13.2539 41.9121 13.209 41.7773 13.209 41.5977V34.5H34.5918V41.5977ZM34.5918 32.9727H13.209V8.44531H34.5918V32.9727ZM34.5918 6.91797H13.209V4.40234C13.209 4.22266 13.2539 4.08789 13.3438 3.99805C13.4336 3.9082 13.5684 3.86328 13.748 3.86328H34.0527C34.2324 3.86328 34.3672 3.9082 34.457 3.99805C34.5469 4.08789 34.5918 4.22266 34.5918 4.40234V6.91797ZM21.5645 37.5547H26.2363V39.082H21.5645V37.5547Z" fill="black" />
-                </svg> 
+                </svg>
               </div>
               <div className="text-center">
                 <h3 className="font-semibold text-lg"> Contacts info</h3>
@@ -229,27 +236,7 @@ export default function page() {
                 />
               </div>
 
-              <div>
-                <label htmlFor="iam" className="block text-md font-medium mb-1">
-                  I am
-                </label>
-                <select
-                  id="iam"
-                  name="iam"
-                  value={formData.iam}
-                  onChange={handleChange}
-                  className="w-full border-b text-gray-500 border-gray-300 focus:outline-none p-2"
-                  required
-                >
-                  <option value="">Select an option</option>
-                  <option value="booking">Looking to book an adventure</option>
-                  <option value="inquiry">Just making an inquiry</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-            </div>
-
-            <div className="my-8">
+            <div  >
               <label htmlFor="interest" className="block text-md font-medium mb-1 w-96">
                 I am interested in
               </label>
@@ -268,10 +255,11 @@ export default function page() {
                 <option value="camping">Camping</option>
               </select>
             </div>
-
+            </div>
+  
             <fieldset className="my-8">
-              <legend className="text-md font-medium mb-2">
-                Do you want our expert to call you back? (required)
+              <legend  className="text-md font-medium mb-2">
+                Do you want our expert to call you back? 
               </legend>
               <div className="space-y-1 lg:w-xl grid grid-cols-2 gap-5 text-gray-500 ">
                 <label className="flex items-center">
@@ -322,47 +310,34 @@ export default function page() {
             </fieldset>
 
             <div className="my-4">
-              <label htmlFor="description" className="block text-md font-medium mb-1">
-                Description
+              <label htmlFor="query" className="block text-md font-medium mb-1">
+                Query
               </label>
               <textarea
-                id="description"
-                name="description"
+                id="query"
+                name="query"
                 rows="4"
                 placeholder="Tell us more..."
-                value={formData.description}
+                value={formData.query}
                 onChange={handleChange}
                 className="w-full border-b border-gray-300 focus:outline-none p-2"
               />
             </div>
 
-            <div className="my-4">
-              <label className="flex items-center">
-                <input
-                  type="checkbox"
-                  name="newsletter"
-                  checked={formData.newsletter}
-                  onChange={handleChange}
-                  className="mr-2"
-                />
-                Send me a monthly newsletter about Offbeat Treks
-              </label>
-            </div>
+        
 
             <button
               type="submit"
               disabled={loading}
-              className="bg-black text-white px-6 py-2 rounded hover:bg-gray-800 disabled:opacity-50"
+            className=" text-white px-6 py-2 rounded bg-[#1CCBD7] hover:bg-black transition-colors duration-200 ease-in disabled:opacity-50"
             >
               {loading ? "Submitting..." : "Send Mail"}
             </button>
           </form>
 
-        </div>
+        </main>
 
-
-
-      </main>
+ 
     </section>
   );
 }

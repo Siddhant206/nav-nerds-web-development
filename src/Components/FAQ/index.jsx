@@ -95,7 +95,7 @@ const FAQ = () => {
             {/* Header - Remain same */}
             <div className="">
                 <div className="max-w-4xl mx-auto px-6 py-8">
-                    <div className="text-center"> 
+                    <div className="text-center">
                         <h1 className="text-4xl font-bold text-gray-900 mb-2 animate-fade-in">
                             Frequently Asked Questions
                         </h1>
@@ -161,7 +161,7 @@ const FAQ = () => {
                         <p className="text-gray-600 mb-6">
                             Can't find what you're looking for? We're here to help!
                         </p>
-                        <Link href={"/contact"} className="px-8 py-3 bg-black text-white hover:bg-white hover:text-black border border-gray-300 rounded-full cursor-pointer transition-colors duration-500">
+                        <Link href={"/contact-us"} className="px-8 py-3 bg-black text-white hover:bg-white hover:text-black border border-gray-300 rounded-full cursor-pointer transition-colors duration-500">
                             Contact Support
                         </Link>
                     </div>
