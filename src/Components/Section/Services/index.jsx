@@ -6,11 +6,11 @@ import {
   IconFileBroken,
   IconSignature,
   IconTableColumn,
-} from "@tabler/icons-react";
-import { motion } from "motion/react";
+} from "@tabler/icons-react"; 
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 import { cn } from "@/components/lib/utils";
 import Image from "next/image";
+import { motion } from 'framer-motion';
 
 
 export default function ServicesSection() {

@@ -22,7 +22,7 @@ function Navbar() {
 
     return (
         // <nav className="absolute top-0 left-0  w-full flex justify-between items-center  md:h-22 z-10 md:border-b border-gray-300">
-        <nav className="sticky top-0 left-0 bg-[#1CCBD7] w-full flex justify-between items-center  md:h-22 z-10 ">
+        <nav className="sticky top-0 left-0 bg-[#1DCCD8] w-full flex justify-between items-center  md:h-22 z-10 ">
             <div className="flex items-center justify-between w-full max-w-7xl mx-auto px-4">
                 <Link href={"/"} className='w-fit'>
                     <Image
@@ -97,6 +97,15 @@ function Navbar() {
                                         role="menuitem"
                                     >
                                         Integration
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link
+                                        href="/services/customization"
+                                        className="block px-4 py-2 hover:bg-gray-100"
+                                        role="menuitem"
+                                    >
+                                        Customization
                                     </Link>
                                 </li>
                                 <li>
@@ -207,6 +216,18 @@ function Navbar() {
                                             }}
                                         >
                                             implementation
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link
+                                            href="/services/customization"
+                                            className="block px-8 py-2 hover:bg-gray-200"
+                                            onClick={() => {
+                                                setIsMobileMenuOpen(false);
+                                                setIsDropdownOpen(false);
+                                            }}
+                                        >
+                                            Customization
                                         </Link>
                                     </li>
                                     <li>
