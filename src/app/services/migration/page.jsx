@@ -5,6 +5,65 @@ import { ServiceCard } from '@/components/ui/serviceCard';
 import { typography } from '@/components/ui/fonts';
 import Link from 'next/link';
 
+const services = [
+    {
+        title: "Code Conversion – Modernizing Your Customizations",
+        description:
+            "The first and most crucial step in your migration from Navision (NAV) to Business Central is converting legacy C/AL code to the modern AL language. This includes transforming customizations, reports, and forms into extensions that are compatible with Business Central’s extension-based architecture. We carefully assess your existing custom codebase, eliminate obsolete modifications, and refactor what’s necessary—ensuring a clean, future-ready code structure that’s easier to maintain and upgrade.",
+        icon: <></>,
+        color: "from-cyan-500/10 to-cyan-300/10",
+    },
+    {
+        title: "Data Migration to Business Central On-Premises",
+        description:
+            "Once the code is modernized, we move on to migrating your historical and active data from Navision to the latest compatible version of Business Central On-Premises. This includes master data (customers, vendors, items), open transactions (sales, purchases), and ledger entries. We validate and map fields to align with BC’s data structure, ensuring accuracy, consistency, and compliance. Data integrity checks and reconciliation steps are also performed before final cutover.",
+        icon: <></>,
+        color: "from-cyan-500/10 to-cyan-300/10",
+    },
+    {
+        title: "Pre-Migration Assessment and Planning",
+        description:
+            "Every successful migration starts with proper analysis. Our team conducts a thorough system review—analyzing your NAV version, customizations, data size, integrations, and reporting requirements. Based on this assessment, we define a roadmap with timelines, risks, testing strategies, and a phased transition plan. This ensures transparency, minimal disruption, and a clearly defined migration scope tailored to your business needs.",
+        icon: <></>,
+        color: "from-cyan-500/10 to-cyan-300/10",
+    },
+    {
+        title: "Environment Setup and Technical Readiness",
+        description:
+            "We establish your Business Central environments (on-prem and/or cloud) with proper configurations, security policies, extensions, and integrations. Whether it’s a hybrid setup or fully SaaS, we make sure each environment is optimized for performance and aligned with Microsoft’s best practices. Sandbox environments are used for safe testing and validations before going live.",
+        icon: <></>,
+        color: "from-cyan-500/10 to-cyan-300/10",
+    },
+    {
+        title: "Testing and Validation",
+        description:
+            "Before migrating live data, we perform trial migrations to test both code and data in the target BC environment. This includes functional testing, integration checks, and user acceptance testing (UAT). We engage key users from your team to verify transactions, workflows, reports, and document layouts, ensuring that your processes remain seamless and effective in the new system.",
+        icon: <></>,
+        color: "from-cyan-500/10 to-cyan-300/10",
+    },
+    {
+        title: "Training and User Enablement",
+        description:
+            "Moving to Business Central introduces a modern UI, new features, and cloud capabilities. We provide hands-on training and onboarding sessions to ensure your teams are confident and productive from day one. From finance to warehouse staff, we tailor the training sessions according to roles—covering navigation, process changes, and reporting tools.",
+        icon: <></>,
+        color: "from-cyan-500/10 to-cyan-300/10",
+    },
+    {
+        title: "Migration from On-Premises to Business Central SaaS (Cloud)",
+        description:
+            "Once your system is stable on Business Central On-Prem, the next leap is moving to the cloud. We facilitate a smooth transition from on-prem to Business Central SaaS, helping you unlock benefits like automatic updates, Azure hosting, scalability, and integrations with Power Platform and Microsoft 365. We migrate your extensions, data, and settings to the cloud using Microsoft's cloud migration tools and our proven methodology.",
+        icon: <></>,
+        color: "from-cyan-500/10 to-cyan-300/10",
+    },
+    {
+        title: "Go-Live, Support, and Post-Migration Optimization",
+        description:
+            "The final go-live step is carefully executed with minimal downtime. Our team provides hypercare support post-go-live to address any last-minute issues, performance tuning, and user feedback. We also review your workflows for further optimization, helping you take full advantage of Business Central’s latest features, analytics, and automation tools.",
+        icon: <></>,
+        color: "from-cyan-500/10 to-cyan-300/10",
+    },
+];
+
 
 
 function Page() {
@@ -34,83 +93,24 @@ function Page() {
             {/* Content Section */}
             <section className="bg-[url(/HomePageBg.webp)]  bg-cover bg-no-repeat bg-top w-full  py-10  10"> 
 
-                    {/* Top Grid */}
-                    <div className="grid md:grid-cols-3 gap-6 items-stretch">
-                        {/* Left Text Blocks */}
-                        <div className="flex flex-col gap-6">
-                            {/* Card 1 */}
-                            <div className="bg-white rounded-xl shadow-md p-6 flex items-start gap-4">
-                                <div className="w-14 min-w-14">
-                                    <Image
-                                        src="/icons/thinker.png" // replace with your actual icon
-                                        alt="Seamless Communication"
-                                        width={64}
-                                        height={64}
-                                        className="w-14 h-14 object-contain"
-                                    />
-                                </div>
-                                <div>
-                                    <h2 className="text-lg md:text-xl font-semibold mb-1">
-                                        Seamless Communication & Faster Turnaround
-                                    </h2>
-                                    <p className="text-sm text-gray-700">
-                                        With a dedicated consultant, you’ll experience streamlined communication, quicker decision-making, and faster execution.
-                                    </p>
-                                </div>
+                <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                    {services.map((service, index) => (
+                        <article
+                            key={index}
+                            className={`rounded-xl p-6  backdrop-blur-sm border border-gray-200 bg-gradient-to-br ${service.color}  bg-white/10 shadow-md transition-all duration-300 hover:scale-[1.02]`}
+                        >
+                            <div className="flex flex-col items-start justify-center gap-4 mb-4">
+                               
+                                    {service.icon}
+                                
+                                <h3 className="text-md font-semibold text-gray-900 leading-tight">
+                                    {service.title}
+                                </h3>
                             </div>
-
-                            {/* Card 2 */}
-                            <div className="bg-white rounded-xl shadow-md p-6 flex items-start gap-4">
-                                <div className="w-14 min-w-14">
-                                    <Image
-                                        src="/icons/thinker.png"
-                                        alt="Greater Accountability"
-                                        width={64}
-                                        height={64}
-                                        className="w-14 h-14 object-contain"
-                                    />
-                                </div>
-                                <div>
-                                    <h2 className="text-lg md:text-xl font-semibold mb-1">
-                                        Greater Accountability & Flexibility
-                                    </h2>
-                                    <p className="text-sm text-gray-700">
-                                        Our dedicated resource model gives you one point of contact, making scope adjustments and feedback seamless.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Right Image Card */}
-                        <div className="col-span-2 bg-gradient-to-b from-[#def3ff] to-[#dffbfc] rounded-xl shadow-md p-6 md:p-10 flex flex-col justify-between">
-                            <div className="w-full h-64 md:h-[300px] mb-4 relative rounded-xl overflow-hidden">
-                                <Image
-                                    src="/images/expert-banner.png" // replace with your actual image
-                                    alt="Expertise"
-                                    fill
-                                    className="object-cover"
-                                />
-                            </div>
-                            <div>
-                                <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">
-                                    Focused Expertise, Just for You
-                                </h2>
-                                <p className="text-sm text-gray-700">
-                                    We offer dedicated resources who are trained on your Business Central or NAVISION environment, ensuring familiarity and long-term ROI.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Bottom Block */}
-                    <div className="bg-[#F5F7FA] rounded-xl p-6 md:p-10 text-center max-w-4xl mx-auto shadow-sm">
-                        <h2 className="text-xl md:text-2xl font-semibold mb-3">
-                            A True Extension of Your Team
-                        </h2>
-                        <p className="text-gray-700 text-sm md:text-base">
-                            We don’t just assign you a technician—we assign a partner who integrates with your team, understands your industry, and proactively identifies ways to optimize your system.
-                        </p>
-                    </div> 
+                            <p className="text-sm text-gray-800">{service.description}</p>
+                        </article>
+                    ))}
+                </div>
             </section>
         </section>
     );
