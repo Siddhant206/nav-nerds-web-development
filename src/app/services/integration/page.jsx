@@ -4,27 +4,7 @@ import Image from "next/image";
 import { ServiceCard } from '@/components/ui/serviceCard';
 import { typography } from '@/components/ui/fonts';
 import Link from 'next/link';
-import { IntegrationCard } from '@/components/ui/IntegrationCard';
 
-const INTEGRATIONS = [
-    {
-        title: 'Document Sign Integration',
-        description:
-            'Deliver real-time updates to your customers through WhatsApp—order confirmations, invoice alerts...',
-        imageSrc: '/icons/doc-sign.png',
-        iconSrc: '/icons/nav-logo.png',
-        direction: 'left',
-    },
-    {
-        title: 'Microsoft 365 Integration',
-        description:
-            'Work smarter with full integration between Business Central and Microsoft tools like Outlook...',
-        imageSrc: '/icons/microsoft365.png',
-        iconSrc: '/icons/nav-logo.png',
-        direction: 'right',
-    },
-    // Add more integrations...
-];
 
 function Page() {
     return (
@@ -52,16 +32,24 @@ function Page() {
 
             {/* Content Section */}
             <section className="bg-[url(/HomePageBg.webp)]  bg-cover bg-no-repeat bg-top w-full  py-10  10">
-
-
-                <div className='max-w-7xl mx-auto space-y-5'>
-                    <div className='relative flex items-center justify-between gap-6 bg-[#1FBAC4] p-6'>
-                        <div className='w-1/3'>
-                            <div>
-                                <h2>Document Sign Integration</h2>
-                                <p>Deliver real-time updates to your customers through WhatsApp—order confirmations, invoice alerts, payment reminders, and more. This integration brings a familiar, instant messaging experience into your workflow, improving customer satisfaction and response rates.</p>
+            <div className='max-w-2xl mx-auto mb-10'>
+                    <h2 className={`${typography.subheading} text-center`}>
+                        Powerful Integrations for Every Need</h2>
+                    <p className={`${typography.paragraph} text-center`}>
+                        Discover how these integrations can streamline your operations, boost productivity,
+                        and drive growth across your organization.
+                    </p>
+            </div>
+                <div className='max-w-7xl mx-auto space-y-4'>
+                    <div className='relative flex items-center  justify-between gap-6 bg-[#1FBAC4] p-6 overflow-clip' >
+                        <div className='w-[40%] flex flex-col items-center justify-center space-y-4'>
+                            <div className=' text-white  space-y-2 '>
+                                <h2 className="text-xl md:text-2xl font-bold text-center ">
+                                    Document Sign Integration
+                                </h2>
+                                <p>Deliver real-time updates to your customers through WhatsApp order confirmations, invoice alerts, payment reminders, and more. This integration brings a familiar, instant messaging experience into your workflow, improving customer satisfaction and response rates.</p>
                             </div>
-                            <div>
+                            <div className='max-w-80'>
                                 <Image
                                     src={"/Services/Integration/docusign.png"}
                                     alt={"Document Sign Integration"}
@@ -71,15 +59,21 @@ function Page() {
                                 />
                             </div>
                         </div>
-                        <div className="absolute" />
-                        <div className='w-1/3'>
-                            <div>
-                                <h2>Document Sign Integration</h2>
-                                <p>Deliver real-time updates to your customers through WhatsApp—order confirmations, invoice alerts, payment reminders, and more. This integration brings a familiar, instant messaging experience into your workflow, improving customer satisfaction and response rates.</p>
+                        <div className="absolute -rotate-[70deg] bg-white translate-x-[46%] h-6 w-1/2" />
+                        <div className="absolute -rotate-[70deg] bg-[#1BCAD6] translate-x-[50%] h-6 w-1/2" />
+                        <div className='w-[40%]  flex flex-col items-center justify-center space-y-4'>
+                            <div className='max-w- text-white  space-y-2 '>
+                                <h2 className="text-xl md:text-2xl font-bold text-center ">
+                                    Microsoft 365 Integration
+                                </h2>
+                                <p  >
+                                    Work smarter with full integration between Business Central and Microsoft tools like Outlook, Excel, and Teams. Create invoices straight from emails, analyze real-time data in Excel, or collaborate on transactions in Teams. It’s all connected—boosting efficiency and reducing context-switching.
+
+                                </p>
                             </div>
-                            <div>
+                            <div className='max-w-80'>
                                 <Image
-                                    src={"/Services/Integration/docusign.png"}
+                                    src={"/Services/Integration/ms365.svg"}
                                     alt={"Document Sign Integration"}
                                     width={200}
                                     height={200}
@@ -87,17 +81,118 @@ function Page() {
                                 />
                             </div>
                         </div>
-                   </div>
+                    </div >
 
-                    <IntegrationCard
-                        title="Customization"
-                        description="From adding simple fields and automating approval workflows to building entirely new modules, our customization services are designed to enhance your existing ERP without compromising performance or upgrade compatibility. Using both C/AL for older NAV versions and modern AL extensions in Business Central, we customize your solution for maximum flexibility and long-term maintainability. We also offer interface improvements to enhance user experience, making everyday tasks faster, clearer, and more intuitive."
-                        imageUrl="/Services/Customization/Customization.png"
-                        imageAlt="Customization of Business Central"
-                        imageLeft={false}
-                    />
+                    <div className='relative flex items-center  justify-between gap-6 bg-[#1FBAC4] p-6 overflow-clip' >
+                        <div className='w-[40%] flex flex-col items-center justify-center space-y-4'>
+                            <div className=' text-white  space-y-2 '>
+                                <h2 className="text-xl md:text-2xl font-bold text-center ">
+                                    WooCommerce Integration
+                                </h2>
+                                <p>
+                                    Sync your WooCommerce storefront with Business Central to automate order processing, inventory updates, and financial entries. Say goodbye to manual entry errors and hello to a unified system that keeps your e-commerce and accounting perfectly aligned.
+                                </p>
+                            </div>
+                            <div className='max-w-80'>
+                                <Image
+                                    src={"/Services/Integration/wooCom.svg"}
+                                    alt={"WooCommerce Integration"}
+                                    width={200}
+                                    height={200}
+                                    className="w-full object-contain"
+                                />
+                            </div>
+                        </div>
+                        <div className="absolute rotate-[70deg] bg-white translate-x-[46%] h-6 w-1/2" />
+                        <div className="absolute rotate-[70deg] bg-[#1BCAD6] translate-x-[50%] h-6 w-1/2" />
+                        <div className='w-[40%]  flex flex-col items-center justify-center space-y-4'>
+                            <div className='max-w- text-white  space-y-2 '>
+                                <h2 className="text-xl md:text-2xl font-bold text-center ">
+                                    WhatsApp  Integration
+                                </h2>
+                                <p  >
+                                    Work smarter with full integration between Business Central and Microsoft tools like Outlook, Excel, and Teams. Create invoices straight from emails, analyze real-time data in Excel, or collaborate on transactions in Teams. It’s all connected—boosting efficiency and reducing context-switching.
 
+                                </p>
+                            </div>
+                            <div className='max-w-80'>
+                                <Image
+                                    src={"/Services/Integration/whatsapp.svg"}
+                                    alt={" WhatsApp Integration"}
+                                    width={200}
+                                    height={200}
+                                    className="w-full object-contain"
+                                />
+                            </div>
+                        </div>
+                    </div >
 
+                    <div className='relative flex items-center  justify-between gap-6 bg-[#1FBAC4] p-6 overflow-clip' >
+                        <div className='w-[40%] flex flex-col items-center justify-center space-y-4'>
+                            <div className=' text-white  space-y-2 '>
+                                <h2 className="text-xl md:text-2xl font-bold text-center ">
+                                    PowerApps Integration
+                                </h2>
+                                <p>
+                                    Build custom business apps that talk directly to your Business Central data—no coding required. Whether it’s a mobile app for your sales team or a quick form for inventory updates, PowerApps helps automate tasks and extend your system with agility and precision.
+
+                                </p>
+                            </div>
+                            <div className='max-w-80'>
+                                <Image
+                                    src={"/Services/Integration/powerapps.svg"}
+                                    alt={"PowerApps Integration"}
+                                    width={200}
+                                    height={200}
+                                    className="w-full object-contain"
+                                />
+                            </div>
+                        </div>
+                        <div className="absolute -rotate-[70deg] bg-white translate-x-[46%] h-6 w-1/2" />
+                        <div className="absolute -rotate-[70deg] bg-[#1BCAD6] translate-x-[50%] h-6 w-1/2" />
+                        <div className='w-[40%]  flex flex-col items-center justify-center space-y-4'>
+                            <div className='max-w- text-white  space-y-2 '>
+                                <h2 className="text-xl md:text-2xl font-bold text-center ">
+                                    Shopify Integration
+                                </h2>
+                                <p  >
+                                    Connect your Shopify store with Business Central to automate order, inventory, and customer syncs. Stay on top of stock levels, avoid overselling, and get a real-time view of your financials—all from one place. It’s the ideal integration for scaling your e-commerce operations effortlessly.
+
+                                </p>
+                            </div>
+                            <div className='max-w-80'>
+                                <Image
+                                    src={"/Services/Integration/shopify.svg"}
+                                    alt={"Shopify Integration"}
+                                    width={200}
+                                    height={200}
+                                    className="w-full object-contain"
+                                />
+                            </div>
+                        </div>
+                    </div >
+                    <div className='max-w-4xl mx-auto  bg-[#1FBAC4] p-6 overflow-clip' >
+                        <div className='w-full flex flex-col items-center justify-center space-y-4'>
+                            <div className=' text-white  space-y-2 '>
+                                <h2 className="text-xl md:text-2xl font-bold text-center ">
+                                    SharePoint Integration
+                                </h2>
+                                <p>
+                                    Deliver real-time updates to your customers through WhatsApp—order confirmations, invoice alerts, payment reminders, and more. This integration brings a familiar, instant messaging experience into your workflow, improving customer satisfaction and response rates.
+                                </p>
+                            </div>
+                            <div className='max-w-96'>
+                                <Image
+                                    src={"/Services/Integration/sharepoint.svg"}
+                                    alt={"SharePoint Integration"}
+                                    width={200}
+                                    height={200}
+                                    className="w-full object-contain"
+                                />
+                            </div>
+                        </div>
+                         
+                    </div >
                 </div>
             </section>
         </section>

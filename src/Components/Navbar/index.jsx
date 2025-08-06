@@ -1,139 +1,117 @@
-"use client"
-import Image from 'next/image';
-import Link from 'next/link';
-import React, { useState, useRef, useEffect } from 'react';
+"use client";
 
-function Navbar() {
-    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+import React, { useState, useRef, useEffect } from "react";
+import Link from "next/link";
+import Image from "next/image";
+
+
+const navLinks = [
+    { label: "Home", href: "/" },
+    { label: "About Us", href: "/about-us" },
+    {
+        label: "Services",
+        children: [
+            { label: "Business Central", href: "/services/business-central" },
+            { label: "Implementation", href: "/services/implementation" },
+            { label: "Integration", href: "/services/integration" },
+            { label: "Customization", href: "/services/customization" },
+            { label: "Migration", href: "/services/migration" },
+            { label: "Dedicated Resources", href: "/services/dedicated-resources" },
+        ],
+    },
+    { label: "Pricing", href: "/pricing" },
+    { label: "Contact Us", href: "/contact-us" },
+];
+
+
+
+
+
+export default function Navbar() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    const ref = useRef(null);
+    const [openDropdown, setOpenDropdown] = useState (null);
+    const ref = useRef (null);
 
+    // Click-outside to close menu
     useEffect(() => {
-        const handleClickOutside = (event) => {
-            if (ref.current && !ref.current.contains(event.target)) {
+        const handleClickOutside = (e) => {
+            if (ref.current && !ref.current.contains(e.target)) {
                 setIsMobileMenuOpen(false);
+                setOpenDropdown(null);
             }
         };
-        document.addEventListener('click', handleClickOutside, true);
-        return () => {
-            document.removeEventListener('click', handleClickOutside, true);
-        };
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => document.removeEventListener("mousedown", handleClickOutside);
     }, []);
 
     return (
-        // <nav className="absolute top-0 left-0  w-full flex justify-between items-center  md:h-22 z-10 md:border-b border-gray-300">
-        <nav className="sticky top-0 left-0 bg-[#1DCCD8] w-full flex justify-between items-center  md:h-22 z-10 ">
-            <div className="flex items-center justify-between w-full max-w-7xl mx-auto px-4">
-                <Link href={"/"} className='w-fit'>
+        <nav className="sticky top-0 z-40 bg-[#1DCCD8]">
+            <div className="flex items-center justify-between max-w-7xl mx-auto px-4 py-2 md:py-2">
+                <Link href="/" className="w-fit">
                     <Image
-                        src={"/logoWhite.webp"}
-                        alt={"logo of offbeattrek"}
-                        width={400}
-                        height={200}
+                        src="/logoWhite.webp"
+                        alt="Logo"
+                        width={160}
+                        height={50}
+                        className="object-contain h-16"
                         priority
-                        className='object-contain h-20 w-60'
                     />
                 </Link>
 
                 {/* Desktop Menu */}
-                <ul className="hidden md:flex space-x-6 font-semibold text-base text-white relative">
-                    <li>
-                        <Link href="/" className="hover:underline">Home</Link>
-                    </li>
-                    <li>
-                        <Link href="/about-us" className="hover:underline">About Us</Link>
-                    </li>
-
-                    {/* --- SERVICES DROPDOWN --- */}
-                    <li
-                        className="relative"
-                        onMouseEnter={() => setIsDropdownOpen(true)}
-                        onMouseLeave={() => setIsDropdownOpen(false)}
-                    >
-                        <button
-                            className="hover:underline focus:outline-none  flex items-center gap-2"
-                            aria-haspopup="true"
-                            aria-expanded={isDropdownOpen}
-                        >
-                            Services
-                            <svg
-                                width="14"
-                                height="10"
-                                viewBox="0 0 14 10"
-                                fill="none"
-                                className={`transition-transform duration-300 ${isDropdownOpen ? "rotate-180" : "rotate-0"}`}
+                <ul className="hidden md:flex space-x-6 text-white font-semibold relative">
+                    {navLinks.map((link) =>
+                        link.children ? (
+                            <li
+                                key={link.label}
+                                className="relative"
+                                onMouseEnter={() => setOpenDropdown(link.label)}
+                                onMouseLeave={() => setOpenDropdown(null)}
                             >
-                                <path d="M2.625 0L0 2.625L7 9.625L14 2.625L11.375 0L7 4.375L2.625 0Z" fill="white" />
-                            </svg>
-                        </button>
-                        {isDropdownOpen && (
-                            <ul
-                                className="absolute left-0 top-full  font-medium w-48 bg-white text-black shadow-lg rounded-md overflow-hidden z-20 transition-all duration-300 ease-in-out opacity-100 translate-y-0 pointer-events-auto"
-                                role="menu"
-                            > <li>
-                                    <Link
-                                        href="/services/business-central"
-                                        className="block px-4 py-2 hover:bg-gray-100"
-                                        role="menuitem"
+                                <button
+                                    className="hover:underline flex items-center gap-2"
+                                    aria-haspopup="true"
+                                    aria-expanded={openDropdown === link.label}
+                                >
+                                    {link.label}
+                                    <svg
+                                        className={`w-4 h-4 transition-transform ${openDropdown === link.label ? "rotate-180" : "rotate-0"
+                                            }`}
+                                        fill="white"
+                                        viewBox="0 0 14 10"
                                     >
-                                        Business Central
-                                    </Link>
-                                </li>
-                              
-                               
-                                <li>
-                                    <Link
-                                        href="/services/implementation"
-                                        className="block px-4 py-2 hover:bg-gray-100"
-                                        role="menuitem"
-                                    >
-                                        Implementation
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link
-                                        href="/services/integration"
-                                        className="block px-4 py-2 hover:bg-gray-100"
-                                        role="menuitem"
-                                    >
-                                        Integration
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link
-                                        href="/services/customization"
-                                        className="block px-4 py-2 hover:bg-gray-100"
-                                        role="menuitem"
-                                    >
-                                        Customization
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link
-                                        href="/services/migration"
-                                        className="block px-4 py-2 hover:bg-gray-100"
-                                        role="menuitem"
-                                    >
-                                        Migration
-                                    </Link>
-                                </li>
-                            </ul>
-                        )}
-                    </li>
-
-                    <li>
-                        <Link href="/pricing" className="hover:underline">Pricing</Link>
-                    </li>
-                    <li>
-                        <Link href="/contact-us" className="hover:underline">Contact Us</Link>
-                    </li>
+                                        <path d="M2.625 0L0 2.625L7 9.625L14 2.625L11.375 0L7 4.375L2.625 0Z" />
+                                    </svg>
+                                </button>
+                                {openDropdown === link.label && (
+                                    <ul className="absolute top-full  left-0 bg-white text-black  font-medium shadow-lg rounded-md w-52 overflow-clip z-20">
+                                        {link.children.map((child) => (
+                                            <li key={child.label}>
+                                                <Link
+                                                    href={child.href}
+                                                    className="block px-4 py-2 hover:bg-gray-100"
+                                                >
+                                                    {child.label}
+                                                </Link>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                )}
+                            </li>
+                        ) : (
+                            <li key={link.label}>
+                                <Link href={link.href} className="hover:underline">
+                                    {link.label}
+                                </Link>
+                            </li>
+                        )
+                    )}
                 </ul>
 
-                {/* Hamburger Button */}
+                {/* Hamburger */}
                 <button
-
-                    className="md:hidden text-white focus:outline-none"
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                    className="md:hidden text-white z-50"
                     aria-label="Toggle mobile menu"
                 >
                     <svg
@@ -143,9 +121,19 @@ function Navbar() {
                         viewBox="0 0 24 24"
                     >
                         {isMobileMenuOpen ? (
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M6 18L18 6M6 6l12 12"
+                            />
                         ) : (
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M4 6h16M4 12h16M4 18h16"
+                            />
                         )}
                     </svg>
                 </button>
@@ -153,122 +141,64 @@ function Navbar() {
 
             {/* Mobile Menu */}
             {isMobileMenuOpen && (
-                <div ref={ref} className="absolute top-full left-0 w-[95%] bg-white shadow-lg  mx-2 rounded-2xl md:hidden z-50">
-                    <ul className="flex flex-col text-black">
-                        <li>
-                            <Link
-                                href="/"
-                                className="block px-6 py-3 hover:bg-gray-100 border-b border-gray-200"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                            >
-                                Home
-                            </Link>
-                        </li>
-                        <li>
-                            <Link
-                                href="/about-us"
-                                className="block px-6 py-3 hover:bg-gray-100 border-b border-gray-200"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                            >
-                                About Us
-                            </Link>
-                        </li>
-
-                        {/* Mobile Journeys Section */}
-                        <li className="border-b border-gray-200">
-                            <button
-                                className="w-full text-left px-6 py-3 hover:bg-gray-100 flex items-center justify-between"
-                                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                            >
-                                Services
-                                <svg
-                                    width="14"
-                                    height="10"
-                                    viewBox="0 0 14 10"
-                                    fill="none"
-                                    className={`transition-transform duration-300 ${isDropdownOpen ? "rotate-180" : "rotate-0"}`}
-                                >
-                                    <path d="M2.625 0L0 2.625L7 9.625L14 2.625L11.375 0L7 4.375L2.625 0Z" fill="currentColor" />
-                                </svg>
-                            </button>
-                            {isDropdownOpen && (
-                                <ul className="bg-gray-50">
-                                  
-                                    <li>
-                                        <Link
-                                            href="/services/business-central"
-                                            className="block px-8 py-2 hover:bg-gray-200"
-                                            onClick={() => {
-                                                setIsMobileMenuOpen(false);
-                                                setIsDropdownOpen(false);
-                                            }}
+                <div
+                    ref={ref}
+                    className="md:hidden absolute left-4 w-80 bg-white text-black shadow-md rounded-xl mx-3 my-2 p-4"
+                >
+                    <ul className="space-y-3">
+                        {navLinks.map((link) =>
+                            link.children ? (
+                                <li key={link.label}>
+                                    <button
+                                        onClick={() =>
+                                            setOpenDropdown(openDropdown === link.label ? null : link.label)
+                                        }
+                                        className="w-full flex justify-between items-center font-medium py-2"
+                                    >
+                                        {link.label}
+                                        <svg
+                                            className={`w-4 h-4 transition-transform ${openDropdown === link.label ? "rotate-180" : ""
+                                                }`}
+                                            fill="currentColor"
+                                            viewBox="0 0 14 10"
                                         >
-                                            Business Central
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link
-                                            href="/services/implementation"
-                                            className="block px-8 py-2 hover:bg-gray-200"
-                                            onClick={() => {
-                                                setIsMobileMenuOpen(false);
-                                                setIsDropdownOpen(false);
-                                            }}
-                                        >
-                                            implementation
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link
-                                            href="/services/customization"
-                                            className="block px-8 py-2 hover:bg-gray-200"
-                                            onClick={() => {
-                                                setIsMobileMenuOpen(false);
-                                                setIsDropdownOpen(false);
-                                            }}
-                                        >
-                                            Customization
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link
-                                            href="/services/support"
-                                            className="block px-8 py-2 hover:bg-gray-200"
-                                            onClick={() => {
-                                                setIsMobileMenuOpen(false);
-                                                setIsDropdownOpen(false);
-                                            }}
-                                        >
-                                            Support
-                                        </Link>
-                                    </li>
-                                </ul>
-                            )}
-                        </li>
-
-                        <li>
-                            <Link
-                                href="/pricing"
-                                className="block px-6 py-3 hover:bg-gray-100 border-b border-gray-200"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                            >
-                                Pricing
-                            </Link>
-                        </li>
-                        <li>
-                            <Link
-                                href="/contact-us"
-                                className="block px-6 py-3 hover:bg-gray-100"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                            >
-                                Contact
-                            </Link>
-                        </li>
+                                            <path d="M2.625 0L0 2.625L7 9.625L14 2.625L11.375 0L7 4.375L2.625 0Z" />
+                                        </svg>
+                                    </button>
+                                    {openDropdown === link.label && (
+                                        <ul className="ml-4 mt-2 space-y-2 text-sm">
+                                            {link.children.map((child) => (
+                                                <li key={child.label}>
+                                                    <Link
+                                                        href={child.href}
+                                                        className="block py-1 hover:text-primary"
+                                                        onClick={() => {
+                                                            setIsMobileMenuOpen(false);
+                                                            setOpenDropdown(null);
+                                                        }}
+                                                    >
+                                                        {child.label}
+                                                    </Link>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    )}
+                                </li>
+                            ) : (
+                                <li key={link.label}>
+                                    <Link
+                                        href={link.href}
+                                        className="block font-medium py-2 hover:text-primary"
+                                        onClick={() => setIsMobileMenuOpen(false)}
+                                    >
+                                        {link.label}
+                                    </Link>
+                                </li>
+                            )
+                        )}
                     </ul>
                 </div>
             )}
         </nav>
     );
 }
-
-export default Navbar;
