@@ -1,4 +1,4 @@
-export const typography = {
+export  const typography = {
   bannerHeading:
     "text-[1.6rem] md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-5xl font-black ",
   heading:
