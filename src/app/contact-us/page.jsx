@@ -1,8 +1,7 @@
 "use client";
 import { useState, useEffect, use } from "react";
 import Image from "next/image";
-import Link from "next/link";
-import { h1Text } from "@/components/styles";
+import Link from "next/link"; 
 
 
 export default function page() {
