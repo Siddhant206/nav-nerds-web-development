@@ -1,6 +1,6 @@
 "use client"
-import Link from 'next/link';
 import { typography } from '@/components/ui/fonts';
+import Link from 'next/link'; 
 
 
 
