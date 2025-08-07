@@ -1,10 +1,10 @@
 
 import React from 'react'
 import Image from "next/image";
-import { ServiceCard } from '@/components/ui/serviceCard';
-import { typography } from '@/components/ui/fonts';
-import  Link  from 'next/link';
-import FeatureCard from '@/components/ui/FeatureCard';
+import { ServiceCard } from '@/components/Ui/serviceCard';
+import { typography } from '@/components/Ui/fonts';
+import Link from 'next/link';
+import FeatureCard from '@/components/Ui/FeatureCard';
 
 
 const features = [
@@ -64,7 +64,7 @@ function Page() {
                 <div className='absolute inset-0 bg-black/30 ' />
                 <div className="md:pb-60 relative flex flex-col items-center justify-center w-fit">
                     <h1 className={`${typography.heading} text-white max-w-xl text-center`}>
-                        Needs Customization for Your Business 
+                        Needs Customization for Your Business
                     </h1>
                     <Link
                         href={"/contact-us"}
@@ -81,9 +81,9 @@ function Page() {
 
             {/* Content Section */}
             <section className="bg-[url(/HomePageBg.webp)]  bg-cover bg-no-repeat bg-top w-full  py-10  10">
- 
-                
-            <div className='max-w-7xl mx-auto space-y-5 px-2'>
+
+
+                <div className='max-w-7xl mx-auto space-y-5 px-2'>
                     <FeatureCard
                         title="Customization"
                         description="From adding simple fields and automating approval workflows to building entirely new modules, our customization services are designed to enhance your existing ERP without compromising performance or upgrade compatibility. Using both C/AL for older NAV versions and modern AL extensions in Business Central, we customize your solution for maximum flexibility and long-term maintainability. We also offer interface improvements to enhance user experience, making everyday tasks faster, clearer, and more intuitive."
@@ -113,7 +113,7 @@ function Page() {
                         imageLeft={true}
                     />
 
-            </div> 
+                </div>
             </section>
         </section>
     );

@@ -1,8 +1,8 @@
 
 import React from 'react'
 import Image from "next/image";
-import { ServiceCard } from '@/components/ui/serviceCard';
-import { typography } from '@/components/ui/fonts';
+import { ServiceCard } from '@/components/Ui/serviceCard';
+import { typography } from '@/components/Ui/fonts';
 import Link from 'next/link';
 
 const services = [
@@ -142,9 +142,9 @@ function Page() {
                             <div className={`flex flex-col items-start justify-center gap-4 w-fit bg-gray-300 p-4 rounded-full mb-4`}>
                                 {service.icon}
                             </div>
-                                <h3 className="text-md font-semibold text-gray-900 leading-tight">
-                                    {service.title}
-                                </h3>
+                            <h3 className="text-md font-semibold text-gray-900 leading-tight">
+                                {service.title}
+                            </h3>
                             <p className="text-sm text-gray-800">{service.description}</p>
                         </article>
                     ))}

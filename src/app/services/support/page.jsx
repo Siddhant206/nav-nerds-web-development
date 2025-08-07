@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { typography } from '@/components/ui/fonts';
+import { typography } from '@/components/Ui/fonts';
 import Link from 'next/link';
 
 
@@ -74,86 +74,86 @@ const tabContent = {
 
 
 const TabsSection = () => {
-  const [activeTab, setActiveTab] = useState("Technical");
+    const [activeTab, setActiveTab] = useState("Technical");
 
-  return (
-    <section id="services" className="relative  text-black overflow-hidden">
-                {/* Hero Section */}
-          <section className="relative bg-white bg-[url(/Services/Dedicated-Resources/dedicatedResourcesBG.jpg)]  bg-cover bg-no-repeat  bg-center md:bg-bottom   flex items-center justify-center lg:py-14 max-lg:px-4  flex-col w-full text-black  overflow-hidden h-[50vh] md:h-[100dvh] " >
-              <div className='absolute inset-0 bg-black/30 ' />
-              <div className="md:pb-60 relative flex flex-col items-center justify-center w-fit">
-                  <h1 className={`${typography.heading} text-white max-w-xl text-center`}>
-                      Support Services
-                      for your Business
-                  </h1>
-                  <Link
-                      href={"/contact-us"}
-                      className="w-fit flex items-center justify-center gap-4 px-6 py-3 md:px-10 md:py-2 rounded-3xl border border-gray-200  text-white bg-[#4ED0DB] hover:bg-black hover:text-white transition-colors duration-300 mt-4 md:mt-8"
-                  >
-                      Contact Us
-                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"  >
-                          <path d="M1 7C0.447715 7 0 7.44772 0 8C0 8.55228 0.447715 9 1 9V8V7ZM15.7071 8.70711C16.0976 8.31658 16.0976 7.68342 15.7071 7.29289L9.34315 0.928932C8.95262 0.538408 8.31946 0.538408 7.92893 0.928932C7.53841 1.31946 7.53841 1.95262 7.92893 2.34315L13.5858 8L7.92893 13.6569C7.53841 14.0474 7.53841 14.6805 7.92893 15.0711C8.31946 15.4616 8.95262 15.4616 9.34315 15.0711L15.7071 8.70711ZM1 8V9H15V8V7H1V8Z" fill="white" />
-                      </svg>
+    return (
+        <section id="services" className="relative  text-black overflow-hidden">
+            {/* Hero Section */}
+            <section className="relative bg-white bg-[url(/Services/Dedicated-Resources/dedicatedResourcesBG.jpg)]  bg-cover bg-no-repeat  bg-center md:bg-bottom   flex items-center justify-center lg:py-14 max-lg:px-4  flex-col w-full text-black  overflow-hidden h-[50vh] md:h-[100dvh] " >
+                <div className='absolute inset-0 bg-black/30 ' />
+                <div className="md:pb-60 relative flex flex-col items-center justify-center w-fit">
+                    <h1 className={`${typography.heading} text-white max-w-xl text-center`}>
+                        Support Services
+                        for your Business
+                    </h1>
+                    <Link
+                        href={"/contact-us"}
+                        className="w-fit flex items-center justify-center gap-4 px-6 py-3 md:px-10 md:py-2 rounded-3xl border border-gray-200  text-white bg-[#4ED0DB] hover:bg-black hover:text-white transition-colors duration-300 mt-4 md:mt-8"
+                    >
+                        Contact Us
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"  >
+                            <path d="M1 7C0.447715 7 0 7.44772 0 8C0 8.55228 0.447715 9 1 9V8V7ZM15.7071 8.70711C16.0976 8.31658 16.0976 7.68342 15.7071 7.29289L9.34315 0.928932C8.95262 0.538408 8.31946 0.538408 7.92893 0.928932C7.53841 1.31946 7.53841 1.95262 7.92893 2.34315L13.5858 8L7.92893 13.6569C7.53841 14.0474 7.53841 14.6805 7.92893 15.0711C8.31946 15.4616 8.95262 15.4616 9.34315 15.0711L15.7071 8.70711ZM1 8V9H15V8V7H1V8Z" fill="white" />
+                        </svg>
 
-                  </Link>
-              </div>
-          </section>
-    
-                {/* Content Section */}
-                <section className="bg-[url(/HomePageBg.webp)]  bg-cover bg-no-repeat bg-top w-full  py-10  10"> 
-
-              <div className="max-w-6xl mx-auto md:p-6 bg-white rounded-xl shadow-md border border-gray-300 relative z-10">
-                  {/* Tabs */}
-                  <div className="max-sm:flex-wrap p-1 md:p-2 w-fit mx-auto bg-gray-100 sm:rounded-2xl flex items-center justify-center gap-1 md:gap-6 mb-6">
-                      {tabs.map((tab) => (
-                          <button
-                              key={tab}
-                              onClick={() => setActiveTab(tab)}
-                              className={`px-3 py-2 rounded-full font-semibold text-sm transition-all duration-300 ${activeTab === tab
-                                  ? "bg-[#4ED0DB] text-white shadow-md"
-                                      : "bg-gray-200 text-black hover:bg-gray-300"
-                                  }`}
-                          >
-                              {tab}
-                          </button>
-                      ))}
-                  </div>
-
-                  {/* Content with Animation */}
-                  <AnimatePresence mode="wait">
-                      <motion.div
-                          key={activeTab}
-                          initial={{ opacity: 0, y: 20 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          exit={{ opacity: 0, y: -20 }}
-                          transition={{ duration: 0.3 }}
-                          className="p-2 md:p-6 "
-                      >
-                          <h2 className="text-xl md:text-2xl font-bold text-center mb-4">
-                              {tabContent[activeTab].heading}
-                          </h2>
-                          <p className="text-gray-700 text-sm md:text-base mb-6 text-center max-w-3xl mx-auto">
-                              {tabContent[activeTab].description}
-                          </p>
-
-                          {/* Grid */}
-                          <div className="flex flex-wrap items-center justify-center gap-4">
-                              {tabContent[activeTab].grid.map((item, index) => (
-                                  <div
-                                      key={index}
-                                      className="bg-gray-200 text-center text-sm max-sm:w-80 font-medium p-4 md:p-8 rounded-md shadow-sm"
-                                  >
-                                      {item}
-                                  </div>
-                              ))}
-                          </div>
-                      </motion.div>
-                  </AnimatePresence>
-              </div>
-                </section>
+                    </Link>
+                </div>
             </section>
-  
-  );
+
+            {/* Content Section */}
+            <section className="bg-[url(/HomePageBg.webp)]  bg-cover bg-no-repeat bg-top w-full  py-10  10">
+
+                <div className="max-w-6xl mx-auto md:p-6 bg-white rounded-xl shadow-md border border-gray-300 relative z-10">
+                    {/* Tabs */}
+                    <div className="max-sm:flex-wrap p-1 md:p-2 w-fit mx-auto bg-gray-100 sm:rounded-2xl flex items-center justify-center gap-1 md:gap-6 mb-6">
+                        {tabs.map((tab) => (
+                            <button
+                                key={tab}
+                                onClick={() => setActiveTab(tab)}
+                                className={`px-3 py-2 rounded-full font-semibold text-sm transition-all duration-300 ${activeTab === tab
+                                    ? "bg-[#4ED0DB] text-white shadow-md"
+                                    : "bg-gray-200 text-black hover:bg-gray-300"
+                                    }`}
+                            >
+                                {tab}
+                            </button>
+                        ))}
+                    </div>
+
+                    {/* Content with Animation */}
+                    <AnimatePresence mode="wait">
+                        <motion.div
+                            key={activeTab}
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -20 }}
+                            transition={{ duration: 0.3 }}
+                            className="p-2 md:p-6 "
+                        >
+                            <h2 className="text-xl md:text-2xl font-bold text-center mb-4">
+                                {tabContent[activeTab].heading}
+                            </h2>
+                            <p className="text-gray-700 text-sm md:text-base mb-6 text-center max-w-3xl mx-auto">
+                                {tabContent[activeTab].description}
+                            </p>
+
+                            {/* Grid */}
+                            <div className="flex flex-wrap items-center justify-center gap-4">
+                                {tabContent[activeTab].grid.map((item, index) => (
+                                    <div
+                                        key={index}
+                                        className="bg-gray-200 text-center text-sm max-sm:w-80 font-medium p-4 md:p-8 rounded-md shadow-sm"
+                                    >
+                                        {item}
+                                    </div>
+                                ))}
+                            </div>
+                        </motion.div>
+                    </AnimatePresence>
+                </div>
+            </section>
+        </section>
+
+    );
 };
 
 export default TabsSection;

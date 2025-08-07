@@ -1,8 +1,8 @@
 
 import React from 'react'
 import Image from "next/image";
-import { ServiceCard } from '@/components/ui/serviceCard';
-import { typography } from '@/components/ui/fonts';
+import { ServiceCard } from '@/components/Ui/serviceCard';
+import { typography } from '@/components/Ui/fonts';
 import Link from 'next/link';
 
 
@@ -32,14 +32,14 @@ function Page() {
 
             {/* Content Section */}
             <section className="bg-[url(/HomePageBg.webp)]  bg-cover bg-no-repeat bg-top w-full  py-10  10">
-            <div className='max-w-2xl mx-auto mb-10'>
+                <div className='max-w-2xl mx-auto mb-10'>
                     <h2 className={`${typography.subheading} text-center`}>
                         Powerful Integrations for Every Need</h2>
                     <p className={`${typography.paragraph} text-center`}>
                         Discover how these integrations can streamline your operations, boost productivity,
                         and drive growth across your organization.
                     </p>
-            </div>
+                </div>
                 <div className='max-w-7xl mx-auto space-y-4'>
                     <div className='relative flex max-sm:flex-col items-center  justify-between gap-20 md:gap-6 bg-[#1FBAC4] p-6 overflow-clip' >
                         <div className='w-full md:w-[40%] flex flex-col items-center justify-center space-y-4'>
@@ -191,7 +191,7 @@ function Page() {
                                 />
                             </div>
                         </div>
-                         
+
                     </div >
                 </div>
             </section>

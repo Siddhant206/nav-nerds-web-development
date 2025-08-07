@@ -1,8 +1,8 @@
 
 import React from 'react'
 import Image from "next/image";
-import { ServiceCard } from '@/components/ui/serviceCard';
-import { typography } from '@/components/ui/fonts';
+import { ServiceCard } from '@/components/Ui/serviceCard';
+import { typography } from '@/components/Ui/fonts';
 
 
 const features = [
@@ -102,7 +102,7 @@ function Page() {
                     bgColor="bg-[#36E3EE]"
                     imagePosition="right"
                 />
-              
+
                 <ServiceCard
                     title="From Legacy to Modern"
                     description="Train your team to migrate like pros. Moving from NAV or other ERP systems? We guide your users through Business Central’s modern UI, new features, and best practices so they’re not just using it, they’re owning it."
@@ -121,7 +121,7 @@ function Page() {
                     bgColor="bg-[#36E3EE]"
                     imagePosition="right"
                 />
-             
+
             </section>
         </section>
     );

@@ -6,8 +6,8 @@ import {
   IconFileBroken,
   IconSignature,
   IconTableColumn,
-} from "@tabler/icons-react"; 
-import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
+} from "@tabler/icons-react";
+import { BentoGrid, BentoGridItem } from "@/components/Ui/bento-grid";
 import { cn } from "@/components/lib/utils";
 import Image from "next/image";
 import { motion } from 'framer-motion';

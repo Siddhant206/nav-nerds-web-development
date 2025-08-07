@@ -1,8 +1,8 @@
 
 import React from 'react'
 import Image from "next/image";
-import { ServiceCard } from '@/components/ui/serviceCard';
-import { typography } from '@/components/ui/fonts';
+import { ServiceCard } from '@/components/Ui/serviceCard';
+import { typography } from '@/components/Ui/fonts';
 
 
 const features = [

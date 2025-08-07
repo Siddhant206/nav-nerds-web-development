@@ -1,4 +1,4 @@
-import { h1Text } from "@/components/styles";
+
 import Image from "next/image";
 import Link from 'next/link';
 
@@ -17,7 +17,7 @@ export default function Banner() {
                 ></video>
             </div>
             <div className="relative flex flex-col items-center justify-center space-y-2 px-4 text-center  ">
-                <h1 className={`${h1Text} text-white`}>Welcome To NavNerds</h1>
+                <h1 className="text-4xl lg:text-6xl font-semibold text-white">Welcome To NavNerds</h1>
                 <p className="text-lg md:text-xl text-white">Your Complete Business  Solution Partner.</p>
                 <Link
                     href={"/contact-us"}

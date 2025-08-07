@@ -1,14 +1,14 @@
 
 import React from 'react'
-import Image from "next/image"; 
-import { typography } from '@/components/ui/fonts';
+import Image from "next/image";
+import { typography } from '@/components/Ui/fonts';
 import Link from 'next/link';
- 
+
 
 function Page() {
     return (
         <section id="services" className="relative  text-black overflow-hidden">
-            {/* Hero Section */} 
+            {/* Hero Section */}
             <section className="relative bg-white bg-[url(/Services/Dedicated-Resources/dedicatedResourcesBG.jpg)]  bg-cover bg-no-repeat  bg-center md:bg-bottom   flex items-center justify-center lg:py-14 max-lg:px-4  flex-col w-full text-black  overflow-hidden h-[50vh] md:h-[100dvh] " >
                 <div className='absolute inset-0 bg-black/30 ' />
                 <div className="md:pb-60 relative flex flex-col items-center justify-center w-fit">
@@ -31,7 +31,7 @@ function Page() {
             {/* Content Section */}
             <section className="bg-[url(/HomePageBg.webp)]  bg-cover bg-no-repeat bg-top w-full  py-10  10">
                 <div className='max-w-7xl mx-auto space-y-5 px-2'>
-                    {/* Top Grid */} 
+                    {/* Top Grid */}
                     <div className="flex flex-col lg:flex-row gap-6 items-stretch justify-between">
                         {/* Left Cards Stack */}
                         <div className="w-full lg:w-1/2 flex flex-col gap-6">
@@ -87,7 +87,7 @@ function Page() {
                                     fill
                                     className="object-cover"
                                 />
-                            </div>  
+                            </div>
                             <div className="absolute bottom-0 w-full p-4 md:p-6  bg-gradient-to-t from-black to-100%">
                                 <h2 className="text-xl md:text-3xl font-bold text-white mb-3">
                                     Focused Expertise, Just for You
@@ -98,7 +98,7 @@ function Page() {
                             </div>
                         </article>
                     </div>
- 
+
                     {/* Bottom Block */}
                     <div className="relative rounded-xl overflow-hidden text-center max-w-4xl mx-auto shadow-md">
                         {/* Background Image */}
@@ -108,7 +108,7 @@ function Page() {
                                 alt="Team Collaboration"
                                 fill
                                 className="object-cover opacity-80"
-                             />
+                            />
                         </div>
 
                         {/* Content Overlay */}
@@ -121,7 +121,7 @@ function Page() {
                             </p>
                         </div>
                     </div>
-  
+
 
 
                 </div>
