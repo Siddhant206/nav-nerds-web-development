@@ -30,14 +30,14 @@ function Page() {
             </section>
             {/* Content Section */}
             <section className="bg-[url(/HomePageBg.webp)]  bg-cover bg-no-repeat bg-top w-full  py-10  10">
-                <div className='max-w-7xl mx-auto space-y-5'>
+                <div className='max-w-7xl mx-auto space-y-5 px-2'>
                     {/* Top Grid */} 
                     <div className="flex flex-col lg:flex-row gap-6 items-stretch justify-between">
                         {/* Left Cards Stack */}
                         <div className="w-full lg:w-1/2 flex flex-col gap-6">
                             {/* Card 1 */}
-                            <article className="flex-1 bg-white rounded-xl shadow-md flex items-center gap-4 overflow-clip">
-                                <div className="w-1/2">
+                            <article className="flex-1 bg-white rounded-xl shadow-md flex max-sm:flex-col items-center gap-4 overflow-clip">
+                                <div className="w-full md:w-1/2">
                                     <Image
                                         src="/Services/Dedicated-Resources/Seamless-Communication.svg"
                                         alt="Seamless Communication"
@@ -46,7 +46,7 @@ function Page() {
                                         className="w-full h-full object-contain"
                                     />
                                 </div>
-                                <div className="w-2/3 p-6">
+                                <div className="w-full md:w-2/3 p-4 md:p-6">
                                     <h2 className="text-lg md:text-xl font-semibold mb-1">
                                         Seamless Communication & Faster Turnaround
                                     </h2>
@@ -57,17 +57,17 @@ function Page() {
                             </article>
 
                             {/* Card 2 */}
-                            <article className="flex-1 bg-white rounded-xl shadow-md flex items-center gap-4 overflow-clip">
-                                <div className="w-1/3">
+                            <article className="flex-1 bg-white rounded-xl shadow-md flex max-sm:flex-col items-center gap-4 overflow-clip">
+                                <div className="w-full md:w-1/3">
                                     <Image
                                         src="/Services/Dedicated-Resources/Accountability.jpg"
                                         alt="Greater Accountability"
                                         width={100}
                                         height={100}
-                                        className="w-full h-full object-cover rounded-md"
+                                        className="w-full h-full object-contain md:object-cover rounded-md"
                                     />
                                 </div>
-                                <div className="w-2/3 p-6">
+                                <div className="w-full md:w-2/3 p-4 md:p-6">
                                     <h2 className="text-lg md:text-xl font-semibold mb-1">
                                         Greater Accountability & Flexibility
                                     </h2>
@@ -88,11 +88,11 @@ function Page() {
                                     className="object-cover"
                                 />
                             </div>  
-                            <div className="absolute bottom-0 w-full p-6  bg-gradient-to-t from-black to-100%">
+                            <div className="absolute bottom-0 w-full p-4 md:p-6  bg-gradient-to-t from-black to-100%">
                                 <h2 className="text-xl md:text-3xl font-bold text-white mb-3">
                                     Focused Expertise, Just for You
                                 </h2>
-                                <p className="text-white font-semibold">
+                                <p className="text-white text-sm md:text-base md:font-semibold">
                                     We offer dedicated resources to ensure your Business Central or Navision project receives undivided attention and continuity from start to finish. Our experts work exclusively on your implementation, customization, support, or upgrade becoming fully immersed in your business processes and goals. This allows for deeper understanding, stronger collaboration, and better long-term results.
                                 </p>
                             </div>
@@ -117,7 +117,7 @@ function Page() {
                                 A True Extension of Your Team
                             </h2>
                             <p className="text-sm md:text-base text-white max-w-2xl mx-auto">
-                                We don’t just assign you a technician—we assign a partner who integrates with your team, understands your industry, and proactively identifies ways to optimize your system. With direct access to development, testing, and advisory expertise, you can count on a seamless experience and stronger results, every step of the way.
+                                We don’t just assign you a technician we assign a partner who integrates with your team, understands your industry, and proactively identifies ways to optimize your system. With direct access to development, testing, and advisory expertise, you can count on a seamless experience and stronger results, every step of the way.
                             </p>
                         </div>
                     </div>

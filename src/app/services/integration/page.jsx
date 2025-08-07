@@ -41,8 +41,8 @@ function Page() {
                     </p>
             </div>
                 <div className='max-w-7xl mx-auto space-y-4'>
-                    <div className='relative flex items-center  justify-between gap-6 bg-[#1FBAC4] p-6 overflow-clip' >
-                        <div className='w-[40%] flex flex-col items-center justify-center space-y-4'>
+                    <div className='relative flex max-sm:flex-col items-center  justify-between gap-20 md:gap-6 bg-[#1FBAC4] p-6 overflow-clip' >
+                        <div className='w-full md:w-[40%] flex flex-col items-center justify-center space-y-4'>
                             <div className=' text-white  space-y-2 '>
                                 <h2 className="text-xl md:text-2xl font-bold text-center ">
                                     Document Sign Integration
@@ -59,9 +59,9 @@ function Page() {
                                 />
                             </div>
                         </div>
-                        <div className="absolute -rotate-[70deg] bg-white translate-x-[46%] h-6 w-1/2" />
-                        <div className="absolute -rotate-[70deg] bg-[#1BCAD6] translate-x-[50%] h-6 w-1/2" />
-                        <div className='w-[40%]  flex flex-col items-center justify-center space-y-4'>
+                        <div className="absolute md:-rotate-[70deg] bg-white max-sm:top-[27.1rem] md:translate-x-[46%] h-4  md:h-6 w-full md:w-1/2" />
+                        <div className="absolute md:-rotate-[70deg] bg-[#1BCAD6] max-sm:bottom-[24.5rem] md:translate-x-[50%] h-4 md:h-6 w-full md:w-1/2" />
+                        <div className='w-full md:w-[40%]  flex flex-col items-center justify-center space-y-4'>
                             <div className='max-w- text-white  space-y-2 '>
                                 <h2 className="text-xl md:text-2xl font-bold text-center ">
                                     Microsoft 365 Integration
@@ -83,8 +83,8 @@ function Page() {
                         </div>
                     </div >
 
-                    <div className='relative flex items-center  justify-between gap-6 bg-[#1FBAC4] p-6 overflow-clip' >
-                        <div className='w-[40%] flex flex-col items-center justify-center space-y-4'>
+                    <div className='relative flex max-sm:flex-col  items-center  justify-between gap-20 md:gap-6 bg-[#1FBAC4] p-6 overflow-clip' >
+                        <div className='w-full md:w-[40%] flex flex-col items-center justify-center space-y-4'>
                             <div className=' text-white  space-y-2 '>
                                 <h2 className="text-xl md:text-2xl font-bold text-center ">
                                     WooCommerce Integration
@@ -103,9 +103,9 @@ function Page() {
                                 />
                             </div>
                         </div>
-                        <div className="absolute rotate-[70deg] bg-white translate-x-[46%] h-6 w-1/2" />
-                        <div className="absolute rotate-[70deg] bg-[#1BCAD6] translate-x-[50%] h-6 w-1/2" />
-                        <div className='w-[40%]  flex flex-col items-center justify-center space-y-4'>
+                        <div className="absolute md:rotate-[70deg] bg-white max-sm:top-[23.2rem] md:translate-x-[46%] h-4  md:h-6 w-full md:w-1/2" />
+                        <div className="absolute md:rotate-[70deg] bg-[#1BCAD6] max-sm:bottom-[24.5rem] md:translate-x-[50%] h-4 md:h-6 w-full md:w-1/2" />
+                        <div className='w-full md:w-[40%]  flex flex-col items-center justify-center space-y-4'>
                             <div className='max-w- text-white  space-y-2 '>
                                 <h2 className="text-xl md:text-2xl font-bold text-center ">
                                     WhatsApp  Integration
@@ -127,8 +127,8 @@ function Page() {
                         </div>
                     </div >
 
-                    <div className='relative flex items-center  justify-between gap-6 bg-[#1FBAC4] p-6 overflow-clip' >
-                        <div className='w-[40%] flex flex-col items-center justify-center space-y-4'>
+                    <div className='relative flex max-sm:flex-col items-center  justify-between gap-20 md:gap-6 bg-[#1FBAC4] p-6 overflow-clip' >
+                        <div className='w-full md:w-[40%] flex flex-col items-center justify-center space-y-4'>
                             <div className=' text-white  space-y-2 '>
                                 <h2 className="text-xl md:text-2xl font-bold text-center ">
                                     PowerApps Integration
@@ -148,9 +148,9 @@ function Page() {
                                 />
                             </div>
                         </div>
-                        <div className="absolute -rotate-[70deg] bg-white translate-x-[46%] h-6 w-1/2" />
-                        <div className="absolute -rotate-[70deg] bg-[#1BCAD6] translate-x-[50%] h-6 w-1/2" />
-                        <div className='w-[40%]  flex flex-col items-center justify-center space-y-4'>
+                        <div className="absolute md:-rotate-[70deg] bg-white max-sm:top-[27.1rem] md:translate-x-[46%] h-4  md:h-6 w-full md:w-1/2" />
+                        <div className="absolute md:-rotate-[70deg] bg-[#1BCAD6] max-sm:bottom-[24.5rem] md:translate-x-[50%] h-4 md:h-6 w-full md:w-1/2" />
+                        <div className='w-full md:w-[40%]  flex flex-col items-center justify-center space-y-4'>
                             <div className='max-w- text-white  space-y-2 '>
                                 <h2 className="text-xl md:text-2xl font-bold text-center ">
                                     Shopify Integration

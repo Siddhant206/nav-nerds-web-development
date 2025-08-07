@@ -69,36 +69,27 @@ export default function Packages() {
                 height={300}
                 className='object-cover rounded-lg'
               />
-              <div className="absolute top-44 left-0 right-0 border h-40 bg-white rounded-3xl p-4 overflow-yscroll scrollbar-hide">
+              <div className="absolute top-40 md:top-44 left-0 right-0 border h-36 bg-white rounded-3xl p-4 overflow-yscroll scrollbar-hide">
 
-                <h4 className="font-bold text-lg  text-gray-900">
+                <h4 className="font-bold  text-lg  text-gray-900">
                   {plan.title}
                 </h4>
-                <p className="font-bold text-lg text-center mb-10 text-gray-900">
+                <p className="font-bold md:text-lg text-center mb-5 text-gray-900">
                   -"{plan.subtitle}"</p>
-               
-                {/* Badge */}
-                <div className="absolute top-4 right-4 text-teal-400">
-                  <span
-                    className="px-3 py-1 rounded-full text-xs font-medium"
-                  >
-                    {plan.planInfo || ""}
-                  </span>
-                </div>
-
-                <div className="flex justify-between items-center ">
-                  <div>
+                
+                <div className="flex justify-center items-center ">
+                  {/* <div>
                     {plan.price && (
                       <p className="font-bold text-black text-base">
                         ${plan.price.toLocaleString()}
                       </p>
                     )}
-                  </div>
+                  </div> */}
                   <Link
                     href={"/pricing"}
-                    className='px-2 py-1 text-sm bg-gray-100 hover:bg-black text-black hover:text-white transition-colors duration-500 transform-fill rounded-full border border-gray-200'
+                    className='px-3 py-2 text-sm bg-gray-100 hover:bg-black text-black hover:text-white transition-colors duration-500 transform-fill rounded-full border border-gray-200'
                   >
-                    View Details
+                    Schedule a free demo now
                   </Link>
                 </div>
               </div>

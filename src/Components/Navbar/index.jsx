@@ -11,11 +11,12 @@ const navLinks = [
     {
         label: "Services",
         children: [
-            { label: "Business Central", href: "/services/business-central" },
-            { label: "Implementation", href: "/services/implementation" },
+            { label: "Support", href: "/services/support" },
+            { label: "Migration", href: "/services/migration" },
             { label: "Integration", href: "/services/integration" },
             { label: "Customization", href: "/services/customization" },
-            { label: "Migration", href: "/services/migration" },
+            { label: "Implementation", href: "/services/implementation" },
+            { label: "Business Central", href: "/services/business-central" },
             { label: "Dedicated Resources", href: "/services/dedicated-resources" },
         ],
     },

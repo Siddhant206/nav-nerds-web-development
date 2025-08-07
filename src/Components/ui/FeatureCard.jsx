@@ -35,7 +35,7 @@ const FeatureCard = ({ title, description, imageUrl, imageAlt = "", imageLeft = 
             animate={controls}
             variants={variants}
             className={`flex flex-col md:flex-row ${imageLeft ? "md:flex-row-reverse" : "md:flex-row"
-      } items-center justify-between gap-6 border border-gray-200 rounded-2xl bg-white h-[30rem] shadow-md overflow-hidden`}
+      } items-center justify-between gap-6 border border-gray-200 rounded-2xl bg-white max-sm:flex-col-reverse md:h-[30rem] shadow-md overflow-hidden`}
         >
             {/* Left Content */}
             <div className="md:w-[60%] w-full p-8">

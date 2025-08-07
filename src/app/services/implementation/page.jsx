@@ -9,7 +9,7 @@ const features = [
     {
         id: 1,
         title: "Unify What's Broken",
-        description: "No more scattered spreadsheets, manual processes, or duplicated work. One smart system, one source of truth — finally everything just connects."
+        description: "No more scattered spreadsheets, manual processes, or duplicated work. One smart system, one source of truth finally everything just connects."
     },
     {
         id: 2,
@@ -24,7 +24,7 @@ const features = [
     {
         id: 4,
         title: "Feel the Shift",
-        description: "It's not just efficiency — it's a mindset shift when operations align, data flows, and decisions get sharper. It's not just better. It's business reborn."
+        description: "It's not just efficiency it's a mindset shift when operations align, data flows, and decisions get sharper. It's not just better. It's business reborn."
     }
 ];
 const TrendIcon = () => (
@@ -72,11 +72,11 @@ function Page() {
 
                 <h1 className={`${typography.subheading} text-black text-center mb-2`}>Scaling Efficently? </h1>
                 <p className={`max-w-4xl ${typography.paragraph} max-sm:px-2 sm:px-4 lg:px-0 text-center font-semibold mx-auto mb-14`}>
-                    When growth kicks in, so do operational challenges. Our Business Central implementation simplifies what’s becoming too complex — automating workflows, enhancing customer visibility, and giving your teams the tools to move faster. We keep your systems lean while your business goes big.
+                    When growth kicks in, so do operational challenges. Our Business Central implementation simplifies what’s becoming too complex automating workflows, enhancing customer visibility, and giving your teams the tools to move faster. We keep your systems lean while your business goes big.
                 </p>
                 <ServiceCard
                     title="Starting fresh? "
-                    description="You deserve a solution built for today’s speed and tomorrow’s scale. At Navnerds, we help first-time ERP adopters launch with confidence. With Business Central, you’ll gain a future-ready system that adapts as you grow — without overwhelming complexity. Start smart. Start strong.
+                    description="You deserve a solution built for today’s speed and tomorrow’s scale. At Navnerds, we help first-time ERP adopters launch with confidence. With Business Central, you’ll gain a future-ready system that adapts as you grow without overwhelming complexity. Start smart. Start strong.
 "
                     imageSrc="/Implementation/StartingFresh.png"
                     imageAlt="Starting fresh illustration"
@@ -96,7 +96,7 @@ function Page() {
 
                 <ServiceCard
                     title="Upgrade To Business Central"
-                    description="You’ve outgrown your old system — and that’s a good thing. Whether it’s poor integrations, slow performance, or scattered data, we help you transition smoothly to Business Central. Our migration process is clean, strategic, and tailored to your needs — no disruption, just evolution."
+                    description="You’ve outgrown your old system and that’s a good thing. Whether it’s poor integrations, slow performance, or scattered data, we help you transition smoothly to Business Central. Our migration process is clean, strategic, and tailored to your needs no disruption, just evolution."
                     imageSrc="/Implementation/upgradingBusinessCentral.png"
                     imageAlt="Social Media Marketing illustration"
                     bgColor="bg-[#36E3EE]"

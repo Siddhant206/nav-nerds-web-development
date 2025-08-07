@@ -28,8 +28,7 @@ function Footer() {
     "Dedicated Resources", 
     "Business Central", 
     "Support",
-     "Migration ",
-      "Training",  ];
+     "Migration "];
   const industry = ["Construction", "E-Commerce", "Manufacturing", "Finance", "Education","Travel",];
 
   const socialLinks = [
@@ -76,7 +75,7 @@ function Footer() {
             <ul className="space-y-2">
               {services.map((service) => (
                 <li key={service}>
-                  <AnimatedLink href={`/services/${encodeURIComponent(service.toLowerCase().replace(/\s+/g, '-'))}`}>
+                  <AnimatedLink href={`/services/${encodeURIComponent(service.toLowerCase().replace(/\s+/g, ''))}`}>
                     {service}
                   </AnimatedLink>
                 </li>

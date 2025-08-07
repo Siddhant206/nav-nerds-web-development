@@ -83,7 +83,7 @@ function Page() {
             <section className="bg-[url(/HomePageBg.webp)]  bg-cover bg-no-repeat bg-top w-full  py-10  10">
  
                 
-            <div className='max-w-7xl mx-auto space-y-5'>
+            <div className='max-w-7xl mx-auto space-y-5 px-2'>
                     <FeatureCard
                         title="Customization"
                         description="From adding simple fields and automating approval workflows to building entirely new modules, our customization services are designed to enhance your existing ERP without compromising performance or upgrade compatibility. Using both C/AL for older NAV versions and modern AL extensions in Business Central, we customize your solution for maximum flexibility and long-term maintainability. We also offer interface improvements to enhance user experience, making everyday tasks faster, clearer, and more intuitive."
