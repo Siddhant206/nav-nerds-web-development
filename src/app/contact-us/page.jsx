@@ -143,9 +143,7 @@ export default function page() {
               </div>
               <div className="text-center ">
                 <h3 className="font-semibold text-lg"> Address</h3>
-                <p className="text-sm max-w-64 mt-1">43A, IT Park,
-                  Sahastradhara Road
-                  Dehradun, Uttarakhand 248009</p>
+              <p className="text-sm max-w-64 mt-1"> 273/1 Maltulpuri, Haridwar Uttarakhand 247667</p>
               </div>
             </address>
             <div className="flex flex-col items-center justify-center gap-3 p-2 md:h-20 rounded-xl not-italic" >
@@ -167,7 +165,7 @@ export default function page() {
               </div>
               <div className="text-center">
                 <h3 className="font-semibold text-lg"> Contacts info</h3>
-                <Link href={"tel:+918477800887"} className="text-sm">+918477800887</Link>
+              <Link href={"tel:+919068476495"} className="text-sm">+91 9068476495</Link>
               </div>
             </div>
 
