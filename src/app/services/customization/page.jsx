@@ -1,10 +1,10 @@
 
 import React from 'react'
 import Image from "next/image";
-import { ServiceCard } from '@/components/Ui/serviceCard';
-import { typography } from '@/components/Ui/Fonts';
+import { ServiceCard } from '@/components/ui/serviceCard';
+import { typography } from '@/components/ui/fonts';
 import Link from 'next/link';
-import FeatureCard from '@/components/Ui/FeatureCard';
+import FeatureCard from '@/components/ui/FeatureCard';
 
 
 const features = [
