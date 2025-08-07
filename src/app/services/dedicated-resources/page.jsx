@@ -1,7 +1,7 @@
 
 import React from 'react'
 import Image from "next/image";
-import { typography } from '@/components/Ui/fonts';
+import { typography } from '@/components/Ui/Fonts';
 import Link from 'next/link';
 
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { typography } from "@/components/Ui/fonts";
+import { typography } from "@/components/Ui/Fonts";
 import { useState } from "react";
 import { BsBuilding, BsCart, BsGear, BsBank, BsBook, BsAirplane } from "react-icons/bs";
 
