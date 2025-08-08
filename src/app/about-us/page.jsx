@@ -1,6 +1,6 @@
-"use client"
-import { typography } from '@/Components/ui/Fonts';
+"use client" 
 import Link from 'next/link';
+import { typography } from '@/components/ui/fonts';
 
 function FeatureCard({ title, description, icon }) {
     return (

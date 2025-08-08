@@ -1,8 +1,9 @@
 "use client";
 
-import { typography } from "@/Components/ui/Fonts";
+
 import { useState } from "react";
 import { BsBuilding, BsCart, BsGear, BsBank, BsBook, BsAirplane } from "react-icons/bs";
+import { typography } from '@/components/ui/fonts';
 
 const industries = [
     { title: "Construction", icon: <BsBuilding />, key: "construction" },

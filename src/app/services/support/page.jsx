@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { typography } from '@/Components/ui/Fonts';
+import { typography } from '@/components/ui/fonts';
 import Link from 'next/link';
 
 
