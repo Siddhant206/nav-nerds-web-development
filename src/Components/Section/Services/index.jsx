@@ -41,7 +41,9 @@ export default function ServicesSection() {
             description={item.description}
             header={item.header}
             className={cn("[&>p:text-lg]", item.className)}
-            icon={item.icon} />
+            icon={item.icon}
+            link={item.link}
+          />
         ))}
       </BentoGrid>
     </section>
@@ -185,11 +187,11 @@ const SkeletonFour = () => {
       whileHover="hover"
       className="relative overflow-clip rounded-lg flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-row ">
       <Image
-        src={"/Services/Migration.png"}
+        src={"/Services/Migration-3.svg"}
         alt={"BusinessCentral of Microsoft Dynamics 365"}
         width={200}
         height={200}
-        className="object-cover  size-full"
+        className="object-fill  size-full"
       />
     </motion.div>
   );
@@ -369,6 +371,7 @@ const items = [
     header: <SkeletonOne />,
     className: "md:col-span-1",
     icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
+    link: "/implementation"
   },
   {
     title: "Integration",
@@ -380,6 +383,7 @@ const items = [
     header: <SkeletonTwo />,
     className: "md:col-span-1",
     icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
+    link: "/integration"
   },
   {
     title: "Support",
@@ -391,6 +395,7 @@ const items = [
     header: <SkeletonThree />,
     className: "md:col-span-1",
     icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
+    link: "/support"
   },
   {
     title: "Migrating from Another ERP or CRM",
@@ -402,6 +407,7 @@ const items = [
     header: <SkeletonFour />,
     className: "md:col-span-2",
     icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
+    link: "/implementation"
   },
 
   {
@@ -414,6 +420,7 @@ const items = [
     header: <SkeletonFive />,
     className: "md:col-span-1",
     icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
+    link: "/training"
   },
   {
     title: "Customization",
@@ -425,6 +432,7 @@ const items = [
     header: <SkeletonSix />,
     className: "md:col-span-1",
     icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
+    link: "/customization"
   },
   {
     title: "Dedicated Resources",
@@ -436,6 +444,7 @@ const items = [
     header: <SkeletonSeven />,
     className: "md:col-span-1",
     icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
+    link: "/dedicated-resources"
   },
   {
     title: " Business Central",
@@ -447,5 +456,6 @@ const items = [
     header: <SkeletonEight />,
     className: "md:col-span-1",
     icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
+    link: "/training"
   },
 ];

@@ -25,7 +25,7 @@ function Footer() {
     "Integration",
      "Customization", 
     "Dedicated Resources", 
-    "Business Central", 
+    "Training",
     "Support",
      "Migration "];
   const industry = ["Construction", "E-Commerce", "Manufacturing", "Finance", "Education","Travel",];

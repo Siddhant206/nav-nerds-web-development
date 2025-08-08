@@ -51,7 +51,7 @@ export default function Packages() {
 
 
 {/* Packages Card */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4  gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4  mx-auto gap-6">
           {plans.map((plan, index) => (
             <div
               key={index}

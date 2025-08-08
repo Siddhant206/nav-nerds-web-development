@@ -20,7 +20,7 @@ export default function PricingPage() {
         },
         {
             title: "Growth Plan",
-            price: "$60/hr",
+            // price: "$60/hr",
             desc: "Ideal for growing businesses. Full implementation + 30-day support.",
             features: [
                 "Full Financial & Inventory Setup",
@@ -33,7 +33,7 @@ export default function PricingPage() {
         },
         {
             title: "Enterprise Plan",
-            price: "$90/hr",
+            // price: "$90/hr",
             desc: "Built for scale. Advanced modules, analytics & hyperscare.",
             features: [
                 "Multi-Company, Currency, Language",
@@ -46,7 +46,7 @@ export default function PricingPage() {
         },
         {
             title: "HRMS Plan",
-            price: "$0.99/Employee",
+            // price: "$0.99/Employee",
             desc: "Smart HRMS with BC integration. Payroll, attendance & analytics.",
             features: [
                 "Biometric & Attendance Management",

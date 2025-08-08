@@ -61,11 +61,8 @@ export default function page() {
       fullName: formData.name,
       email: formData.email,
       mobile: formData.mobile,
-      iam: formData.iam,
-      interest: formData.interest,
-      callback: formData.callback.join(', '),
-      query: formData.query,
-      newsletter: formData.newsletter ? 'Yes' : 'No',
+      iam: formData.iam, 
+      query: formData.query, 
       submittedAt: new Date().toISOString(),
     };
 
@@ -87,11 +84,8 @@ export default function page() {
           name: "",
           mobile: "",
           email: "",
-          iam: "",
-          interest: "",
-          callback: [],
-          query: "",
-          newsletter: false,
+          iam: "", 
+          query: "", 
         });
       } else {
         alert("Error: " + result.message);
@@ -233,78 +227,10 @@ export default function page() {
                 />
               </div>
 
-            <div  >
-              <label htmlFor="interest" className="block text-md font-medium mb-1 w-96">
-                I am interested in
-              </label>
-              <select
-                id="interest"
-                name="interest"
-                value={formData.interest}
-                onChange={handleChange}
-                className="lg:w-96 border-b text-gray-500 border-gray-300 focus:outline-none p-2"
-                required
-              >
-                <option value="">Select an activity</option>
-                <option value="treks">Treks</option>
-                <option value="walks">Walks</option>
-                <option value="hikes">Hikes</option>
-                <option value="camping">Camping</option>
-              </select>
-            </div>
+          
             </div>
   
-            <fieldset className="my-8">
-              <legend  className="text-md font-medium mb-2">
-                Do you want our expert to call you back? 
-              </legend>
-              <div className="space-y-1 lg:w-xl grid grid-cols-2 gap-5 text-gray-500 ">
-                <label className="flex items-center">
-                  <input
-                    type="checkbox"
-                    name="callback[]"
-                    value="no-call"
-                    checked={formData.callback.includes('no-call')}
-                    onChange={handleChange}
-                    className="mr-2"
-                  />
-                  Do not call me, I prefer email
-                </label>
-                <label className="flex items-center">
-                  <input
-                    type="checkbox"
-                    name="callback[]"
-                    value="10-12"
-                    checked={formData.callback.includes('10-12')}
-                    onChange={handleChange}
-                    className="mr-2"
-                  />
-                  Between 10 am – 12 noon
-                </label>
-                <label className="flex items-center">
-                  <input
-                    type="checkbox"
-                    name="callback[]"
-                    value="2-5"
-                    checked={formData.callback.includes('2-5')}
-                    onChange={handleChange}
-                    className="mr-2"
-                  />
-                  Between 2 pm – 5 pm
-                </label>
-                <label className="flex items-center">
-                  <input
-                    type="checkbox"
-                    name="callback[]"
-                    value="after-5"
-                    checked={formData.callback.includes('after-5')}
-                    onChange={handleChange}
-                    className="mr-2"
-                  />
-                  After 5 pm
-                </label>
-              </div>
-            </fieldset>
+           
 
             <div className="my-4">
               <label htmlFor="query" className="block text-md font-medium mb-1">
