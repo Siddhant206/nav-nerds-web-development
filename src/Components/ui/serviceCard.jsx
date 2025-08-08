@@ -3,7 +3,7 @@
 import { useRef } from "react"
 import Image from "next/image"
 import { motion, useInView } from "framer-motion"
-import { typography } from '@/components/ui/fonts';
+import { typography } from '@/Components/ui/Fonts';
 
 
 export function ServiceCard({

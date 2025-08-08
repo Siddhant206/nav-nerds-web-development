@@ -28,7 +28,7 @@ const navLinks = [
 
 
 
-export default function Navbar() {
+ function Navbar() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [openDropdown, setOpenDropdown] = useState (null);
     const ref = useRef (null);
@@ -203,3 +203,5 @@ export default function Navbar() {
         </nav>
     );
 }
+
+export default Navbar

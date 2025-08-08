@@ -1,8 +1,8 @@
 
 import React from 'react'
 import Image from "next/image";
-import { ServiceCard } from '@/components/ui/serviceCard';
-import { typography } from '@/components/ui/fonts';
+import { ServiceCard } from '@/Components/ui/serviceCard';
+import { typography } from '@/Components/ui/Fonts';
 import Link from 'next/link';
 
 const services = [
