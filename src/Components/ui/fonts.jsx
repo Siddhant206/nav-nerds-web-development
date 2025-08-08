@@ -4,6 +4,6 @@ export  const typography = {
   heading:
     "text-3xl md:text-xl lg:text-5xl font-semibold ",
   subheading:
-    "text-2xl xl:text-3xl 2xl:text-4xl font-bold ",
-  paragraph: "xs:text-lg md:text-base lg:text-[17px]   3xl:text-xl",
+    "text-2xl xl:text-3xl 2xl:text-4xl   ",
+  paragraph: "xs:text-lg md:text-base lg:text-[17px] 3xl:text-xl",
 };

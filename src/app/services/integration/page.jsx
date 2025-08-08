@@ -1,10 +1,7 @@
 
 import React from 'react'
-import Image from "next/image";
-import { ServiceCard } from '@/Components/ui/serviceCard';
-import { typography } from '@/Components/ui/Fonts';
+import Image from "next/image"; 
 import Link from 'next/link';
-
 
 function Page() {
     return (
@@ -13,7 +10,7 @@ function Page() {
             <section className="relative bg-[url(/Services/Integration/IntegrationBG.png)]  bg-cover bg-no-repeat  bg-center md:bg-bottom   flex items-center justify-center lg:py-14 max-lg:px-4  flex-col w-full text-black  overflow-hidden h-[50vh] md:h-[100dvh] " >
                 {/* <div className='absolute inset-0 bg-black/30 ' /> */}
                 <div className="md:pb-60 relative flex flex-col items-center justify-center w-fit">
-                    <h1 className={`${typography.heading} text-black max-w-2xl text-center`}>
+                    <h1 className={`text-3xl md:text-xl lg:text-5xl font-semibold text-black max-w-2xl text-center`}>
                         Transform Your Business
                         with Seamless Integrations
                     </h1>
@@ -33,9 +30,9 @@ function Page() {
             {/* Content Section */}
             <section className="bg-[url(/HomePageBg.webp)]  bg-cover bg-no-repeat bg-top w-full  py-10  10">
                 <div className='max-w-2xl mx-auto mb-10'>
-                    <h2 className={`${typography.subheading} text-center`}>
+                    <h2 className={`text-2xl xl:text-3xl 2xl:text-4xl text-center`}>
                         Powerful Integrations for Every Need</h2>
-                    <p className={`${typography.paragraph} text-center`}>
+                    <p className={`xs:text-lg md:text-base lg:text-[17px]   3xl:text-xl text-center`}>
                         Discover how these integrations can streamline your operations, boost productivity,
                         and drive growth across your organization.
                     </p>

@@ -1,8 +1,5 @@
 
-import React from 'react'
-import Image from "next/image";
-import { ServiceCard } from '@/Components/ui/serviceCard';
-import { typography } from '@/Components/ui/Fonts';
+import React from 'react' 
 import Link from 'next/link';
 
 const services = [
@@ -113,7 +110,7 @@ function Page() {
             <section className="relative bg-[url(/Services/Integration/IntegrationBG.png)]  bg-cover bg-no-repeat  bg-center md:bg-bottom   flex items-center justify-center lg:py-14 max-lg:px-4  flex-col w-full text-black  overflow-hidden h-[50vh] md:h-[100dvh] " >
                 {/* <div className='absolute inset-0 bg-black/30 ' /> */}
                 <div className="md:pb-60 relative flex flex-col items-center justify-center w-fit">
-                    <h1 className={`${typography.heading} text-black max-w-2xl text-center`}>
+                    <h1 className={`text-3xl md:text-xl lg:text-5xl font-semibold text-black max-w-2xl text-center`}>
                         Transform Your Business
                         with Seamless Integrations
                     </h1>

@@ -1,8 +1,7 @@
 
 import React from 'react'
 import Image from "next/image";
-import { ServiceCard } from '@/Components/ui/serviceCard';
-import { typography } from '@/Components/ui/Fonts';
+import { ServiceCard } from '@/Components/ui/serviceCard'; 
 
 
 const features = [
@@ -61,7 +60,7 @@ function Page() {
             <section className="relative bg-white bg-[url(/ImplementationBG.webp)]  bg-contain bg-no-repeat  bg-center md:bg-bottom   flex items-center justify-center lg:py-14 max-lg:px-4  flex-col w-full text-black  overflow-hidden h-[50vh] md:h-[100dvh] " >
                 <div className='absolute inset-0 bg-black/30 ' />
                 <div className="relative flex flex-col w-fit">
-                    <h1 className={`${typography.heading} text-white max-w-xl text-center`}>
+                    <h1 className={`text-3xl md:text-xl lg:text-5xl font-semibold text-white max-w-xl text-center`}>
                         Implementation Services with Navnerds
                     </h1>
                 </div>
@@ -70,8 +69,8 @@ function Page() {
             {/* Content Section */}
             <section className="bg-[url(/HomePageBg.webp)]  bg-cover bg-no-repeat bg-top w-full  py-10  10">
 
-                <h1 className={`${typography.subheading} text-black text-center mb-2`}>Scaling Efficently? </h1>
-                <p className={`max-w-4xl ${typography.paragraph} max-sm:px-2 sm:px-4 lg:px-0 text-center font-semibold mx-auto mb-14`}>
+                <h1 className={`text-2xl xl:text-3xl 2xl:text-4xl  text-black text-center mb-2`}>Scaling Efficently? </h1>
+                <p className={`max-w-4xl xs:text-lg md:text-base lg:text-[17px]   3xl:text-xl max-sm:px-2 sm:px-4 lg:px-0 text-center font-semibold mx-auto mb-14`}>
                     When growth kicks in, so do operational challenges. Our Business Central implementation simplifies what’s becoming too complex automating workflows, enhancing customer visibility, and giving your teams the tools to move faster. We keep your systems lean while your business goes big.
                 </p>
                 <ServiceCard
@@ -107,7 +106,7 @@ function Page() {
                 <section className="max-w-7xl mx-auto bg-white mt-14 py-14 px-8">
                     {/* Header */}
                     <div className="text-center mb-8 md:mb-16">
-                        <h2 className={`${typography.subheading} text-gray-900 leading-tight`}>
+                        <h2 className={`text-2xl xl:text-3xl 2xl:text-4xl text-gray-900 leading-tight`}>
                             What Happens When You Implement with Navnerds
                         </h2>
                     </div>
