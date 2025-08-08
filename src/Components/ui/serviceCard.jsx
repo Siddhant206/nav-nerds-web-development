@@ -2,8 +2,7 @@
 
 import { useRef } from "react"
 import Image from "next/image"
-import { motion, useInView } from "framer-motion"
-import { typography } from '@/Components/ui/Fonts';
+import { motion, useInView } from "framer-motion" 
 
 
 export function ServiceCard({
@@ -51,13 +50,13 @@ export function ServiceCard({
       >
         <motion.div className="md:w-[50%]" variants={itemVariants}>
           <h2
-            className={`${typography.subheading}  font-bold mb-4 ${textColor === "text-white" ? "!text-white" : "!text-black"
+            className={`text-2xl xl:text-3xl 2xl:text-4xl font-bold   mb-4 ${textColor === "text-white" ? "!text-white" : "!text-black"
               }`}
           >
             {title}
           </h2>
 
-          <div className={`${typography.paragraph}  leading-relaxed ${textColor}`}>{description}</div>
+          <div className={`xs:text-lg md:text-base lg:text-[17px]   3xl:text-xl leading-relaxed ${textColor}`}>{description}</div>
         </motion.div>
 
         <motion.div className="w-full md:w-[50%] h-full flex justify-center" variants={itemVariants}>

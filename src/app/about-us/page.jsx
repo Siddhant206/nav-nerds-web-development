@@ -1,6 +1,5 @@
 "use client" 
-import Link from 'next/link';
-import { typography } from '@/components/ui/fonts';
+import Link from 'next/link'; 
 
 function FeatureCard({ title, description, icon }) {
     return (
@@ -61,8 +60,8 @@ export default function Page() {
         <section className=' bg-[url(/HomePageBg.webp)]  bg-cover bg-no-repeat bg-top min-h-96 text-black'>
             {/* HERO */}
             <header className="max-w-4xl mx-auto pt-10 lg:pt-40 px-6 text-center ">
-                <h1 className={`${typography.heading} font-semibold mb-4`}>About Us</h1>
-                <p className={`max-w-2xl mx-auto ${typography.paragraph}  `}>
+                <h1 className={`text-3xl md:text-xl lg:text-5xl   font-semibold mb-4`}>About Us</h1>
+                <p className={`max-w-2xl mx-auto xs:text-lg md:text-base lg:text-[17px]   3xl:text-xl  `}>
                     At Navnerds, we understand that trusting a new team takes time—so we’ve created a Trust & Trial Package to let you experience our expertise in{" "}
                     <span className="text-blue-600 font-semibold">Microsoft Dynamics 365 Business Central</span> without long-term commitments.
                 </p>
@@ -74,7 +73,7 @@ export default function Page() {
                     {/* Text Block */}
                     <div className='flex flex-col justify-between items-start h-full py-10 '>
                         <div>
-                            <h2 className={`${typography.subheading} font-bold text-gray-900 mb-6`}>
+                            <h2 className={`text-2xl xl:text-3xl 2xl:text-4xl font-bold  text-gray-900 mb-6`}>
                                 What Sets Us Apart
                             </h2>
                             <p className="text-gray-600 mb-6 text-base    leading-relaxed">

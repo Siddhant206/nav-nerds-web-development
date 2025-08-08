@@ -3,7 +3,7 @@
 
 import { useState } from "react";
 import { BsBuilding, BsCart, BsGear, BsBank, BsBook, BsAirplane } from "react-icons/bs";
-import { typography } from '@/components/ui/fonts';
+ 
 
 const industries = [
     { title: "Construction", icon: <BsBuilding />, key: "construction" },
@@ -20,7 +20,7 @@ export default function IndustrySpecializations() {
     return (
         <section className="max-w-7xl mx-auto bg-gray-50/60 border border-gray-200 mt-10 py-20 px-6">
             <div className="max-w-6xl mx-auto">
-                <h2 className={`${typography.subheading} font-semibold text-gray-800 text-left mb-10`}>
+                <h2 className={` text-2xl xl:text-3xl 2xl:text-4xl font-bold   text-gray-800 text-left mb-10`}>
                     Industry Specializations
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
