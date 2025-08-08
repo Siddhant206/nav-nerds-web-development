@@ -2,8 +2,6 @@
 import { typography } from '@/Components/ui/Fonts';
 import Link from 'next/link';
 
-
-
 function FeatureCard({ title, description, icon }) {
     return (
         <div
