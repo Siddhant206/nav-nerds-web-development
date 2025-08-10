@@ -3,7 +3,7 @@ import React from "react";
 
 export default function page() {
   return (
-    <main className="px-4 sm:px-6 lg:p-8 mt-4 bg-white text-black">
+    <main className="px-4 sm:px-6 lg:p-8  bg-white text-black">
       {/* Container and header remain same */}
       <div className="max-w-4xl xl:max-w-5xl mx-auto text-justify text-xl space-y-8">
         <div className="text-center space-y-4">
