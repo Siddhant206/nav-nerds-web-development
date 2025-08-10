@@ -8,10 +8,10 @@ export default function page() {
       <div className="max-w-4xl xl:max-w-5xl mx-auto text-justify text-xl space-y-8">
         <div className="text-center space-y-4">
           <h2 className="text-3xl font-bold">
-            Privacy Policy - Offbeat Treks
+            Privacy Policy - Navnerds
           </h2>
           <p>
-            This Privacy Policy outlines how Offbeat Treks collects, uses, and
+            This Privacy Policy outlines how Navnerds collects, uses, and
             protects personal information obtained from participants in our
             outdoor activities and programs. By enrolling or participating in
             any of our program, you consent to the terms of this Policy.
@@ -226,7 +226,7 @@ export default function page() {
             10. Equipment Buy and Hire Policy:
           </h4>
           <p>
-            Offbeat Treks may offer equipment for hire or purchase. Users are
+            Navnerds may offer equipment for hire or purchase. Users are
             responsible for the proper use and return of hired equipment as per
             the outlined terms.
           </p>
@@ -236,13 +236,13 @@ export default function page() {
           <ol className="space-y-4">
             <li>
 
-              Offbeat Treks is committed to resolving all disputes fairly, promptly and transparently. Any individual or entity who has experienced a problem or disagreement with our services is encouraged to reach out to us at the earliest. We value feedback and aim to address concerns in a constructive manner that maintains trust and professionalism.
+              Navnerds is committed to resolving all disputes fairly, promptly and transparently. Any individual or entity who has experienced a problem or disagreement with our services is encouraged to reach out to us at the earliest. We value feedback and aim to address concerns in a constructive manner that maintains trust and professionalism.
 
             </li>
             <li> 
               <ul className="list-[lower-roman] list-inside space-y-4 ml-4">
                 <li>
-                 Disputes must be reported in writing to info@offbeattreks.com within 7 days of the incident or event.
+                 Disputes must be reported in writing to info@navnerds.com within 7 days of the incident or event.
                 </li>
                 <li>
                  The complaint should include the full name, contact information, trek details (location and date) and a clear description of the issue.
@@ -272,7 +272,7 @@ export default function page() {
                  This policy does not override or limit any consumer rights provided under applicable Indian laws.
                 </li>
                 <li>
-                 Offbeat Treks reserves the right to update or amend this policy, and such changes will be duly communicated.
+                 Navnerds reserves the right to update or amend this policy, and such changes will be duly communicated.
                 </li>
               </ul>
               <p className="mt-2">
@@ -289,12 +289,11 @@ export default function page() {
           <p>
             If you have any questions, concerns, or requests regarding this
             Privacy Policy or the handling of your personal information, please
-            contact us at info@thebacktobasics.com.
+            contact us at info@navnerds.com
           </p>
           <address className="not-italic">
-            Address: 43A, IT Park, Sahastradhara Road,<br/>
-            Dehradun - 248001, Uttarakhand<br/>
-            Phone: +91 8477800887
+            Address: 273/1 Maltulpuri, Haridwar Uttarakhand 247667 <br />
+            Phone: +91 9068476495
           </address>
         </div>
         <p>
