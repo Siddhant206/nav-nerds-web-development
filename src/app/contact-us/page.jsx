@@ -10,21 +10,12 @@ export default function page() {
     name: "",
     mobile: "",
     email: "",
-    iam: "",
-    interest: "",
-    callback: [],
     query: "",
-    newsletter: false,
   });
 
-  // Form state for newsletter
-  const [newsletterData, setNewsletterData] = useState({
-    name: "",
-    email: "",
-  });
 
-  const [loading, setLoading] = useState(false);
-  const [newsletterLoading, setNewsletterLoading] = useState(false);
+  const [status, setStatus] = useState({ type: "", message: "" });
+  const [loading, setLoading] = useState(false); 
 
   // Handle main form changes
   const handleChange = (e) => {
@@ -46,28 +37,24 @@ export default function page() {
     }
   };
 
-  // Handle newsletter form changes
-  const handleNewsletterChange = (e) => {
-    const { name, value } = e.target;
-    setNewsletterData(prev => ({ ...prev, [name]: value }));
-  };
+
 
   // Submit main contact form
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
+    setStatus({ type: "", message: "" });
 
     const data = {
       fullName: formData.name,
       email: formData.email,
-      mobile: formData.mobile,
-      iam: formData.iam, 
+      mobile: formData.mobile, 
       query: formData.query, 
       submittedAt: new Date().toISOString(),
     };
 
     try {
-      const response = await fetch("https://all-websiteformsdata.workers.dev/", {
+      const response = await fetch("https://website-contact-data.nishantsaini3120.workers.dev", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -79,20 +66,13 @@ export default function page() {
 
       const result = await response.json();
       if (result.result === "success") {
-        alert("Form submitted successfully!");
-        setFormData({
-          name: "",
-          mobile: "",
-          email: "",
-          iam: "", 
-          query: "", 
-        });
+        setStatus({ type: "success", message: "Thanks! We'll get back to you shortly." });
+        setFormData({ name: "", email: "", mobile: "", query: "" });
       } else {
-        alert("Error: " + result.message);
+        setStatus({ type: "error", message: result.message || "Something went wrong." });
       }
-    } catch (error) {
-      console.error("Submission error:", error);
-      alert("There was an error submitting your form. Please try again.");
+    } catch (err) {
+      setStatus({ type: "error", message: "Network error. Please try again later." });
     } finally {
       setLoading(false);
     }
@@ -165,98 +145,133 @@ export default function page() {
 
           </div>
 
-          {/* Main Contact Form */}
-          <form
-            onSubmit={handleSubmit}
-            className="max-w-6xl mx-auto px-4 sm:px-10 lg:px-40 py-10 lg:py-20 rounded-lg shadow-lg"
-            style={{
-              background: "linear-gradient(to right, white 60%, transparent 80%)"
-            }}
-            aria-labelledby="contact-heading"
-          >
-            <h2 id="contact-heading" className="text-2xl font-bold mb-6">
-              Get in touch with us now
-            </h2>
+       
+        {/* Main Contact Form */}
+        <form
+          onSubmit={handleSubmit}
+          className="max-w-6xl mx-auto px-4 sm:px-10 lg:px-40 py-10 lg:py-20 rounded-lg shadow-lg"
+          style={{
+            background: "linear-gradient(to right, white 60%, transparent 80%)",
+          }}
+          aria-labelledby="contact-heading"
+        >
+          <h2 id="contact-heading" className="text-2xl font-bold mb-6">
+            Get in touch with us now
+          </h2>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
-              <div>
-                <label htmlFor="name" className="block text-md font-medium mb-1">
-                  Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder="Your Name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  className="w-full border-b border-gray-300 focus:outline-none p-2"
-                  required
-                />
-              </div>
-
-              <div>
-                <label htmlFor="mobile" className="block text-md font-medium mb-1">
-                  Mobile Number
-                </label>
-                <input
-                  type="tel"
-                  id="mobile"
-                  name="mobile"
-                  placeholder="Your Mobile Number"
-                  value={formData.mobile}
-                  onChange={handleChange}
-                  className="w-full border-b border-gray-300 focus:outline-none p-2"
-                  required
-                />
-              </div>
-
-              <div>
-                <label htmlFor="email" className="block text-md font-medium mb-1">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="Your Email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  className="w-full border-b border-gray-300 focus:outline-none p-2"
-                  required
-                />
-              </div>
-
-          
+          {/* Success / Error Messages */}
+          {status.message && (
+            <div
+              className={`mb-4 p-3 rounded-lg text-sm ${status.type === "success"
+                  ? "bg-green-100 text-green-700 border border-green-300"
+                  : "bg-red-100 text-red-700 border border-red-300"
+                }`}
+            >
+              {status.message}
             </div>
-  
-           
+          )}
 
-            <div className="my-4">
-              <label htmlFor="query" className="block text-md font-medium mb-1">
-                Query
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+            <div>
+              <label htmlFor="name" className="block text-md font-medium mb-1">
+                Name
               </label>
-              <textarea
-                id="query"
-                name="query"
-                rows="4"
-                placeholder="Tell us more..."
-                value={formData.query}
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your Name"
+                value={formData.name}
                 onChange={handleChange}
                 className="w-full border-b border-gray-300 focus:outline-none p-2"
+                required
               />
             </div>
 
-        
+            <div>
+              <label htmlFor="mobile" className="block text-md font-medium mb-1">
+                Mobile Number
+              </label>
+              <input
+                type="tel"
+                id="mobile"
+                name="mobile"
+                placeholder="Your Mobile Number"
+                value={formData.mobile}
+                onChange={handleChange}
+                className="w-full border-b border-gray-300 focus:outline-none p-2"
+                required
+              />
+            </div>
 
-            <button
-              type="submit"
-              disabled={loading}
-            className=" text-white px-6 py-2 rounded bg-[#1CCBD7] hover:bg-black transition-colors duration-200 ease-in disabled:opacity-50"
-            >
-              {loading ? "Submitting..." : "Send Mail"}
-            </button>
-          </form>
+            <div>
+              <label htmlFor="email" className="block text-md font-medium mb-1">
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Your Email"
+                value={formData.email}
+                onChange={handleChange}
+                className="w-full border-b border-gray-300 focus:outline-none p-2"
+                required
+              />
+            </div>
+          </div>
+
+          <div className="my-4">
+            <label htmlFor="query" className="block text-md font-medium mb-1">
+              Query
+            </label>
+            <textarea
+              id="query"
+              name="query"
+              rows="4"
+              placeholder="Tell us more..."
+              value={formData.query}
+              onChange={handleChange}
+              className="w-full border-b border-gray-300 focus:outline-none p-2"
+            />
+          </div>
+
+          {/* Submit Button with Loading Spinner */}
+          <button
+            type="submit"
+            disabled={loading}
+            className="flex items-center justify-center cursor-pointer text-white px-6 py-2 rounded bg-[#1CCBD7] hover:bg-black transition-colors duration-200 ease-in disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            {loading ? (
+              <>
+                <svg
+                  className="animate-spin h-5 w-5 mr-2 text-white"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <circle
+                    className="opacity-25"
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    strokeWidth="4"
+                  ></circle>
+                  <path
+                    className="opacity-75"
+                    fill="currentColor"
+                    d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+                  ></path>
+                </svg>
+                Submitting...
+              </>
+            ) : (
+              "Send Mail"
+            )}
+          </button>
+        </form>
+
 
         </main>
 

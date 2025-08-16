@@ -33,7 +33,7 @@ const services = [
         description:
             "The first and most crucial step in your migration from Navision (NAV) to Business Central is converting legacy C/AL code to the modern AL language. This includes transforming customizations, reports, and forms into extensions that are compatible with Business Central’s extension-based architecture. We carefully assess your existing custom codebase, eliminate obsolete modifications, and refactor what’s necessary—ensuring a clean, future-ready code structure that’s easier to maintain and upgrade.",
         icon: <svg width="28" height="30" viewBox="0 0 28 30" fill="none"  >
-            <path d="M15.3179 1.64648L1.98877 17.6415H13.985L12.6521 28.3048L25.9813 12.3098H13.985L15.3179 1.64648Z" stroke="white" strokeWidth="2.66583" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M15.3179 1.64648L1.98877 17.6415H13.985L12.6521 28.3048L25.9813 12.3098H13.985L15.3179 1.64648Z" stroke="white" strokeWidth="2.66583" strokeLinecap="round" strokeLinejoin="round" fill="black" />
         </svg>
         ,
         color: "from-cyan-500/10 to-cyan-300/10",
@@ -53,7 +53,7 @@ const services = [
         title: "Pre-Migration Assessment and Planning",
         description:
             "Every successful migration starts with proper analysis. Our team conducts a thorough system review—analyzing your NAV version, customizations, data size, integrations, and reporting requirements. Based on this assessment, we define a roadmap with timelines, risks, testing strategies, and a phased transition plan. This ensures transparency, minimal disruption, and a clearly defined migration scope tailored to your business needs.",
-        icon: <svg width="33" height="33" viewBox="0 0 33 33" fill="none" >
+        icon: <svg width="33" height="33" viewBox="0 0 33 33" fill="black" >
             <path d="M20.9028 3.53613H8.90656C8.19953 3.53613 7.52147 3.817 7.02153 4.31694C6.52159 4.81688 6.24072 5.49494 6.24072 6.20197V27.5286C6.24072 28.2357 6.52159 28.9137 7.02153 29.4137C7.52147 29.9136 8.19953 30.1945 8.90656 30.1945H24.9016C25.6086 30.1945 26.2866 29.9136 26.7866 29.4137C27.2865 28.9137 27.5674 28.2357 27.5674 27.5286V10.2007L20.9028 3.53613Z" stroke="white" strokeWidth="2.66583" strokeLinecap="round" strokeLinejoin="round" />
             <path d="M19.5698 3.53613V8.86757C19.5698 9.57456 19.8507 10.2526 20.3506 10.7525C20.8505 11.2524 21.5285 11.5333 22.2355 11.5333H27.567" stroke="white" strokeWidth="2.66583" strokeLinecap="round" strokeLinejoin="round" />
             <path d="M14.2385 12.8662H11.5728" stroke="white" strokeWidth="2.66583" strokeLinecap="round" strokeLinejoin="round" />
@@ -130,19 +130,19 @@ function Page() {
             {/* Content Section */}
             <section className="bg-[url(/HomePageBg.webp)]  bg-cover bg-no-repeat bg-top w-full  py-10  10">
 
-                <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 px-4">
+                <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6 px-4">
                     {services.map((service, index) => (
                         <article
                             key={index}
-                            className={`rounded-xl p-4 md:p-6 space-y-2 backdrop-blur-sm border border-gray-200 bg-gradient-to-br ${service.color}  bg-white/10 shadow-md transition-all duration-300 hover:scale-[1.02]`}
+                            className={`rounded-xl p-4 md:p-6 space-y-2  border border-gray-200 bg-gradient-to-br ${service.color}  bg-white/20 shadow-md  `}
                         >
                             <div className={`flex flex-col items-start justify-center gap-4 w-fit bg-gray-300 p-4 rounded-full mb-4`}>
                                 {service.icon}
                             </div>
-                            <h3 className="text-md font-semibold text-gray-900 leading-tight">
+                            <h3 className="text-lg font-bold text-gray-900 leading-tight">
                                 {service.title}
                             </h3>
-                            <p className="text-sm text-gray-800">{service.description}</p>
+                            <p className=" text-gray-800">{service.description}</p>
                         </article>
                     ))}
                 </div>

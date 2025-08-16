@@ -24,10 +24,6 @@ const navLinks = [
     { label: "Contact Us", href: "/contact-us" },
 ];
 
-
-
-
-
  function Navbar() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [openDropdown, setOpenDropdown] = useState (null);
