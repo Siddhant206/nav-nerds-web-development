@@ -4,19 +4,18 @@ import Image from "next/image";
 import Link from "next/link"; 
 
 function formatDateForSheet(date) {
-  const options = {
-    day: "2-digit",
-    month: "short",  // Aug
-    year: "numeric",
-    hour: "2-digit",
-    minute: "2-digit",
-    hour12: false,
-    timeZone: "Asia/Kolkata", // ⚡ pick your timezone!
-  };
+  const d = new Date(date);
 
-  return new Date(date).toLocaleString("en-GB", options)
+  const day = String(d.getDate()).padStart(2, "0");
+  const month = d.toLocaleString("en-GB", { month: "short", timeZone: "Asia/Kolkata" });
+  const year = d.getFullYear();
 
+  const hours = String(d.getHours()).padStart(2, "0");
+  const minutes = String(d.getMinutes()).padStart(2, "0");
+
+  return `${day}-${month}-${year} ${hours}:${minutes}`;
 }
+
 
 export default function page() {
   // Form state for the main contact form
