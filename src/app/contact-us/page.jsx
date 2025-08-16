@@ -17,7 +17,7 @@ function formatDateForSheet(date) {
   return new Date(date).toLocaleString("en-GB", options)
     .replace(",", "")
     .replace(" ", "-")
-    .replace(" ", "---");
+    .replace(" ", "-");
 }
 
 export default function page() {
