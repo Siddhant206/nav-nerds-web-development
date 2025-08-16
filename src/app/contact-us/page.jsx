@@ -3,6 +3,22 @@ import { useState, useEffect, use } from "react";
 import Image from "next/image";
 import Link from "next/link"; 
 
+function formatDateForSheet(date) {
+  const options = {
+    day: "2-digit",
+    month: "short",  // Aug
+    year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false,
+    timeZone: "Asia/Kolkata", // ⚡ pick your timezone!
+  };
+
+  return new Date(date).toLocaleString("en-GB", options)
+    .replace(",", "")
+    .replace(" ", "-")
+    .replace(" ", "---");
+}
 
 export default function page() {
   // Form state for the main contact form
@@ -44,13 +60,13 @@ export default function page() {
     e.preventDefault();
     setLoading(true);
     setStatus({ type: "", message: "" });
-
+    const submittedAt = formatDateForSheet(new Date());
     const data = {
       fullName: formData.name,
       email: formData.email,
       mobile: formData.mobile, 
       query: formData.query, 
-      submittedAt: new Date().toISOString(),
+      submittedAt: submittedAt,
     };
 
     try {
