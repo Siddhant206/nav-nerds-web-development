@@ -60,11 +60,7 @@ export default function Page() {
         <section className=' bg-[url(/HomePageBg.webp)]  bg-cover bg-no-repeat bg-top min-h-96 text-black'>
             {/* HERO */}
             <header className="max-w-4xl mx-auto pt-10 lg:pt-40 px-6 text-center ">
-                <h1 className={`text-3xl md:text-xl lg:text-5xl   font-semibold mb-4`}>About Us</h1>
-                <p className={`max-w-2xl mx-auto xs:text-lg md:text-base lg:text-[17px]   3xl:text-xl  `}>
-                    At Navnerds, we understand that trusting a new team takes time—so we’ve created a Trust & Trial Package to let you experience our expertise in{" "}
-                    <span className="text-blue-600 font-semibold">Microsoft Dynamics 365 Business Central</span> without long-term commitments.
-                </p>
+                <h1 className={`text-3xl md:text-xl lg:text-5xl   font-semibold mb-4`}>About Us</h1> 
 
             </header>
             {/* Main content remains same */}
@@ -76,8 +72,8 @@ export default function Page() {
                             <h2 className={`text-2xl xl:text-3xl 2xl:text-4xl font-bold  text-gray-900 mb-6`}>
                                 What Sets Us Apart
                             </h2>
-                            <p className="text-gray-600 mb-6 text-base    leading-relaxed">
-                                Helping businesses grow with Microsoft Dynamics 365. We bring 10+ years of ERP excellence, certified consultants, and an agile approach to digital transformation.
+                            <p className="text-gray-600 mb-6 text-base text-justify leading-relaxed">
+                                NavNerds is a specialized Microsoft enterprise solutions IT consulting company. Our purpose is to marry cutting-edge technology with business strategy, enabling organizations to maximize operations and growth. We utilize extensive knowledge of Microsoft Dynamics 365 Business Central (previously Dynamics NAV/Navision) and Microsoft 365 (Office 365) to provide seamless ERP and cloud productivity solutions. For instance, Microsoft Dynamics 365 Business Central is outlined as "a comprehensive business management solution that helps automate and streamline business processes and manage your entire business"
                             </p>
                         </div>
                         <Link href={"/contact-us"} className="bg-[#1CCBD7] hover:bg-black  text-white font-semibold px-6 py-2 rounded-full   transition duration-300 w-fit">

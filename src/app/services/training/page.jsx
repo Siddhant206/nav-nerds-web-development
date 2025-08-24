@@ -11,8 +11,8 @@ function Page() {
             <section className="relative bg-white bg-[url(/ImplementationBG.webp)]  bg-contain bg-no-repeat bg-center md:bg-bottom  flex items-center justify-center lg:py-14 flex-col w-full text-black  overflow-hidden h-[50vh] md:h-[100dvh] max-lg:px-4 " >
                 <div className='absolute inset-0 bg-black/30 ' />
                 <div className="md:pb-60 relative flex flex-col items-center justify-center w-fit">
-                    <h1 className={`text-3xl md:text-xl lg:text-5xl font-extrabold md:font-bold text-white max-w-xl text-center`}>
-                        Business Central Training with Navnerds
+                    <h1 className={`text-3xl md:text-xl lg:text-5xl font-extrabold md:font-bold text-black max-w-xl text-center`}>
+                    Training with Navnerds
                     </h1>
                     <Link
                         href={"/contact-us"}

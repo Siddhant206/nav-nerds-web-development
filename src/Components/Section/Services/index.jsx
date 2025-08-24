@@ -1,461 +1,402 @@
 "use client";
 import React from "react";
-import {
-  IconBoxAlignRightFilled,
-  IconClipboardCopy,
-  IconFileBroken,
-  IconSignature,
-  IconTableColumn,
-} from "@tabler/icons-react";
-import { BentoGrid, BentoGridItem } from "@/Components/ui/bento-grid";
-import { cn } from "@/Components/lib/utils";
+import { motion, useInView } from 'framer-motion';
+import { useRef } from 'react';
 import Image from "next/image";
-import { motion } from 'framer-motion';
+import Link from 'next/link';
 
+const services = [
+  {
+    id: 1,
+    title: "Support",
+    description: "24/7 technical support and managed services to keep your Microsoft solutions running smoothly.",
+    link:"support",
+    icon: "/Icons/Support.gif",
+    bgColor: "bg-[#0094C6]",
+    textColor: "text-white"
+  },
+  {
+    id: 2,
+    title: "Implementation",
+    description: "Professional deployment and configuration of Dynamics 365 and Microsoft 365 solutions.",
+    link: "implementation",
+    icon: "/Icons/Implementation.svg",
+    bgColor: "bg-white",
+    textColor: "text-black"
+  },
+  {
+    id: 3,
+    title: "Integration",
+    description: "Connect Dynamics 365 and Microsoft 365 with your other business applications and platforms.",
+    link: "integration", 
+    icon: "/Icons/Integration.gif",
+    bgColor: "bg-[#0094C6]",
+    textColor: "text-white"
+  },
+  {
+    id: 4,
+    title: "Training",
+    description: "We teach administrators and end-users how to maximize new system capabilities and improve productivity",
+    link: "training",
+    icon: "/Icons/Training.gif",
+    bgColor: "bg-white",
+    textColor: "text-black"
+  },
+  {
+    id: 5,
+    title: "Customization",
+    description: "we help you adapt the system to work your way. Drive efficiency, scalability, and seamless user adoption with our expert customization services.",
+    link: "customization",
+    icon: "/Icons/Customization.gif",
+    bgColor: "bg-white",
+    textColor: "text-black"
+  },
+  {
+    id: 6,
+    title: "Business Central",
+    description: " we helps small and mid-sized companies streamline finance, operations, sales, and customer service.",
+    link: "training",
+    icon: "/Icons/Business-Central.svg",
+    bgColor: "bg-[#0094C6]",
+    textColor: "text-white"
+  },
+  {
+    id: 7,
+    title: "Dedicated Resources",
+    description: "Skilled Microsoft consultants and developers available on-demand whenever or wherever you want to connect with us. ",
+    link: "dedicated-resources",
+    icon: "/Icons/Dedicated-Resources.gif",
+    bgColor: "bg-white",
+    textColor: "text-gray-800"
+  },
+  {
+    id: 8,
+    title: "Migration",
+    description: "Seamless setup and migration from ERP & CRM's to Microsoft 365 tailored to your business needs.",
+    link: "migration",
+    icon: "/Icons/Migration.gif",
+    bgColor: "bg-[#0094C6]",
+    textColor: "text-white"
+  }
+];
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.2
+    }
+  }
+};
+
+const cardVariants = {
+  hidden: {
+    opacity: 0,
+    y: 50,
+    scale: 0.9
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      type: "spring",
+      stiffness: 100,
+      damping: 15,
+      duration: 0.6
+    }
+  }
+};
+
+const hoverVariants = {
+  hover: {
+    scale: 1.05,
+    y: -5,
+    transition: {
+      type: "spring",
+      stiffness: 300,
+      damping: 20
+    }
+  }
+};
+
+const iconVariants = {
+  hover: {
+    scale: 1.2,
+    rotate: 0,
+    transition: {
+      type: "spring",
+      stiffness: 400,
+      damping: 10
+    }
+  }
+};
+
+const indicatorVariants = {
+  hover: {
+    width: "3rem",
+    opacity: 1,
+    transition: {
+      duration: 0.3,
+      ease: "easeOut"
+    }
+  }
+};
+
+const textVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut"
+    }
+  }
+};
+
+const svgVariants = {
+  hidden: { pathLength: 0, opacity: 0 },
+  visible: {
+    pathLength: 1,
+    opacity: 0.8,
+    transition: {
+      pathLength: { duration: 2, ease: "easeInOut" },
+      opacity: { duration: 0.5 }
+    }
+  }
+};
 
 export default function ServicesSection() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.1 });
+  const titleRef = useRef(null);
+  const isTitleInView = useInView(titleRef, { once: true });
+  const servicesRef = useRef(null);
+  const isServicesInView = useInView(servicesRef, { once: true });
+
   return (
-    <section className="py-10 px-4 max-w-7xl mx-auto">
-      <div className=" max-w-4xl mx-auto text-black py-10 space-y-4 text-center">
-        <h1 className=" relative text-xl sm:text-2xl md:text-4xl  tracking-wide  font-semibold">Get The Best Solutions For Business Growth From Microsoft Dynamic 365
-          <svg width="406" height="20" viewBox="0 0 606 33" fill="none" className="absolute lg:right-44 top-10 lg:top-18" >
-            <path d="M2.02148 21.7915C2.77703 21.478 3.53257 21.1645 9.77725 20.6895C16.0219 20.2145 27.7328 19.5875 103.653 19.7348C179.574 19.882 319.349 20.8225 414.399 18.172C509.449 15.5215 555.537 9.2515 603.021 2.7915" strokeOpacity="0.8" strokeWidth="4" strokeLinecap="round" strokeDasharray="8 8" stroke="#12C1CE" />
-            <path d="M2.02148 30.7915C2.77703 30.478 3.53257 30.1645 9.77725 29.6895C16.0219 29.2145 27.7328 28.5875 103.653 28.7348C179.574 28.882 319.349 29.8225 414.399 27.172C509.449 24.5215 555.537 18.2515 603.022 11.7915" strokeOpacity="0.8" strokeWidth="4" strokeLinecap="round" stroke="#12C1CE" />
+    <section className="py-10 px-4 max-w-7xl mx-auto overflow-hidden">
+      {/* Hero Section */}
+      <motion.div
+        ref={titleRef}
+        initial="hidden"
+        animate={isTitleInView ? "visible" : "hidden"}
+        variants={textVariants}
+        className="max-w-4xl mx-auto text-black py-10 space-y-4 text-center"
+      >
+        <motion.h1
+          variants={textVariants}
+          className="relative text-xl sm:text-2xl md:text-4xl tracking-wide font-semibold"
+        >
+          Get The Best Solutions For Business Growth From Microsoft Dynamic 365
+          <motion.svg
+            width="406"
+            height="20"
+            viewBox="0 0 606 33"
+            fill="none"
+            className="absolute lg:right-44 top-10 lg:top-18"
+            initial="hidden"
+            animate={isTitleInView ? "visible" : "hidden"}
+          >
+            <motion.path
+              d="M2.02148 21.7915C2.77703 21.478 3.53257 21.1645 9.77725 20.6895C16.0219 20.2145 27.7328 19.5875 103.653 19.7348C179.574 19.882 319.349 20.8225 414.399 18.172C509.449 15.5215 555.537 9.2515 603.021 2.7915"
+              strokeOpacity="0.8"
+              strokeWidth="4"
+              strokeLinecap="round"
+              strokeDasharray="8 8"
+              stroke="#12C1CE"
+              variants={svgVariants}
+            />
+            <motion.path
+              d="M2.02148 30.7915C2.77703 30.478 3.53257 30.1645 9.77725 29.6895C16.0219 29.2145 27.7328 28.5875 103.653 28.7348C179.574 28.882 319.349 29.8225 414.399 27.172C509.449 24.5215 555.537 18.2515 603.022 11.7915"
+              strokeOpacity="0.8"
+              strokeWidth="4"
+              strokeLinecap="round"
+              stroke="#12C1CE"
+              variants={svgVariants}
+              transition={{ delay: 0.5 }}
+            />
+          </motion.svg>
+        </motion.h1>
+        <motion.p
+          variants={textVariants}
+          className="text-sm md:text-xl text-gray-600"
+        >
+          Automate your business, simplify operations, and redefine the way you deal with new opportunities using powerful Dynamics 365 solutions from the Nerds.
+        </motion.p>
+      </motion.div>
 
-          </svg>
+      {/* Services Header */}
+      <motion.div
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+        variants={textVariants}
+        className="max-w-2xl mr-auto text-black py-10 lg:pb-10 lg:pt-20 space-y-4 text-left"
+      >
+        <motion.h1
+          variants={textVariants}
+          className="text-xl sm:text-2xl md:text-4xl tracking-wide font-semibold"
+        >
+          Our Services
+        </motion.h1>
+        <motion.p
+          variants={textVariants}
+          className="text-sm md:text-base text-gray-600"
+        >
+          We offer professional ERP consulting services to help companies map their needs with ERP capabilities and select the best ERP vendor.
+        </motion.p>
+      </motion.div>
 
-        </h1>
-        <p className="text-sm md:text-xl">Automate your business, simplify operations, and redefine the way you deal with new opportunities using powerful Dynamics 365 solutions from the Nerds.</p>
+      {/* Services Grid */}
+      <div className="max-w-7xl mx-auto" ref={servicesRef}>
+        <motion.div
+          ref={ref}
+          initial="hidden"
+          animate={isServicesInView ? "visible" : "hidden"}
+          variants={containerVariants}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 auto-rows-fr"
+        >
+          {services.map((service, index) => (
+            <Link  key={service.id}
+              href={`/services/${service.link}`}>
+            
+            <motion.div 
+              variants={cardVariants}
+              whileHover="hover"
+              className={`
+                ${service.bgColor} 
+                rounded-2xl p-6 shadow-lg cursor-pointer group relative h-64 overflow-hidden
+                backdrop-blur-sm border border-white/10
+              `}
+              style={{
+                boxShadow: service.bgColor === 'bg-white'
+                  ? '0 10px 40px rgba(0,0,0,0.1)'
+                  : '0 10px 40px rgba(0,148,198,0.3)'
+              }}
+            >
+              {/* Animated Background Decorations */}
+              <motion.div
+                className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-white/20 to-white/5 rounded-full"
+                initial={{ x: 40, y: -40, scale: 0 }}
+                animate={{ x: 40, y: -40, scale: 1 }}
+                transition={{ delay: index * 0.1 + 0.5, type: "spring" }}
+                whileHover={{ scale: 1.2, rotate: 90 }}
+              />
+              <motion.div
+                className="absolute bottom-0 left-0 w-16 h-16 bg-gradient-to-tr from-white/15 to-white/5 rounded-full"
+                initial={{ x: -32, y: 32, scale: 0 }}
+                animate={{ x: -32, y: 32, scale: 1 }}
+                transition={{ delay: index * 0.1 + 0.7, type: "spring" }}
+                whileHover={{ scale: 1.3, rotate: -90 }}
+              />
+
+              {/* Shimmer Effect */}
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full"
+                animate={{ x: ['-100%', '100%'] }}
+                transition={{
+                  duration: 2,
+                  delay: index * 0.2 + 1,
+                  ease: "easeInOut"
+                }}
+              />
+
+              <motion.div
+                variants={hoverVariants}
+                className="relative z-10 h-full flex flex-col"
+              >
+                <div className="flex items-center mb-4">
+                  <motion.div
+                    variants={iconVariants}
+                    className={`
+                      w-12 h-12 rounded-xl flex items-center justify-center text-2xl
+                      ${service.bgColor === 'bg-white'
+                        ? 'bg-gradient-to-br from-gray-50 to-gray-100 border border-gray-200 shadow-inner'
+                        : 'bg-white/20 backdrop-blur-sm border border-white/20'
+                      }
+                    `}
+                    whileHover={{
+                      boxShadow: service.bgColor === 'bg-white'
+                        ? "0 5px 20px rgba(0,0,0,0.1)"
+                        : "0 5px 20px rgba(255,255,255,0.3)"
+                    }}
+                  >
+                    <span>
+                      {typeof service.icon === "string" && service.icon.startsWith("/Icons") ? (
+                        <Image
+                          src={service.icon}
+                          alt={`Our Microsoft 365 ${service.title} services`}
+                          width={160}
+                          height={50}
+                          className="object-contain bg-transparent h-16"
+                          priority
+                        />
+                      ) : (
+                          <span  className="text-3xl animate-pulse">{service.icon}</span>
+                      )}
+                    </span>
+                  </motion.div>
+                </div>
+
+                <motion.h3
+                  className={`text-xl font-bold mb-3 ${service.textColor}`}
+                  whileHover={{ x: 2 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  {service.title}
+                </motion.h3>
+
+                <motion.p
+                  className={`text-sm leading-relaxed flex-grow ${service.textColor === 'text-white' ? 'text-white/90' : 'text-gray-600'
+                    }`}
+                  whileHover={{ x: 2 }}
+                  transition={{ type: "spring", stiffness: 300, delay: 0.1 }}
+                >
+                  {service.description}
+                </motion.p>
+
+                {/* Animated Hover Indicator */}
+                <div className="mt-4 overflow-hidden">
+                  <motion.div
+                    className={`h-1 rounded-full ${service.textColor === 'text-white'
+                        ? 'bg-gradient-to-r from-white/60 to-white/20'
+                        : 'bg-gradient-to-r from-[#0094C6] to-[#12C1CE]'
+                      }`}
+                    initial={{ width: 0, opacity: 0 }}
+                    variants={indicatorVariants}
+                    whileHover="hover"
+                  />
+                </div>
+              </motion.div>
+
+              {/* Floating Particles */}
+              {[...Array(3)].map((_, i) => (
+                <motion.div
+                  key={i}
+                  className="absolute w-1 h-1 bg-white/30 rounded-full"
+                  style={{
+                    left: `${20 + i * 30}%`,
+                    top: `${30 + i * 20}%`
+                  }}
+                  animate={{
+                    y: [0, -10, 0],
+                    opacity: [0.5, 1, 0.5]
+                  }}
+                  transition={{
+                    duration: 2 + i,
+                    repeat: Infinity,
+                    delay: i * 0.5
+                  }}
+                />
+              ))}
+            </motion.div>
+            </Link>
+          ))}
+        </motion.div>
       </div>
-
-      <div className="max-w-2xl mr-auto text-black py-10 lg:pb-10 lg:pt-20 space-y-4 text-left">
-        <h1 className="text-xl sm:text-2xl md:text-4xl  tracking-wide  font-semibold">Our Services </h1>
-        <p className="text-sm md:text-xl">We offer professional ERP consulting services to help companies map their needs with ERP capabilities and select the best ERP vendor.</p>
-      </div>
-
-      <BentoGrid className="max-w-7xl mx-auto md:auto-rows-[20rem] ">
-        {items.map((item, i) => (
-          <BentoGridItem
-            key={i}
-            title={item.title}
-            description={item.description}
-            header={item.header}
-            className={cn("[&>p:text-lg]", item.className)}
-            icon={item.icon}
-            link={item.link}
-          />
-        ))}
-      </BentoGrid>
     </section>
   );
 }
-
-const SkeletonOne = () => {
-  const variants = {
-    initial: {
-      x: 0,
-    },
-    animate: {
-      x: 10,
-      rotate: 5,
-      transition: {
-        duration: 0.2,
-      },
-    },
-  };
-  const variantsSecond = {
-    initial: {
-      x: 0,
-    },
-    animate: {
-      x: -10,
-      rotate: -5,
-      transition: {
-        duration: 0.2,
-      },
-    },
-  };
-
-  return (
-    <motion.div
-      initial="initial"
-      whileHover="animate"
-      className="relative overflow-clip rounded-lg flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col space-y-2">
-
-
-      <Image
-        src={"/Services/Implementation.png"}
-        alt={"Implementation of Business Central Microsoft Dynamics 365"}
-        fill
-        priority
-        className="object-cover"
-      />
-    </motion.div>
-  );
-};
-const SkeletonTwo = () => {
-  const variants = {
-    initial: {
-      width: 0,
-    },
-    animate: {
-      width: "100%",
-      transition: {
-        duration: 0.2,
-      },
-    },
-    hover: {
-      width: ["0%", "100%"],
-      transition: {
-        duration: 2,
-      },
-    },
-  };
-  const arr = new Array(6).fill(0);
-  return (
-    <motion.div
-      initial="initial"
-      animate="animate"
-      whileHover="hover"
-      className="relative overflow-clip rounded-lg flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col space-y-2">
-      <Image
-        src={"/Services/Integration.png"}
-        alt={"BusinessCentral of Microsoft Dynamics 365"}
-        width={200}
-        height={200}
-        className="object-cover size-full"
-      />
-    </motion.div>
-  );
-};
-const SkeletonThree = () => {
-  const variants = {
-    initial: {
-      backgroundPosition: "0 50%",
-    },
-    animate: {
-      backgroundPosition: ["0, 50%", "100% 50%", "0 50%"],
-    },
-  };
-  return (
-    <motion.div
-      initial="initial"
-      animate="animate"
-      variants={variants}
-      transition={{
-        duration: 5,
-        repeat: Infinity,
-        repeatType: "reverse",
-      }}
-      className="relative overflow-clip rounded-lg flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2]  bg-dot-black/[0.2] flex-col space-y-2"
-    >
-      <Image
-        src={"/Services/Support.png"}
-        alt={"BusinessCentral of Microsoft Dynamics 365"}
-        width={200}
-        height={200}
-        className="object-contain size-full"
-      />
-    </motion.div>
-  );
-};
-const SkeletonFour = () => {
-  const first = {
-    initial: {
-      x: 20,
-      rotate: -5,
-    },
-    hover: {
-      x: 0,
-      rotate: 0,
-    },
-  };
-  const second = {
-    initial: {
-      x: -20,
-      rotate: 5,
-    },
-    hover: {
-      x: 0,
-      rotate: 0,
-    },
-  };
-  return (
-    <motion.div
-      initial="initial"
-      animate="animate"
-      whileHover="hover"
-      className="relative overflow-clip rounded-lg flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-row ">
-      <Image
-        src={"/Services/Migration-3.svg"}
-        alt={"BusinessCentral of Microsoft Dynamics 365"}
-        width={200}
-        height={200}
-        className="object-fill  size-full"
-      />
-    </motion.div>
-  );
-};
-const SkeletonFive = () => {
-  const variants = {
-    initial: {
-      x: 0,
-    },
-    animate: {
-      x: 10,
-      rotate: 5,
-      transition: {
-        duration: 0.2,
-      },
-    },
-  };
-  const variantsSecond = {
-    initial: {
-      x: 0,
-    },
-    animate: {
-      x: -10,
-      rotate: -5,
-      transition: {
-        duration: 0.2,
-      },
-    },
-  };
-
-  return (
-    <motion.div
-      initial="initial"
-      whileHover="animate"
-      className="relative overflow-clip rounded-lg  flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col space-y-2">
-      <Image
-        src={"/Services/Training.png"}
-        alt={"Training of Microsoft Dynamics 365"}
-        width={200}
-        height={200}
-        className="object-contain  size-full"
-      />
-    </motion.div>
-  );
-};
-const SkeletonSix = () => {
-  const variants = {
-    initial: {
-      x: 0,
-    },
-    animate: {
-      x: 10,
-      rotate: 5,
-      transition: {
-        duration: 0.2,
-      },
-    },
-  };
-  const variantsSecond = {
-    initial: {
-      x: 0,
-    },
-    animate: {
-      x: -10,
-      rotate: -5,
-      transition: {
-        duration: 0.2,
-      },
-    },
-  };
-
-  return (
-    <motion.div
-      initial="initial"
-      whileHover="animate"
-      className="relative overflow-clip rounded-lg  flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col space-y-2">
-      <Image
-        src={"/Services/Customization.png"}
-        alt={"Customization of Microsoft Dynamics 365"}
-        width={200}
-        height={200}
-        className="object-contain size-full"
-      />
-    </motion.div>
-  );
-};
-const SkeletonSeven = () => {
-  const variants = {
-    initial: {
-      x: 0,
-    },
-    animate: {
-      x: 10,
-      rotate: 5,
-      transition: {
-        duration: 0.2,
-      },
-    },
-  };
-  const variantsSecond = {
-    initial: {
-      x: 0,
-    },
-    animate: {
-      x: -10,
-      rotate: -5,
-      transition: {
-        duration: 0.2,
-      },
-    },
-  };
-
-  return (
-    <motion.div
-      initial="initial"
-      whileHover="animate"
-      className="relative overflow-clip rounded-lg  flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col space-y-2">
-      <Image
-        src={"/Services/Dedicated-Resources.png"}
-        alt={"Dedicated-Resources of Microsoft Dynamics 365"}
-        width={200}
-        height={200}
-        className="object-contain size-full"
-      />
-    </motion.div>
-  );
-};
-const SkeletonEight = () => {
-  const variants = {
-    initial: {
-      x: 0,
-    },
-    animate: {
-      x: 10,
-      rotate: 5,
-      transition: {
-        duration: 0.2,
-      },
-    },
-  };
-  const variantsSecond = {
-    initial: {
-      x: 0,
-    },
-    animate: {
-      x: -10,
-      rotate: -5,
-      transition: {
-        duration: 0.2,
-      },
-    },
-  };
-
-  return (
-    <motion.div
-      initial="initial"
-      whileHover="animate"
-      className="relative overflow-clip rounded-lg  flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col space-y-2">
-      <Image
-        src={"/Services/BusinessCentral.svg"}
-        alt={"BusinessCentral of Microsoft Dynamics 365"}
-        width={200}
-        height={200}
-        className="object-contain  size-full"
-      />
-    </motion.div>
-  );
-};
-const items = [
-  {
-    title: "Implementation",
-    description: (
-      <span className="text-sm">
-        Experience the power of AI in generating unique content.
-      </span>
-    ),
-    header: <SkeletonOne />,
-    className: "md:col-span-1",
-    icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
-    link: "/implementation"
-  },
-  {
-    title: "Integration",
-    description: (
-      <span className="text-sm">
-        Let AI handle the proofreading of your documents.
-      </span>
-    ),
-    header: <SkeletonTwo />,
-    className: "md:col-span-1",
-    icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
-    link: "/integration"
-  },
-  {
-    title: "Support",
-    description: (
-      <span className="text-sm">
-        Get AI-powered suggestions based on your writing context.
-      </span>
-    ),
-    header: <SkeletonThree />,
-    className: "md:col-span-1",
-    icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
-    link: "/support"
-  },
-  {
-    title: "Migrating from Another ERP or CRM",
-    description: (
-      <span className="text-sm">
-        Understand the sentiment of your text with AI analysis.
-      </span>
-    ),
-    header: <SkeletonFour />,
-    className: "md:col-span-2",
-    icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
-    link: "/implementation"
-  },
-
-  {
-    title: "Training",
-    description: (
-      <span className="text-sm">
-        Summarize your lengthy documents with AI technology.
-      </span>
-    ),
-    header: <SkeletonFive />,
-    className: "md:col-span-1",
-    icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
-    link: "/training"
-  },
-  {
-    title: "Customization",
-    description: (
-      <span className="text-sm">
-        Summarize your lengthy documents with AI technology.
-      </span>
-    ),
-    header: <SkeletonSix />,
-    className: "md:col-span-1",
-    icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
-    link: "/customization"
-  },
-  {
-    title: "Dedicated Resources",
-    description: (
-      <span className="text-sm">
-        Summarize your lengthy documents with AI technology.
-      </span>
-    ),
-    header: <SkeletonSeven />,
-    className: "md:col-span-1",
-    icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
-    link: "/dedicated-resources"
-  },
-  {
-    title: " Business Central",
-    description: (
-      <span className="text-sm">
-        Summarize your lengthy documents with AI technology.
-      </span>
-    ),
-    header: <SkeletonEight />,
-    className: "md:col-span-1",
-    icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
-    link: "/training"
-  },
-];

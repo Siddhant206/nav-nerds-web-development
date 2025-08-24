@@ -11,7 +11,7 @@ function Page() {
             <section className="relative bg-white bg-[url(/Services/Dedicated-Resources/dedicatedResourcesBG.jpg)]  bg-cover bg-no-repeat  bg-center md:bg-bottom   flex items-center justify-center lg:py-14 max-lg:px-4  flex-col w-full text-black  overflow-hidden h-[50vh] md:h-[100dvh] " >
                 <div className='absolute inset-0 bg-black/30 ' />
                 <div className="md:pb-60 relative flex flex-col items-center justify-center w-fit">
-                    <h1 className={`  text-3xl md:text-xl lg:text-5xl font-semibold text-white max-w-xl text-center`}>
+                    <h1 className={`  text-3xl md:text-xl lg:text-5xl font-semibold text-black max-w-xl text-center`}>
                         Dedicated Resources
                         for your Business
                     </h1>

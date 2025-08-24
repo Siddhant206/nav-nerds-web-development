@@ -6,25 +6,25 @@ import { BsBuilding, BsCart, BsGear, BsBank, BsBook, BsAirplane } from "react-ic
  
 
 const industries = [
-    { title: "Construction", icon: <BsBuilding />, key: "construction" },
-    { title: "E-Commerce", icon: <BsCart />, key: "ecommerce", highlight: true },
-    { title: "Manufacturing", icon: <BsGear />, key: "manufacturing" },
-    { title: "Finance", icon: <BsBank />, key: "finance" },
-    { title: "Education", icon: <BsBook />, key: "education" },
-    { title: "Travel", icon: <BsAirplane />, key: "travel" },
+    { title: "Construction", icon: <BsBuilding />, text:"We deliver ERP solutions that streamline project management, resource allocation, and compliance - helping construction firms complete projects on time and within budget.", key: "construction" },
+    { title: "E-Commerce", icon: <BsCart />, text:"Our ERP systems integrate with online stores, automate inventory, and optimize order fulfillment - enabling retailers to scale seamlessly and improve customer experience.", key: "ecommerce", highlight: true },
+    { title: "Manufacturing", icon: <BsGear />, text:"We provide ERP platforms that enhance production planning, quality control, and supply chain visibility - empowering manufacturers to operate more efficiently.", key: "manufacturing" },
+    { title: "Finance", icon: <BsBank />, text:"Our ERP solutions support real-time reporting, compliance, and secure financial operations - helping financial organizations maintain accuracy and trust.",  key: "finance" },
+    { title: "Education", icon: <BsBook />, text:"We implement ERP systems that centralize student data, simplify administration, and improve collaboration across academic institutions.",  key: "education" },
+    { title: "Travel", icon: <BsAirplane />, text:"Our ERP tools help travel businesses manage bookings, customer interactions, and partner integrations - delivering smooth operations and better client satisfaction.", key: "travel" },
 ];
 
 export default function IndustrySpecializations() {
     const [hovered, setHovered] = useState(null);
 
     return (
-        <section className="max-w-7xl mx-auto bg-gray-50/60 border border-gray-200 mt-10 py-20 px-6">
+        <section className="max-w-7xl mx-auto bg-gray-50/60 border border-gray-200  py-20 px-6">
             <div className="max-w-6xl mx-auto">
                 <h2 className={` text-2xl xl:text-3xl 2xl:text-4xl font-bold   text-gray-800 text-left mb-10`}>
                     Industry Specializations
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-                    {industries.map(({ title, icon, highlight, key }) => (
+                    {industries.map(({ title, icon, highlight, key, text }) => (
                         <div
                             key={key}
                             onMouseEnter={() => setHovered(key)}
@@ -36,8 +36,7 @@ export default function IndustrySpecializations() {
                                 {title}
                             </div>
                             <p className="text-sm leading-relaxed">
-                                We build custom ERP systems with fully tailored functionality and integrations
-                                for organizations of all sizes and industries.
+                                {text}
                             </p>
                         </div>
                     ))}

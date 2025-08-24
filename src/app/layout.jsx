@@ -1,8 +1,9 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/Components/Navbar";
-import Footer from "@/Components/Footer";
-
+import Footer from "@/Components/Footer"; 
+import { GoogleTagManager } from '@next/third-parties/google'
+import FloatingContacts from "@/Components/ui/FloatingContacts";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,15 +18,16 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "NavNerds",
-  description: "NavNerds A Micorsoft Business 365 services provider.",
+  description: "NavNerds A Micorsoft Business 365 Services Provider.",
 };
 
 export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased   `} >
-
+      <GoogleTagManager gtmId="GTM-PN6PVXLB" />
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased   `} >  
+        <FloatingContacts/>
         <Navbar />
         {children}
         <Footer />
