@@ -1,6 +1,6 @@
 
 import React from 'react'
-import { ServiceCard } from '@/components/UI/serviceCard';
+import { ServiceCard } from '@/component/UI/serviceCard';
 import Link from 'next/link';
 
 

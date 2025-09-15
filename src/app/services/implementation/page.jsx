@@ -2,7 +2,7 @@
 import React from 'react'
 import Image from "next/image";
 import Link from 'next/link';
-import { ServiceCard } from '@/components/UI/serviceCard';
+import { ServiceCard } from '@/component/UI/serviceCard';
 
 
 const features = [
