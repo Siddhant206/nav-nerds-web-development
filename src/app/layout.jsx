@@ -2,8 +2,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/Components/Navbar";
 import Footer from "@/Components/Footer";
-import { GoogleTagManager } from '@next/third-parties/google'
-import FloatingContacts from "@/Components/UI/FloatingContacts";
+import { GoogleTagManager } from '@next/third-parties/google'  
+import FloatingContacts from './../Components/UI/FloatingContacts';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
