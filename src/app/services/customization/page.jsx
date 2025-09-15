@@ -1,9 +1,9 @@
 
 import React from 'react'
-import Image from "next/image"; 
+import Image from "next/image";
 import Link from 'next/link';
-import FeatureCard from '@/Components/ui/FeatureCard';
- 
+import FeatureCard from '@/Components/UI/FeatureCard';
+
 function Page() {
     return (
         <section id="services" className="relative  text-black overflow-hidden">

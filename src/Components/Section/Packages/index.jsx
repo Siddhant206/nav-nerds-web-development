@@ -41,7 +41,7 @@ export default function Packages() {
   const [hoveredIndex, setHoveredIndex] = useState (null);
 
   return (
-    <section className="py-10 md:py-16 px-6">
+    <section className="py-10 md:py-10 px-6">
       <div className="max-w-7xl mx-auto">
         
         <div className="max-w-2xl mr-auto text-black pb-4 space-y-4 text-left">

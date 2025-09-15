@@ -1,6 +1,6 @@
 
-import React from 'react' 
-import { ServiceCard } from '@/Components/ui/serviceCard'; 
+import React from 'react'
+import { ServiceCard } from '@/Components/UI/serviceCard';
 import Link from 'next/link';
 
 
@@ -12,7 +12,7 @@ function Page() {
                 <div className='absolute inset-0 bg-black/30 ' />
                 <div className="md:pb-60 relative flex flex-col items-center justify-center w-fit">
                     <h1 className={`text-3xl md:text-xl lg:text-5xl font-extrabold md:font-bold text-black max-w-xl text-center`}>
-                    Training with Navnerds
+                        Training with Navnerds
                     </h1>
                     <Link
                         href={"/contact-us"}

@@ -20,6 +20,7 @@ const navLinks = [
             { label: "Dedicated Resources", href: "/services/dedicated-resources" },
         ],
     },
+    { label: "Blogs", href: "/blogs" },
     { label: "Pricing", href: "/pricing" },
     { label: "Contact Us", href: "/contact-us" },
 ];
