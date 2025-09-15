@@ -1,7 +1,7 @@
-import Banner from "@/Components/Section/Banner";
-import IndustrySpecializations from "@/Components/Section/IndustrySpecializations";
-import Packages from "@/Components/Section/Packages";
-import ServicesSection from "@/Components/Section/Services";
+import Banner from "@/components/Section/Banner";
+import IndustrySpecializations from "@/components/Section/IndustrySpecializations";
+import Packages from "@/components/Section/Packages";
+import ServicesSection from "@/components/Section/Services";
 
 export default function Home() {
   return (

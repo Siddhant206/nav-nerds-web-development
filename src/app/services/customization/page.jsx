@@ -2,8 +2,7 @@
 import React from 'react'
 import Image from "next/image";
 import Link from 'next/link';
-import FeatureCard from './../../../Components/UI/FeatureCard';
- 
+import FeatureCard from '@/components/UI/FeatureCard';
 
 function Page() {
     return (

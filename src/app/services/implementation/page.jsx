@@ -1,8 +1,8 @@
 
 import React from 'react'
 import Image from "next/image";
-import Link from 'next/link'; 
-import { ServiceCard } from './../../../Components/UI/serviceCard';
+import Link from 'next/link';
+import { ServiceCard } from '@/components/UI/serviceCard';
 
 
 const features = [
