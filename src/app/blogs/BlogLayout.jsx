@@ -13,7 +13,7 @@ function BlogCard({ post, priority = false }) {
         className="block rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 bg-[#4fd0da]  transform hover:-translate-y-1"
       >
         {post.mainImage?.asset?.url ? (
-          <div className="relative overflow-hidden  rounded-t-xl">
+          <div className="relative overflow-hidden border   rounded-t-xl">
             <Image
               src={urlFor(post.mainImage.asset.url).width(800).height(500).url()}
               alt={post.mainImage?.alt || `Featured image for ${post.title}`}
