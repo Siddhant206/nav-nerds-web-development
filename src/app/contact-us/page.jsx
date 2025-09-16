@@ -111,7 +111,7 @@ export default function page() {
         </div>
       </section> */}
       {/* HERO */}
-      <header className="max-w-4xl mx-auto py-20 xl:py-40 px-6 text-center ">
+      <header className="max-w-4xl mx-auto pt-20 px-6 text-center ">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
         <p className="max-w-2xl mx-auto text-lg md:text-xl">
           At Navnerds, we understand that trusting a new team takes time—so we’ve created a Trust & Trial Package to let you experience our expertise in{" "}
@@ -120,7 +120,7 @@ export default function page() {
 
       </header> 
         {/* Contact Info Cards */}
-        <main className="max-w-6xl w-full mx-auto px-4 space-y-10 -mt-16 relative z10">
+        <main className="max-w-6xl w-full mx-auto px-4 space-y-10 py-10 relative z10">
           <div className="bg-white rounded-xl h-full sm:h-40 lg:h-52 border border-gray-200 px-16 flex max-md:flex-col gap-4 justify-between items-center">
             <address className="flex flex-col items-center justify-center gap-3 mt-3 p-2 md:h-20 rounded-xl not-italic" >
               <div >

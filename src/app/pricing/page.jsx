@@ -62,7 +62,7 @@ export default function PricingPage() {
     return (
         <main className="bg-[url(/HomePageBg.webp)]  bg-cover bg-no-repeat bg-top text-gray-800 font-sans">
             {/* HERO */}
-            <header className="max-w-4xl mx-auto pt-40 px-6 text-center ">
+            <header className="max-w-4xl mx-auto pt-20 px-6 text-center ">
                 <h1 className="text-4xl md:text-5xl font-bold mb-4">Pricing</h1>
                 <p className="max-w-2xl mx-auto text-lg md:text-xl mb-4">
                     At Navnerds, we understand that trusting a new team takes time—so we’ve created a Trust & Trial Package to let you experience our expertise in{" "}

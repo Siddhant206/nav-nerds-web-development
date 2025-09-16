@@ -241,7 +241,7 @@ export default function BlogLayout({
   };
 
   return (
-    <section className="min-h-screen bg-[url(/HomePageBg.webp)]  bg-cover bg-no-repeat bg-top py-12">
+    <section className="min-h-screen bg-[url(/HomePageBg.webp)]  bg-cover bg-no-repeat bg-top pt-20 ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900  mb-4">

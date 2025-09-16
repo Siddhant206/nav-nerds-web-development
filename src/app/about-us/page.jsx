@@ -59,12 +59,12 @@ export default function Page() {
     return (
         <section className=' bg-[url(/HomePageBg.webp)]  bg-cover bg-no-repeat bg-top min-h-96 text-black'>
             {/* HERO */}
-            <header className="max-w-4xl mx-auto pt-10 lg:pt-40 px-6 text-center ">
+            <header className="max-w-4xl mx-auto pt-20 px-6 text-center ">
                 <h1 className={`text-3xl md:text-xl lg:text-5xl   font-semibold mb-4`}>About Us</h1> 
 
             </header>
             {/* Main content remains same */}
-            <main className=" py-16 px-4">
+            <main className=" py-10 px-4">
                 <div className="bg-white max-w-6xl mx-auto p-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     {/* Text Block */}
                     <div className='flex flex-col justify-between items-start h-full py-10 '>
@@ -72,7 +72,7 @@ export default function Page() {
                             <h2 className={`text-2xl xl:text-3xl 2xl:text-4xl font-bold  text-gray-900 mb-6`}>
                                 What Sets Us Apart
                             </h2>
-                            <p className="text-gray-600 mb-6 text-base text-justify leading-relaxed">
+                            <p className="text-gray-600 mb-6 text-base text-justify   hyphens-auto">
                                 NavNerds is a specialized Microsoft enterprise solutions IT consulting company. Our purpose is to marry cutting-edge technology with business strategy, enabling organizations to maximize operations and growth. We utilize extensive knowledge of Microsoft Dynamics 365 Business Central (previously Dynamics NAV/Navision) and Microsoft 365 (Office 365) to provide seamless ERP and cloud productivity solutions. For instance, Microsoft Dynamics 365 Business Central is outlined as "a comprehensive business management solution that helps automate and streamline business processes and manage your entire business"
                             </p>
                         </div>

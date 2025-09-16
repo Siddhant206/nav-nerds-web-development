@@ -56,64 +56,13 @@ export const blockContentType = defineType({
       },
     }),
 
-    // Regular image block
-    defineArrayMember({
-      type: "image",
-      icon: ImageIcon,
-      options: { hotspot: true },
-      fields: [
-        {
-          name: "alt",
-          type: "string",
-          title: "Alternative Text",
-        },
-        {
-          name: "caption",
-          type: "string",
-          title: "Caption",
-        },
-      ],
-    }),
-
-    // Custom code block
-    defineArrayMember({
-      type: "object",
-      name: "code",
-      title: "Code Block",
-      icon: CodeIcon,
-      fields: [
-        {
-          name: "code",
-          type: "text",
-          title: "Code",
-          options: {
-            language: "javascript", // You can set a default
-          },
-        },
-        {
-          name: "language",
-          type: "string",
-          title: "Language",
-          options: {
-            list: [
-              { title: "JavaScript", value: "javascript" },
-              { title: "TypeScript", value: "typescript" },
-              { title: "HTML", value: "html" },
-              { title: "CSS", value: "css" },
-              { title: "Python", value: "python" },
-              { title: "JSON", value: "json" },
-            ],
-          },
-        },
-      ],
-    }),
-
-    // Custom imageWithText block
+   // Custom imageWithText block
     defineArrayMember({
       type: "object",
       name: "imageWithText",
-      title: "Image with Text",
+      title: "Image",
       icon: ImageIcon,
+      options: { hotspot: true },
       fields: [
         {
           name: "image",
@@ -187,7 +136,41 @@ export const blockContentType = defineType({
           media: "image",
         },
       },
+    }), 
+    // Custom code block
+    defineArrayMember({
+      type: "object",
+      name: "code",
+      title: "Code Block",
+      icon: CodeIcon,
+      fields: [
+        {
+          name: "code",
+          type: "text",
+          title: "Code",
+          options: {
+            language: "javascript", // You can set a default
+          },
+        },
+        {
+          name: "language",
+          type: "string",
+          title: "Language",
+          options: {
+            list: [
+              { title: "JavaScript", value: "javascript" },
+              { title: "TypeScript", value: "typescript" },
+              { title: "HTML", value: "html" },
+              { title: "CSS", value: "css" },
+              { title: "Python", value: "python" },
+              { title: "JSON", value: "json" },
+            ],
+          },
+        },
+      ],
     }),
+
+   
 
     // Break/Separator
     defineArrayMember({

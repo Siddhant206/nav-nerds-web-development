@@ -15,7 +15,7 @@ export async function getData() {
 export default async function sitemap() {
     const data = await getData()
     const posts = data.map((post) => ({
-        url: `https://www.vitwo.finance/blogs-resources/${post.currentSlug}`,
+        url: `https://www.navnerds.com/blogs/${post.currentSlug}`,
         lastModified: post.lastModified,
         changeFrequency: 'weekly',
         priority: 0.9,
@@ -23,79 +23,79 @@ export default async function sitemap() {
 
     return [
         {
-            url: 'https://www.vitwo.finance/',
+            url: 'https://www.navnerds.com/',
             lastModified: new Date(),
             changeFrequency: 'monthly',
             priority: 1,
         },
         {
-            url: 'https://www.vitwo.finance/contact',
+            url: 'https://www.navnerds.com/contact',
             lastModified: new Date(),
             changeFrequency: 'yearly',
             priority: 0.8,
         },
         {
-            url: 'https://www.vitwo.finance/career',
+            url: 'https://www.navnerds.com/career',
             lastModified: new Date(),
             changeFrequency: 'monthly',
             priority: 0.9,
         },
         {
-            url: 'https://www.vitwo.finance/about',
+            url: 'https://www.navnerds.com/about',
             lastModified: new Date(),
             changeFrequency: 'yearly',
             priority: 0.9,
         },
         {
-            url: 'https://www.vitwo.finance/privacy-policy',
+            url: 'https://www.navnerds.com/privacy-policy',
             lastModified: new Date(),
             changeFrequency: 'yearly',
             priority: 0.8,
         },
         {
-            url: 'https://www.vitwo.finance/virtual-cfo-services',
+            url: 'https://www.navnerds.com/virtual-cfo-services',
             lastModified: new Date(),
             changeFrequency: 'yearly',
             priority: 0.8,
         },
         {
-            url: 'https://www.vitwo.finance/accounting-bookkeeping',
+            url: 'https://www.navnerds.com/accounting-bookkeeping',
             lastModified: new Date(),
             changeFrequency: 'yearly',
             priority: 0.8,
         },
         {
-            url: 'https://www.vitwo.finance/compliance-management',
+            url: 'https://www.navnerds.com/compliance-management',
             lastModified: new Date(),
             changeFrequency: 'yearly',
             priority: 0.8,
         },
         {
-            url: 'https://www.vitwo.finance/mis-reporting',
+            url: 'https://www.navnerds.com/mis-reporting',
             lastModified: new Date(),
             changeFrequency: 'yearly',
             priority: 0.8,
         },
         {
-            url: 'https://www.vitwo.finance/business-intelligence',
+            url: 'https://www.navnerds.com/business-intelligence',
             lastModified: new Date(),
             changeFrequency: 'yearly',
             priority: 0.8,
         },
         {
-            url: 'https://www.vitwo.finance/risk-mitigation',
+            url: 'https://www.navnerds.com/risk-mitigation',
             lastModified: new Date(),
             changeFrequency: 'yearly',
             priority: 0.8,
         },
         {
-            url: 'https://www.vitwo.finance/fund-management',
+            url: 'https://www.navnerds.com/fund-management',
             lastModified: new Date(),
             changeFrequency: 'yearly',
             priority: 0.8,
         },
         {
-            url: 'https://www.vitwo.finance/associate-services',
+            url: 'https://www.navnerds.com/associate-services',
             lastModified: new Date(),
             changeFrequency: 'yearly',
             priority: 0.8,

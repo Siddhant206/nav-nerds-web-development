@@ -1,11 +1,11 @@
-import { MetadataRoute } from 'next';
+import { MetadataRoute } from "next";
 
 export default function robots() {
-    return {
-        rules: {
-            userAgent: '*',
-            allow: '/',
-        },
-        sitemap: 'https://www.vitwo.finance/sitemap.xml',
-    };
+  return {
+    rules: {
+      userAgent: "*",
+      allow: "/",
+    },
+    sitemap: "https://www.navnerds.com/sitemap.xml",
+  };
 }

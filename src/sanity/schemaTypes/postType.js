@@ -41,6 +41,7 @@ export const postType = defineType({
   name: 'category',
   title: 'Category',
   type: 'string',
+  placeholder:"Select",
   options: {
     list: [
       {title: 'Customization', value: 'customization'},
@@ -55,7 +56,7 @@ export const postType = defineType({
 }),
     defineField({
       name: 'publishedAt',
-      type: 'datetime',
+      type: 'date',
     }),
     defineField({
       name: 'body',

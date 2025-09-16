@@ -4,6 +4,7 @@ import { urlFor } from "@/sanity/lib/image";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import PortableTextRenderer from "@/component/PortableText";
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
@@ -47,9 +48,9 @@ export default async function BlogPostPage({ params }) {
   return (
     <section className="w-full min-h-screen bg-[url(/HomePageBg.webp)] bg-cover bg-no-repeat bg-top">
       {/* Breadcrumb Navigation */}
-      <nav
+      {/* <nav
         aria-label="Breadcrumb"
-        className="relative w-full border-b-2 overflow-hidden"
+        className="relative w-full border-b-2 pt-20 overflow-hidden"
       >
         <div className="absolute bottom-0 md:top-0 left-10 h-fit w-full -z-10">
           <Image
@@ -66,7 +67,7 @@ export default async function BlogPostPage({ params }) {
           </h1>
         
         </div>
-      </nav>
+      </nav> */}
 
       {/* Blog Content */}
       <div className="max-w-5xl mx-auto flex flex-col gap-6 px-4 py-12">
@@ -143,7 +144,7 @@ export default async function BlogPostPage({ params }) {
                           prose-code:bg-gray-100 prose-code:rounded prose-code:px-2 prose-code:py-1
                           prose-pre:bg-gray-900 prose-pre:rounded-lg
                           prose-img:rounded-lg prose-img:shadow-md">
-              <PortableText value={post.body} />
+              <PortableTextRenderer value={post.body} />
             </div>
           </article>
         )}
