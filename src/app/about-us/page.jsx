@@ -1,4 +1,6 @@
-"use client" 
+// "use client" 
+import { generateMetadata } from '@/component/SEO/generateMetadata';
+import { pagesMetadata } from '@/component/SEO/pages-metadata';
 import Link from 'next/link'; 
 
 function FeatureCard({ title, description, icon }) {
@@ -52,10 +54,10 @@ const features = [
     },
 ];
 
+export const metadata = generateMetadata(pagesMetadata.about);
+
 export default function Page() {
-
-
-    // Header and main sections remain same - only optimized the posts mapping
+// Header and main sections remain same - only optimized the posts mapping
     return (
         <section className=' bg-[url(/HomePageBg.webp)]  bg-cover bg-no-repeat bg-top min-h-96 text-black'>
             {/* HERO */}
