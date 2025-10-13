@@ -2,8 +2,7 @@
 import { getAllBlogs, getBlogCategories } from "@/sanity/lib/blog";
 import BlogLayout from "./BlogLayout";
 
-const POSTS_PER_PAGE = 9;
-
+const POSTS_PER_PAGE = 9; 
 export async function generateMetadata({ searchParams }) {
   const { search, category } = await searchParams;
 

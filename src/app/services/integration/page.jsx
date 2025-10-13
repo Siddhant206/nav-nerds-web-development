@@ -2,6 +2,10 @@
 import React from 'react'
 import Image from "next/image"; 
 import Link from 'next/link';
+import { generateMetadata } from '@/component/SEO/generateMetadata';
+import { pagesMetadata } from '@/component/SEO/pages-metadata';
+
+export const metadata = generateMetadata(pagesMetadata.integrationsMetadata);
 
 function Page() {
     return (

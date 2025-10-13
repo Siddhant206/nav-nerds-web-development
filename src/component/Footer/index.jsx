@@ -3,6 +3,8 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from "next/image"; 
+// import { ContactSection } from '../temp'; 
+// import { Button } from '../UI/button';
 
 const AnimatedLink = ({ href, children, onClick }) => (
   <Link href={href} onClick={onClick} className="relative inline-block group">
@@ -17,6 +19,7 @@ function Footer() {
     { href: "/", text: "Home" },
     { href: "/pricing", text: "Pricing" },
     { href: "/about-us", text: "About Us" },
+    { href: "/contact-us", text: "Contact Us" },
     { href: "/privacy-policy", text: "Privacy Policy" }, 
   ];
 
@@ -27,7 +30,9 @@ function Footer() {
     "Integration",
     "Customization", 
     "Implementation", 
-    "Dedicated Resources"];
+    "Dedicated Resources",
+    "Website Development",
+  ];
   const industry = [
     "Travel",
     "Finance", 
@@ -42,21 +47,29 @@ function Footer() {
      ];
 
   return (
-    <footer role="contentinfo" className="bg-[url(/FooterBg.webp)] bg-cover bg-top bg-blend-d text-gray-800 min-h-fit max-lg:px-4">
-    <div className='max-w-3xl mx-auto text-center space-y-4 pt-20'>
-      <h3 className='text-xl sm:text-2xl lg:text-4xl font-bold'>Get In Touch</h3>
-        <p className='text-sm sm:text-base lg:text-xl'>Contact Us For your needs we have the best team and right minds to deliver projects end-to-end.</p>
+    <footer
+      role="contentinfo"
+      className="bg-[url(/FooterBg.webp)] bg-cover bg-top bg-blend-d text-gray-800 min-h-fit max-lg:px-4"
+    >
+      {/* <ContactSection /> */}
+      
+      <div className="max-w-3xl mx-auto text-center space-y-4 pt-20">
+        <h3 className="text-xl sm:text-2xl lg:text-4xl font-bold">
+          Get In Touch
+        </h3>
+        <p className="text-sm sm:text-base lg:text-xl">
+          Contact Us For your needs we have the best team and right minds to
+          deliver projects end-to-end.
+        </p>
         <Link
           href={"/contact-us"}
           className="px-6 py-3 md:px-12 md:py-2 rounded-3xl border border-gray-400   hover:text-white bg-white hover:bg-black text-black transition-colors duration-300 mt-4 md:mt-8"
         >
           Contact Us
         </Link>
-    </div>
-    
-    
-      <div className="max-w-5xl mx-auto px-4 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8 py-28">
+      </div>
 
+      <div className="max-w-5xl mx-auto px-4 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8 py-28">
         {/* Company Section - Remain same */}
         <div>
           <h2 className="text-lg font-semibold mb-4">Company</h2>
@@ -78,12 +91,13 @@ function Footer() {
             <ul className="space-y-2">
               {services.map((service) => (
                 <li key={service}>
-                  <AnimatedLink href={`/services/${encodeURIComponent(service.toLowerCase().replace(/\s+/g, ''))}`}>
+                  <AnimatedLink
+                    href={`/services/${encodeURIComponent(service.toLowerCase().replace(/\s+/g, ""))}`}
+                  >
                     {service}
                   </AnimatedLink>
                 </li>
               ))}
-
             </ul>
           </nav>
         </div>
@@ -94,12 +108,14 @@ function Footer() {
           <nav aria-label="Industries We Serve">
             <ul className="space-y-2">
               {industry.map((industry) => (
-                <li key={industry} className="group relative w-fit cursor-default">
+                <li
+                  key={industry}
+                  className="group relative w-fit cursor-default"
+                >
                   <span className="relative ">{industry}</span>
                   <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-current transition-all duration-500 group-hover:w-full"></span>
                 </li>
               ))}
-
             </ul>
           </nav>
         </div>
@@ -108,16 +124,38 @@ function Footer() {
         <div>
           <h2 className="text-lg font-semibold mb-4">Contact Us</h2>
           <address className="not-italic space-y-2">
-            <p><span className="font-medium">Phone:</span> <a href="tel:+919068476495" className="hover:underline">+91 9068476495</a></p>
-            <p><span className="font-medium">Email:</span> <a href="mailto:info@navnerds.com" className="hover:underline">info@navnerds.com</a></p>
+            <p>
+              <span className="font-medium">Phone:</span>{" "}
+              <a href="tel:+919068476495" className="hover:underline">
+                +91 9068476495
+              </a>
+            </p>
+            <p>
+              <span className="font-medium">Email:</span>{" "}
+              <a href="mailto:info@navnerds.com" className="hover:underline">
+                info@navnerds.com
+              </a>
+            </p>
           </address>
 
           <div>
             <h2 className="text-lg font-semibold mt-2">Follow Us</h2>
             <div className="flex space-x-4 mt-2">
               {socialLinks.map(({ href, label, color, path }) => (
-                <Link key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label} className={`text-gray-800 ${color} transition-colors duration-300`}>
-                  <svg width={label === "Instagram" ? "30" : "24"} height={label === "Instagram" ? "30" : "24"} fill="currentColor" viewBox="0 0 24 24">
+                <Link
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className={`text-gray-800 ${color} transition-colors duration-300`}
+                >
+                  <svg
+                    width={label === "Instagram" ? "30" : "24"}
+                    height={label === "Instagram" ? "30" : "24"}
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
                     <path d={path} />
                   </svg>
                 </Link>
@@ -130,7 +168,8 @@ function Footer() {
       {/* Copyright - Remain same */}
       <div className="py-5 text-center text-sm text-gray-800 border-t border-gray-300 pt-4">
         <p>
-          &copy; {new Date().getFullYear()} <strong>NavNerds</strong>. All rights reserved.  
+          &copy; {new Date().getFullYear()} <strong>NavNerds</strong>. All
+          rights reserved.
         </p>
       </div>
     </footer>

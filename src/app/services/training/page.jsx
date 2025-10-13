@@ -4,6 +4,10 @@ import { ServiceCard } from '@/component/UI/serviceCard';
 import Link from 'next/link';
 
 
+import { generateMetadata } from '@/component/SEO/generateMetadata';
+import { pagesMetadata } from '@/component/SEO/pages-metadata';
+
+export const metadata = generateMetadata(pagesMetadata.trainingMetadata);
 function Page() {
     return (
         <section id="services" className="relative  text-black overflow-hidden ">

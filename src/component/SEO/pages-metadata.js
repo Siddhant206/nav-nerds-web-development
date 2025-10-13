@@ -1,259 +1,300 @@
-export const pagesMetadata= {
-    home: {
-        title:
-            "Best Dynamics 365 Services | Expert Financial Solutions for Growth",
-        description:
-            "Get the best Dynamics 365 Services & Outsourced CFO Services. Expert Dynamics 365 Services in India delivering strategic CFO Services in India for growth.",
-        openGraph: {
-            title: "Best Dynamics 365 Services | Expert Financial Solutions for Growth",
-            description:
-                "Get the best Dynamics 365 Services & Outsourced CFO Services. Expert Dynamics 365 Services in India delivering strategic CFO Services in India for growth.",
-            type: "website",
-            image: "/images/Navnerds-og.jpg",
-        },
-        twitter: {
-            card: "summary_large_image",
-            title: "Best Dynamics 365 Services | Expert Financial Solutions for Growth",
-            description:
-                "Get the best Dynamics 365 Services & Outsourced CFO Services. Expert Dynamics 365 Services in India delivering strategic CFO Services in India for growth.",
-            image: "/images/Navnerds-twitter.jpg",
-        },
-         verification: {
-             google: 'UfiISf7wPSWOVD-EmLGuz5lDH0nZ2gus4ZF5VKEOnVg',
-        },
-        canonical: "https://www.navnerds.com/",
-        robots: "index, follow",
+export const pagesMetadata = {
+  home: {
+    title:
+      "Microsoft Dynamics 365 Experts | Complete Business Solutions | NavNerds",
+    description:
+      "Welcome to NavNerds — your complete business solution partner. Get the best Microsoft Dynamics 365 Services, ERP Implementation, Integration, and Support to automate and grow your business.",
+    openGraph: {
+      title:
+        "Microsoft Dynamics 365 Experts | Complete Business Solutions | NavNerds",
+      description:
+        "NavNerds delivers expert Microsoft Dynamics 365, ERP, and Business Central services to help companies automate operations and achieve growth.",
+      type: "website",
+      image: "/images/navnerds-home-og.jpg",
     },
+    twitter: {
+      card: "summary_large_image",
+      title:
+        "Microsoft Dynamics 365 Experts | Complete Business Solutions | NavNerds",
+      description:
+        "Automate your business with NavNerds — the trusted Microsoft Dynamics 365 consulting and ERP solution provider.",
+      image: "/images/navnerds-home-twitter.jpg",
+    },
+    verification: {
+      google: "UfiISf7wPSWOVD-EmLGuz5lDH0nZ2gus4ZF5VKEOnVg",
+    },
+    canonical: "https://www.navnerds.com/",
+    robots: "index, follow",
+  },
 
-    about: {
-        title: "Best ERP Company | Navnerds",
-        description:
-            "Learn about the Best ERP Company with . Expert financial planning services to help you grow, succeed, and achieve goals.",
-        openGraph: {
-            title: "Best ERP Company | Navnerds",
-            description:
-                "Learn about the Best ERP Company with . Expert financial planning services to help you grow, succeed, and achieve goals.",
-            type: "website",
-            image: "/images/about-og.jpg",
-        },
-        twitter: {
-            card: "summary_large_image",
-            title: "Best ERP Company | Navnerds",
-            description:
-                "Learn about the Best ERP Company with . Expert financial planning services to help you grow, succeed, and achieve goals.",
-            image: "/images/about-twitter.jpg",
-        },
-        canonical: "https://www.navnerds.com/about",
-        robots: "index, follow",
+  about: {
+    title: "About NavNerds | Leading Microsoft Dynamics 365 & ERP Company",
+    description:
+      "Learn more about NavNerds — a trusted Microsoft Dynamics 365 consulting company helping businesses grow through ERP, automation, and digital transformation.",
+    openGraph: {
+      title: "About NavNerds | Leading Microsoft Dynamics 365 & ERP Company",
+      description:
+        "NavNerds empowers businesses with Microsoft Dynamics 365, ERP implementation, and financial automation solutions.",
+      type: "website",
+      image: "/images/navnerds-about-og.jpg",
     },
-    blog: {
-        title: "Our Blogs | ViTwo Finance",
-        description:
-            "Explore expert blogs on Dynamics 365 Services, Finance, Risk Management, Compliance, and Business Growth strategies from ViTwo Finance.",
-        openGraph: {
-            title: "Our Blogs | ViTwo Finance",
-            description:
-                "Explore expert blogs on Dynamics 365 Services, Finance, Risk Management, Compliance, and Business Growth strategies from ViTwo Finance.",
-            type: "website",
-            image: "/images/about-og.jpg",
-        },
-        twitter: {
-            card: "summary_large_image",
-            title: "Best ERP Company | Navnerds",
-            description:
-                "Explore expert blogs on Dynamics 365 Services, Finance, Risk Management, Compliance, and Business Growth strategies from ViTwo Finance.",
-            image: "/images/about-twitter.jpg",
-        },
-        canonical: "https://www.navnerds.com/blogs-resources",
-        robots: "index, follow",
+    twitter: {
+      card: "summary_large_image",
+      title: "About NavNerds | Leading Microsoft Dynamics 365 & ERP Company",
+      description:
+        "Discover how NavNerds helps businesses streamline operations with ERP and Microsoft 365 expertise.",
+      image: "/images/navnerds-about-twitter.jpg",
     },
+    canonical: "https://www.navnerds.com/about-us",
+    robots: "index, follow",
+  },
 
-    virtualCFOServices: {
-        title:
-            "Best Dynamics 365 Services | Expert Guidance for Growth",
-        description:
-            "Discover the Best CFO Services. Our expert  deliver strategic guidance and reliable support to drive your business growth.",
-        openGraph: {
-            title:
-                "Best Dynamics 365 Services | Expert Guidance for Growth",
-            description:
-                "Discover the Best CFO Services. Our expert  deliver strategic guidance and reliable support to drive your business growth.",
-            type: "website",
-            image: "/images/associate-og.jpg",
-        },
-        twitter: {
-            card: "summary_large_image",
-            title:
-                "Best Dynamics 365 Services | Expert Guidance for Growth",
-            description:
-                "Discover the Best CFO Services. Our expert  deliver strategic guidance and reliable support to drive your business growth.",
-            image: "/images/associate-twitter.jpg",
-        },
-        canonical: "https://www.navnerds.com/Navnerds-services",
-        robots: "index, follow",
+  services: {
+    title:
+      "Microsoft Dynamics 365 Services | ERP, Support, Training, Integration",
+    description:
+      "Explore NavNerds’ professional Microsoft Dynamics 365 services — from Implementation, Integration, and Support to Customization and Training for your business.",
+    openGraph: {
+      title:
+        "Microsoft Dynamics 365 Services | ERP, Support, Training, Integration",
+      description:
+        "End-to-end Microsoft Dynamics 365 services — Implementation, Integration, Support, Training, and Customization for seamless business transformation.",
+      type: "website",
+      image: "/images/navnerds-services-og.jpg",
     },
+    twitter: {
+      card: "summary_large_image",
+      title:
+        "Microsoft Dynamics 365 Services | ERP, Support, Training, Integration",
+      description:
+        "Comprehensive Microsoft Dynamics 365 and ERP services to streamline your business operations with NavNerds.",
+      image: "/images/navnerds-services-twitter.jpg",
+    },
+    canonical: "https://www.navnerds.com/services",
+    robots: "index, follow",
+  },
+trainingMetadata : {
+  title: "Business Central Training Services | NavNerds",
+  description:
+    "Get hands-on training for Microsoft Business Central with NavNerds. From basics to advanced functional training, developer courses, ERP migration guidance, and Power BI integration, we empower your team to master Business Central effectively.",
+  openGraph: {
+    title: "Business Central Training Services | NavNerds",
+    description:
+      "Learn Business Central from scratch or level up your team with advanced functional, technical, and analytics training. Hands-on sessions for users, developers, and consultants.",
+    type: "website",
+    image: "/images/training-og.jpg",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Business Central Training Services | NavNerds",
+    description:
+      "Step into Business Central with confidence. Training for beginners, developers, and teams transitioning from legacy ERP systems. Hands-on, real-world learning.",
+    image: "/images/training-twitter.jpg",
+  },
+  canonical: "https://www.navnerds.com/business-central-training",
+  robots: "index, follow",
+},
 
-    associate: {
-        title:
-            "Best Consulting Associate Services | Expert Guidance for Growth",
-        description:
-            "Discover the Best Consulting Associate Services. Our expert associates deliver strategic guidance and reliable support to drive your business growth.",
-        openGraph: {
-            title:
-                "Best Consulting Associate Services | Expert Guidance for Growth",
-            description:
-                "Discover the Best Consulting Associate Services. Our expert associates deliver strategic guidance and reliable support to drive your business growth.",
-            type: "website",
-            image: "/images/associate-og.jpg",
-        },
-        twitter: {
-            card: "summary_large_image",
-            title:
-                "Best Consulting Associate Services | Expert Guidance for Growth",
-            description:
-                "Discover the Best Consulting Associate Services. Our expert associates deliver strategic guidance and reliable support to drive your business growth.",
-            image: "/images/associate-twitter.jpg",
-        },
-        canonical: "https://www.navnerds.com/associate-services",
-        robots: "index, follow",
-    },
+   migrationMetadata: {
+  title: "Business Central Migration Services | Navision to BC | NavNerds",
+  description:
+    "Seamlessly migrate from Microsoft Navision (NAV) to Business Central with NavNerds. Our end-to-end migration services include code conversion, data migration, testing, training, go-live support, and cloud migration to ensure a smooth, future-ready transition.",
+  openGraph: {
+    title: "Business Central Migration Services | NavNerds",
+    description:
+      "Move from Navision to Business Central with minimal downtime and full support. Code modernization, data migration, UAT, and cloud transition handled by experts.",
+    type: "website",
+    image: "/images/migration-og.jpg",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Business Central Migration Services | NavNerds",
+    description:
+      "Expert migration from NAV to Business Central SaaS or On-Premises. Training, testing, and post-go-live support included.",
+    image: "/images/migration-twitter.jpg",
+  },
+  canonical: "https://www.navnerds.com/migration",
+  robots: "index, follow",
+},
+integrationsMetadata :{
+  title: "Seamless Business Integrations | Dynamics 365 & Navision | NavNerds",
+  description:
+    "Transform your business with NavNerds’ seamless integrations. Connect Business Central with Microsoft 365, WooCommerce, Shopify, WhatsApp, PowerApps, and SharePoint for automated workflows and real-time insights.",
+  openGraph: {
+    title: "Seamless Business Integrations | NavNerds",
+    description:
+      "Boost productivity and streamline operations with powerful integrations for Microsoft Dynamics 365, Business Central, and Navision.",
+    type: "website",
+    image: "/images/integrations-og.jpg",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Seamless Business Integrations | NavNerds",
+    description:
+      "Integrate Business Central with Microsoft 365, Shopify, WooCommerce, WhatsApp, PowerApps, and SharePoint. Automate tasks and gain real-time insights.",
+    image: "/images/integrations-twitter.jpg",
+  },
+  canonical: "https://www.navnerds.com/integrations",
+  robots: "index, follow",
+},
+  dedicatedResourcesMetadata : {
+  title: "Dedicated Microsoft Dynamics Resources | Business Central & Navision | NavNerds",
+  description:
+    "NavNerds provides dedicated Microsoft Dynamics 365 Business Central and Navision resources to streamline your projects. Ensure faster turnaround, greater accountability, and expert support tailored to your business.",
+  openGraph: {
+    title: "Dedicated Microsoft Dynamics Resources | NavNerds",
+    description:
+      "Hire dedicated resources for Business Central or Navision projects. Focused expertise, seamless collaboration, and continuity from start to finish with NavNerds.",
+    type: "website",
+    image: "/images/dedicated-resources-og.jpg",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Dedicated Microsoft Dynamics Resources | NavNerds",
+    description:
+      "Ensure successful Microsoft Dynamics 365 projects with NavNerds’ dedicated resources. Expert implementation, customization, and support.",
+    image: "/images/dedicated-resources-twitter.jpg",
+  },
+  canonical: "https://www.navnerds.com/dedicated-resources",
+  robots: "index, follow",
+},
+implementationServicesMetadata :{
+  title: "Business Central Implementation Services | ERP Migration & Scaling | NavNerds",
+  description:
+    "NavNerds provides expert Microsoft Dynamics 365 Business Central implementation services. From legacy ERP migration to automation and scaling, we deliver solutions tailored to your business growth.",
+  openGraph: {
+    title: "Business Central Implementation Services | NavNerds",
+    description:
+      "Implement Microsoft Dynamics 365 Business Central with NavNerds. Upgrade from legacy systems, automate workflows, and streamline operations for faster growth.",
+    type: "website",
+    image: "/images/implementation-services-og.jpg",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Business Central Implementation Services | NavNerds",
+    description:
+      "Expert Business Central implementation and ERP migration services by NavNerds. Automate, scale, and streamline your operations efficiently.",
+    image: "/images/implementation-services-twitter.jpg",
+  },
+  canonical: "https://www.navnerds.com/implementation-services",
+  robots: "index, follow",
+},
 
-    accounting: {
-        title:
-            "Best Accounting & Bookkeeping Services | Financial Partner",
-        description:
-            "Get the Best Accounting Services and Bookkeeping Services in India. Trusted accounting outsourcing company offering reliable support to grow your business.",
-        openGraph: {
-            title: "Best Accounting & Bookkeeping Services | Financial Partner",
-            description:
-                "Get the Best Accounting Services and Bookkeeping Services in India. Trusted accounting outsourcing company offering reliable support to grow your business.",
-            type: "website",
-            image: "/images/accounting-og.jpg",
-        },
-        twitter: {
-            card: "summary_large_image",
-            title: "Best Accounting & Bookkeeping Services | Financial Partner",
-            description:
-                "Get the Best Accounting Services and Bookkeeping Services in India. Trusted accounting outsourcing company offering reliable support to grow your business.",
-            image: "/images/accounting-twitter.jpg",
-        },
-        canonical: "https://www.navnerds.com/accounting-bookkeeping",
-        robots: "index, follow",
+  supportServicesMetadata :{
+  title: "Microsoft Dynamics 365 Support Services | Business Central, PowerApps & NAV | NavNerds",
+  description:
+    "Get expert support for Microsoft Dynamics 365, Business Central, PowerApps, and legacy NAV (Navision). Technical, functional, licensing, and upgrade services to keep your business running smoothly.",
+  openGraph: {
+    title: "Microsoft Dynamics 365 Support Services | NavNerds",
+    description:
+      "NavNerds provides comprehensive support services for Microsoft Dynamics 365, Business Central, PowerApps, and NAV. Ensure system performance, upgrades, integration, and licensing optimization.",
+    type: "website",
+    image: "/images/support-services-og.jpg",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Microsoft Dynamics 365 Support Services | NavNerds",
+    description:
+      "Expert technical, functional, licensing, and NAV upgrade support for Microsoft Dynamics 365 and Business Central from NavNerds.",
+    image: "/images/support-services-twitter.jpg",
+  },
+  canonical: "https://www.navnerds.com/support-services",
+  robots: "index, follow",
+},
+  websiteDevelopment: {
+    title:
+      "Website Development Services | Custom & SEO-Optimized Websites | NavNerds",
+    description:
+      "Get professional website development services from NavNerds. Custom, fast, SEO-optimized websites tailored to your business growth and online presence.",
+    openGraph: {
+      title:
+        "Website Development Services | Custom & SEO-Optimized Websites | NavNerds",
+      description:
+        "NavNerds offers expert website development services. Build a responsive, fast, and SEO-friendly website that drives growth and improves user experience.",
+      type: "website",
+      image: "/images/website-development-og.jpg",
     },
+    twitter: {
+      card: "summary_large_image",
+      title:
+        "Website Development Services | Custom & SEO-Optimized Websites | NavNerds",
+      description:
+        "Professional website development services by NavNerds. Custom, fast, and SEO-optimized websites for your business success.",
+      image: "/images/website-development-twitter.jpg",
+    },
+    canonical: "https://www.navnerds.com/website-development",
+    robots: "index, follow",
+  },
 
-    risk: {
-        title: "Best Risk Management Services | Expert Risk Mitigation",
-        description:
-            "Get the Best Risk Management Services with expert Risk Mitigation strategies. Trusted enterprise risk management solutions to protect and grow your business.",
-        openGraph: {
-            title: "Best Risk Management Services | Expert Risk Mitigation",
-            description:
-                "Get the Best Risk Management Services with expert Risk Mitigation strategies. Trusted enterprise risk management solutions to protect and grow your business.",
-            type: "website",
-            image: "/images/risk-og.jpg",
-        },
-        twitter: {
-            card: "summary_large_image",
-            title: "Best Risk Management Services | Expert Risk Mitigation",
-            description:
-                "Get the Best Risk Management Services with expert Risk Mitigation strategies. Trusted enterprise risk management solutions to protect and grow your business.",
-            image: "/images/risk-twitter.jpg",
-        },
-        canonical: "https://www.navnerds.com/risk-mitigation",
-        robots: "index, follow",
+  blogs: {
+    title:
+      "Blogs & Insights | Dynamics 365, ERP, and Business Growth | NavNerds",
+    description:
+      "Read expert articles and insights from NavNerds on Microsoft Dynamics 365, ERP implementation, automation, and digital transformation for growing businesses.",
+    openGraph: {
+      title:
+        "Blogs & Insights | Dynamics 365, ERP, and Business Growth | NavNerds",
+      description:
+        "Get the latest tips, strategies, and updates on Microsoft Dynamics 365, ERP solutions, and business automation from NavNerds.",
+      type: "website",
+      image: "/images/navnerds-blogs-og.jpg",
     },
+    twitter: {
+      card: "summary_large_image",
+      title:
+        "Blogs & Insights | Dynamics 365, ERP, and Business Growth | NavNerds",
+      description:
+        "Explore NavNerds’ blogs for practical insights on Microsoft Dynamics 365, ERP implementation, and digital growth strategies.",
+      image: "/images/navnerds-blogs-twitter.jpg",
+    },
+    canonical: "https://www.navnerds.com/blogs",
+    robots: "index, follow",
+  },
 
-    mis: {
-        title: "Best MIS Reporting Services | Accurate Business Insights",
-        description:
-            "Reliable MIS Reporting Services delivering accurate reports and insights. Trusted partner to ensure data accuracy and smarter financial decisions.",
-        openGraph: {
-            title: "Best MIS Reporting Services | Accurate Business Insights",
-            description:
-                "Reliable MIS Reporting Services delivering accurate reports and insights. Trusted partner to ensure data accuracy and smarter financial decisions.",
-            type: "website",
-            image: "/images/mis-og.jpg",
-        },
-        twitter: {
-            card: "summary_large_image",
-            title: "Best MIS Reporting Services | Accurate Business Insights",
-            description:
-                "Reliable MIS Reporting Services delivering accurate reports and insights. Trusted partner to ensure data accuracy and smarter financial decisions.",
-            image: "/images/mis-twitter.jpg",
-        },
-        canonical: "https://www.navnerds.com/mis-reporting",
-        robots: "index, follow",
+  pricing: {
+    title:
+      "ERP & Dynamics 365 Pricing Plans | Starter, Growth, Enterprise, HRMS | NavNerds",
+    description:
+      "Choose the perfect plan for your business — Starter, Growth, Enterprise, or HRMS. NavNerds offers transparent and affordable Microsoft Dynamics 365 pricing packages.",
+    openGraph: {
+      title:
+        "ERP & Dynamics 365 Pricing Plans | Starter, Growth, Enterprise, HRMS | NavNerds",
+      description:
+        "Flexible pricing plans for Microsoft Dynamics 365 implementation and ERP solutions — designed for startups, SMBs, and enterprises.",
+      type: "website",
+      image: "/images/navnerds-pricing-og.jpg",
     },
+    twitter: {
+      card: "summary_large_image",
+      title:
+        "ERP & Dynamics 365 Pricing Plans | Starter, Growth, Enterprise, HRMS | NavNerds",
+      description:
+        "Compare Microsoft Dynamics 365 pricing plans with NavNerds and choose the right one for your business growth.",
+      image: "/images/navnerds-pricing-twitter.jpg",
+    },
+    canonical: "https://www.navnerds.com/pricing",
+    robots: "index, follow",
+  },
 
-    fund: {
-        title: "Best Fund Management Services | Expert Money Managers",
-        description:
-            "Best Fund Management Services by expert money managers. Trusted cash management and hedge fund solutions designed to protect and grow your wealth.",
-        openGraph: {
-            title: "Best Fund Management Services | Expert Money Managers",
-            description:
-                "Best Fund Management Services by expert money managers. Trusted cash management and hedge fund solutions designed to protect and grow your wealth.",
-            type: "website",
-            image: "/images/fund-og.jpg",
-        },
-        twitter: {
-            card: "summary_large_image",
-            title: "Best Fund Management Services | Expert Money Managers",
-            description:
-                "Best Fund Management Services by expert money managers. Trusted cash management and hedge fund solutions designed to protect and grow your wealth.",
-            image: "/images/fund-twitter.jpg",
-        },
-        canonical: "https://www.navnerds.com/fund-management",
-        robots: "index, follow",
+  contact: {
+    title: "Contact NavNerds | Get in Touch for Dynamics 365 & ERP Services",
+    description:
+      "Contact NavNerds today for expert Microsoft Dynamics 365, ERP consulting, and implementation services. We help businesses automate and grow efficiently.",
+    openGraph: {
+      title: "Contact NavNerds | Get in Touch for Dynamics 365 & ERP Services",
+      description:
+        "Reach out to NavNerds for Microsoft Dynamics 365 consulting, ERP solutions, and expert implementation support.",
+      type: "website",
+      image: "/images/navnerds-contact-og.jpg",
     },
-
-    businessIntelligence: {
-        title:
-            "Best Business Intelligence Analytics | Smarter Data Insights",
-        description:
-            "Get the Best Business Intelligence Analytics with smarter data insights. Expert BI tools help you analyze data, improve decisions, and drive business growth.",
-        openGraph: {
-            title:
-                "Best Business Intelligence Analytics | Smarter Data Insights",
-            description:
-                "Get the Best Business Intelligence Analytics with smarter data insights. Expert BI tools help you analyze data, improve decisions, and drive business growth.",
-            type: "website",
-            image: "/images/bi-og.jpg",
-        },
-        twitter: {
-            card: "summary_large_image",
-            title:
-                "Best Business Intelligence Analytics | Smarter Data Insights",
-            description:
-                "Get the Best Business Intelligence Analytics with smarter data insights. Expert BI tools help you analyze data, improve decisions, and drive business growth.",
-            image: "/images/bi-twitter.jpg",
-        },
-        canonical: "https://www.navnerds.com/business-intelligence",
-        robots: "index, follow",
+    twitter: {
+      card: "summary_large_image",
+      title: "Contact NavNerds | Get in Touch for Dynamics 365 & ERP Services",
+      description:
+        "Have a question about Microsoft Dynamics 365 or ERP solutions? Contact NavNerds for expert help and support.",
+      image: "/images/navnerds-contact-twitter.jpg",
     },
-
-    compliance: {
-        title:
-            "Compliance Management System | Best Compliance Software",
-        description:
-            "Discover the Best Compliance Management System with trusted compliance software. Simplify governance, reduce risk, and ensure regulatory compliance.",
-        openGraph: {
-            title:
-                "Compliance Management System | Best Compliance Software",
-            description:
-                "Discover the Best Compliance Management System with trusted compliance software. Simplify governance, reduce risk, and ensure regulatory compliance.",
-            type: "website",
-            image: "/images/compliance-og.jpg",
-        },
-        twitter: {
-            card: "summary_large_image",
-            title:
-                "Compliance Management System | Best Compliance Software",
-            description:
-                "Discover the Best Compliance Management System with trusted compliance software. Simplify governance, reduce risk, and ensure regulatory compliance.",
-            image: "/images/compliance-twitter.jpg",
-        },
-        canonical: "https://www.navnerds.com/compliance-management",
-        robots: "index, follow",
-    },
+    canonical: "https://www.navnerds.com/contact-us",
+    robots: "index, follow",
+  },
 };

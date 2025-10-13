@@ -15,7 +15,10 @@ function BlogCard({ post, priority = false }) {
         {post.mainImage?.asset?.url ? (
           <div className="relative overflow-hidden border   rounded-t-xl">
             <Image
-              src={urlFor(post.mainImage.asset.url).width(800).height(500).url()}
+              src={urlFor(post.mainImage.asset.url)
+                .width(800)
+                .height(500)
+                .url()}
               alt={post.mainImage?.alt || `Featured image for ${post.title}`}
               width={400}
               height={200}
@@ -23,31 +26,39 @@ function BlogCard({ post, priority = false }) {
               priority={priority}
             />
             {post.category && (
-              <span className="absolute top-3 left-3 bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
+              <span className="absolute top-3 left-3 bg-[#1CCBD7] text-white text-xs font-semibold px-3 py-1 rounded-full">
                 {post.category}
               </span>
             )}
           </div>
         ) : (
           <div className="w-full h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
-            <svg className="w-12 h-12 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
+            <svg
+              className="w-12 h-12 text-gray-400"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fillRule="evenodd"
+                d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"
+                clipRule="evenodd"
+              />
             </svg>
           </div>
         )}
 
         <div className="p-5">
-          <h3 className="font-bold text-lg leading-tight line-clamp-2 text-gray-800 group-hover:text-white transition-colors">
+          <h3 className="font-bold text-lg leading-tight line-clamp-2 group-hover:text-gray-800  text-white transition-colors">
             {post.title}
           </h3>
 
           {(post.excerpt || post.description) && (
-            <p className="text-gray-600 dark:text-gray-300 text-sm mt-2 line-clamp-2 leading-relaxed">
+            <p className="text-white hover:text-gray-600 dark:text-gray-300 text-sm mt-2 line-clamp-2 leading-relaxed">
               {post.excerpt || post.description}
             </p>
           )}
 
-          <div className="flex items-center justify-between mt-4 text-xs text-gray-500">
+          <div className="flex items-center justify-between mt-4 text-xs group-hover:text-gray-500  text-white">
             <time dateTime={post.publishedAt}>
               {new Date(post.publishedAt).toLocaleDateString("en-US", {
                 month: "short",

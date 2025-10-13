@@ -2,6 +2,11 @@
 import React from 'react' 
 import Link from 'next/link';
 
+
+import { generateMetadata } from '@/component/SEO/generateMetadata';
+import { pagesMetadata } from '@/component/SEO/pages-metadata';
+
+export const metadata = generateMetadata(pagesMetadata.migrationMetadata);
 const services = [
     {
         title: "Testing and Validation",
@@ -100,8 +105,6 @@ const services = [
         color: "from-cyan-500/10 to-cyan-300/10",
     },
 ];
-
-
 
 function Page() {
     return (

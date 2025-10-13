@@ -9,7 +9,7 @@ const components = {
   block: {
     // Normal paragraphs
     normal: ({ children }) => (
-      <p className="mb-4 text-gray-700 leading-relaxed">{children}</p>
+      <p className="text-gray-700 leading-relaxed">{children}</p>
     ),
     h1: ({ children }) => (
       <h1 className="text-5xl font-bold mb-6 text-gray-900">{children}</h1>
@@ -21,13 +21,13 @@ const components = {
       <h3 className="text-3xl font-bold mb-4 text-gray-900">{children}</h3>
     ),
     h4: ({ children }) => (
-      <h4 className="text-2xl font-bold mb-3 text-gray-900">{children}</h4>
+      <h4 className="text-2xl font-bold mb-2 text-gray-900">{children}</h4>
     ),
     h5: ({ children }) => (
-      <h4 className="text-xl font-bold mb-3 text-gray-900">{children}</h4>
+      <h4 className="text-xl font-bold mb-2 text-gray-900">{children}</h4>
     ),
     h6: ({ children }) => (
-      <h4 className="text-lg font-bold mb-3 text-gray-900">{children}</h4>
+      <h4 className="text-lg font-bold mb-2 text-gray-900">{children}</h4>
     ),
     // Blockquotes
     blockquote: ({ children }) => (
@@ -36,20 +36,20 @@ const components = {
       </blockquote>
     ),
     left: ({ children }) => (
-      <p className="text-left mb-4 text-gray-700 leading-relaxed">{children}</p>
+      <p className="text-left mb4 text-gray-700 leading-relaxed">{children}</p>
     ),
     center: ({ children }) => (
-      <p className="text-center mb-4 text-gray-700 leading-relaxed">
+      <p className="text-center mb4 text-gray-700 leading-relaxed">
         {children}
       </p>
     ),
     right: ({ children }) => (
-      <p className="text-right mb-4 text-gray-700 leading-relaxed">
+      <p className="text-right mb4 text-gray-700 leading-relaxed">
         {children}
       </p>
     ),
     justify: ({ children }) => (
-      <p className="text-justify mb-4 text-gray-700 leading-relaxed">
+      <p className="text-justify mb4 text-gray-700 leading-relaxed">
         {children}
       </p>
     ),
@@ -85,12 +85,12 @@ const components = {
 
   // List items
   listItem: {
-    bullet: ({ children }) => <li className="ml-1">{children}</li>,
-    number: ({ children }) => <li className="ml-1">{children}</li>,
-    circle: ({ children }) => <li className="ml-1">{children}</li>,
-    square: ({ children }) => <li className="ml-1">{children}</li>,
-    dash: ({ children })   => <li className="ml-1">{children}</li>,
-    check: ({ children })  => <li className="ml-1">{children}</li>,
+    bullet: ({ children }) => <li className="ml1">{children}</li>,
+    number: ({ children }) => <li className="ml1">{children}</li>,
+    circle: ({ children }) => <li className="ml1">{children}</li>,
+    square: ({ children }) => <li className="ml1">{children}</li>,
+    dash: ({ children })   => <li className="ml1">{children}</li>,
+    check: ({ children })  => <li className="ml1">{children}</li>,
   },
 
   // Inline formatting marks

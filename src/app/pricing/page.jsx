@@ -1,8 +1,9 @@
-// app/pricing/page.tsx
-"use client";
-
+ 
+import { generateMetadata } from "@/component/SEO/generateMetadata";
+import { pagesMetadata } from "@/component/SEO/pages-metadata";
 import Link from "next/link";
 
+export const metadata = generateMetadata(pagesMetadata.pricing);
 export default function PricingPage() {
     const plans = [
         {

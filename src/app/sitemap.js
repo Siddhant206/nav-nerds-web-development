@@ -22,85 +22,92 @@ export default async function sitemap() {
     }));
 
     return [
-        {
-            url: 'https://www.navnerds.com/',
-            lastModified: new Date(),
-            changeFrequency: 'monthly',
-            priority: 1,
-        },
-        {
-            url: 'https://www.navnerds.com/contact',
-            lastModified: new Date(),
-            changeFrequency: 'yearly',
-            priority: 0.8,
-        },
-        {
-            url: 'https://www.navnerds.com/career',
-            lastModified: new Date(),
-            changeFrequency: 'monthly',
-            priority: 0.9,
-        },
-        {
-            url: 'https://www.navnerds.com/about',
-            lastModified: new Date(),
-            changeFrequency: 'yearly',
-            priority: 0.9,
-        },
-        {
-            url: 'https://www.navnerds.com/privacy-policy',
-            lastModified: new Date(),
-            changeFrequency: 'yearly',
-            priority: 0.8,
-        },
-        {
-            url: 'https://www.navnerds.com/virtual-cfo-services',
-            lastModified: new Date(),
-            changeFrequency: 'yearly',
-            priority: 0.8,
-        },
-        {
-            url: 'https://www.navnerds.com/accounting-bookkeeping',
-            lastModified: new Date(),
-            changeFrequency: 'yearly',
-            priority: 0.8,
-        },
-        {
-            url: 'https://www.navnerds.com/compliance-management',
-            lastModified: new Date(),
-            changeFrequency: 'yearly',
-            priority: 0.8,
-        },
-        {
-            url: 'https://www.navnerds.com/mis-reporting',
-            lastModified: new Date(),
-            changeFrequency: 'yearly',
-            priority: 0.8,
-        },
-        {
-            url: 'https://www.navnerds.com/business-intelligence',
-            lastModified: new Date(),
-            changeFrequency: 'yearly',
-            priority: 0.8,
-        },
-        {
-            url: 'https://www.navnerds.com/risk-mitigation',
-            lastModified: new Date(),
-            changeFrequency: 'yearly',
-            priority: 0.8,
-        },
-        {
-            url: 'https://www.navnerds.com/fund-management',
-            lastModified: new Date(),
-            changeFrequency: 'yearly',
-            priority: 0.8,
-        },
-        {
-            url: 'https://www.navnerds.com/associate-services',
-            lastModified: new Date(),
-            changeFrequency: 'yearly',
-            priority: 0.8,
-        },
-        ...posts,
+      {
+        url: "https://www.navnerds.com/",
+        lastModified: new Date(),
+        changeFrequency: "monthly",
+        priority: 1,
+      },
+      {
+        url: "https://www.navnerds.com/pricing",
+        lastModified: new Date(),
+        changeFrequency: "monthly",
+        priority: 0.9,
+      },
+      {
+        url: "https://www.navnerds.com/contact-us",
+        lastModified: new Date(),
+        changeFrequency: "yearly",
+        priority: 0.8,
+      },
+      {
+        url: "https://www.navnerds.com/career",
+        lastModified: new Date(),
+        changeFrequency: "monthly",
+        priority: 0.9,
+      },
+      {
+        url: "https://www.navnerds.com/about-us",
+        lastModified: new Date(),
+        changeFrequency: "yearly",
+        priority: 0.9,
+      },
+      {
+        url: "https://www.navnerds.com/privacy-policy",
+        lastModified: new Date(),
+        changeFrequency: "yearly",
+        priority: 0.8,
+      },
+      {
+        url: "https://www.navnerds.com/services/support",
+        lastModified: new Date(),
+        changeFrequency: "yearly",
+        priority: 0.8,
+      },
+      {
+        url: "https://www.navnerds.com/services/training",
+        lastModified: new Date(),
+        changeFrequency: "yearly",
+        priority: 0.8,
+      },
+      {
+        url: "https://www.navnerds.com/services/migration",
+        lastModified: new Date(),
+        changeFrequency: "yearly",
+        priority: 0.8,
+      },
+      {
+        url: "https://www.navnerds.com/services/integration",
+        lastModified: new Date(),
+        changeFrequency: "yearly",
+        priority: 0.8,
+      },
+      {
+        url: "https://www.navnerds.com/services/customization",
+        lastModified: new Date(),
+        changeFrequency: "yearly",
+        priority: 0.8,
+      },
+      {
+        url: "https://www.navnerds.com/services/implementation",
+        lastModified: new Date(),
+        changeFrequency: "yearly",
+        priority: 0.8,
+      },
+      {
+        url: "https://www.navnerds.com/services/website-development",
+        lastModified: new Date(),
+        changeFrequency: "yearly",
+        priority: 0.8,
+      },
+      {
+        url: "https://www.navnerds.com/services/dedicated-resources",
+        lastModified: new Date(),
+        changeFrequency: "yearly",
+        priority: 0.8,
+      },
+     
+      ...posts,
     ];
 
 }

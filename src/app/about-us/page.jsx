@@ -2,7 +2,6 @@
 import { generateMetadata } from '@/component/SEO/generateMetadata';
 import { pagesMetadata } from '@/component/SEO/pages-metadata';
 import Link from 'next/link'; 
-
 function FeatureCard({ title, description, icon }) {
     return (
         <div

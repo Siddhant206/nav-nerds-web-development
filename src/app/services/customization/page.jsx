@@ -3,6 +3,11 @@ import React from 'react'
 import Image from "next/image";
 import Link from 'next/link';
 import FeatureCard from '@/component/UI/FeatureCard';
+import { generateMetadata } from "@/component/SEO/generateMetadata";
+import { pagesMetadata } from "@/component/SEO/pages-metadata";
+import Link from "next/link";
+
+export const metadata = generateMetadata(pagesMetadata.services);
 
 function Page() {
     return (

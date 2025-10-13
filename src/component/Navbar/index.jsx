@@ -18,6 +18,7 @@ const navLinks = [
             { label: "Customization", href: "/services/customization" },
             { label: "Implementation", href: "/services/implementation" },
             { label: "Dedicated Resources", href: "/services/dedicated-resources" },
+            { label: "Website Development", href: "/services/website-development" },
         ],
     },
     { label: "Blogs", href: "/blogs" },
