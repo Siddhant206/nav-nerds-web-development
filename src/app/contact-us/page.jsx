@@ -290,7 +290,7 @@ import { Mail, Phone, MapPin, Send } from "lucide-react";
 import { Button } from "@/component/UI/Button";
 import { Input } from "@/component/UI/input";
 import { Textarea } from "@/component/UI/Textarea";
-import { Card, CardContent } from "@/component/UI/Card";
+import { Card, CardContent } from "@/component/UI/card";
 import Link from "next/link";
 import Image from "next/image";
 

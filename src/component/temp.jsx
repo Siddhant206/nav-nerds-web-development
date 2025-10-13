@@ -4,7 +4,7 @@ import {
   Rocket, Shield, Users, Headphones, TrendingUp, Award,
 } from 'lucide-react';
 import { Button } from './UI/Button'; 
-import { Card, CardContent } from './UI/Card';
+import { Card, CardContent } from './UI/card';
 
 // Hero Component
 export function Hero() {
