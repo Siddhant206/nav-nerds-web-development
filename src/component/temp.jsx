@@ -3,8 +3,8 @@ import {
   Zap, Palette, Search, Database, Cloud, Lock, Layers, Cpu,
   Rocket, Shield, Users, Headphones, TrendingUp, Award,
 } from 'lucide-react';
-import { Button } from './ui/button'; 
-import { Card, CardContent } from './ui/card';
+import { Button } from './UI/Button'; 
+import { Card, CardContent } from './UI/Card';
 
 // Hero Component
 export function Hero() {

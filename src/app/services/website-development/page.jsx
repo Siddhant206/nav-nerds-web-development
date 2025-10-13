@@ -18,8 +18,8 @@ import {
   TrendingUp,
   Award,
 } from "lucide-react";
-import { Button } from "@/component/UI/button"
-import { Card, CardContent } from "@/component/UI/card";
+import { Button } from "@/component/UI/Button"
+import { Card, CardContent } from "@/component/UI/Card";
 import { generateMetadata } from "@/component/SEO/generateMetadata";
 import { pagesMetadata } from "@/component/SEO/pages-metadata";
 import Link from "next/link";
