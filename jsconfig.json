@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",       // base directory for module resolution
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["src/*"]   // maps "@/..." to "src/..."
     }
   }
 }
