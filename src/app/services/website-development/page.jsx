@@ -18,7 +18,7 @@ import {
   TrendingUp,
   Award,
 } from "lucide-react";
-import { Button } from "@/component/UI/button.jsx"
+import { Button } from "@/component/UI/button"
 import { Card, CardContent } from "@/component/UI/card";
 import { generateMetadata } from "@/component/SEO/generateMetadata";
 import { pagesMetadata } from "@/component/SEO/pages-metadata";
