@@ -10,8 +10,6 @@ import {
   Search,
   Database,
   Cloud,
-  Lock,
-  Layers,
   Cpu,
   Rocket,
   Shield,
@@ -20,7 +18,7 @@ import {
   TrendingUp,
   Award,
 } from "lucide-react";
-import { Button } from "@/component/UI/button"
+import { Button } from "@/component/UI/button.jsx"
 import { Card, CardContent } from "@/component/UI/card";
 import { generateMetadata } from "@/component/SEO/generateMetadata";
 import { pagesMetadata } from "@/component/SEO/pages-metadata";
