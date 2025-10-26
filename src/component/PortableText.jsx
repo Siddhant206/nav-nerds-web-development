@@ -18,13 +18,13 @@ const components = {
       <h3 className="text-3xl font-bold my-4 text-gray-900">{children}</h3>
     ),
     h4: ({ children }) => (
-      <h4 className="text-2xl font-bold my-3 text-gray-900">{children}</h4>
+      <h4 className="text-2xl font-bold mt-3 text-gray-900">{children}</h4>
     ),
     h5: ({ children }) => (
-      <h5 className="text-xl font-bold my-2 text-gray-900">{children}</h5>
+      <h5 className="text-xl font-bold mt-2 text-gray-900">{children}</h5>
     ),
     h6: ({ children }) => (
-      <h6 className="text-lg font-bold my-1 text-gray-900">{children}</h6>
+      <h6 className="text-lg font-bold text-gray-900">{children}</h6>
     ),
     blockquote: ({ children }) => (
       <blockquote className="border-l-4 border-blue-400 pl-6 my-6 italic text-gray-700 bg-blue-50 py-4 rounded-r-lg">
