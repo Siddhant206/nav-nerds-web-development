@@ -9,22 +9,22 @@ const components = {
       <p className="mb-4 text-gray-700 leading-relaxed">{children}</p>
     ),
     h1: ({ children }) => (
-      <h1 className="text-5xl font-bold mb-6 text-gray-900">{children}</h1>
+      <h1 className="text-5xl font-bold my-6 text-gray-900">{children}</h1>
     ),
     h2: ({ children }) => (
-      <h2 className="text-4xl font-bold mb-5 text-gray-900">{children}</h2>
+      <h2 className="text-4xl font-bold my-5 text-gray-900">{children}</h2>
     ),
     h3: ({ children }) => (
-      <h3 className="text-3xl font-bold mb-4 text-gray-900">{children}</h3>
+      <h3 className="text-3xl font-bold my-4 text-gray-900">{children}</h3>
     ),
     h4: ({ children }) => (
-      <h4 className="text-2xl font-bold mb-3 text-gray-900">{children}</h4>
+      <h4 className="text-2xl font-bold my-3 text-gray-900">{children}</h4>
     ),
     h5: ({ children }) => (
-      <h5 className="text-xl font-bold mb-2 text-gray-900">{children}</h5>
+      <h5 className="text-xl font-bold my-2 text-gray-900">{children}</h5>
     ),
     h6: ({ children }) => (
-      <h6 className="text-lg font-bold mb-2 text-gray-900">{children}</h6>
+      <h6 className="text-lg font-bold my-1 text-gray-900">{children}</h6>
     ),
     blockquote: ({ children }) => (
       <blockquote className="border-l-4 border-blue-400 pl-6 my-6 italic text-gray-700 bg-blue-50 py-4 rounded-r-lg">
@@ -32,20 +32,20 @@ const components = {
       </blockquote>
     ),
     left: ({ children }) => (
-      <p className="text-left mb-4 text-gray-700 leading-relaxed">{children}</p>
+      <p className="text-left my-4 text-gray-700 leading-relaxed">{children}</p>
     ),
     center: ({ children }) => (
-      <p className="text-center mb-4 text-gray-700 leading-relaxed">
+      <p className="text-center my-4 text-gray-700 leading-relaxed">
         {children}
       </p>
     ),
     right: ({ children }) => (
-      <p className="text-right mb-4 text-gray-700 leading-relaxed">
+      <p className="text-right my-4 text-gray-700 leading-relaxed">
         {children}
       </p>
     ),
     justify: ({ children }) => (
-      <p className="text-justify mb-4 text-gray-700 leading-relaxed">
+      <p className="text-justify my-4 text-gray-700 leading-relaxed">
         {children}
       </p>
     ),
@@ -53,19 +53,19 @@ const components = {
 
   list: {
     bullet: ({ children }) => (
-      <ul className="list-disc list-inside mb-4 space-y-2">{children}</ul>
+      <ul className="list-disc list-inside my-4 space-y-2">{children}</ul>
     ),
     number: ({ children }) => (
-      <ol className="list-decimal list-inside mb-4 space-y-2">{children}</ol>
+      <ol className="list-decimal list-inside my-4 space-y-2">{children}</ol>
     ),
     circle: ({ children }) => (
-      <ul className="list-[circle] list-inside mb-4 space-y-2">{children}</ul>
+      <ul className="list-[circle] list-inside my-4 space-y-2">{children}</ul>
     ),
     square: ({ children }) => (
-      <ul className="list-[square] list-inside mb-4 space-y-2">{children}</ul>
+      <ul className="list-[square] list-inside my-4 space-y-2">{children}</ul>
     ),
     dash: ({ children }) => (
-      <ul className="mb-4 space-y-2">
+      <ul className="my-4 space-y-2">
         {React.Children.map(children, (child, i) => (
           <li key={i} className="flex items-start gap-2">
             <span className="font-semibold select-none">–</span>
@@ -75,7 +75,7 @@ const components = {
       </ul>
     ),
     check: ({ children }) => (
-      <ul className="mb-4 space-y-2">
+      <ul className="my-4 space-y-2">
         {React.Children.map(children, (child, i) => (
           <li key={i} className="flex items-start gap-2">
             <span className="text-green-600 select-none">✔</span>
@@ -176,7 +176,7 @@ const components = {
       );
     },
 
-    break: () => <hr className="my-8 border-t-2 border-gray-200" />,
+    break: () => <hr className="my-2 border-t-2 border-gray-200" />,
   },
 };
 
