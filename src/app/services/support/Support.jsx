@@ -154,7 +154,7 @@ const SupportPage = () => {
               src="/Services/Support/consultant.png"
               width={150}
               height={150}
-              alt="Technical Consultant"
+              alt="Technical Consultant" 
             />
             <h3 className="font-semibold text-lg mt-3">Technical Consultant</h3>
             <p className="text-sm mt-1">
