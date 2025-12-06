@@ -151,7 +151,7 @@ const SupportPage = () => {
           {/* Technical Consultant */}
           <div className="bg-white text-black rounded-3xl h-64 p-4 shadow-md flex flex-col items-center text-center">
             <Image
-              src="/Services/Support/consultant.png"
+              src="/Services/Support/consultant-1.png"
               width={150}
               height={150}
               alt="Technical Consultant" 
