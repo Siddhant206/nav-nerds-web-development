@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 const tabs = ["Technical", "Functional", "Licensing", "Navision"];
 
@@ -76,31 +77,91 @@ const SupportPage = () => {
   return (
     <section id="services" className="relative  text-black overflow-hidden">
       {/* Hero Section */}
-      <section className="relative bg-white bg-[url(/Services/Dedicated-Resources/dedicatedResourcesBG.jpg)]  bg-cover bg-no-repeat  bg-center md:bg-bottom   flex items-center justify-center lg:py-14 max-lg:px-4  flex-col w-full text-black  overflow-hidden h-[50vh] md:h-[100dvh] ">
-        <div className="absolute inset-0 bg-black/30 " />
-        <div className="md:pb-60 relative flex flex-col items-center justify-center w-fit">
-          <h1
-            className={`text-3xl md:text-xl lg:text-5xl font-semibold text-black max-w-xl text-center`}
-          >
-            Support Services for your Business
-          </h1>
-          <Link
-            href={"/contact-us"}
-            className="w-fit flex items-center justify-center gap-4 px-6 py-3 md:px-10 md:py-2 rounded-3xl border border-gray-200  text-white bg-[#4ED0DB] hover:bg-black hover:text-white transition-colors duration-300 mt-4 md:mt-8"
-          >
-            Contact Us
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <path
-                d="M1 7C0.447715 7 0 7.44772 0 8C0 8.55228 0.447715 9 1 9V8V7ZM15.7071 8.70711C16.0976 8.31658 16.0976 7.68342 15.7071 7.29289L9.34315 0.928932C8.95262 0.538408 8.31946 0.538408 7.92893 0.928932C7.53841 1.31946 7.53841 1.95262 7.92893 2.34315L13.5858 8L7.92893 13.6569C7.53841 14.0474 7.53841 14.6805 7.92893 15.0711C8.31946 15.4616 8.95262 15.4616 9.34315 15.0711L15.7071 8.70711ZM1 8V9H15V8V7H1V8Z"
-                fill="white"
-              />
-            </svg>
-          </Link>
+      <section
+        className="relative bg-[url('/Services/Support/SupportBG.png')] bg-cover bg-no-repeat bg-center 
+        flex flex-col items-center justify-center overflow-hidden 
+        h-[60vh] md:h-screen text-white"
+      >
+        {/* main headline box */}
+        <div className="relative z-10 mt-10 md:mt-0 text-center px-6">
+          <div className="bg-white text-[#22b8cf] rounded-3xl px-8 py-6 md:px-14 md:py-8 shadow-lg max-w-3xl mx-auto">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold  leading-tight">
+              Support Services
+              <br />
+              for your Business
+            </h1>
+
+            <p className="text-sm md:text-base text-right text-black  w-full mt-3">
+              Always on. Always reliable.
+            </p>
+          </div>
         </div>
+        {/* CTA Button */}
+        <Link
+          href="/contact-us"
+          className="relative z-10 mt-10 inline-flex items-center gap-3 px-8 py-3 bg-[#4ED0DB] text-black 
+          rounded-full hover:bg-black hover:text-white transition shadow-md"
+        >
+          Contact Us
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path
+              d="M1 7C0.447715 7 0 7.44772 0 8C0 8.55228 0.447715 9 1 9V8V7ZM15.7071 8.70711C16.0976 8.31658 
+               16.0976 7.68342 15.7071 7.29289L9.34315 0.928932C8.95262 0.538408 8.31946 0.538408 
+               7.92893 0.928932C7.53841 1.31946 7.53841 1.95262 7.92893 2.34315L13.5858 8L7.92893 
+               13.6569C7.53841 14.0474 7.53841 14.6805 7.92893 15.0711C8.31946 15.4616 8.95262 
+               15.4616 9.34315 15.0711L15.7071 8.70711ZM1 8V9H15V8V7H1V8Z"
+              fill="white"
+            />
+          </svg>
+        </Link>
       </section>
 
       {/* Content Section */}
       <section className="bg-[url(/HomePageBg.webp)]  bg-cover bg-no-repeat bg-top w-full  py-10  10">
+        {/* Service Cards */}
+        <div className="relative z-10 mx-auto mb-10 md:mb-20 md:-mt-40 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl px-4 w-full">
+          {/* 24/7 IT Support */}
+          <div className="bg-white text-black rounded-3xl h-64 p-4 shadow-md flex flex-col items-center text-center">
+            <Image
+              src="/Services/Support/it-support.png"
+              width={150}
+              height={150}
+              alt="IT Support"
+            />
+            <h3 className="font-semibold text-lg mt-3">24/7 IT Support</h3>
+            <p className="text-sm mt-1">
+              24/7 IT Support tailored to needs ensuring maximum uptime.
+            </p>
+          </div>
+
+          {/* Cloud Solution */}
+          <div className="bg-white text-black rounded-3xl h-64 p-4 shadow-md flex flex-col items-center text-center">
+            <Image
+              src="/Services/Support/cloud.png"
+              width={150}
+              height={150}
+              alt="Cloud Solution"
+            />
+            <h3 className="font-semibold text-lg mt-3">Cloud Solution</h3>
+            <p className="text-sm mt-1">
+              Cloud Solutions seasoned & tailored for maximum uptime delivery.
+            </p>
+          </div>
+
+          {/* Technical Consultant */}
+          <div className="bg-white text-black rounded-3xl h-64 p-4 shadow-md flex flex-col items-center text-center">
+            <Image
+              src="/Services/Support/consultant.png"
+              width={150}
+              height={150}
+              alt="Technical Consultant"
+            />
+            <h3 className="font-semibold text-lg mt-3">Technical Consultant</h3>
+            <p className="text-sm mt-1">
+              Technical Consulting, IT Marketing & Support for your platform.
+            </p>
+          </div>
+        </div>
         <div className="max-w-6xl mx-auto md:p-6 bg-white rounded-xl shadow-md border border-gray-300 relative z-10">
           {/* Tabs */}
           <div className="max-sm:flex-wrap p-1 md:p-2 w-fit mx-auto bg-gray-100 sm:rounded-2xl flex items-center justify-center gap-1 md:gap-6 mb-6">
