@@ -570,7 +570,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h3 className="font-bold text-gray-900">Visit Us</h3>
-                    <p className="text-gray-600">273/1 Maltulpuri, Haridwar</p>
+                    <p className="text-gray-600">273/1 Maktoolpuri, Haridwar</p>
                     <p className="text-gray-600">Uttarakhand, India 247667</p>
                   </div>
                 </div>
