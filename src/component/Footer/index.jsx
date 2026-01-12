@@ -182,11 +182,12 @@ function Footer() {
       </div>
 
       {/* Copyright - Remain same */}
-      <div className="py-5 text-center text-sm text-gray-800 border-t border-gray-300 pt-4">
+      <div className="py-5 text-center text-sm text-gray-800 border-t border-gray-300 pt-4 max-w-7xl mx-auto flex items-center justify-between">
         <p>
           &copy; {new Date().getFullYear()} <strong>NavNerds</strong>. All
           rights reserved.
         </p>
+       <p>Designed and Maintained by <a href="http://neuera.in" target='_blank' className='font-bold text-lg lg:text-xl'>Neuera</a></p>
       </div>
     </footer>
   );
