@@ -30,8 +30,8 @@ function Footer() {
     "Integration",
     "Customization", 
     "Implementation", 
-    "Dedicated Resources",
-    "Website Development",
+    "Dedicated-Resources",
+    "Website-Development",
   ];
   const industry = [
     "Travel",
@@ -108,7 +108,7 @@ function Footer() {
             <ul className="space-y-2">
               {services.map((service) => (
                 <li key={service}>
-                  <AnimatedLink href={`/services/${service}`}>
+                  <AnimatedLink href={`/services/${service.toLocaleLowerCase()}`}>
                     {service}
                   </AnimatedLink>
                 </li>
