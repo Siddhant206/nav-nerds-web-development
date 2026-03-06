@@ -69,7 +69,7 @@ function Footer() {
       className="bg-[url(/FooterBg.webp)] bg-cover bg-top bg-blend-d text-gray-800 min-h-fit max-lg:px-4"
     >
       {/* <ContactSection /> */}
-      
+
       <div className="max-w-3xl mx-auto text-center space-y-4 pt-20">
         <h3 className="text-xl sm:text-2xl lg:text-4xl font-bold">
           Get In Touch
@@ -108,9 +108,7 @@ function Footer() {
             <ul className="space-y-2">
               {services.map((service) => (
                 <li key={service}>
-                  <AnimatedLink
-                    href={`/services/${encodeURIComponent(service.toLowerCase().replace(/\s+/g, ""))}`}
-                  >
+                  <AnimatedLink href={`/services/${service}`}>
                     {service}
                   </AnimatedLink>
                 </li>
@@ -170,7 +168,7 @@ function Footer() {
                   <svg
                     fill="currentColor"
                     viewBox="0 0 24 24"
-                    className='size-8'
+                    className="size-8"
                   >
                     <path d={path} />
                   </svg>
@@ -187,7 +185,16 @@ function Footer() {
           &copy; {new Date().getFullYear()} <strong>NavNerds</strong>. All
           rights reserved.
         </p>
-       <p>Designed and Maintained by <a href="http://neuera.in" target='_blank' className='font-bold text-lg lg:text-xl'>Neuera</a></p>
+        <p>
+          Designed and Maintained by{" "}
+          <a
+            href="http://neuera.in"
+            target="_blank"
+            className="font-bold text-lg lg:text-xl"
+          >
+            Neuera
+          </a>
+        </p>
       </div>
     </footer>
   );
