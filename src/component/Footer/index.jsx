@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from "next/image"; 
+import { H2, H3, H4, P } from '@/component/UI/typography';
 // import { ContactSection } from '../temp'; 
 // import { Button } from '../UI/button';
 
@@ -71,13 +72,13 @@ function Footer() {
       {/* <ContactSection /> */}
 
       <div className="max-w-3xl mx-auto text-center space-y-4 pt-20">
-        <h3 className="text-xl sm:text-2xl lg:text-4xl font-bold">
+        <H3 className="text-gray-800">
           Get In Touch
-        </h3>
-        <p className="text-sm sm:text-base lg:text-xl">
+        </H3>
+        <P className="text-sm sm:text-base lg:text-xl">
           Contact Us For your needs we have the best team and right minds to
           deliver projects end-to-end.
-        </p>
+        </P>
         <Link
           href={"/contact-us"}
           className="px-6 py-3 md:px-12 md:py-2 rounded-3xl border border-gray-400   hover:text-white bg-white hover:bg-black text-black transition-colors duration-300 mt-4 md:mt-8"
@@ -89,7 +90,7 @@ function Footer() {
       <div className="max-w-5xl mx-auto px-4 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8 py-28">
         {/* Company Section - Remain same */}
         <div>
-          <h2 className="text-lg font-semibold mb-4">Company</h2>
+          <H4 className="mb-4 text-gray-900">Company</H4>
           <nav aria-label="Company Links">
             <ul className="space-y-2">
               {companyLinks.map(({ href, text }) => (
@@ -103,7 +104,7 @@ function Footer() {
 
         {/* Services */}
         <div>
-          <h2 className="text-lg font-semibold mb-4">Services</h2>
+          <H4 className="mb-4 text-gray-900">Services</H4>
           <nav aria-label="Our Services">
             <ul className="space-y-2">
               {services.map((service) => (
@@ -119,7 +120,7 @@ function Footer() {
 
         {/* Industry */}
         <div>
-          <h2 className="text-lg font-semibold mb-4">Industry</h2>
+          <H4 className="mb-4 text-gray-900">Industry</H4>
           <nav aria-label="Industries We Serve">
             <ul className="space-y-2">
               {industry.map((industry) => (
@@ -137,24 +138,24 @@ function Footer() {
 
         {/* Contact Section - Remain same */}
         <div>
-          <h2 className="text-lg font-semibold mb-4">Contact Us</h2>
-          <address className="not-italic space-y-2">
-            <p>
+          <H4 className="text-lg font-semibold mb-4 text-gray-800">Contact Us</H4>
+          <address className="not-italic space-y-2 text-sm sm:text-base">
+            <P>
               <span className="font-medium">Phone:</span>{" "}
               <a href="tel:+919068476495" className="hover:underline">
                 +91 9068476495
               </a>
-            </p>
-            <p>
+            </P>
+            <P>
               <span className="font-medium">Email:</span>{" "}
               <a href="mailto:info@navnerds.com" className="hover:underline">
                 info@navnerds.com
               </a>
-            </p>
+            </P>
           </address>
 
           <div>
-            <h2 className="text-lg font-semibold mt-2">Follow Us</h2>
+            <H4 className="text-lg font-semibold mt-2 text-gray-800">Follow Us</H4>
             <div className="flex space-x-4 mt-2">
               {socialLinks.map(({ href, label, color, path }) => (
                 <Link
@@ -181,11 +182,11 @@ function Footer() {
 
       {/* Copyright - Remain same */}
       <div className="py-5 text-center text-sm text-gray-800 border-t border-gray-300 pt-4 max-w-7xl mx-auto flex items-center justify-between">
-        <p>
+        <P>
           &copy; {new Date().getFullYear()} <strong>NavNerds</strong>. All
           rights reserved.
-        </p>
-        <p>
+        </P>
+        <P>
           Designed and Maintained by{" "}
           <a
             href="http://neuera.in"
@@ -194,7 +195,7 @@ function Footer() {
           >
             Neuera
           </a>
-        </p>
+        </P>
       </div>
     </footer>
   );

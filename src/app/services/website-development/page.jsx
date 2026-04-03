@@ -23,6 +23,7 @@ import { Card, CardContent } from "@/component/UI/card";
 import { generateMetadata } from "@/component/SEO/generateMetadata";
 import { pagesMetadata } from "@/component/SEO/pages-metadata";
 import Link from "next/link";
+import { H1, H2, H3, P } from "@/component/UI/typography";
 
 // Hero Component
 export function Hero() {
@@ -42,7 +43,7 @@ export function Hero() {
             </span>
           </div>
 
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
+          <H1 className="mb-6">
             <span className="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
               Build Your Digital Future
             </span>
@@ -50,13 +51,13 @@ export function Hero() {
             <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">
               with Modern Web Development
             </span>
-          </h1>
+          </H1>
 
-          <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
+          <P className="text-gray-600 mb-10 max-w-2xl mx-auto">
             Transform your ideas into stunning, high-performance websites and
             applications. We leverage the latest technologies to create digital
             experiences that drive results.
-          </p>
+          </P>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button
@@ -161,15 +162,15 @@ export function Services() {
     <section id="services" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <H2 className="font-bold mb-4">
             <span className="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
               Our Services
             </span>
-          </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          </H2>
+          <P className="text-gray-600 max-w-2xl mx-auto">
             Comprehensive web development solutions tailored to your unique
             business needs
-          </p>
+          </P>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -186,10 +187,10 @@ export function Services() {
                   >
                     <Icon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold mb-2 text-gray-900">
+                  <H3 className="font-bold mb-2 text-gray-900">
                     {service.title}
-                  </h3>
-                  <p className="text-gray-600">{service.description}</p>
+                  </H3>
+                  <P className="text-gray-600">{service.description}</P>
                 </CardContent>
               </Card>
             );
@@ -305,15 +306,15 @@ export function Technologies() {
     >
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <H2 className="font-bold mb-4">
             <span className="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
               Technologies We Master
             </span>
-          </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          </H2>
+          <P className="text-gray-600 max-w-2xl mx-auto">
             Leveraging cutting-edge tools and frameworks to build robust,
             scalable solutions
-          </p>
+          </P>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -332,9 +333,9 @@ export function Technologies() {
                   >
                     <Icon className="w-5 h-5 text-white" />
                   </div>
-                  <h3 className={`text-xl font-bold ${colors.text}`}>
+                  <H3 className={`font-bold ${colors.text}`}>
                     {tech.category}
-                  </h3>
+                  </H3>
                 </div>
 
                 <div className="flex flex-wrap gap-2">
@@ -401,15 +402,15 @@ export function Features() {
     <section id="features" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <H2 className="font-bold mb-4">
             <span className="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
               Why Choose Us
             </span>
-          </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          </H2>
+          <P className="text-gray-600 max-w-2xl mx-auto">
             We combine technical excellence with exceptional service to deliver
             outstanding results
-          </p>
+          </P>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -422,10 +423,10 @@ export function Features() {
                   <div className="w-14 h-14 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                     <Icon className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold mb-2 text-gray-900">
+                  <H3 className="font-bold mb-2 text-gray-900">
                     {feature.title}
-                  </h3>
-                  <p className="text-gray-600">{feature.description}</p>
+                  </H3>
+                  <P className="text-gray-600">{feature.description}</P>
                 </div>
               </div>
             );

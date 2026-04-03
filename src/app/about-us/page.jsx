@@ -1,7 +1,13 @@
 // "use client" 
 import { generateMetadata } from '@/component/SEO/generateMetadata';
 import { pagesMetadata } from '@/component/SEO/pages-metadata';
+
+export const metadata = generateMetadata(pagesMetadata.about);
+
+
 import Link from 'next/link'; 
+import { H1, H2, H3, P } from '@/component/UI/typography';
+
 function FeatureCard({ title, description, icon }) {
     return (
         <div
@@ -10,8 +16,8 @@ function FeatureCard({ title, description, icon }) {
             <div className="mb-4 rounded-full w-fit p-4 bg-[#1CCBD7] transition-all duration-300 group-hover:bg-white">
                 {icon}
             </div>
-            <h3 className="text-xl font-bold mb-1">{title}</h3>
-            <p className="text-sm font-medium">{description}</p>
+            <H3 className="mb-1">{title}</H3>
+            <P className="font-medium">{description}</P>
         </div>
     );
 }
@@ -53,7 +59,7 @@ const features = [
     },
 ];
 
-export const metadata = generateMetadata(pagesMetadata.about);
+
 
 export default function Page() {
 // Header and main sections remain same - only optimized the posts mapping
@@ -61,7 +67,7 @@ export default function Page() {
         <section className=' bg-[url(/HomePageBg.webp)]  bg-cover bg-no-repeat bg-top min-h-96 text-black'>
             {/* HERO */}
             <header className="max-w-4xl mx-auto pt-20 px-6 text-center ">
-                <h1 className={`text-3xl md:text-xl lg:text-5xl   font-semibold mb-4`}>About Us</h1> 
+                <H1 className="mb-4">About Us</H1> 
 
             </header>
             {/* Main content remains same */}
@@ -70,12 +76,12 @@ export default function Page() {
                     {/* Text Block */}
                     <div className='flex flex-col justify-between items-start h-full py-10 '>
                         <div>
-                            <h2 className={`text-2xl xl:text-3xl 2xl:text-4xl font-bold  text-gray-900 mb-6`}>
+                            <H2 className="text-gray-900 mb-6">
                                 What Sets Us Apart
-                            </h2>
-                            <p className="text-gray-600 mb-6 text-base text-justify   hyphens-auto">
+                            </H2>
+                            <P className="text-gray-600 mb-6 text-justify hyphens-auto">
                                 NavNerds is a specialized Microsoft enterprise solutions IT consulting company. Our purpose is to marry cutting-edge technology with business strategy, enabling organizations to maximize operations and growth. We utilize extensive knowledge of Microsoft Dynamics 365 Business Central (previously Dynamics NAV/Navision) and Microsoft 365 (Office 365) to provide seamless ERP and cloud productivity solutions. For instance, Microsoft Dynamics 365 Business Central is outlined as "a comprehensive business management solution that helps automate and streamline business processes and manage your entire business"
-                            </p>
+                            </P>
                         </div>
                         <Link href={"/contact-us"} className="bg-[#1CCBD7] hover:bg-black  text-white font-semibold px-6 py-2 rounded-full   transition duration-300 w-fit">
                             Let’s Connect

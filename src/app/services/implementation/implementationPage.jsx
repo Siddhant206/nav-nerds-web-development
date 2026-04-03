@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ServiceCard } from "@/component/UI/serviceCard";
+import { H1, H2, H3, P } from "@/component/UI/typography";
 
 const features = [
   {
@@ -101,11 +102,11 @@ function ImplementationPage() {
       <section className="relative bg-white bg-[url(/ImplementationBG.webp)]  bg-contain bg-no-repeat  bg-center md:bg-bottom   flex items-center justify-center lg:py-14 max-lg:px-4  flex-col w-full text-black  overflow-hidden h-[50vh] md:h-[100dvh] ">
         <div className="absolute inset-0 bg-black/30 " />
         <div className="md:pb-60 relative flex flex-col items-center justify-center w-fit">
-          <h1
-            className={`text-3xl md:text-xl lg:text-5xl font-semibold text-black max-w-xl text-center`}
+          <H1
+            className={`max-w-xl text-center text-black mb-0`}
           >
             Implementation Services with Navnerds
-          </h1>
+          </H1>
           <Link
             href={"/contact-us"}
             className="w-fit flex items-center justify-center gap-4 px-6 py-3 md:px-10 md:py-2 rounded-3xl border border-gray-200  text-white bg-[#4ED0DB] hover:bg-black hover:text-white transition-colors duration-300 mt-4 md:mt-8"
@@ -123,25 +124,25 @@ function ImplementationPage() {
 
       {/* Content Section */}
       <section className="bg-[url(/HomePageBg.webp)]  bg-cover bg-no-repeat bg-top w-full  py-10  10">
-        <h1
-          className={`text-2xl xl:text-3xl 2xl:text-4xl  text-black text-center mb-2`}
+        <H2
+          className={`text-black text-center mb-2`}
         >
           Scaling Efficently?{" "}
-        </h1>
-        <p
-          className={`max-w-4xl xs:text-lg md:text-base lg:text-[17px]   3xl:text-xl max-sm:px-2 sm:px-4 lg:px-0 text-center font-semibold mx-auto mb-14`}
+        </H2>
+        <P
+          className={`max-w-4xl max-sm:px-2 sm:px-4 lg:px-0 text-center font-semibold mx-auto mb-14`}
         >
           When growth kicks in, so do operational challenges. Our Business
           Central implementation simplifies what’s becoming too complex
           automating workflows, enhancing customer visibility, and giving your
           teams the tools to move faster. We keep your systems lean while your
           business goes big.
-        </p>
+        </P>
         <ServiceCard
           title="Starting fresh? "
           description="You deserve a solution built for today’s speed and tomorrow’s scale. At Navnerds, we help first-time ERP adopters launch with confidence. With Business Central, you’ll gain a future-ready system that adapts as you grow without overwhelming complexity. Start smart. Start strong.
 "
-          imageSrc="/Implementation/StartingFresh.png"
+          imageSrc="/Implementation/StartingFresh.webp"
           imageAlt="Starting fresh illustration"
           bgColor="bg-[#36E3EE]"
           imagePosition="right"
@@ -150,7 +151,7 @@ function ImplementationPage() {
         <ServiceCard
           title="Stuck with Legacy Systems?"
           description="If your current ERP feels like a burden instead of a solution, it’s time to move forward. Outdated platforms slow down innovation, create silos, and risk compliance. With Navnerds and Business Central, you get a modern, connected, cloud-based system that empowers your business with real-time data and security you can trust. "
-          imageSrc="/Implementation/Frustration.png"
+          imageSrc="/Implementation/Frustration.webp"
           imageAlt="Stuck with Legacy Systems illustration"
           bgColor="bg-white"
           textColor="text-black"
@@ -160,7 +161,7 @@ function ImplementationPage() {
         <ServiceCard
           title="Upgrade To Business Central"
           description="You’ve outgrown your old system and that’s a good thing. Whether it’s poor integrations, slow performance, or scattered data, we help you transition smoothly to Business Central. Our migration process is clean, strategic, and tailored to your needs no disruption, just evolution."
-          imageSrc="/Implementation/upgradingBusinessCentral.png"
+          imageSrc="/Implementation/upgradingBusinessCentral.webp"
           imageAlt="Social Media Marketing illustration"
           bgColor="bg-[#36E3EE]"
           imagePosition="right"
@@ -169,11 +170,11 @@ function ImplementationPage() {
         <section className="max-w-7xl mx-auto bg-white mt-14 py-14 px-8">
           {/* Header */}
           <div className="text-center mb-8 md:mb-16">
-            <h2
-              className={`text-2xl xl:text-3xl 2xl:text-4xl text-gray-900 leading-tight`}
+            <H2
+              className={`text-gray-900 leading-tight text-center`}
             >
               What Happens When You Implement with Navnerds
-            </h2>
+            </H2>
           </div>
 
           {/* Features Grid */}
@@ -205,14 +206,14 @@ function ImplementationPage() {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-3 leading-snug">
+                <H3 className="mb-3 leading-snug text-gray-900">
                   {feature.title}
-                </h3>
+                </H3>
 
                 {/* Description */}
-                <p className="text-gray-600 text-sm md:text-base leading-relaxed">
+                <P className="text-gray-600 leading-relaxed">
                   {feature.description}
-                </p>
+                </P>
               </div>
             ))}
           </div>

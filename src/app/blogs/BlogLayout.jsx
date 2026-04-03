@@ -4,6 +4,7 @@ import Link from "next/link";
 import { urlFor } from "@/sanity/lib/image";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useState, useTransition } from "react";
+import { H1, H3, P } from "@/component/UI/typography";
 
 function BlogCard({ post, priority = false }) {
   return (
@@ -48,14 +49,14 @@ function BlogCard({ post, priority = false }) {
         )}
 
         <div className="p-5">
-          <h3 className="font-bold text-lg leading-tight line-clamp-2 group-hover:text-gray-800  text-white transition-colors">
+          <H3 className="leading-tight line-clamp-2 group-hover:text-gray-800  text-white transition-colors">
             {post.title}
-          </h3>
+          </H3>
 
           {(post.excerpt || post.description) && (
-            <p className="text-white hover:text-gray-600 dark:text-gray-300 text-sm mt-2 line-clamp-2 leading-relaxed">
+            <P className="text-white hover:text-gray-600 dark:text-gray-300 text-sm mt-2 line-clamp-2 leading-relaxed">
               {post.excerpt || post.description}
-            </p>
+            </P>
           )}
 
           <div className="flex items-center justify-between mt-4 text-xs group-hover:text-gray-500  text-white">
@@ -134,7 +135,7 @@ function SearchAndFilter({
       </div>
 
       {/* Results count */}
-      <div className="text-sm text-gray-600 dark:text-gray-200">
+      <P className="text-sm text-gray-600 dark:text-gray-200">
         {searchQuery || selectedCategory ? (
           <>
             Found {totalResults} result{totalResults !== 1 ? 's' : ''}
@@ -144,7 +145,7 @@ function SearchAndFilter({
         ) : (
           `Showing ${totalResults} article${totalResults !== 1 ? 's' : ''}`
         )}
-      </div>
+      </P>
     </div>
   );
 }
@@ -255,12 +256,12 @@ export default function BlogLayout({
     <section className="min-h-screen bg-[url(/HomePageBg.webp)]  bg-cover bg-no-repeat bg-top pt-20 ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900  mb-4">
+          <H1 className="text-gray-900 mb-4">
             Our Latest Insights
-          </h1>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          </H1>
+          <P className="text-gray-600 max-w-2xl mx-auto">
             Discover stories, thinking, and expertise from writers on any topic.
-          </p>
+          </P>
         </div>
 
         <SearchAndFilter
@@ -295,12 +296,12 @@ export default function BlogLayout({
             <svg className="mx-auto h-12 w-12 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
             </svg>
-            <h3 className="mt-2 text-sm font-medium text-gray-900 dark:text-white">
+            <H3 className="mt-2 text-gray-900 dark:text-white">
               {searchQuery || selectedCategory ? 'No posts match your criteria' : 'No posts found'}
-            </h3>
-            <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
+            </H3>
+            <P className="mt-1 text-gray-500 dark:text-gray-400">
               {searchQuery || selectedCategory ? 'Try adjusting your search or filters.' : 'Get started by creating your first blog post.'}
-            </p>
+            </P>
           </div>
         )}
       </div>

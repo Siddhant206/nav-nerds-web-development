@@ -1,19 +1,22 @@
 
 import { getAllBlogs, getBlogCategories } from "@/sanity/lib/blog";
 import BlogLayout from "./BlogLayout";
+import { generateMetadata as generateBaseMetadata } from "@/component/SEO/generateMetadata";
+import { pagesMetadata } from "@/component/SEO/pages-metadata";
 
 const POSTS_PER_PAGE = 9; 
 export async function generateMetadata({ searchParams }) {
   const { search, category } = await searchParams;
+  const baseMetadata = pagesMetadata.blogs;
 
-  let title = "Our Blogs | Navnerds";
+  let title = baseMetadata.title;
   if (search) title = `Search: ${search} | Navnerds`;
   if (category) title = `${category} Articles | Navnerds`;
 
-  return {
+  return generateBaseMetadata({
+    ...baseMetadata,
     title,
-    description: "Discover insights, tutorials, and expertise across various topics.",
-  };
+  });
 }
 
 export default async function BlogsPage({ searchParams }) {

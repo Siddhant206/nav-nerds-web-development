@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import PortableTextRenderer from "@/component/PortableText";
+import { H1, P } from "@/component/UI/typography";
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
@@ -14,11 +15,12 @@ export async function generateMetadata({ params }) {
 
   const ogImage = blog.mainImage?.asset?.url
     ? urlFor(blog.mainImage.asset.url).width(1200).height(630).url()
-    : "/default-og.jpg";
+    : "/default-og.webp";
 
   return {
     title: blog.title,
-    description: blog.excerpt || blog.description || "Read our latest insights.",
+    description:
+      blog.excerpt || blog.description || "Read our latest insights.",
     openGraph: {
       title: blog.title,
       description: blog.excerpt || blog.description || "",
@@ -54,7 +56,7 @@ export default async function BlogPostPage({ params }) {
       >
         <div className="absolute bottom-0 md:top-0 left-10 h-fit w-full -z-10">
           <Image
-            src="/Banner/BreadcrumbShape.png"
+            src="/Banner/BreadcrumbShape.webp"
             alt="Breadcrumb background"
             width={1920}
             height={1020}
@@ -80,15 +82,22 @@ export default async function BlogPostPage({ params }) {
 
         {/* Title with styled background */}
         <div className="bg-[#4fd0da] p-4 rounded-2xl text-white text-center shadow-lg">
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight">
+          <H1 className="leading-tight text-white mb-0">
             {post.title}
-          </h1>
+          </H1>
 
           {/* Meta information */}
           <div className="mt-4 flex flex-wrap justify-center items-center gap-4 text-blue-100 text-sm">
-            <time dateTime={post.publishedAt} className="flex items-center gap-1">
+            <time
+              dateTime={post.publishedAt}
+              className="flex items-center gap-1"
+            >
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
+                <path
+                  fillRule="evenodd"
+                  d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                  clipRule="evenodd"
+                />
               </svg>
               {new Date(post.publishedAt).toLocaleDateString("en-US", {
                 year: "numeric",
@@ -98,8 +107,16 @@ export default async function BlogPostPage({ params }) {
             </time>
             {post.readingTime && (
               <span className="flex items-center gap-1">
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
+                <svg
+                  className="w-4 h-4"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
+                    clipRule="evenodd"
+                  />
                 </svg>
                 {post.readingTime} min read
               </span>
@@ -111,11 +128,14 @@ export default async function BlogPostPage({ params }) {
         {post.mainImage?.asset?.url && (
           <div className="relative rounded-2xl overflow-hidden shadow-lg">
             <Image
-              src={urlFor(post.mainImage.asset.url).width(1200).height(600).url()}
+              src={urlFor(post.mainImage.asset.url)
+                .width(1200)
+                .height(600)
+                .url()}
               alt={post.mainImage?.alt || post.title}
               width={1200}
               height={600}
-              className="w-full h-auto max-h-[30rem] object-cover" 
+              className="w-full h-auto max-h-[30rem] object-cover"
               priority
             />
           </div>
@@ -125,9 +145,9 @@ export default async function BlogPostPage({ params }) {
         {(post.subtitle || post.excerpt) && (
           <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 border border-gray-200 shadow-sm">
             <div className="prose prose-lg max-w-none text-gray-700">
-              <p className="text-xl leading-relaxed font-medium">
+              <P className="text-xl leading-relaxed font-medium">
                 {post.subtitle || post.excerpt}
-              </p>
+              </P>
             </div>
           </div>
         )}
@@ -135,7 +155,8 @@ export default async function BlogPostPage({ params }) {
         {/* Main Content */}
         {post.body && (
           <article className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-gray-200 shadow-sm text-gray-800">
-            <div className="prose prose-lg prose-blue max-w-none 
+            <div
+              className="prose prose-lg prose-blue max-w-none 
                           prose-headings:text-gray-800 
                           prose-p:text-gray-700 prose-p:leading-relaxed
                           prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline
@@ -143,7 +164,8 @@ export default async function BlogPostPage({ params }) {
                           prose-blockquote:border-blue-200 prose-blockquote:bg-blue-50/50 prose-blockquote:rounded-lg prose-blockquote:p-4
                           prose-code:bg-gray-100 prose-code:rounded prose-code:px-2 prose-code:py-1
                           prose-pre:bg-gray-900 prose-pre:rounded-lg
-                          prose-img:rounded-lg prose-img:shadow-md">
+                          prose-img:rounded-lg prose-img:shadow-md"
+            >
               <PortableTextRenderer value={post.body} />
             </div>
           </article>
@@ -156,7 +178,11 @@ export default async function BlogPostPage({ params }) {
             className="inline-flex items-center gap-2 px-6 py-3 bg-[#4fd0da] text-white rounded-full hover:bg-black transition-colors font-medium shadow-md"
           >
             <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clipRule="evenodd" />
+              <path
+                fillRule="evenodd"
+                d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z"
+                clipRule="evenodd"
+              />
             </svg>
             Back to Blogs
           </Link>

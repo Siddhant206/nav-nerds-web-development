@@ -4,6 +4,10 @@ import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import Image from "next/image";
 import Link from 'next/link';
+import { H2, H3, P } from "@/component/UI/typography";
+const MotionH2 = motion.create(H2);
+const MotionH3 = motion.create(H3);
+const MotionP = motion.create(P);
 
 const services = [
   {
@@ -11,7 +15,7 @@ const services = [
     title: "Support",
     description: "24/7 technical support and managed services to keep your Microsoft solutions running smoothly.",
     link:"support",
-    icon: "/Icons/Support.gif",
+    icon: "/Icons/Support.webm",
     bgColor: "bg-[#0094C6]",
     textColor: "text-white"
   },
@@ -29,7 +33,7 @@ const services = [
     title: "Integration",
     description: "Connect Dynamics 365 and Microsoft 365 with your other business applications and platforms.",
     link: "integration", 
-    icon: "/Icons/Integration.gif",
+    icon: "/Icons/Integration.webm",
     bgColor: "bg-[#0094C6]",
     textColor: "text-white"
   },
@@ -38,7 +42,7 @@ const services = [
     title: "Training",
     description: "We teach administrators and end-users how to maximize new system capabilities and improve productivity",
     link: "training",
-    icon: "/Icons/Training.gif",
+    icon: "/Icons/Training.webm",
     bgColor: "bg-white",
     textColor: "text-black"
   },
@@ -47,7 +51,7 @@ const services = [
     title: "Customization",
     description: "we help you adapt the system to work your way. Drive efficiency, scalability, and seamless user adoption with our expert customization services.",
     link: "customization",
-    icon: "/Icons/Customization.gif",
+    icon: "/Icons/Customization.webm",
     bgColor: "bg-white",
     textColor: "text-black"
   },
@@ -65,7 +69,7 @@ const services = [
     title: "Dedicated Resources",
     description: "Skilled Microsoft consultants and developers available on-demand whenever or wherever you want to connect with us. ",
     link: "dedicated-resources",
-    icon: "/Icons/Dedicated-Resources.gif",
+    icon: "/Icons/Dedicated-Resources.webm",
     bgColor: "bg-white",
     textColor: "text-gray-800"
   },
@@ -74,7 +78,7 @@ const services = [
     title: "Migration",
     description: "Seamless setup and migration from ERP & CRM's to Microsoft 365 tailored to your business needs.",
     link: "migration",
-    icon: "/Icons/Migration.gif",
+    icon: "/Icons/Migration.webm",
     bgColor: "bg-[#0094C6]",
     textColor: "text-white"
   }
@@ -187,9 +191,9 @@ export default function ServicesSection() {
         variants={textVariants}
         className="max-w-4xl mx-auto text-black py-10 space-y-4 text-center"
       >
-        <motion.h1
+        <MotionH2
           variants={textVariants}
-          className="relative text-xl sm:text-2xl md:text-4xl tracking-wide font-semibold"
+          className="relative tracking-wide font-semibold"
         >
           Get The Best Solutions For Business Growth From Microsoft Dynamic 365
           <motion.svg
@@ -220,13 +224,13 @@ export default function ServicesSection() {
               transition={{ delay: 0.5 }}
             />
           </motion.svg>
-        </motion.h1>
-        <motion.p
+        </MotionH2>
+        <MotionP
           variants={textVariants}
-          className="text-sm md:text-xl text-gray-600"
+          className="text-gray-600"
         >
           Automate your business, simplify operations, and redefine the way you deal with new opportunities using powerful Dynamics 365 solutions from the Nerds.
-        </motion.p>
+        </MotionP>
       </motion.div>
 
       {/* Services Header */}
@@ -236,18 +240,18 @@ export default function ServicesSection() {
         variants={textVariants}
         className="max-w-2xl mr-auto text-black py-10 lg:pb-10 lg:pt-20 space-y-4 text-left"
       >
-        <motion.h1
+        <MotionH2
           variants={textVariants}
-          className="text-xl sm:text-2xl md:text-4xl tracking-wide font-semibold"
+          className="tracking-wide font-semibold"
         >
           Our Services
-        </motion.h1>
-        <motion.p
+        </MotionH2>
+        <MotionP
           variants={textVariants}
-          className="text-sm md:text-base text-gray-600"
+          className="text-gray-600"
         >
           We offer professional ERP consulting services to help companies map their needs with ERP capabilities and select the best ERP vendor.
-        </motion.p>
+        </MotionP>
       </motion.div>
 
       {/* Services Grid */}
@@ -326,37 +330,48 @@ export default function ServicesSection() {
                   >
                     <span>
                       {typeof service.icon === "string" && service.icon.startsWith("/Icons") ? (
-                        <Image
-                          src={service.icon}
-                          alt={`Our Microsoft 365 ${service.title} services`}
-                          width={160}
-                          height={50}
-                          className="object-contain bg-transparent h-16"
-                          priority
-                        />
+                        service.icon.endsWith(".webm") ? (
+                          <video
+                            src={service.icon}
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            className="h-16 w-auto object-contain"
+                          />
+                        ) : (
+                          <Image
+                            src={service.icon}
+                            alt={`Our Microsoft 365 ${service.title} services`}
+                            width={160}
+                            height={50}
+                            className="object-contain bg-transparent h-16"
+                            priority
+                          />
+                        )
                       ) : (
-                          <span  className="text-3xl animate-pulse">{service.icon}</span>
+                        <span className="text-3xl animate-pulse">{service.icon}</span>
                       )}
                     </span>
                   </motion.div>
                 </div>
 
-                <motion.h3
-                  className={`text-xl font-bold mb-3 ${service.textColor}`}
+                <MotionH3
+                  className={`${service.textColor}`}
                   whileHover={{ x: 2 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
                   {service.title}
-                </motion.h3>
+                </MotionH3>
 
-                <motion.p
-                  className={`text-sm leading-relaxed flex-grow ${service.textColor === 'text-white' ? 'text-white/90' : 'text-gray-600'
+                <MotionP
+                  className={`flex-grow ${service.textColor === 'text-white' ? 'text-white/90' : 'text-gray-600'
                     }`}
                   whileHover={{ x: 2 }}
                   transition={{ type: "spring", stiffness: 300, delay: 0.1 }}
                 >
                   {service.description}
-                </motion.p>
+                </MotionP>
 
                 {/* Animated Hover Indicator */}
                 <div className="mt-4 overflow-hidden">

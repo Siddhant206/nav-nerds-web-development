@@ -2,6 +2,7 @@
 import { generateMetadata } from "@/component/SEO/generateMetadata";
 import { pagesMetadata } from "@/component/SEO/pages-metadata";
 import Link from "next/link";
+import { H1, H2, H3, P } from "@/component/UI/typography";
 
 export const metadata = generateMetadata(pagesMetadata.pricing);
 export default function PricingPage() {
@@ -64,18 +65,18 @@ export default function PricingPage() {
         <main className="bg-[url(/HomePageBg.webp)]  bg-cover bg-no-repeat bg-top text-gray-800 font-sans">
             {/* HERO */}
             <header className="max-w-4xl mx-auto pt-20 px-6 text-center ">
-                <h1 className="text-4xl md:text-5xl font-bold mb-4">Pricing</h1>
-                <p className="max-w-2xl mx-auto text-lg md:text-xl mb-4">
+                <H1 className="mb-4">Pricing</H1>
+                <P className="max-w-2xl mx-auto mb-4">
                     At Navnerds, we understand that trusting a new team takes time—so we’ve created a Trust & Trial Package to let you experience our expertise in{" "}
-                    <span className="text-blue-600 font-semibold">Microsoft Dynamics 365 Business Central</span> without long-term commitments.
-                </p>  
+                    <span className="text-blue-600 font-semibold underline decoration-wavy underline-offset-4">Microsoft Dynamics 365 Business Central</span> without long-term commitments.
+                </P>  
             </header>
 
             {/* PRICING CARDS */}
             <section className="py-10 px-6 ">
                 <div className="text-center mb-12">
-                    <h2 className="text-3xl font-bold">ERP Made Easy</h2>
-                    <p className="text-sm text-gray-500">Powered by Navnerds</p>
+                    <H2 className="mb-2">ERP Made Easy</H2>
+                    <P className="text-gray-500 uppercase tracking-widest font-bold">Powered by Navnerds</P>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
                     {plans.map((plan, index) => (
@@ -83,12 +84,12 @@ export default function PricingPage() {
                             key={index}
                             className="flex flex-col hover:bg-white   dura justify-between border border-gray-400 ease-in-out duration-200 p-6 rounded-xl shadow-sm hover:shadow-md transition"
                         >
-                            <div> <h3 className="text-xl font-bold text-gray-800 mb-2">{plan.title}</h3>
+                            <div> <H3 className="text-gray-800 mb-2">{plan.title}</H3>
                                 <div className="text-2xl font-bold text-blue-700 mb-2">{plan.price}</div>
-                                <p className="text-sm text-gray-600 mb-4">{plan.desc}</p>
+                                <P className="text-gray-600 mb-4">{plan.desc}</P>
                                 <ul className="text-sm text-gray-700 list-disc list-inside mb-4">
                                     {plan.features.map((feature, i) => (
-                                        <li key={i}>{feature}</li>
+                                        <P key={i} as="li" className="text-sm list-item">{feature}</P>
                                     ))}
                                 </ul>
                                 </div>

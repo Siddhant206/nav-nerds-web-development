@@ -4,6 +4,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useEffect, useRef } from "react";
 import { useInView } from "framer-motion";
 import Image from "next/image";
+import { H2, P } from "@/component/UI/typography";
 
 const FeatureCard = ({ title, description, imageUrl, imageAlt = "", imageLeft = false, }) => {
     const ref = useRef(null);
@@ -39,8 +40,8 @@ const FeatureCard = ({ title, description, imageUrl, imageAlt = "", imageLeft = 
         >
             {/* Left Content */}
             <div className="md:w-[60%] w-full p-8">
-                <h2 className="text-3xl font-bold text-gray-800 mb-3">{title}</h2>
-                <p className="text-gray-600 font-semibold ">{description}</p>
+                <H2 className="text-gray-800 mb-3">{title}</H2>
+                <P className="text-gray-600 font-semibold ">{description}</P>
             </div>
 
             {/* Right Image */}

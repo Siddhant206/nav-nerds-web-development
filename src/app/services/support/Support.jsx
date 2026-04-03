@@ -3,6 +3,9 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import { H1, H2, H3, P } from "@/component/UI/typography";
+const MotionH2 = motion.create(H2);
+const MotionP = motion.create(P);
 
 const tabs = ["Technical", "Functional", "Licensing", "Navision"];
 
@@ -78,22 +81,22 @@ const SupportPage = () => {
     <section id="services" className="relative  text-black overflow-hidden">
       {/* Hero Section */}
       <section
-        className="relative bg-[url('/Services/Support/SupportBG.png')] bg-cover bg-no-repeat bg-center 
+        className="relative bg-[url('/Services/Support/SupportBG.webp')] bg-cover bg-no-repeat bg-center 
         flex flex-col items-center justify-center overflow-hidden 
         h-[60vh] md:h-screen text-white"
       >
         {/* main headline box */}
         <div className="relative z-10 mt-10 md:mt-0 text-center px-6">
           <div className="bg-white text-[#22b8cf] rounded-3xl px-8 py-6 md:px-14 md:py-8 shadow-lg max-w-3xl mx-auto">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold  leading-tight">
+            <H1 className="leading-tight text-[#22b8cf]">
               Support Services
               <br />
               for your Business
-            </h1>
+            </H1>
 
-            <p className="text-sm md:text-base text-right text-black  w-full mt-3">
+            <P className="text-right text-black  w-full mt-3 italic font-medium">
               Always on. Always reliable.
-            </p>
+            </P>
           </div>
         </div>
         {/* CTA Button */}
@@ -123,43 +126,43 @@ const SupportPage = () => {
           {/* 24/7 IT Support */}
           <div className="bg-white text-black rounded-3xl h-64 p-4 shadow-md flex flex-col items-center text-center">
             <Image
-              src="/Services/Support/it-support.png"
+              src="/Services/Support/it-support.webp"
               width={150}
               height={150}
               alt="IT Support"
             />
-            <h3 className="font-semibold text-lg mt-3">24/7 IT Support</h3>
-            <p className="text-sm mt-1">
+            <H3 className="mt-3">24/7 IT Support</H3>
+            <P className="mt-1">
               24/7 IT Support tailored to needs ensuring maximum uptime.
-            </p>
+            </P>
           </div>
 
           {/* Cloud Solution */}
           <div className="bg-white text-black rounded-3xl h-64 p-4 shadow-md flex flex-col items-center text-center">
             <Image
-              src="/Services/Support/cloud.png"
+              src="/Services/Support/cloud.webp"
               width={150}
               height={150}
               alt="Cloud Solution"
             />
-            <h3 className="font-semibold text-lg mt-3">Cloud Solution</h3>
-            <p className="text-sm mt-1">
+            <H3 className="mt-3">Cloud Solution</H3>
+            <P className="mt-1">
               Cloud Solutions seasoned & tailored for maximum uptime delivery.
-            </p>
+            </P>
           </div>
 
           {/* Technical Consultant */}
           <div className="bg-white text-black rounded-3xl h-64 p-4 shadow-md flex flex-col items-center text-center">
             <Image
-              src="/Services/Support/consultant-1.png"
+              src="/Services/Support/consultant-1.webp"
               width={150}
               height={150}
-              alt="Technical Consultant" 
+              alt="Technical Consultant"
             />
-            <h3 className="font-semibold text-lg mt-3">Technical Consultant</h3>
-            <p className="text-sm mt-1">
+            <H3 className="mt-3">Technical Consultant</H3>
+            <P className="mt-1">
               Technical Consulting, IT Marketing & Support for your platform.
-            </p>
+            </P>
           </div>
         </div>
         <div className="max-w-6xl mx-auto md:p-6 bg-white rounded-xl shadow-md border border-gray-300 relative z-10">
@@ -190,12 +193,12 @@ const SupportPage = () => {
               transition={{ duration: 0.3 }}
               className="p-2 md:p-6 "
             >
-              <h2 className="text-xl md:text-2xl font-bold text-center mb-4">
+              <MotionH2 className="text-center mb-4">
                 {tabContent[activeTab].heading}
-              </h2>
-              <p className="text-gray-700 text-sm md:text-base mb-6 text-center max-w-3xl mx-auto">
+              </MotionH2>
+              <MotionP className="text-gray-700 text-center max-w-3xl mx-auto mb-6">
                 {tabContent[activeTab].description}
-              </p>
+              </MotionP>
 
               {/* Grid */}
               <div className="flex flex-wrap items-center justify-center gap-4">

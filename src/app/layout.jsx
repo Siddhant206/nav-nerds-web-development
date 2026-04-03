@@ -1,9 +1,10 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/component/Navbar";
-import Footer from "@/component/Footer";
+
 import { GoogleTagManager } from '@next/third-parties/google'
 import FloatingContacts from "@/component/UI/FloatingContacts";
+import Navbar from "@/component/Navbar";
+import Footer from "@/component/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,8 +18,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "NavNerds",
-  description: "NavNerds A Micorsoft Business 365 Services Provider.",
+  title: "NavNerds | Microsoft Dynamics 365 & ERP Experts",
+  description: "NavNerds is a leading Microsoft Dynamics 365 and ERP service provider, helping businesses automate and grow through specialized consulting and implementation.",
 };
 
 export default function RootLayout({ children }) {

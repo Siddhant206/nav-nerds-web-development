@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Link from 'next/link';
+import { H1, H2, H3, P } from '@/component/UI/typography';
 
 const FAQ = () => {
     const [openItem, setOpenItem] = useState(null);
@@ -7,82 +8,83 @@ const FAQ = () => {
     const faqData = [
         {
             id: 1,
-            question: "Why is your trek fee higher than other trekking companies?",
+            question: "What exactly is Microsoft Dynamics 365 Business Central?",
             answer: (
                 <div>
-                    <ul className="space-y-2">
-                        <li><strong>Curated Itineraries:</strong> We offer well-researched, offbeat routes and immersive experiences that go beyond the usual trek.</li>
-                        <li><strong>Smaller Group Sizes:</strong> We limit group size to ensure personalized attention, a richer experience and minimal environmental impact.</li>
-                        <li><strong>Expert Team:</strong> Our guides are not only experienced trekkers but also trained in wilderness first aid, environmental ethics and local culture.</li>
-                        <li><strong>Higher Staff-to-Trekker Ratio:</strong> Whether it's helping you navigate a tough section of the trail, adjusting your pace or addressing any signs of discomfort, our team has been prepared to deal with any situation.</li>
-                        <li><strong>Pre-Trek Screening & Briefings:</strong> We conduct health assessments and safety briefings to ensure you're well-prepared for the terrain.</li>
-                        <li><strong>Eco-friendly measures:</strong> We follow a strict 'Leave No Trace' policy and carry back all waste.</li>
-                        <li><strong>Local community support:</strong> We assist and support local communities by sourcing food and services from them.</li>
+                    <P className="mb-4">Microsoft Dynamics 365 Business Central is a comprehensive business management solution (ERP) designed for small to medium-sized organizations. It automates and streamlines business processes and helps you manage your business across:</P>
+                    <ul className="space-y-2 ml-6 list-disc">
+                        <li><strong>Finance:</strong> Manage your cash flow, bank reconciliations, fixed assets, and end-of-year reporting.</li>
+                        <li><strong>Sales & Service:</strong> Track customer interactions and get guidance on the best upsell, cross-sell, and renewal opportunities.</li>
+                        <li><strong>Supply Chain Management:</strong> Use built-in intelligence to predict when and what to replenish, ensuring inventory levels are optimized.</li>
+                        <li><strong>Project Management:</strong> Create, manage, and track customer projects using timesheets and advanced job costing.</li>
+                        <li><strong>Operations:</strong> Manage your manufacturing, warehousing, and shipping operations with real-time data.</li>
                     </ul>
                 </div>
             )
         },
         {
             id: 2,
-            question: "What are some easy treks for beginners?",
+            question: "How does Business Central differ from legacy NAV (Navision)?",
             answer: (
                 <div>
-                    <p className="mb-2">If you're a beginner and confuse which trek to choose, here are some easy treks to begin with:</p>
-                    <ol className="list-decimal list-inside space-y-1">
-                        <li>Nag Tibba</li>
-                        <li>Harsil Saattal</li>
-                        <li>Ali bedni bugyal</li>
-                        <li>Tungnath & Chandrashila</li>
-                        <li>Brahmatal</li>
-                    </ol>
+                    <P className="mb-4">Business Central is the modern, cloud-first evolution of NAV. While it retains the robust logic of NAV, it brings significant improvements:</P>
+                    <ul className="space-y-2 ml-6 list-disc">
+                        <li><strong>Cloud Accessibility:</strong> Access your business data from any device, anywhere, via a web browser or mobile app.</li>
+                        <li><strong>Automatic Updates:</strong> No more expensive version upgrades. Microsoft handles updates automatically in the background.</li>
+                        <li><strong>Modern Customization:</strong> Customizations are built as "Extensions" (AL code) that don't modify the base code, making future updates seamless.</li>
+                        <li><strong>Tighter Integration:</strong> Native integration with Outlook, Excel, Teams, and the Power Platform.</li>
+                    </ul>
                 </div>
             )
         },
         {
             id: 3,
-            question: "How safe are the treks?",
+            question: "Is Business Central suitable for my specific industry?",
             answer: (
                 <div>
-                    <ul className="space-y-2">
-                        <li><strong>Certified & experienced guides:</strong> With years of experience in leading treks, they are skilled at reading terrain, they also conduct regular safety briefings throughout the trek.</li>
-                        <li><strong>Group size:</strong> We keep our groups small, typically under 15 participants, so that guides can closely monitor each individual.</li>
-                        <li><strong>Medical safety:</strong> A comprehensive medical kit is available at all times including altitude sickness medication, first aid supplies, oxygen cylinders. Also daily health checks are done during high-altitude treks.</li>
-                    </ul>
+                    <P>Absolutely. While Business Central covers core business needs out-of-the-box, Navnerds specializes in tailoring it for specific industries such as <strong>E-commerce, Manufacturing, Professional Services, and Retail.</strong> We utilize specialized extensions and custom AL development to ensure the system fits your unique workflows perfectly.</P>
                 </div>
             )
         },
         {
             id: 4,
-            question: "What type of toilet facility is provided at the trek?",
-            answer: "Dry toilets, to have minimal impact on the environment"
+            question: "What is the typical timeline for an ERP implementation?",
+            answer: "Implementation timelines vary based on complexity. A standard 'Go-Live' for core financial modules can take 4–8 weeks. More complex projects involving manufacturing, warehouse management, and deep customizations typically range from 3 to 6 months. We provide a detailed roadmap during our initial assessment phase."
         },
         {
             id: 5,
-            question: "How does Offbeat Treks promote Sustainable Tourism and Eco-Friendly Tourism?",
-            answer: (
-                <div>
-                    <ul className="space-y-2">
-                        <li><strong>Eco-friendly methods:</strong> We follow a strict 'Leave No Trace' policy and carry back all waste.</li>
-                        <li><strong>Prohibit the use of plastic:</strong> We prohibit the use of plastic on all treks and we encourage the trekkers to carry reusable water bottles and containers.</li>
-                        <li><strong>Proper waste disposal:</strong> waste is disposed off at proper disposal facilities and organic waste is composted to reduce the impact on the environment.</li>
-                    </ul>
-                </div>
-            )
+            question: "Can we integrate Business Central with our existing 3rd party tools?",
+            answer: "Yes. Integration is one of our core strengths. We can connect Business Central with Shopify, WooCommerce, Magento, WhatsApp, CRM systems, and custom internal applications using standard APIs, OData services, or custom middleware."
         },
         {
             id: 6,
-            question: "Is water available at the campsites?",
-            answer: "We provide filtered or boiled water at campsites to reduce the need for packaged water bottles."
+            question: "What kind of support do you provide post-implementation?",
+            answer: "We offer comprehensive support packages including technical troubleshooting, functional guidance, minor customizations, and monthly health checks. Our goal is to ensure your team is never stuck and your system is always optimized."
         },
         {
             id: 7,
-            question: "Made a payment but did not receive any confirmation.",
-            answer: "Reach out to us on our support & helpline number- +91 8477800887 or mail us at info@offbeattreks.com"
+            question: "Do you offer a trial period for your services?",
+            answer: "Yes! We offer a 'Starter Plan' (Trial & Trust) at $499. This allows you to experience our expertise and working style with a low-risk, small-scale project before committing to a larger engagement."
         },
         {
             id: 8,
-            question: "How will Offbeat Treks manage if I am the only woman in the group?",
-            answer: "We provide a separate sleeping arrangements to women and in case of a single woman trekker, a guide will always be available to supervise and support you."
+            question: "Can Navnerds help with on-premise to cloud migrations?",
+            answer: "Absolutely. Migrating from on-premise NAV or older versions of Business Central to the cloud is one of our specialties. We ensure a smooth data transition, re-implement necessary customizations as extensions, and minimize downtime for your business."
+        },
+        {
+            id: 9,
+            question: "Do you provide dedicated resources for BC development?",
+            answer: "Yes, we offer dedicated resource packages. You can hire our skilled Microsoft consultants and developers on-demand to work exclusively on your projects, providing scalability and deep technical expertise without the overhead of full-time hiring."
+        },
+        {
+            id: 10,
+            question: "What is the difference between your Growth and Enterprise plans?",
+            answer: "Our Growth Plan ($60/hr) is designed for scaling businesses needing steady development and support. The Enterprise Plan ($90/hr) is for larger organizations requiring complex architecture, deep integrations, and high-priority, multi-resource support."
+        },
+        {
+            id: 11,
+            question: "I have a question not listed here. How can I reach you?",
+            answer: "You can reach our expert consultants directly at info@navnerds.com or call us at +91 9068476495. We're always happy to discuss your business challenges."
         }
     ];
 
@@ -96,9 +98,9 @@ const FAQ = () => {
             <div className="">
                 <div className="max-w-4xl mx-auto px-6 py-8">
                     <div className="text-center">
-                        <h1 className="text-4xl font-bold text-gray-900 mb-2 animate-fade-in">
+                        <H1 className="mb-2 animate-fade-in text-gray-900">
                             Frequently Asked Questions
-                        </h1>
+                        </H1>
                         {/* <p className="text-gray-600 text-lg animate-fade-in-delay">
                             Find answers to common questions about our products and services
                         </p> */}
@@ -119,9 +121,9 @@ const FAQ = () => {
                                 onClick={() => toggleItem(item.id)}
                                 className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-200 transition-colors duration-200 rounded-lg"
                             >
-                                <h3 className="text-lg font-semibold text-gray-900 pr-4">
+                                <H3 className="text-gray-900 pr-4 text-left">
                                     {item.question}
-                                </h3>
+                                </H3>
                                 <div className="flex-shrink-0">
                                     {openItem === item.id ? (
                                         <svg width="13" height="9" viewBox="0 0 13 9" fill="none" className="w-5 h-5 text-blue-600 transform transition-transform duration-200">
@@ -155,9 +157,9 @@ const FAQ = () => {
                 {/* Contact Section - Remain same */}
                 <div className="mt-16 text-center">
                     <div className="bg-white rounded-lg border border-gray-200 p-8 duration-300">
-                        <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                        <H2 className="text-gray-900 mb-4">
                             Still have questions?
-                        </h2>
+                        </H2>
                         <p className="text-gray-600 mb-6">
                             Can't find what you're looking for? We're here to help!
                         </p>

@@ -2,6 +2,10 @@ import Banner from "@/component/Section/Banner";
 import IndustrySpecializations from "@/component/Section/IndustrySpecializations";
 import Packages from "@/component/Section/Packages";
 import ServicesSection from "@/component/Section/Services";
+import { generateMetadata } from "@/component/SEO/generateMetadata";
+import { pagesMetadata } from "@/component/SEO/pages-metadata";
+
+export const metadata = generateMetadata(pagesMetadata.home);
 
 export default function Home() {
   return (

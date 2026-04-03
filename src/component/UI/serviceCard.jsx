@@ -3,6 +3,9 @@
 import { useRef } from "react"
 import Image from "next/image"
 import { motion, useInView } from "framer-motion" 
+import { H2, P } from "@/component/UI/typography"
+const MotionH2 = motion.create(H2);
+const MotionP = motion.create(P);
 
 
 export function ServiceCard({
@@ -49,14 +52,14 @@ export function ServiceCard({
         className={`flex flex-col-reverse ${imagePosition === "right" ? "md:flex-row" : "md:flex-row-reverse"} items-center gap-8 max-w-6xl 2xl:max-w-7xl mx-auto`}
       >
         <motion.div className="md:w-[50%]" variants={itemVariants}>
-          <h2
-            className={`text-2xl xl:text-3xl 2xl:text-4xl font-bold   mb-4 ${textColor === "text-white" ? "!text-white" : "!text-black"
-              }`}
+          <MotionH2
+            className={`font-bold mb-4 ${textColor === "text-white" ? "!text-white" : "!text-black"
+               }`}
           >
             {title}
-          </h2>
+          </MotionH2>
 
-          <div className={`xs:text-lg md:text-base lg:text-[17px]   3xl:text-xl leading-relaxed ${textColor}`}>{description}</div>
+          <MotionP className={`leading-relaxed ${textColor}`}>{description}</MotionP>
         </motion.div>
 
         <motion.div className="w-full md:w-[50%] h-full flex justify-center" variants={itemVariants}>

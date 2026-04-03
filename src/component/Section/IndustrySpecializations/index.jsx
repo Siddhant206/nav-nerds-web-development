@@ -3,6 +3,7 @@
 
 import { useState } from "react";
 import { BsBuilding, BsCart, BsGear, BsBank, BsBook, BsAirplane } from "react-icons/bs";
+import { H2, H3, P } from "@/component/UI/typography";
  
 
 const industries = [
@@ -20,9 +21,9 @@ export default function IndustrySpecializations() {
     return (
         <section className="max-w-7xl mx-auto bg-gray-50/60 border border-gray-200  py-20 px-6">
             <div className="max-w-6xl mx-auto">
-                <h2 className={` text-2xl xl:text-3xl 2xl:text-4xl font-bold   text-gray-800 text-left mb-10`}>
+                <H2 className="text-gray-800 text-left mb-10">
                     Industry Specializations
-                </h2>
+                </H2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
                     {industries.map(({ title, icon, highlight, key, text }) => (
                         <div
@@ -31,13 +32,13 @@ export default function IndustrySpecializations() {
                             onMouseLeave={() => setHovered(null)}
                             className="rounded-xl border border-gray-400 text-black hover:text-white transition-all duration-400 ease-in-out py-14 px-6 shadow-sm bg-white hover:bg-[#22D0DC] scale-105"
                         >
-                            <div className="flex items-center mb-4 gap-2  text-base md:text-lg font-semibold">
+                            <div className="flex items-center mb-4 gap-2 font-semibold">
                                 <span className="text-xl">{icon}</span>
-                                {title}
+                                <H3 as="span" className="text-inherit uppercase tracking-widest">{title}</H3>
                             </div>
-                            <p className="text-sm leading-relaxed">
+                            <P className="text-sm leading-relaxed">
                                 {text}
-                            </p>
+                            </P>
                         </div>
                     ))}
                 </div>

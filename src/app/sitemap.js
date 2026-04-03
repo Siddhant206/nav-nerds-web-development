@@ -16,7 +16,7 @@ export default async function sitemap() {
     const data = await getData()
     const posts = data.map((post) => ({
         url: `https://www.navnerds.com/blogs/${post.currentSlug}`,
-        lastModified: post.lastModified,
+        lastModified: post.updated,
         changeFrequency: 'weekly',
         priority: 0.9,
     }));
