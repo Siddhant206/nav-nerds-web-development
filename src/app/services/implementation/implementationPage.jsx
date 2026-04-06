@@ -100,11 +100,9 @@ function ImplementationPage() {
     <section id="services" className="relative  text-black overflow-hidden">
       {/* Hero Section */}
       <section className="relative bg-white bg-[url(/ImplementationBG.webp)]  bg-contain bg-no-repeat  bg-center md:bg-bottom   flex items-center justify-center lg:py-14 max-lg:px-4  flex-col w-full text-black  overflow-hidden h-[50vh] md:h-[100dvh] ">
-        <div className="absolute inset-0 bg-black/30 " />
+        <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px]" />
         <div className="md:pb-60 relative flex flex-col items-center justify-center w-fit">
-          <H1
-            className={`max-w-xl text-center text-black mb-0`}
-          >
+          <H1 className={`max-w-2xl text-center text-white mb-0`}>
             Implementation Services with Navnerds
           </H1>
           <Link
@@ -124,11 +122,7 @@ function ImplementationPage() {
 
       {/* Content Section */}
       <section className="bg-[url(/HomePageBg.webp)]  bg-cover bg-no-repeat bg-top w-full  py-10  10">
-        <H2
-          className={`text-black text-center mb-2`}
-        >
-          Scaling Efficently?{" "}
-        </H2>
+        <H2 className={`text-black text-center mb-2`}>Scaling Efficently? </H2>
         <P
           className={`max-w-4xl max-sm:px-2 sm:px-4 lg:px-0 text-center font-semibold mx-auto mb-14`}
         >
@@ -170,9 +164,7 @@ function ImplementationPage() {
         <section className="max-w-7xl mx-auto bg-white mt-14 py-14 px-8">
           {/* Header */}
           <div className="text-center mb-8 md:mb-16">
-            <H2
-              className={`text-gray-900 leading-tight text-center`}
-            >
+            <H2 className={`text-gray-900 leading-tight text-center`}>
               What Happens When You Implement with Navnerds
             </H2>
           </div>

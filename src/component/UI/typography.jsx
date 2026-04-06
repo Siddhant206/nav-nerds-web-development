@@ -27,7 +27,6 @@ export const H1 = forwardRef(function H1(
                     "font-light",
                     "tracking-[0.04em]",
                     "leading-none",
-                    "uppercase",
                     "select-none",
                     className
                )}
