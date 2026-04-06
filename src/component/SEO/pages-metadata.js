@@ -1,12 +1,12 @@
 export const pagesMetadata = {
   home: {
     title:
-      "Microsoft Dynamics 365 Experts | Complete Business Solutions | NavNerds",
+      "Microsoft Dynamics 365 Experts | NavNerds",
     description:
       "Welcome to NavNerds — your complete business solution partner. Get the best Microsoft Dynamics 365 Services, ERP Implementation, Integration, and Support to automate and grow your business.",
     openGraph: {
       title:
-        "Microsoft Dynamics 365 Experts | Complete Business Solutions | NavNerds",
+        "Microsoft Dynamics 365 Experts | NavNerds",
       description:
         "NavNerds delivers expert Microsoft Dynamics 365, ERP, and Business Central services to help companies automate operations and achieve growth.",
       type: "website",
@@ -15,7 +15,7 @@ export const pagesMetadata = {
     twitter: {
       card: "summary_large_image",
       title:
-        "Microsoft Dynamics 365 Experts | Complete Business Solutions | NavNerds",
+        "Microsoft Dynamics 365 Experts  | NavNerds",
       description:
         "Automate your business with NavNerds — the trusted Microsoft Dynamics 365 consulting and ERP solution provider.",
       image: "/images/navnerds-home-twitter.webp",
@@ -75,7 +75,7 @@ export const pagesMetadata = {
   },
   customizationMetadata: {
     title:
-      "Business Central Customization Services | Tailored ERP Solutions | NavNerds",
+      "Business Central Customization Services | NavNerds",
     description:
       "NavNerds specializes in Microsoft Dynamics 365 Business Central and Navision customization. From AL extensions to automated workflows, we tailor your ERP to fit your unique business processes.",
     openGraph: {
@@ -118,7 +118,7 @@ export const pagesMetadata = {
   },
 
   migrationMetadata: {
-    title: "Business Central Migration Services | Navision to BC | NavNerds",
+    title: "Business Central Migration Services | NavNerds",
     description:
       "Seamlessly migrate from Microsoft Navision (NAV) to Business Central with NavNerds. Our end-to-end migration services include code conversion, data migration, testing, training, go-live support, and cloud migration to ensure a smooth, future-ready transition.",
     openGraph: {
@@ -184,7 +184,7 @@ export const pagesMetadata = {
   },
   implementationServicesMetadata: {
     title:
-      "Business Central Implementation Services | ERP Migration & Scaling | NavNerds",
+      "Business Central Implementation Services | NavNerds",
     description:
       "NavNerds provides expert Microsoft Dynamics 365 Business Central implementation services. From legacy ERP migration to automation and scaling, we deliver solutions tailored to your business growth.",
     openGraph: {
@@ -207,7 +207,7 @@ export const pagesMetadata = {
 
   supportServicesMetadata: {
     title:
-      "Microsoft Dynamics 365 Support Services | Business Central, PowerApps & NAV | NavNerds",
+      "Microsoft Dynamics 365 Support Services | NavNerds",
     description:
       "Get expert support for Microsoft Dynamics 365, Business Central, PowerApps, and legacy NAV (Navision). Technical, functional, licensing, and upgrade services to keep your business running smoothly.",
     openGraph: {
@@ -229,12 +229,12 @@ export const pagesMetadata = {
   },
   websiteDevelopment: {
     title:
-      "Website Development Services | Custom & SEO-Optimized Websites | NavNerds",
+      "Website Development Services | NavNerds",
     description:
       "Get professional website development services from NavNerds. Custom, fast, SEO-optimized websites tailored to your business growth and online presence.",
     openGraph: {
       title:
-        "Website Development Services | Custom & SEO-Optimized Websites | NavNerds",
+        "Website Development Services | NavNerds",
       description:
         "NavNerds offers expert website development services. Build a responsive, fast, and SEO-friendly website that drives growth and improves user experience.",
       type: "website",
@@ -243,7 +243,7 @@ export const pagesMetadata = {
     twitter: {
       card: "summary_large_image",
       title:
-        "Website Development Services | Custom & SEO-Optimized Websites | NavNerds",
+        "Website Development Services | NavNerds",
       description:
         "Professional website development services by NavNerds. Custom, fast, and SEO-optimized websites for your business success.",
       image: "/images/website-development-twitter.webp",
@@ -254,12 +254,12 @@ export const pagesMetadata = {
 
   blogs: {
     title:
-      "Blogs & Insights | Dynamics 365, ERP, and Business Growth | NavNerds",
+      "Blogs & Insights | NavNerds",
     description:
       "Read expert articles and insights from NavNerds on Microsoft Dynamics 365, ERP implementation, automation, and digital transformation for growing businesses.",
     openGraph: {
       title:
-        "Blogs & Insights | Dynamics 365, ERP, and Business Growth | NavNerds",
+        "Blogs & Insights | NavNerds",
       description:
         "Get the latest tips, strategies, and updates on Microsoft Dynamics 365, ERP solutions, and business automation from NavNerds.",
       type: "website",
@@ -268,7 +268,7 @@ export const pagesMetadata = {
     twitter: {
       card: "summary_large_image",
       title:
-        "Blogs & Insights | Dynamics 365, ERP, and Business Growth | NavNerds",
+        "Blogs & Insights | NavNerds",
       description:
         "Explore NavNerds’ blogs for practical insights on Microsoft Dynamics 365, ERP implementation, and digital growth strategies.",
       image: "/images/navnerds-blogs-twitter.webp",
@@ -293,7 +293,7 @@ export const pagesMetadata = {
     twitter: {
       card: "summary_large_image",
       title:
-        "ERP & Dynamics 365 Pricing Plans | Starter, Growth, Enterprise, HRMS | NavNerds",
+        "ERP & Dynamics 365 Pricing Plans | NavNerds",
       description:
         "Compare Microsoft Dynamics 365 pricing plans with NavNerds and choose the right one for your business growth.",
       image: "/images/navnerds-pricing-twitter.webp",

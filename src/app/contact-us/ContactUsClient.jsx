@@ -305,12 +305,13 @@ export default function ContactSection() {
                 variant="secondary"
                 className="bg-white text-cyan-600 hover:bg-white overflow-hidden w-32 h-14"
               >
-                <Image
-                  src="/Icons/Vaule-Icon.gif"
-                  alt="Value Creation Icon"
-                  width={70}
-                  height={70}
-                  className="object-contain"
+                <video 
+                  src="/Icons/Vaule-Icon.webm"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="object-contain aspect-square p-4"
                 />
               </Button>
             </div>
