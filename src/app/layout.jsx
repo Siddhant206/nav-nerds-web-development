@@ -18,8 +18,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "NavNerds | Microsoft Dynamics 365 & ERP Experts",
-  description: "NavNerds is a leading Microsoft Dynamics 365 and ERP service provider, helping businesses automate and grow through specialized consulting and implementation.",
+  title: "Microsoft Dynamics 365 Experts | NavNerds",
+  description:
+    "NavNerds — Microsoft Dynamics 365 experts offering ERP Implementation, Integration, Support & Training to automate and grow your business.",
 };
 
 export default function RootLayout({ children }) {
