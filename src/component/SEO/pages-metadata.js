@@ -3,7 +3,7 @@ export const pagesMetadata = {
     title:
       "Microsoft Dynamics 365 Experts | NavNerds",
     description:
-      "Welcome to NavNerds — your complete business solution partner. Get the best Microsoft Dynamics 365 Services, ERP Implementation, Integration, and Support to automate and grow your business.",
+      "NavNerds — your Microsoft Dynamics 365 partner. Expert ERP Implementation, Integration, and Support services to automate and grow your business.",
     openGraph: {
       title:
         "Microsoft Dynamics 365 Experts | NavNerds",
@@ -77,7 +77,7 @@ export const pagesMetadata = {
     title:
       "Business Central Customization Services | NavNerds",
     description:
-      "NavNerds specializes in Microsoft Dynamics 365 Business Central and Navision customization. From AL extensions to automated workflows, we tailor your ERP to fit your unique business processes.",
+      "Expert Business Central & Navision customization by NavNerds. AL extensions, automated workflows, and tailored ERP solutions for your business.",
     openGraph: {
       title: "Business Central Customization Services | NavNerds",
       description:
@@ -98,11 +98,11 @@ export const pagesMetadata = {
   trainingMetadata: {
     title: "Business Central Training Services | NavNerds",
     description:
-      "Get hands-on training for Microsoft Business Central with NavNerds. From basics to advanced functional training, developer courses, ERP migration guidance, and Power BI integration, we empower your team to master Business Central effectively.",
+      "Hands-on Business Central training by NavNerds. Beginner to advanced courses covering functional, developer, migration, and Power BI topics.",
     openGraph: {
       title: "Business Central Training Services | NavNerds",
       description:
-        "Learn Business Central from scratch or level up your team with advanced functional, technical, and analytics training. Hands-on sessions for users, developers, and consultants.",
+        "Level up your team with Business Central training — functional, technical, and analytics sessions for users, developers, and consultants.",
       type: "website",
       image: "/images/training-og.webp",
     },
@@ -120,7 +120,7 @@ export const pagesMetadata = {
   migrationMetadata: {
     title: "Business Central Migration Services | NavNerds",
     description:
-      "Seamlessly migrate from Microsoft Navision (NAV) to Business Central with NavNerds. Our end-to-end migration services include code conversion, data migration, testing, training, go-live support, and cloud migration to ensure a smooth, future-ready transition.",
+      "Migrate from NAV to Business Central with NavNerds. End-to-end services — code conversion, data migration, testing, and go-live support.",
     openGraph: {
       title: "Business Central Migration Services | NavNerds",
       description:
@@ -142,7 +142,7 @@ export const pagesMetadata = {
     title:
       "Seamless Business Integrations | Dynamics 365 & Navision | NavNerds",
     description:
-      "Transform your business with NavNerds’ seamless integrations. Connect Business Central with Microsoft 365, WooCommerce, Shopify, WhatsApp, PowerApps, and SharePoint for automated workflows and real-time insights.",
+      "Connect Business Central with Microsoft 365, Shopify, WooCommerce, WhatsApp & more. NavNerds delivers seamless ERP integrations.",
     openGraph: {
       title: "Seamless Business Integrations | NavNerds",
       description:
@@ -164,11 +164,11 @@ export const pagesMetadata = {
     title:
       "Dedicated Microsoft Dynamics Resources | Business Central & Navision | NavNerds",
     description:
-      "NavNerds provides dedicated Microsoft Dynamics 365 Business Central and Navision resources to streamline your projects. Ensure faster turnaround, greater accountability, and expert support tailored to your business.",
+      "Hire dedicated Business Central & Navision experts from NavNerds. Faster delivery, greater accountability, and tailored ERP support.",
     openGraph: {
       title: "Dedicated Microsoft Dynamics Resources | NavNerds",
       description:
-        "Hire dedicated resources for Business Central or Navision projects. Focused expertise, seamless collaboration, and continuity from start to finish with NavNerds.",
+        "Hire dedicated resources for Business Central or Navision projects. Focused expertise and seamless collaboration with NavNerds.",
       type: "website",
       image: "/images/dedicated-resources-og.webp",
     },
@@ -186,7 +186,7 @@ export const pagesMetadata = {
     title:
       "Business Central Implementation Services | NavNerds",
     description:
-      "NavNerds provides expert Microsoft Dynamics 365 Business Central implementation services. From legacy ERP migration to automation and scaling, we deliver solutions tailored to your business growth.",
+      "Expert Business Central implementation by NavNerds. From legacy ERP migration to automation — solutions tailored to your business growth.",
     openGraph: {
       title: "Business Central Implementation Services | NavNerds",
       description:
@@ -209,11 +209,11 @@ export const pagesMetadata = {
     title:
       "Microsoft Dynamics 365 Support Services | NavNerds",
     description:
-      "Get expert support for Microsoft Dynamics 365, Business Central, PowerApps, and legacy NAV (Navision). Technical, functional, licensing, and upgrade services to keep your business running smoothly.",
+      "Expert support for Dynamics 365, Business Central, PowerApps & NAV. Technical, functional, licensing, and upgrade services by NavNerds.",
     openGraph: {
       title: "Microsoft Dynamics 365 Support Services | NavNerds",
       description:
-        "NavNerds provides comprehensive support services for Microsoft Dynamics 365, Business Central, PowerApps, and NAV. Ensure system performance, upgrades, integration, and licensing optimization.",
+        "Comprehensive Dynamics 365, Business Central, PowerApps & NAV support. System performance, upgrades, and licensing optimization.",
       type: "website",
       image: "/images/support-services-og.webp",
     },
@@ -281,7 +281,7 @@ export const pagesMetadata = {
     title:
       "ERP & Dynamics 365 Pricing Plans | Starter, Growth, Enterprise, HRMS | NavNerds",
     description:
-      "Choose the perfect plan for your business — Starter, Growth, Enterprise, or HRMS. NavNerds offers transparent and affordable Microsoft Dynamics 365 pricing packages.",
+      "Transparent Dynamics 365 pricing — Starter, Growth, Enterprise & HRMS plans. Affordable ERP packages by NavNerds for every business.",
     openGraph: {
       title:
         "ERP & Dynamics 365 Pricing Plans | Starter, Growth, Enterprise, HRMS | NavNerds",
