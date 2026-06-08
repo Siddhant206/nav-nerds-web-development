@@ -1,12 +1,10 @@
 export const pagesMetadata = {
   home: {
-    title:
-      "Microsoft Dynamics 365 Experts | NavNerds",
+    title: "Microsoft Dynamics 365 Experts | NavNerds",
     description:
       "NavNerds — your Microsoft Dynamics 365 partner. Expert ERP Implementation, Integration, and Support services to automate and grow your business.",
     openGraph: {
-      title:
-        "Microsoft Dynamics 365 Experts | NavNerds",
+      title: "Microsoft Dynamics 365 Experts | NavNerds",
       description:
         "NavNerds delivers expert Microsoft Dynamics 365, ERP, and Business Central services to help companies automate operations and achieve growth.",
       type: "website",
@@ -14,8 +12,7 @@ export const pagesMetadata = {
     },
     twitter: {
       card: "summary_large_image",
-      title:
-        "Microsoft Dynamics 365 Experts  | NavNerds",
+      title: "Microsoft Dynamics 365 Experts  | NavNerds",
       description:
         "Automate your business with NavNerds — the trusted Microsoft Dynamics 365 consulting and ERP solution provider.",
       image: "/images/navnerds-home-twitter.webp",
@@ -74,8 +71,7 @@ export const pagesMetadata = {
     robots: "index, follow",
   },
   customizationMetadata: {
-    title:
-      "Business Central Customization Services | NavNerds",
+    title: "Business Central Customization Services | NavNerds",
     description:
       "Expert Business Central & Navision customization by NavNerds. AL extensions, automated workflows, and tailored ERP solutions for your business.",
     openGraph: {
@@ -183,8 +179,7 @@ export const pagesMetadata = {
     robots: "index, follow",
   },
   implementationServicesMetadata: {
-    title:
-      "Business Central Implementation Services | NavNerds",
+    title: "Business Central Implementation Services | NavNerds",
     description:
       "Expert Business Central implementation by NavNerds. From legacy ERP migration to automation — solutions tailored to your business growth.",
     openGraph: {
@@ -206,8 +201,7 @@ export const pagesMetadata = {
   },
 
   supportServicesMetadata: {
-    title:
-      "Microsoft Dynamics 365 Support Services | NavNerds",
+    title: "Microsoft Dynamics 365 Support Services | NavNerds",
     description:
       "Expert support for Dynamics 365, Business Central, PowerApps & NAV. Technical, functional, licensing, and upgrade services by NavNerds.",
     openGraph: {
@@ -228,13 +222,11 @@ export const pagesMetadata = {
     robots: "index, follow",
   },
   websiteDevelopment: {
-    title:
-      "Website Development Services | NavNerds",
+    title: "Website Development Services | NavNerds",
     description:
       "Get professional website development services from NavNerds. Custom, fast, SEO-optimized websites tailored to your business growth and online presence.",
     openGraph: {
-      title:
-        "Website Development Services | NavNerds",
+      title: "Website Development Services | NavNerds",
       description:
         "NavNerds offers expert website development services. Build a responsive, fast, and SEO-friendly website that drives growth and improves user experience.",
       type: "website",
@@ -242,8 +234,7 @@ export const pagesMetadata = {
     },
     twitter: {
       card: "summary_large_image",
-      title:
-        "Website Development Services | NavNerds",
+      title: "Website Development Services | NavNerds",
       description:
         "Professional website development services by NavNerds. Custom, fast, and SEO-optimized websites for your business success.",
       image: "/images/website-development-twitter.webp",
@@ -253,13 +244,11 @@ export const pagesMetadata = {
   },
 
   blogs: {
-    title:
-      "Blogs & Insights | NavNerds",
+    title: "Blogs & Insights | NavNerds",
     description:
       "Read expert articles and insights from NavNerds on Microsoft Dynamics 365, ERP implementation, automation, and digital transformation for growing businesses.",
     openGraph: {
-      title:
-        "Blogs & Insights | NavNerds",
+      title: "Blogs & Insights | NavNerds",
       description:
         "Get the latest tips, strategies, and updates on Microsoft Dynamics 365, ERP solutions, and business automation from NavNerds.",
       type: "website",
@@ -267,8 +256,7 @@ export const pagesMetadata = {
     },
     twitter: {
       card: "summary_large_image",
-      title:
-        "Blogs & Insights | NavNerds",
+      title: "Blogs & Insights | NavNerds",
       description:
         "Explore NavNerds’ blogs for practical insights on Microsoft Dynamics 365, ERP implementation, and digital growth strategies.",
       image: "/images/navnerds-blogs-twitter.webp",
@@ -278,24 +266,22 @@ export const pagesMetadata = {
   },
 
   pricing: {
-    title:
-      "ERP & Dynamics 365 Pricing Plans | Starter, Growth, Enterprise, HRMS | NavNerds",
+    title: "ERP & Dynamics 365 Pricing Plans | NavNerds",
+    description: "Dynamics 365 Pricing Plans | NavNerds",
     description:
       "Transparent Dynamics 365 pricing — Starter, Growth, Enterprise & HRMS plans. Affordable ERP packages by NavNerds for every business.",
     openGraph: {
-      title:
-        "ERP & Dynamics 365 Pricing Plans | Starter, Growth, Enterprise, HRMS | NavNerds",
+      title: "ERP & Dynamics 365 Pricing Plans | NavNerds",
       description:
-        "Flexible pricing plans for Microsoft Dynamics 365 implementation and ERP solutions — designed for startups, SMBs, and enterprises.",
+        "Transparent Dynamics 365 pricing — Starter, Growth, Enterprise & HRMS plans. Affordable ERP packages by NavNerds for every business",
       type: "website",
       image: "/images/navnerds-pricing-og.webp",
     },
     twitter: {
       card: "summary_large_image",
-      title:
-        "ERP & Dynamics 365 Pricing Plans | NavNerds",
+      title: "ERP & Dynamics 365 Pricing Plans | NavNerds",
       description:
-        "Compare Microsoft Dynamics 365 pricing plans with NavNerds and choose the right one for your business growth.",
+        "Transparent Dynamics 365 pricing — Starter, Growth, Enterprise & HRMS plans. Affordable ERP packages by NavNerds for every business",
       image: "/images/navnerds-pricing-twitter.webp",
     },
     canonical: "https://www.navnerds.com/pricing",

@@ -37,26 +37,46 @@ export const postType = defineType({
         })
       ]
     }),
-    defineField({ 
-  name: 'category',
-  title: 'Category',
-  type: 'string',
-  placeholder:"Select",
-  options: {
-    list: [
-      {title: 'Customization', value: 'customization'},
-      {title: 'Dedicated Resources', value: 'dedicated-resources'},
-      {title: 'Implementation', value: 'implementation'},
-      {title: 'Integration', value: 'integration'},
-      {title: 'Migration', value: 'migration'},
-      {title: 'Support', value: 'support'},
-      {title: 'Training', value: 'training'}
-    ]
-  }
-}),
+    defineField({
+      name: 'category',
+      title: 'Category',
+      type: 'string',
+      placeholder:"Select",
+      options: {
+        list: [
+          {title: 'Customization', value: 'customization'},
+          {title: 'Dedicated Resources', value: 'dedicated-resources'},
+          {title: 'Implementation', value: 'implementation'},
+          {title: 'Integration', value: 'integration'},
+          {title: 'Migration', value: 'migration'},
+          {title: 'Support', value: 'support'},
+          {title: 'Training', value: 'training'}
+        ]
+      }
+    }),
     defineField({
       name: 'publishedAt',
       type: 'date',
+    }),
+    defineField({
+      name: 'description',
+      title: 'SEO Description',
+      type: 'text',
+      description: 'A short description for SEO (recommended between 50 and 160 characters).',
+      validation: (Rule) =>
+        Rule.max(160).warning('SEO descriptions should be under 160 characters.'),
+    }),
+    defineField({
+      name: 'excerpt',
+      title: 'Excerpt',
+      type: 'text',
+      description: 'A short summary of the post.',
+      validation: (Rule) => Rule.max(200),
+    }),
+    defineField({
+      name: 'subtitle',
+      title: 'Subtitle',
+      type: 'string',
     }),
     defineField({
       name: 'body',

@@ -17,13 +17,14 @@ export async function generateMetadata({ params }) {
     ? urlFor(blog.mainImage.asset.url).width(1200).height(630).url()
     : "/default-og.webp";
 
+  const seoDescription = (blog.description || blog.excerpt || "Read our latest insights.").substring(0, 160);
+
   return {
     title: blog.title,
-    description:
-      blog.excerpt || blog.description || "Read our latest insights.",
+    description: seoDescription,
     openGraph: {
       title: blog.title,
-      description: blog.excerpt || blog.description || "",
+      description: seoDescription,
       url: `https://www.navnerds.com/blogs/${slug}`,
       type: "article",
       images: [{ url: ogImage, width: 1200, height: 630, alt: blog.title }],
@@ -31,7 +32,7 @@ export async function generateMetadata({ params }) {
     twitter: {
       card: "summary_large_image",
       title: blog.title,
-      description: blog.excerpt || blog.description || "",
+      description: seoDescription,
       images: [ogImage],
     },
     alternates: {
