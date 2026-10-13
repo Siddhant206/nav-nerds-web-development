@@ -2,8 +2,9 @@ import { createClient } from 'next-sanity'
 
 import { apiVersion, dataset, projectId } from '../env'
 
-// Check if we have a real Sanity project ID (8 char alphanumeric)
-const hasValidConfig = projectId && /^[a-z0-9]{8}$/.test(projectId);
+// Only create a real Sanity client if env vars are explicitly set
+const hasValidConfig = Boolean(process.env.NEXT_PUBLIC_SANITY_PROJECT_ID) && 
+                       process.env.NEXT_PUBLIC_SANITY_PROJECT_ID !== 'navnerds';
 
 const realClient = hasValidConfig
   ? createClient({
