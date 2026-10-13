@@ -8,8 +8,13 @@ export async function getData() {
     title,
     "updated": _updatedAt
   }`;
-	const data = await client.fetch(query);
-	return data;
+	try {
+		const data = await client.fetch(query);
+		return Array.isArray(data) ? data : [];
+	} catch (error) {
+		console.warn("[sitemap] Sanity fetch skipped:", error?.message || error);
+		return [];
+	}
 }
 
 export default async function sitemap() {
