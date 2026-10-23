@@ -38,25 +38,25 @@ export default function Banner() {
   ];
 
   return (
-    <section className="relative min-h-[85vh] lg:min-h-[88vh] flex items-center overflow-hidden bg-[#EEF8FF] pt-10 pb-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+    <section className="relative min-h-[85vh] lg:min-h-[88vh] flex items-center overflow-hidden bg-[#EEF8FF] pt-8 pb-14 lg:py-16 px-4 sm:px-6 lg:px-8">
       {/* Main 2-Column Split Content Container */}
-      <div className="relative z-10 max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
-        {/* Left Column (55%): Value Proposition & CTAs */}
-        <div className="lg:col-span-7 flex flex-col items-start text-left">
+      <div className="relative z-10 max-w-7xl 2xl:max-w-[1400px] mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-12 items-center">
+        {/* Left Column (Shifted Left, Compact 5 Cols): Value Proposition & CTAs */}
+        <div className="lg:col-span-5 flex flex-col items-start text-left">
           {/* Eyebrow Pill Badge */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#1DCCD8]/40 shadow-xs mb-5">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-[#1DCCD8]/40 shadow-xs mb-4">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#1DCCD8] opacity-75" />
               <span className="relative inline-flex rounded-full h-2 w-2 bg-[#0094C6]" />
             </span>
             <span className="text-xs sm:text-sm font-semibold text-slate-800">
               Microsoft Dynamics 365{" "}
-              <span className="text-[#0094C6]">· Certified Solutions Partner</span>
+              <span className="text-[#0094C6]">· Certified Partner</span>
             </span>
           </div>
 
           {/* Clean Sentence-Case Headline */}
-          <h1 className="text-3xl sm:text-5xl lg:text-[3.5rem] font-extrabold tracking-tight text-slate-900 leading-[1.12] mb-5">
+          <h1 className="text-3xl sm:text-4xl lg:text-[2.65rem] xl:text-[2.95rem] font-extrabold tracking-tight text-slate-900 leading-[1.14] mb-4">
             Get the best solutions for business growth with{" "}
             <span className="text-[#0094C6] block sm:inline">
               Microsoft Dynamics 365
@@ -64,17 +64,17 @@ export default function Banner() {
           </h1>
 
           {/* Natural Subtitle */}
-          <p className="text-base sm:text-lg text-slate-600 leading-relaxed mb-8 max-w-xl font-normal">
+          <p className="text-sm sm:text-base text-slate-600 leading-relaxed mb-6 max-w-lg font-normal">
             Automate your workflows, simplify operations, and modernize your ERP
             with certified Dynamics 365 Business Central specialists from
             NavNerds.
           </p>
 
           {/* Dual High-Converting CTAs */}
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 mb-10 w-full sm:w-auto">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 mb-8 w-full sm:w-auto">
             <Link
               href="/contact-us"
-              className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-sm sm:text-base font-bold text-white bg-[#0094C6] hover:bg-black transition-all duration-300 shadow-md shadow-[#0094C6]/25 hover:scale-105 active:scale-95"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full text-sm font-bold text-white bg-[#0094C6] hover:bg-black transition-all duration-300 shadow-md shadow-[#0094C6]/25 hover:scale-105 active:scale-95"
             >
               <span>Book a Free Consultation</span>
               <ArrowRight className="w-4 h-4" />
@@ -82,7 +82,7 @@ export default function Banner() {
 
             <Link
               href="/pricing"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full text-sm sm:text-base font-semibold text-slate-700 bg-white hover:bg-slate-50 border border-slate-300 hover:border-slate-400 transition-all duration-200 shadow-xs"
+              className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full text-sm font-semibold text-slate-700 bg-white hover:bg-slate-50 border border-slate-300 hover:border-slate-400 transition-all duration-200 shadow-xs"
             >
               <span>Explore Packages</span>
               <ChevronRight className="w-4 h-4 text-slate-400" />
@@ -90,16 +90,16 @@ export default function Banner() {
           </div>
 
           {/* Trust Metrics Ribbon */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-slate-200/90 w-full">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-5 border-t border-slate-200/90 w-full">
             {trustStats.map((stat, idx) => (
               <div key={idx} className="flex flex-col">
                 <div className="flex items-center gap-1.5 mb-1">
                   {stat.icon}
-                  <span className="text-lg sm:text-xl font-extrabold text-slate-900">
+                  <span className="text-base sm:text-lg font-extrabold text-slate-900">
                     {stat.value}
                   </span>
                 </div>
-                <span className="text-xs text-slate-500 font-medium leading-tight">
+                <span className="text-[11px] text-slate-500 font-medium leading-tight">
                   {stat.label}
                 </span>
               </div>
@@ -107,25 +107,25 @@ export default function Banner() {
           </div>
         </div>
 
-        {/* Right Column (45%): Sleek Framed Enterprise Video Showcase */}
-        <div className="lg:col-span-5 relative w-full flex items-center justify-center">
+        {/* Right Column (Expanded Big 7 Cols): Prominent Large Enterprise Video Showcase */}
+        <div className="lg:col-span-7 relative w-full flex items-center justify-center">
           {/* Top-Right Floating AI Pill Badge */}
           <div className="absolute -top-3.5 -right-2 z-20 hidden sm:flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/95 backdrop-blur-md border border-slate-200 shadow-lg text-xs font-bold text-slate-800 animate-in fade-in zoom-in duration-300">
             <Sparkles className="w-3.5 h-3.5 text-[#0094C6]" />
             <span>AI Copilot Ready</span>
           </div>
 
-          {/* Laptop / Browser Glass Container */}
-          <div className="w-full rounded-2xl sm:rounded-3xl border border-slate-200/90 bg-white p-2.5 sm:p-3 shadow-[0_25px_60px_rgba(0,148,198,0.12)] hover:shadow-[0_30px_70px_rgba(0,148,198,0.18)] transition-all duration-300">
+          {/* Big Laptop / Browser Glass Container */}
+          <div className="w-full rounded-2xl sm:rounded-3xl border border-slate-200/90 bg-white p-2.5 sm:p-3 shadow-[0_25px_60px_rgba(0,148,198,0.15)] hover:shadow-[0_30px_70px_rgba(0,148,198,0.22)] transition-all duration-300">
             {/* Top Browser Bar */}
-            <div className="flex items-center justify-between px-3 py-2 bg-slate-50 rounded-t-xl sm:rounded-t-2xl border-b border-slate-100 mb-1.5">
+            <div className="flex items-center justify-between px-3.5 py-2 bg-slate-50 rounded-t-xl sm:rounded-t-2xl border-b border-slate-100 mb-2">
               <div className="flex items-center gap-1.5">
                 <span className="w-2.5 h-2.5 rounded-full bg-[#EF4444]/80" />
                 <span className="w-2.5 h-2.5 rounded-full bg-[#F59E0B]/80" />
                 <span className="w-2.5 h-2.5 rounded-full bg-[#10B981]/80" />
               </div>
 
-              <div className="flex items-center gap-1 px-3 py-0.5 rounded-md bg-white border border-slate-200/80 text-[11px] font-mono text-slate-500">
+              <div className="flex items-center gap-1.5 px-3.5 py-0.5 rounded-md bg-white border border-slate-200/80 text-[11px] font-mono text-slate-500">
                 <Lock className="w-3 h-3 text-[#10B981]" />
                 <span>businesscentral.dynamics.com</span>
               </div>
@@ -133,15 +133,15 @@ export default function Banner() {
               <div className="w-8" />
             </div>
 
-            {/* Video Player Display */}
-            <div className="relative rounded-xl overflow-hidden aspect-[16/10] bg-slate-900 shadow-inner">
+            {/* Big Video Player Display (16:9 Widescreen) */}
+            <div className="relative rounded-xl sm:rounded-2xl overflow-hidden aspect-video bg-slate-950 shadow-inner w-full">
               <video
                 src="/BannerVideo.webm"
                 autoPlay
                 loop
                 muted
                 playsInline
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover scale-[1.01]"
               />
             </div>
 
