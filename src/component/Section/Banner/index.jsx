@@ -29,22 +29,22 @@ export default function Banner() {
   ];
 
   return (
-    <section className="relative min-h-[82vh] flex flex-col items-center justify-center overflow-hidden bg-white text-gray-900 pt-8 pb-16 px-4 sm:px-6 lg:px-8">
-      {/* 1. Natural Cyan Accent Shapes (Matching Image 1's Theme) */}
+    <section className="relative min-h-[82vh] flex flex-col items-center justify-center overflow-hidden bg-[#EEF8FF] text-gray-900 pt-8 pb-16 px-4 sm:px-6 lg:px-8">
+      {/* 1. Subtle Cyan Ambient Lighting (Seamlessly blending with HomePageBg.webp) */}
       <div className="absolute -top-16 -left-16 w-80 h-80 md:w-[480px] md:h-[480px] bg-[#1DCCD8]/15 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute top-1/4 -right-16 w-80 h-80 md:w-[480px] md:h-[480px] bg-[#0094C6]/10 rounded-full blur-3xl pointer-events-none" />
 
       {/* Main Content Area */}
       <div className="relative z-10 max-w-5xl mx-auto text-center w-full my-auto">
         {/* Top Eyebrow Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#1DCCD8]/10 border border-[#1DCCD8]/30 mb-6">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/90 border border-[#1DCCD8]/40 shadow-xs mb-6">
           <span className="w-2 h-2 rounded-full bg-[#1DCCD8]" />
           <span className="text-xs sm:text-sm font-semibold text-gray-800">
             Microsoft Dynamics 365 <span className="text-[#0094C6]">· Certified Partner</span>
           </span>
         </div>
 
-        {/* Clean, Human-Designed Headline (Matching Image 1) */}
+        {/* Clean, Human-Designed Headline */}
         <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-gray-900 leading-[1.16] mb-6 max-w-4xl mx-auto">
           Get The Best Solutions For Business Growth From{" "}
           <span className="text-[#0094C6] block sm:inline">
@@ -52,12 +52,12 @@ export default function Banner() {
           </span>
         </h1>
 
-        {/* Natural Subtitle (No Robotic Buzzwords) */}
+        {/* Natural Subtitle */}
         <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto mb-10 leading-relaxed font-normal">
           Automate your business, simplify operations, and modernize your ERP with certified Dynamics 365 Business Central specialists from the Nerds.
         </p>
 
-        {/* Dual High-Converting CTAs (NO overlapping badges!) */}
+        {/* Dual High-Converting CTAs */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
           <Link
             href="/contact-us"
@@ -69,21 +69,21 @@ export default function Banner() {
 
           <Link
             href="/contact-us"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-base font-semibold text-gray-800 bg-white hover:bg-gray-50 border border-gray-300 transition-colors duration-300 shadow-xs"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-base font-semibold text-gray-800 bg-white hover:bg-slate-50 border border-gray-300 transition-colors duration-300 shadow-xs"
           >
             <span>Request Custom Quote</span>
             <ChevronRight className="w-4 h-4 text-gray-500" />
           </Link>
         </div>
 
-        {/* Clean 4-Pillar Trust Grid (Clean White Cards, Zero Overlap) */}
+        {/* Clean 4-Pillar Trust Grid (Pure White Cards Popping on #EEF8FF) */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-left w-full max-w-5xl mx-auto">
           {trustPillars.map((pillar, idx) => (
             <div
               key={idx}
-              className="p-5 rounded-2xl bg-white border border-gray-200 shadow-sm hover:shadow-md hover:border-[#1DCCD8] transition-all duration-300"
+              className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-sm hover:shadow-md hover:border-[#1DCCD8] transition-all duration-300"
             >
-              <div className="w-10 h-10 rounded-xl bg-[#1DCCD8]/10 flex items-center justify-center mb-3">
+              <div className="w-10 h-10 rounded-xl bg-[#EEF8FF] border border-[#1DCCD8]/30 flex items-center justify-center mb-3">
                 {pillar.icon}
               </div>
               <h3 className="text-sm font-bold text-gray-900 mb-1">
