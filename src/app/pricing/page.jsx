@@ -36,7 +36,7 @@ export default function PricingPage() {
         {
             title: "Enterprise Plan",
             // price: "$90/hr",
-            desc: "Built for scale. Advanced modules, analytics & hyperscare.",
+            desc: "Built for scale. Advanced modules, analytics & hypercare.",
             features: [
                 "Multi-Company, Currency, Language",
                 "Manufacturing, Project, Service Modules",
@@ -82,7 +82,7 @@ export default function PricingPage() {
                     {plans.map((plan, index) => (
                         <div
                             key={index}
-                            className="flex flex-col hover:bg-white   dura justify-between border border-gray-400 ease-in-out duration-200 p-6 rounded-xl shadow-sm hover:shadow-md transition"
+                            className="flex flex-col hover:bg-white justify-between border border-gray-400 ease-in-out duration-200 p-6 rounded-xl shadow-sm hover:shadow-md transition"
                         >
                             <div> <H3 className="text-gray-800 mb-2">{plan.title}</H3>
                                 <div className="text-2xl font-bold text-blue-700 mb-2">{plan.price}</div>
@@ -93,7 +93,7 @@ export default function PricingPage() {
                                     ))}
                                 </ul>
                                 </div>
-                            <Link href={"/contact-us"} className="w-full text-center bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">
+                            <Link href={"/contact-us"} className="w-full text-center bg-[#1DCCD8] text-white py-2 rounded-lg hover:bg-black transition-colors duration-300 font-semibold">
                                 {plan.cta}
                             </Link>
                         </div>

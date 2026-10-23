@@ -107,7 +107,7 @@ function ImplementationPage() {
           </H1>
           <Link
             href={"/contact-us"}
-            className="w-fit flex items-center justify-center gap-4 px-6 py-3 md:px-10 md:py-2 rounded-3xl border border-gray-200  text-white bg-[#4ED0DB] hover:bg-black hover:text-white transition-colors duration-300 mt-4 md:mt-8"
+            className="w-fit flex items-center justify-center gap-4 px-6 py-3 md:px-10 md:py-2 rounded-3xl border border-gray-200  text-white bg-[#1DCCD8] hover:bg-black hover:text-white transition-colors duration-300 mt-4 md:mt-8"
           >
             Contact Us
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -138,7 +138,7 @@ function ImplementationPage() {
 "
           imageSrc="/Implementation/StartingFresh.webp"
           imageAlt="Starting fresh illustration"
-          bgColor="bg-[#36E3EE]"
+          bgColor="bg-[#1DCCD8]"
           imagePosition="right"
         />
 
@@ -157,7 +157,7 @@ function ImplementationPage() {
           description="You’ve outgrown your old system and that’s a good thing. Whether it’s poor integrations, slow performance, or scattered data, we help you transition smoothly to Business Central. Our migration process is clean, strategic, and tailored to your needs no disruption, just evolution."
           imageSrc="/Implementation/upgradingBusinessCentral.webp"
           imageAlt="Social Media Marketing illustration"
-          bgColor="bg-[#36E3EE]"
+          bgColor="bg-[#1DCCD8]"
           imagePosition="right"
         />
 
@@ -194,7 +194,7 @@ function ImplementationPage() {
 
                 {/* Icon */}
                 <div className="mb-3">
-                  <TrendIcon className="w-8 h-8 text-[#1CCBD7]" />
+                  <TrendIcon className="w-8 h-8 text-[#1DCCD8]" />
                 </div>
 
                 {/* Title */}

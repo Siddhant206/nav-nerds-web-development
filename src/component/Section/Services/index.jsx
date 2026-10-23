@@ -40,7 +40,7 @@ const services = [
   {
     id: 4,
     title: "Training",
-    description: "We teach administrators and end-users how to maximize new system capabilities and improve productivity",
+    description: "We teach administrators and end-users how to maximize new system capabilities and improve productivity.",
     link: "training",
     icon: "/Icons/Training.webm",
     bgColor: "bg-white",
@@ -49,7 +49,7 @@ const services = [
   {
     id: 5,
     title: "Customization",
-    description: "we help you adapt the system to work your way. Drive efficiency, scalability, and seamless user adoption with our expert customization services.",
+    description: "We help you adapt the system to work your way. Drive efficiency, scalability, and seamless user adoption with our expert customization services.",
     link: "customization",
     icon: "/Icons/Customization.webm",
     bgColor: "bg-white",
@@ -57,9 +57,9 @@ const services = [
   },
   {
     id: 6,
-    title: "Business Central",
-    description: " we helps small and mid-sized companies streamline finance, operations, sales, and customer service.",
-    link: "training",
+    title: "Website Development",
+    description: "We build modern, scalable web applications and enterprise portals tailored to your business needs.",
+    link: "website-development",
     icon: "/Icons/Business-Central.svg",
     bgColor: "bg-[#0094C6]",
     textColor: "text-white"
@@ -67,7 +67,7 @@ const services = [
   {
     id: 7,
     title: "Dedicated Resources",
-    description: "Skilled Microsoft consultants and developers available on-demand whenever or wherever you want to connect with us. ",
+    description: "Skilled Microsoft consultants and developers available on-demand whenever or wherever you want to connect with us.",
     link: "dedicated-resources",
     icon: "/Icons/Dedicated-Resources.webm",
     bgColor: "bg-white",
@@ -76,7 +76,7 @@ const services = [
   {
     id: 8,
     title: "Migration",
-    description: "Seamless setup and migration from ERP & CRM's to Microsoft 365 tailored to your business needs.",
+    description: "Seamless setup and migration from ERPs & CRMs to Microsoft 365 tailored to your business needs.",
     link: "migration",
     icon: "/Icons/Migration.webm",
     bgColor: "bg-[#0094C6]",

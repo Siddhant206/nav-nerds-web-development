@@ -37,7 +37,7 @@ function Page() {
           <Link
             href="/contact-us"
             className="mt-6 md:mt-10 inline-flex items-center gap-3 px-6 py-3 md:px-8 md:py-4 
-                 rounded-full bg-[#4ED0DB] text-black hover:bg-black hover:text-white 
+                 rounded-full bg-[#1DCCD8] text-black hover:bg-black hover:text-white 
                  transition-colors duration-300 shadow-md w-fit"
           >
             Let’s integrate your world

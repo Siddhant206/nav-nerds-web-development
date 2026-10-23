@@ -19,7 +19,7 @@ function Page() {
           </H1>
           <Link
             href={"/contact-us"}
-            className="w-fit flex items-center justify-center gap-4 px-6 py-3 md:px-10 md:py-2 rounded-3xl border border-gray-200  text-white bg-[#4ED0DB] hover:bg-black hover:text-white transition-colors duration-300 mt-4 md:mt-8"
+            className="w-fit flex items-center justify-center gap-4 px-6 py-3 md:px-10 md:py-2 rounded-3xl border border-gray-200  text-white bg-[#1DCCD8] hover:bg-black hover:text-white transition-colors duration-300 mt-4 md:mt-8"
           >
             Contact Us
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -47,7 +47,7 @@ function Page() {
           description="If you're stepping into Business Central for the first time, our foundation training gives you clarity, not confusion. Learn navigation, finance basics, sales, and inventory all in real-world terms. No jargon. Just results."
           imageSrc="/Services/BusinessCentral.svg"
           imageAlt="Illustration showing basic Business Central interface and modules"
-          bgColor="bg-[#36E3EE]"
+          bgColor="bg-[#1DCCD8]"
           imagePosition="right"
         />
 
@@ -66,7 +66,7 @@ function Page() {
           description="Build better. Customize with confidence. AL coding, extensions, APIs our technical training is hands-on, code-first, and project-driven. Perfect for those looking to build apps, tweak systems, or develop new modules inside Business Central."
           imageSrc="/Services/BusinessCentral/dev-training.webp"
           imageAlt="Developer writing AL code for Business Central customization"
-          bgColor="bg-[#36E3EE]"
+          bgColor="bg-[#1DCCD8]"
           imagePosition="right"
         />
 
@@ -85,7 +85,7 @@ function Page() {
           description="We provide expert training to enhance your Business Central with modern Microsoft tools. Dive deep into Power BI and unlock powerful, interactive data visualizations. Learn how to build custom apps with Power Apps—no coding required. Automate routine tasks and streamline operations. Turn scattered data into clear, actionable business insights."
           imageSrc="/Services/BusinessCentral/power-bi-integration.webp"
           imageAlt="Business Central dashboard with Power BI charts and analytics"
-          bgColor="bg-[#36E3EE]"
+          bgColor="bg-[#1DCCD8]"
           imagePosition="right"
         />
       </section>

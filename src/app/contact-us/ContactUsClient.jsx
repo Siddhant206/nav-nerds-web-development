@@ -203,7 +203,7 @@ export default function ContactSection() {
                 <Button
                   type="submit"
                   disabled={loading}
-                  className="w-full bg-[#3ECBD6]  hover:bg-black  font-semibold text-white"
+                  className="w-full bg-[#1DCCD8]  hover:bg-black  font-semibold text-white"
                 >
                   {loading ? (
                     <>
@@ -245,7 +245,7 @@ export default function ContactSection() {
             <Card className="border-2 border-cyan-100 bg-white/80 backdrop-blur-sm hover:shadow-lg transition-shadow">
               <CardContent className="p-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-[#36E3EE] rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-[#1DCCD8] rounded-lg flex items-center justify-center flex-shrink-0">
                     <Mail className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -264,7 +264,7 @@ export default function ContactSection() {
             <Card className="border-2 border-cyan-100 bg-white/80 backdrop-blur-sm hover:shadow-lg transition-shadow">
               <CardContent className="p-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-[#36E3EE] rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-[#1DCCD8] rounded-lg flex items-center justify-center flex-shrink-0">
                     <Phone className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -280,7 +280,7 @@ export default function ContactSection() {
             <Card className="border-2 border-cyan-100 bg-white/80 backdrop-blur-sm hover:shadow-lg transition-shadow">
               <CardContent className="p-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-[#36E3EE] rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-[#1DCCD8] rounded-lg flex items-center justify-center flex-shrink-0">
                     <MapPin className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -294,7 +294,7 @@ export default function ContactSection() {
 
             <div className="bg-gradient-to-br from-cyan-600 to-blue-200 rounded-2xl text-justify hyphens-auto p-8 flex flex-col items-center justify-center text-white">
               <H3 className="text-white mb-2">
-                At Navnerds, We Create Values
+                At NavNerds, We Create Value
               </H3>
               <P className="mb-4 text-cyan-50">
                 We believe every business deserves a unique digital identity.

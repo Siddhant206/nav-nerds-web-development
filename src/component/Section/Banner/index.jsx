@@ -8,7 +8,7 @@ export default function Banner() {
       <div className="absolute inset-0">
         <video
           src="/BannerVideo.webm"
-          alt="Image of Camping Mountain"
+          alt="NavNerds Enterprise Microsoft Business Central Solutions"
           autoPlay
           loop
           muted
@@ -25,7 +25,7 @@ export default function Banner() {
         </P>
         <Link
           href={"/contact-us"}
-          className="w-fit flex items-center justify-center gap-4 px-6 py-3 md:px-10 md:py-2 rounded-3xl border border-gray-200  text-white bg-[#4ED0DB] hover:bg-black hover:text-white transition-colors duration-300 mt-4 md:mt-8"
+          className="w-fit flex items-center justify-center gap-4 px-6 py-3 md:px-10 md:py-2 rounded-3xl border border-gray-200  text-white bg-[#1DCCD8] hover:bg-black hover:text-white transition-colors duration-300 mt-4 md:mt-8"
         >
           Contact Us
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none">

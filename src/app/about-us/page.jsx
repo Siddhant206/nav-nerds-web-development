@@ -11,9 +11,9 @@ import { H1, H2, H3, P } from '@/component/UI/typography';
 function FeatureCard({ title, description, icon }) {
     return (
         <div
-            className="group rounded-xl p-6 shadow transition-all bg-white hover:bg-[#1CCBD7]"
+            className="group rounded-xl p-6 shadow transition-all bg-white hover:bg-[#1DCCD8]"
         >
-            <div className="mb-4 rounded-full w-fit p-4 bg-[#1CCBD7] transition-all duration-300 group-hover:bg-white">
+            <div className="mb-4 rounded-full w-fit p-4 bg-[#1DCCD8] transition-all duration-300 group-hover:bg-white">
                 {icon}
             </div>
             <H3 className="mb-1">{title}</H3>
@@ -25,7 +25,7 @@ function FeatureCard({ title, description, icon }) {
 const features = [
     {
         title: "Why Us",
-        description: "We are specialized in almost every Microsoft 365 service",
+        description: "We specialize in almost every Microsoft 365 service.",
         icon: <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
             <path d="M25 6.25C19.8312 6.25 15.625 10.4562 15.625 15.625C15.625 16.2466 15.8719 16.8427 16.3115 17.2823C16.751 17.7218 17.3471 17.9687 17.9688 17.9688C18.5904 17.9687 19.1865 17.7218 19.626 17.2823C20.0656 16.8427 20.3125 16.2466 20.3125 15.625C20.3125 13.0438 22.4188 10.9375 25 10.9375C27.5812 10.9375 29.6875 13.0438 29.6875 15.625C29.6875 17.6656 29.3063 18.8063 28.8938 19.5312C28.4656 20.2875 27.8906 20.8125 27.0156 21.5406L26.8562 21.6719C26.0437 22.3437 24.9438 23.2563 24.1063 24.6063C23.1688 26.1156 22.6562 27.9812 22.6562 30.4688V32.0312C22.6562 32.6529 22.9032 33.249 23.3427 33.6885C23.7823 34.1281 24.3784 34.375 25 34.375C25.6216 34.375 26.2177 34.1281 26.6573 33.6885C27.0968 33.249 27.3438 32.6529 27.3438 32.0312V30.4688C27.3438 28.6594 27.7063 27.6937 28.0906 27.0781C28.5156 26.3937 29.0781 25.9219 30.0156 25.1406C30.9 24.4031 32.0781 23.4125 32.9688 21.85C33.875 20.2563 34.375 18.2719 34.375 15.625C34.375 10.4562 30.1688 6.25 25 6.25ZM25 44.5312C25.8288 44.5312 26.6237 44.202 27.2097 43.616C27.7958 43.0299 28.125 42.2351 28.125 41.4062C28.125 40.5774 27.7958 39.7826 27.2097 39.1965C26.6237 38.6105 25.8288 38.2812 25 38.2812C24.1712 38.2812 23.3763 38.6105 22.7903 39.1965C22.2042 39.7826 21.875 40.5774 21.875 41.4062C21.875 42.2351 22.2042 43.0299 22.7903 43.616C23.3763 44.202 24.1712 44.5312 25 44.5312Z" fill="black" />
         </svg>
@@ -80,10 +80,10 @@ export default function Page() {
                                 What Sets Us Apart
                             </H2>
                             <P className="text-gray-600 mb-6 text-justify hyphens-auto">
-                                NavNerds is a specialized Microsoft enterprise solutions IT consulting company. Our purpose is to marry cutting-edge technology with business strategy, enabling organizations to maximize operations and growth. We utilize extensive knowledge of Microsoft Dynamics 365 Business Central (previously Dynamics NAV/Navision) and Microsoft 365 (Office 365) to provide seamless ERP and cloud productivity solutions. For instance, Microsoft Dynamics 365 Business Central is outlined as "a comprehensive business management solution that helps automate and streamline business processes and manage your entire business"
+                                NavNerds is a specialized Microsoft enterprise solutions IT consulting company. Our purpose is to marry cutting-edge technology with business strategy, enabling organizations to maximize operations and growth. We utilize extensive knowledge of Microsoft Dynamics 365 Business Central (previously Dynamics NAV/Navision) and Microsoft 365 (Office 365) to provide seamless ERP and cloud productivity solutions. For instance, Microsoft Dynamics 365 Business Central is outlined as "a comprehensive business management solution that helps automate and streamline business processes and manage your entire business."
                             </P>
                         </div>
-                        <Link href={"/contact-us"} className="bg-[#1CCBD7] hover:bg-black  text-white font-semibold px-6 py-2 rounded-full   transition duration-300 w-fit">
+                        <Link href={"/contact-us"} className="bg-[#1DCCD8] hover:bg-black  text-white font-semibold px-6 py-2 rounded-full   transition duration-300 w-fit">
                             Let’s Connect
                         </Link>
                     </div>

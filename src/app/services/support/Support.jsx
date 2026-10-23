@@ -102,7 +102,7 @@ const SupportPage = () => {
         {/* CTA Button */}
         <Link
           href="/contact-us"
-          className="relative z-10 mt-10 inline-flex items-center gap-3 px-8 py-3 bg-[#4ED0DB] text-black 
+          className="relative z-10 mt-10 inline-flex items-center gap-3 px-8 py-3 bg-[#1DCCD8] text-black 
           rounded-full hover:bg-black hover:text-white transition shadow-md"
         >
           Contact Us
@@ -174,7 +174,7 @@ const SupportPage = () => {
                 onClick={() => setActiveTab(tab)}
                 className={`px-3 py-2 rounded-full font-semibold text-sm transition-all duration-300 ${
                   activeTab === tab
-                    ? "bg-[#4ED0DB] text-white shadow-md"
+                    ? "bg-[#1DCCD8] text-white shadow-md"
                     : "bg-gray-200 text-black hover:bg-gray-300"
                 }`}
               >

@@ -30,7 +30,7 @@ export default function IndustrySpecializations() {
                             key={key}
                             onMouseEnter={() => setHovered(key)}
                             onMouseLeave={() => setHovered(null)}
-                            className="rounded-xl border border-gray-400 text-black hover:text-white transition-all duration-400 ease-in-out py-14 px-6 shadow-sm bg-white hover:bg-[#22D0DC] scale-105"
+                            className="rounded-xl border border-gray-400 text-black hover:text-white transition-all duration-300 ease-in-out py-14 px-6 shadow-sm bg-white hover:bg-[#1DCCD8] scale-105"
                         >
                             <div className="flex items-center mb-4 gap-2 font-semibold">
                                 <span className="text-xl">{icon}</span>
