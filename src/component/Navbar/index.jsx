@@ -7,13 +7,31 @@ import { usePathname } from "next/navigation";
 import {
   ChevronDown,
   ArrowRight,
-  Sparkles
+  Sparkles,
+  Truck,
+  Cog,
+  GraduationCap,
+  ShoppingCart,
+  Briefcase,
+  Coffee,
+  HeartPulse,
+  ShoppingBag,
+  Cpu,
+  Pill,
+  ShieldCheck,
+  FlaskConical,
+  CircuitBoard,
+  Droplets,
+  LayoutGrid,
+  Store,
+  Building2
 } from "lucide-react";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState(null); // 'solutions' | 'services' | null
+  const [openDropdown, setOpenDropdown] = useState(null); // 'solutions' | 'industries' | 'services' | null
   const [activeSolutionTab, setActiveSolutionTab] = useState("company-size");
+  const [activeIndustryTab, setActiveIndustryTab] = useState("all-industries");
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
   const dropdownRef = useRef(null);
@@ -33,7 +51,9 @@ export default function Navbar() {
     }, 150);
   };
 
-  // Solutions Mega Menu Data (Exact Dynamics Square UK Architecture with authentic official product icons)
+  // ==========================================
+  // SOLUTIONS MEGA MENU DATA
+  // ==========================================
   const solutionTabs = [
     { id: "company-size", label: "Company By Size" },
     { id: "erp", label: "AI-Powered ERP" },
@@ -277,7 +297,176 @@ export default function Navbar() {
     ],
   };
 
-  // Services Menu Data
+  // ==========================================
+  // INDUSTRIES MEGA MENU DATA
+  // ==========================================
+  const industryTabs = [
+    { id: "all-industries", label: "All Industries", icon: LayoutGrid },
+    { id: "manufacturing", label: "Manufacturing", icon: Cog },
+    { id: "retail-commerce", label: "Retail & Commerce", icon: Store },
+    { id: "services-public", label: "Services & Public Sector", icon: Building2 },
+  ];
+
+  const industryContent = {
+    "all-industries": {
+      subtitle: "Dynamics 365 tailored to how your industry works",
+      pillText: "Explore all industries →",
+      pillHref: "/contact-us",
+      items: [
+        {
+          title: "Distribution",
+          desc: "Drive seamless supply flow with connected operations",
+          href: "/contact-us",
+          icon: Truck,
+        },
+        {
+          title: "Manufacturing",
+          desc: "Connect your people and operations to drive profitability",
+          href: "/contact-us",
+          icon: Cog,
+        },
+        {
+          title: "Education",
+          desc: "Effectively manage students and staff for overall growth",
+          href: "/contact-us",
+          icon: GraduationCap,
+        },
+        {
+          title: "Ecommerce",
+          desc: "Optimise E-commerce processes with real-time stocks",
+          href: "/contact-us",
+          icon: ShoppingCart,
+        },
+        {
+          title: "Professional Services",
+          desc: "Streamline administration processes leveraging automation",
+          href: "/contact-us",
+          icon: Briefcase,
+        },
+        {
+          title: "Food & Beverages",
+          desc: "Manage supply and inventory processes with real-time data",
+          href: "/contact-us",
+          icon: Coffee,
+        },
+        {
+          title: "Healthcare",
+          desc: "Track clinical operations while enhancing patient experience",
+          href: "/contact-us",
+          icon: HeartPulse,
+        },
+        {
+          title: "Retail",
+          desc: "Optimize retail operations with seamless user experience",
+          href: "/contact-us",
+          icon: ShoppingBag,
+        },
+      ],
+    },
+    "manufacturing": {
+      subtitle: "Plan production, control costs and track every component",
+      pillText: "Explore manufacturing →",
+      pillHref: "/contact-us",
+      items: [
+        {
+          title: "Discrete Manufacturing",
+          desc: "BOMs, inventory and production in real time",
+          href: "/contact-us",
+          icon: Cpu,
+        },
+        {
+          title: "Pharmaceutical",
+          desc: "Batch control, quality and compliance",
+          href: "/contact-us",
+          icon: Pill,
+        },
+        {
+          title: "Medical Device",
+          desc: "Traceability and regulatory compliance",
+          href: "/contact-us",
+          icon: ShieldCheck,
+        },
+        {
+          title: "Chemical",
+          desc: "Recipes, batches and lot traceability",
+          href: "/contact-us",
+          icon: FlaskConical,
+        },
+        {
+          title: "Electronics",
+          desc: "Multi-level BOMs and serial tracking",
+          href: "/contact-us",
+          icon: CircuitBoard,
+        },
+        {
+          title: "Process Manufacturing",
+          desc: "Formulas, batches and recipes in Business Central",
+          href: "/contact-us",
+          icon: Droplets,
+        },
+      ],
+    },
+    "retail-commerce": {
+      subtitle: "Unify stores, online sales and the back office",
+      pillText: "Explore retail & commerce →",
+      pillHref: "/contact-us",
+      items: [
+        {
+          title: "Retail",
+          desc: "Optimize retail operations with seamless user experience",
+          href: "/contact-us",
+          icon: ShoppingBag,
+        },
+        {
+          title: "Ecommerce",
+          desc: "Optimise E-commerce processes with real-time stocks",
+          href: "/contact-us",
+          icon: ShoppingCart,
+        },
+        {
+          title: "Distribution",
+          desc: "Drive seamless supply flow with connected operations",
+          href: "/contact-us",
+          icon: Truck,
+        },
+        {
+          title: "Food & Beverages",
+          desc: "Manage supply and inventory processes with real-time data",
+          href: "/contact-us",
+          icon: Coffee,
+        },
+      ],
+    },
+    "services-public": {
+      subtitle: "Optimize resource delivery, compliance and client operations",
+      pillText: "Explore services & public →",
+      pillHref: "/contact-us",
+      items: [
+        {
+          title: "Professional Services",
+          desc: "Streamline administration processes leveraging automation",
+          href: "/contact-us",
+          icon: Briefcase,
+        },
+        {
+          title: "Healthcare",
+          desc: "Track clinical operations while enhancing patient experience",
+          href: "/contact-us",
+          icon: HeartPulse,
+        },
+        {
+          title: "Education",
+          desc: "Effectively manage students and staff for overall growth",
+          href: "/contact-us",
+          icon: GraduationCap,
+        },
+      ],
+    },
+  };
+
+  // ==========================================
+  // SERVICES MENU DATA
+  // ==========================================
   const servicesList = [
     { label: "Support", href: "/services/support", desc: "24/7 Managed Dynamics Support" },
     { label: "Training", href: "/services/training", desc: "User & Admin Productivity Training" },
@@ -366,7 +555,33 @@ export default function Navbar() {
               </button>
             </div>
 
-            {/* 2. SERVICES DROPDOWN */}
+            {/* 2. INDUSTRIES MEGA MENU TRIGGER */}
+            <div
+              className="relative"
+              onMouseEnter={() => handleMouseEnter("industries")}
+              onMouseLeave={handleMouseLeave}
+            >
+              <button
+                type="button"
+                onClick={() => setOpenDropdown(openDropdown === "industries" ? null : "industries")}
+                className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-semibold transition-all duration-200 ${
+                  openDropdown === "industries"
+                    ? "text-[#0094C6] bg-white shadow-xs font-bold"
+                    : "text-slate-800 hover:text-[#0094C6] hover:bg-white/60"
+                }`}
+                aria-haspopup="true"
+                aria-expanded={openDropdown === "industries"}
+              >
+                <span>Industries</span>
+                <ChevronDown
+                  className={`w-3.5 h-3.5 transition-transform duration-200 ${
+                    openDropdown === "industries" ? "rotate-180 text-[#0094C6]" : "text-slate-600"
+                  }`}
+                />
+              </button>
+            </div>
+
+            {/* 3. SERVICES DROPDOWN */}
             <div
               className="relative"
               onMouseEnter={() => handleMouseEnter("services")}
@@ -425,7 +640,7 @@ export default function Navbar() {
               )}
             </div>
 
-            {/* 3. PRICING */}
+            {/* 4. PRICING */}
             <Link
               href="/pricing"
               className={`px-3.5 py-2 rounded-full text-sm font-semibold transition-all duration-200 ${
@@ -437,7 +652,7 @@ export default function Navbar() {
               Pricing
             </Link>
 
-            {/* 4. BLOGS */}
+            {/* 5. BLOGS */}
             <Link
               href="/blogs"
               className={`px-3.5 py-2 rounded-full text-sm font-semibold transition-all duration-200 ${
@@ -449,7 +664,7 @@ export default function Navbar() {
               Blogs
             </Link>
 
-            {/* 5. ABOUT US */}
+            {/* 6. ABOUT US */}
             <Link
               href="/about-us"
               className={`px-3.5 py-2 rounded-full text-sm font-semibold transition-all duration-200 ${
@@ -492,7 +707,9 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* DYNAMICS SQUARE UK ARCHITECTURE FULL-WIDTH ENTERPRISE MEGA MENU */}
+      {/* ======================================================== */}
+      {/* 1. SOLUTIONS MEGA MENU DROPDOWN */}
+      {/* ======================================================== */}
       {openDropdown === "solutions" && (
         <div
           className="hidden md:block absolute top-full left-0 right-0 w-full pt-1.5 z-50 animate-in fade-in slide-in-from-top-1 duration-200"
@@ -601,7 +818,124 @@ export default function Navbar() {
         </div>
       )}
 
-      {/* Mobile Drawer Menu */}
+      {/* ======================================================== */}
+      {/* 2. INDUSTRIES MEGA MENU DROPDOWN (Dynamics Square UK Style) */}
+      {/* ======================================================== */}
+      {openDropdown === "industries" && (
+        <div
+          className="hidden md:block absolute top-full left-0 right-0 w-full pt-1.5 z-50 animate-in fade-in slide-in-from-top-1 duration-200"
+          onMouseEnter={() => handleMouseEnter("industries")}
+          onMouseLeave={handleMouseLeave}
+        >
+          <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="rounded-2xl bg-white border border-slate-200/90 shadow-[0_25px_60px_rgba(0,0,0,0.14)] p-6 lg:p-7 grid grid-cols-12 gap-6 items-stretch">
+              {/* Column 1: Left Sidebar Tabs */}
+              <div className="col-span-3 border-r border-slate-100 pr-4 space-y-1">
+                <div className="mb-4">
+                  <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest block">
+                    INDUSTRIES
+                  </span>
+                  <p className="text-xs text-slate-500 font-medium leading-relaxed mt-1">
+                    Dynamics 365 built for the way your sector works
+                  </p>
+                </div>
+
+                {industryTabs.map((tab) => {
+                  const isActive = activeIndustryTab === tab.id;
+                  const TabIcon = tab.icon;
+                  return (
+                    <button
+                      key={tab.id}
+                      type="button"
+                      onMouseEnter={() => setActiveIndustryTab(tab.id)}
+                      onClick={() => setActiveIndustryTab(tab.id)}
+                      className={`w-full text-left px-3.5 py-2.5 rounded-xl text-sm transition-all duration-150 flex items-center gap-2.5 ${
+                        isActive
+                          ? "bg-[#F1F5F9] text-slate-900 font-bold shadow-xs"
+                          : "text-slate-700 font-medium hover:text-slate-900 hover:bg-slate-50"
+                      }`}
+                    >
+                      <TabIcon className={`w-4 h-4 ${isActive ? "text-[#0094C6]" : "text-slate-400"}`} />
+                      <span>{tab.label}</span>
+                    </button>
+                  );
+                })}
+              </div>
+
+              {/* Column 2: Right Main Area with Subtitle, 3-Column Grid, and Bottom Banner */}
+              <div className="col-span-9 flex flex-col justify-between pl-2">
+                <div>
+                  {/* Header Row: Subtitle + Explore All Industries Pill Link */}
+                  <div className="flex items-center justify-between pb-3 border-b border-slate-100 mb-3">
+                    <p className="text-xs font-semibold text-slate-600">
+                      {industryContent[activeIndustryTab]?.subtitle}
+                    </p>
+                    <Link
+                      href={industryContent[activeIndustryTab]?.pillHref || "/contact-us"}
+                      className="text-xs font-semibold text-[#0094C6] hover:text-[#1DCCD8] px-3.5 py-1.5 rounded-full bg-slate-50 hover:bg-[#EEF8FF] border border-slate-200/80 transition-colors flex items-center gap-1.5"
+                    >
+                      <span>{industryContent[activeIndustryTab]?.pillText}</span>
+                    </Link>
+                  </div>
+
+                  {/* 3-Column Grid of Industry Cards */}
+                  <div className="grid grid-cols-3 gap-x-4 gap-y-3.5 items-start">
+                    {industryContent[activeIndustryTab]?.items.map((item) => {
+                      const ItemIcon = item.icon;
+                      return (
+                        <Link
+                          key={item.title}
+                          href={item.href}
+                          className="group p-2.5 rounded-xl border border-transparent hover:border-slate-200/80 hover:bg-slate-50/80 transition-all duration-150 flex items-start gap-3"
+                        >
+                          <div className="w-9 h-9 rounded-xl bg-[#EEF8FF] text-[#0094C6] group-hover:bg-[#0094C6] group-hover:text-white flex items-center justify-center shrink-0 transition-colors mt-0.5 shadow-2xs">
+                            <ItemIcon className="w-4 h-4 transition-transform group-hover:scale-110" />
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <h4 className="text-sm font-bold text-slate-900 group-hover:text-[#0094C6] transition-colors leading-snug">
+                              {item.title}
+                            </h4>
+                            <p className="text-xs text-slate-500 leading-snug line-clamp-2 mt-0.5">
+                              {item.desc}
+                            </p>
+                          </div>
+                        </Link>
+                      );
+                    })}
+                  </div>
+                </div>
+
+                {/* Bottom Banner: Don't See Your Industry? */}
+                <div className="p-4 rounded-2xl bg-[#F8FAFC] border border-slate-100/90 flex items-center justify-between mt-4">
+                  <div className="flex items-center gap-3.5">
+                    <div className="w-9 h-9 rounded-xl bg-slate-900 text-white flex items-center justify-center shrink-0">
+                      <Building2 className="w-4 h-4 text-[#1DCCD8]" />
+                    </div>
+                    <div>
+                      <h4 className="text-xs font-bold text-slate-900">
+                        Don’t see your industry?
+                      </h4>
+                      <p className="text-[11px] text-slate-500">
+                        We’ve delivered Microsoft Dynamics across dozens of niche sectors. Tell us about yours.
+                      </p>
+                    </div>
+                  </div>
+                  <Link
+                    href="/contact-us"
+                    className="px-5 py-2.5 rounded-xl text-xs font-bold text-white bg-[#0094C6] hover:bg-black transition-all duration-200 shrink-0 shadow-sm"
+                  >
+                    <span>Talk to an Expert →</span>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ======================================================== */}
+      {/* MOBILE DRAWER MENU */}
+      {/* ======================================================== */}
       {isMobileMenuOpen && (
         <div
           ref={mobileRef}
@@ -627,6 +961,40 @@ export default function Navbar() {
                       </p>
                       <div className="space-y-1.5 pl-2">
                         {solutionContent[tab.id]?.slice(0, 3).map((item) => (
+                          <Link
+                            key={item.title}
+                            href={item.href}
+                            className="block text-sm text-slate-700 hover:text-[#0094C6] font-medium"
+                          >
+                            {item.title}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Mobile Industries Accordion */}
+            <div className="border-b border-slate-200/80 pb-2">
+              <button
+                type="button"
+                onClick={() => setOpenDropdown(openDropdown === "industries" ? null : "industries")}
+                className="w-full flex items-center justify-between py-2 text-base font-semibold text-slate-800"
+              >
+                <span>Industries</span>
+                <ChevronDown className={`w-4 h-4 transition-transform ${openDropdown === "industries" ? "rotate-180 text-[#0094C6]" : ""}`} />
+              </button>
+              {openDropdown === "industries" && (
+                <div className="pl-3 mt-1 space-y-3 border-l-2 border-[#1DCCD8]">
+                  {industryTabs.map((tab) => (
+                    <div key={tab.id} className="pt-1">
+                      <p className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">
+                        {tab.label}
+                      </p>
+                      <div className="space-y-1.5 pl-2">
+                        {industryContent[tab.id]?.items.slice(0, 3).map((item) => (
                           <Link
                             key={item.title}
                             href={item.href}
