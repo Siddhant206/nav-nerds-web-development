@@ -29,22 +29,20 @@ export default function Banner() {
   ];
 
   return (
-    <section className="relative min-h-[82vh] flex flex-col items-center justify-center overflow-hidden bg-[#EEF8FF] text-gray-900 pt-8 pb-16 px-4 sm:px-6 lg:px-8">
-      {/* 1. Subtle Cyan Ambient Lighting (Seamlessly blending with HomePageBg.webp) */}
-      <div className="absolute -top-16 -left-16 w-80 h-80 md:w-[480px] md:h-[480px] bg-[#1DCCD8]/15 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute top-1/4 -right-16 w-80 h-80 md:w-[480px] md:h-[480px] bg-[#0094C6]/10 rounded-full blur-3xl pointer-events-none" />
+    <section className="relative min-h-[82vh] flex flex-col items-center justify-center overflow-hidden bg-[#EEF8FF] text-gray-900 pt-10 pb-16 px-4 sm:px-6 lg:px-8">
+      {/* Zero color shades / Zero fuzzy blur blobs - 100% Flat & Clean #EEF8FF */}
 
       {/* Main Content Area */}
       <div className="relative z-10 max-w-5xl mx-auto text-center w-full my-auto">
         {/* Top Eyebrow Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/90 border border-[#1DCCD8]/40 shadow-xs mb-6">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-[#1DCCD8]/40 shadow-xs mb-6">
           <span className="w-2 h-2 rounded-full bg-[#1DCCD8]" />
           <span className="text-xs sm:text-sm font-semibold text-gray-800">
             Microsoft Dynamics 365 <span className="text-[#0094C6]">· Certified Partner</span>
           </span>
         </div>
 
-        {/* Clean, Human-Designed Headline */}
+        {/* Clean, Crisp Headline */}
         <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-gray-900 leading-[1.16] mb-6 max-w-4xl mx-auto">
           Get The Best Solutions For Business Growth From{" "}
           <span className="text-[#0094C6] block sm:inline">
@@ -76,7 +74,7 @@ export default function Banner() {
           </Link>
         </div>
 
-        {/* Clean 4-Pillar Trust Grid (Pure White Cards Popping on #EEF8FF) */}
+        {/* Clean 4-Pillar Trust Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-left w-full max-w-5xl mx-auto">
           {trustPillars.map((pillar, idx) => (
             <div
