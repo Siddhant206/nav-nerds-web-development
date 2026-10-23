@@ -56,7 +56,7 @@ export default function Banner() {
           </div>
 
           {/* Clean Sentence-Case Headline */}
-          <h1 className="text-3xl sm:text-4xl lg:text-[2.65rem] xl:text-[2.95rem] font-bold tracking-tight text-slate-900 leading-[1.14] mb-4">
+          <h1 className="text-2xl sm:text-3xl lg:text-[2.35rem] xl:text-[2.6rem] font-semibold tracking-tight text-slate-900 leading-[1.18] mb-4">
             Get the best solutions for business growth with{" "}
             <span className="text-[#2DDAE6] block sm:inline">
               Microsoft Dynamics 365
@@ -95,7 +95,7 @@ export default function Banner() {
               <div key={idx} className="flex flex-col">
                 <div className="flex items-center gap-1.5 mb-1">
                   {stat.icon}
-                  <span className="text-base sm:text-lg font-extrabold text-slate-900">
+                  <span className="text-base sm:text-lg font-bold text-slate-900">
                     {stat.value}
                   </span>
                 </div>
