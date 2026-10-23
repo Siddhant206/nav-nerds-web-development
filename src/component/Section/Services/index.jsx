@@ -16,7 +16,7 @@ const services = [
     description: "24/7 technical support and managed services to keep your Microsoft solutions running smoothly.",
     link:"support",
     icon: "/Icons/Support.webm",
-    bgColor: "bg-[#0094C6]",
+    bgColor: "bg-[#2DDAE6]",
     textColor: "text-white"
   },
   {
@@ -34,7 +34,7 @@ const services = [
     description: "Connect Dynamics 365 and Microsoft 365 with your other business applications and platforms.",
     link: "integration", 
     icon: "/Icons/Integration.webm",
-    bgColor: "bg-[#0094C6]",
+    bgColor: "bg-[#2DDAE6]",
     textColor: "text-white"
   },
   {
@@ -61,7 +61,7 @@ const services = [
     description: "We build modern, scalable web applications and enterprise portals tailored to your business needs.",
     link: "website-development",
     icon: "/Icons/Business-Central.svg",
-    bgColor: "bg-[#0094C6]",
+    bgColor: "bg-[#2DDAE6]",
     textColor: "text-white"
   },
   {
@@ -79,7 +79,7 @@ const services = [
     description: "Seamless setup and migration from ERPs & CRMs to Microsoft 365 tailored to your business needs.",
     link: "migration",
     icon: "/Icons/Migration.webm",
-    bgColor: "bg-[#0094C6]",
+    bgColor: "bg-[#2DDAE6]",
     textColor: "text-white"
   }
 ];
@@ -328,7 +328,7 @@ export default function ServicesSection() {
                   <motion.div
                     className={`h-1 rounded-full ${service.textColor === 'text-white'
                         ? 'bg-gradient-to-r from-white/60 to-white/20'
-                        : 'bg-gradient-to-r from-[#0094C6] to-[#12C1CE]'
+                        : 'bg-gradient-to-r from-[#2DDAE6] to-[#12C1CE]'
                       }`}
                     initial={{ width: 0, opacity: 0 }}
                     variants={indicatorVariants}

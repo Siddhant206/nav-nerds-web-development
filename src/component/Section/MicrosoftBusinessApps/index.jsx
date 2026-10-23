@@ -196,7 +196,7 @@ export default function MicrosoftBusinessApps() {
       <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-14">
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
           Microsoft Business Apps:{" "}
-          <span className="text-[#0094C6]">New Age Solutions</span> to Drive
+          <span className="text-[#2DDAE6]">New Age Solutions</span> to Drive
           Exponential Growth
         </h2>
         <p className="mt-4 text-sm sm:text-base text-slate-600 leading-relaxed max-w-3xl mx-auto">
@@ -232,7 +232,7 @@ export default function MicrosoftBusinessApps() {
               </div>
               <span
                 className={`text-sm font-bold tracking-tight transition-colors ${
-                  isActive ? "text-white" : "text-slate-800 group-hover:text-[#0094C6]"
+                  isActive ? "text-white" : "text-slate-800 group-hover:text-[#2DDAE6]"
                 }`}
               >
                 {tab.name}
@@ -258,7 +258,7 @@ export default function MicrosoftBusinessApps() {
             <ul className="space-y-3.5 w-full">
               {activeTab.checklist.map((item, idx) => (
                 <li key={idx} className="flex items-start gap-3">
-                  <div className="w-5 h-5 rounded-full bg-[#EEF8FF] text-[#0094C6] flex items-center justify-center shrink-0 mt-0.5">
+                  <div className="w-5 h-5 rounded-full bg-[#EEF8FF] text-[#2DDAE6] flex items-center justify-center shrink-0 mt-0.5">
                     <Check className="w-3.5 h-3.5 stroke-[2.5]" />
                   </div>
                   <span className="text-sm sm:text-base font-semibold text-slate-800 leading-snug">
@@ -279,7 +279,7 @@ export default function MicrosoftBusinessApps() {
                     key={idx}
                     className="flex items-center gap-3.5 p-2 rounded-xl hover:bg-slate-50 transition-colors"
                   >
-                    <div className="w-9 h-9 rounded-xl bg-[#EEF8FF] text-[#0094C6] flex items-center justify-center shrink-0 shadow-2xs">
+                    <div className="w-9 h-9 rounded-xl bg-[#EEF8FF] text-[#2DDAE6] flex items-center justify-center shrink-0 shadow-2xs">
                       <FeatIcon className="w-4 h-4" />
                     </div>
                     <span className="text-sm font-bold text-slate-800">
@@ -292,7 +292,7 @@ export default function MicrosoftBusinessApps() {
 
             <Link
               href={activeTab.ctaHref}
-              className="group w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-bold text-white bg-[#0094C6] hover:bg-black transition-all duration-300 shadow-md shadow-[#0094C6]/25 hover:scale-[1.02] active:scale-[0.98]"
+              className="group w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-bold text-white bg-[#2DDAE6] hover:bg-black transition-all duration-300 shadow-md shadow-[#2DDAE6]/25 hover:scale-[1.02] active:scale-[0.98]"
             >
               <span>{activeTab.ctaLabel}</span>
               <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />

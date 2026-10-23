@@ -121,7 +121,7 @@ export default function IndustryExpertise() {
       <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-14">
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
           Your Industry?{" "}
-          <span className="text-[#0094C6]">Our Expertise!</span>
+          <span className="text-[#2DDAE6]">Our Expertise!</span>
         </h2>
         <p className="mt-4 text-sm sm:text-base text-slate-600 leading-relaxed max-w-3xl mx-auto">
           NavNerds brings decades of profound industry expertise that merges ongoing industry insights with Microsoft technology to help you capitalise on your biggest opportunities. As a trusted Microsoft Dynamics 365 implementation partner, we deliver solutions customised for your business growth.
@@ -139,7 +139,7 @@ export default function IndustryExpertise() {
               onClick={() => setActiveTabId(tab.id)}
               className={`group flex flex-col items-center justify-center p-4 rounded-2xl border transition-all duration-200 cursor-pointer text-center ${
                 isActive
-                  ? "bg-white border-[#0094C6] shadow-lg shadow-[#0094C6]/15 -translate-y-1 ring-2 ring-[#0094C6]/20"
+                  ? "bg-white border-[#2DDAE6] shadow-lg shadow-[#2DDAE6]/15 -translate-y-1 ring-2 ring-[#2DDAE6]/20"
                   : "bg-white/80 hover:bg-white border-slate-200/90 hover:border-slate-300 text-slate-700 hover:text-slate-900 shadow-2xs hover:shadow-sm"
               }`}
             >
@@ -160,7 +160,7 @@ export default function IndustryExpertise() {
               </div>
               <span
                 className={`text-sm font-bold tracking-tight transition-colors ${
-                  isActive ? "text-[#0094C6]" : "text-slate-800 group-hover:text-[#0094C6]"
+                  isActive ? "text-[#2DDAE6]" : "text-slate-800 group-hover:text-[#2DDAE6]"
                 }`}
               >
                 {tab.title}
@@ -191,7 +191,7 @@ export default function IndustryExpertise() {
           {/* Right Column: Tab Content */}
           <div className="lg:col-span-7 flex flex-col items-start text-left order-1 lg:order-2">
             {/* Small Badge */}
-            <span className="px-3.5 py-1 rounded-md text-xs font-bold text-[#0094C6] bg-[#EEF8FF] border border-[#0094C6]/20 inline-block mb-3">
+            <span className="px-3.5 py-1 rounded-md text-xs font-bold text-[#2DDAE6] bg-[#EEF8FF] border border-[#2DDAE6]/20 inline-block mb-3">
               {activeTab.badge}
             </span>
 
@@ -209,7 +209,7 @@ export default function IndustryExpertise() {
             <ul className="space-y-3 mb-8 w-full">
               {activeTab.checklist.map((item, idx) => (
                 <li key={idx} className="flex items-center gap-3">
-                  <div className="w-5 h-5 rounded-full bg-[#EEF8FF] text-[#0094C6] flex items-center justify-center shrink-0">
+                  <div className="w-5 h-5 rounded-full bg-[#EEF8FF] text-[#2DDAE6] flex items-center justify-center shrink-0">
                     <Check className="w-3.5 h-3.5 stroke-[2.5]" />
                   </div>
                   <span className="text-sm sm:text-base font-semibold text-slate-800">
@@ -222,7 +222,7 @@ export default function IndustryExpertise() {
             {/* CTA Link / Button */}
             <Link
               href="/contact-us"
-              className="group inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-bold text-white bg-[#0094C6] hover:bg-black transition-all duration-300 shadow-md shadow-[#0094C6]/25 hover:scale-105 active:scale-95"
+              className="group inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-bold text-white bg-[#2DDAE6] hover:bg-black transition-all duration-300 shadow-md shadow-[#2DDAE6]/25 hover:scale-105 active:scale-95"
             >
               <span>Know more about solutions</span>
               <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />

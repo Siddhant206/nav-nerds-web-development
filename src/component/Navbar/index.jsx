@@ -557,8 +557,8 @@ export default function Navbar() {
                 onClick={() => setOpenDropdown(openDropdown === "solutions" ? null : "solutions")}
                 className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-semibold transition-all duration-200 ${
                   openDropdown === "solutions"
-                    ? "text-[#0094C6] bg-white shadow-xs font-bold"
-                    : "text-slate-800 hover:text-[#0094C6] hover:bg-white/60"
+                    ? "text-[#2DDAE6] bg-white shadow-xs font-bold"
+                    : "text-slate-800 hover:text-[#2DDAE6] hover:bg-white/60"
                 }`}
                 aria-haspopup="true"
                 aria-expanded={openDropdown === "solutions"}
@@ -566,7 +566,7 @@ export default function Navbar() {
                 <span>Solutions</span>
                 <ChevronDown
                   className={`w-3.5 h-3.5 transition-transform duration-200 ${
-                    openDropdown === "solutions" ? "rotate-180 text-[#0094C6]" : "text-slate-600"
+                    openDropdown === "solutions" ? "rotate-180 text-[#2DDAE6]" : "text-slate-600"
                   }`}
                 />
               </button>
@@ -583,8 +583,8 @@ export default function Navbar() {
                 onClick={() => setOpenDropdown(openDropdown === "industries" ? null : "industries")}
                 className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-semibold transition-all duration-200 ${
                   openDropdown === "industries"
-                    ? "text-[#0094C6] bg-white shadow-xs font-bold"
-                    : "text-slate-800 hover:text-[#0094C6] hover:bg-white/60"
+                    ? "text-[#2DDAE6] bg-white shadow-xs font-bold"
+                    : "text-slate-800 hover:text-[#2DDAE6] hover:bg-white/60"
                 }`}
                 aria-haspopup="true"
                 aria-expanded={openDropdown === "industries"}
@@ -592,7 +592,7 @@ export default function Navbar() {
                 <span>Industries</span>
                 <ChevronDown
                   className={`w-3.5 h-3.5 transition-transform duration-200 ${
-                    openDropdown === "industries" ? "rotate-180 text-[#0094C6]" : "text-slate-600"
+                    openDropdown === "industries" ? "rotate-180 text-[#2DDAE6]" : "text-slate-600"
                   }`}
                 />
               </button>
@@ -609,8 +609,8 @@ export default function Navbar() {
                 onClick={() => setOpenDropdown(openDropdown === "services" ? null : "services")}
                 className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-semibold transition-all duration-200 ${
                   pathname.startsWith("/services") || openDropdown === "services"
-                    ? "text-[#0094C6] bg-white shadow-xs font-bold"
-                    : "text-slate-800 hover:text-[#0094C6] hover:bg-white/60"
+                    ? "text-[#2DDAE6] bg-white shadow-xs font-bold"
+                    : "text-slate-800 hover:text-[#2DDAE6] hover:bg-white/60"
                 }`}
                 aria-haspopup="true"
                 aria-expanded={openDropdown === "services"}
@@ -618,7 +618,7 @@ export default function Navbar() {
                 <span>Services</span>
                 <ChevronDown
                   className={`w-3.5 h-3.5 transition-transform duration-200 ${
-                    openDropdown === "services" ? "rotate-180 text-[#0094C6]" : "text-slate-600"
+                    openDropdown === "services" ? "rotate-180 text-[#2DDAE6]" : "text-slate-600"
                   }`}
                 />
               </button>
@@ -631,7 +631,7 @@ export default function Navbar() {
                 >
                   <div className="rounded-2xl bg-white border border-slate-200 shadow-2xl p-2">
                     <div className="px-3 py-2 border-b border-slate-100 mb-1">
-                      <p className="text-[11px] font-bold uppercase tracking-wider text-[#0094C6]">
+                      <p className="text-[11px] font-bold uppercase tracking-wider text-[#2DDAE6]">
                         Our Core Services
                       </p>
                     </div>
@@ -642,9 +642,9 @@ export default function Navbar() {
                           href={child.href}
                           className="group flex flex-col px-3 py-2 rounded-xl transition-all hover:bg-slate-50"
                         >
-                          <span className="text-sm font-semibold text-slate-800 group-hover:text-[#0094C6] transition-colors flex items-center justify-between">
+                          <span className="text-sm font-semibold text-slate-800 group-hover:text-[#2DDAE6] transition-colors flex items-center justify-between">
                             {child.label}
-                            <ArrowRight className="w-3.5 h-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-[#0094C6]" />
+                            <ArrowRight className="w-3.5 h-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-[#2DDAE6]" />
                           </span>
                           <span className="text-[11px] text-slate-500 group-hover:text-slate-600">
                             {child.desc}
@@ -662,8 +662,8 @@ export default function Navbar() {
               href="/pricing"
               className={`px-3.5 py-2 rounded-full text-sm font-semibold transition-all duration-200 ${
                 pathname === "/pricing"
-                  ? "text-[#0094C6] bg-white font-bold shadow-xs"
-                  : "text-slate-800 hover:text-[#0094C6] hover:bg-white/60"
+                  ? "text-[#2DDAE6] bg-white font-bold shadow-xs"
+                  : "text-slate-800 hover:text-[#2DDAE6] hover:bg-white/60"
               }`}
             >
               Pricing
@@ -674,8 +674,8 @@ export default function Navbar() {
               href="/blogs"
               className={`px-3.5 py-2 rounded-full text-sm font-semibold transition-all duration-200 ${
                 pathname === "/blogs"
-                  ? "text-[#0094C6] bg-white font-bold shadow-xs"
-                  : "text-slate-800 hover:text-[#0094C6] hover:bg-white/60"
+                  ? "text-[#2DDAE6] bg-white font-bold shadow-xs"
+                  : "text-slate-800 hover:text-[#2DDAE6] hover:bg-white/60"
               }`}
             >
               Blogs
@@ -686,8 +686,8 @@ export default function Navbar() {
               href="/about-us"
               className={`px-3.5 py-2 rounded-full text-sm font-semibold transition-all duration-200 ${
                 pathname === "/about-us"
-                  ? "text-[#0094C6] bg-white font-bold shadow-xs"
-                  : "text-slate-800 hover:text-[#0094C6] hover:bg-white/60"
+                  ? "text-[#2DDAE6] bg-white font-bold shadow-xs"
+                  : "text-slate-800 hover:text-[#2DDAE6] hover:bg-white/60"
               }`}
             >
               About Us
@@ -775,7 +775,7 @@ export default function Navbar() {
                       />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <h4 className="text-sm font-bold text-slate-900 group-hover:text-[#0094C6] transition-colors leading-snug">
+                      <h4 className="text-sm font-bold text-slate-900 group-hover:text-[#2DDAE6] transition-colors leading-snug">
                         {item.title}
                       </h4>
                       <p className="text-xs text-slate-500 leading-snug line-clamp-2 mt-0.5">
@@ -803,7 +803,7 @@ export default function Navbar() {
                     </p>
                     <Link
                       href="/contact-us"
-                      className="text-xs font-bold text-[#0094C6] hover:text-[#1DCCD8] inline-flex items-center gap-1.5 transition-colors group"
+                      className="text-xs font-bold text-[#2DDAE6] hover:text-[#1DCCD8] inline-flex items-center gap-1.5 transition-colors group"
                     >
                       <span>Check Now</span>
                       <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
@@ -872,7 +872,7 @@ export default function Navbar() {
                           : "text-slate-700 font-medium hover:text-slate-900 hover:bg-slate-50"
                       }`}
                     >
-                      <TabIcon className={`w-4 h-4 ${isActive ? "text-[#0094C6]" : "text-slate-400"}`} />
+                      <TabIcon className={`w-4 h-4 ${isActive ? "text-[#2DDAE6]" : "text-slate-400"}`} />
                       <span>{tab.label}</span>
                     </button>
                   );
@@ -889,7 +889,7 @@ export default function Navbar() {
                     </p>
                     <Link
                       href={industryContent[activeIndustryTab]?.pillHref || "/contact-us"}
-                      className="text-xs font-semibold text-[#0094C6] hover:text-[#1DCCD8] px-3.5 py-1.5 rounded-full bg-slate-50 hover:bg-[#EEF8FF] border border-slate-200/80 transition-colors flex items-center gap-1.5"
+                      className="text-xs font-semibold text-[#2DDAE6] hover:text-[#1DCCD8] px-3.5 py-1.5 rounded-full bg-slate-50 hover:bg-[#EEF8FF] border border-slate-200/80 transition-colors flex items-center gap-1.5"
                     >
                       <span>{industryContent[activeIndustryTab]?.pillText}</span>
                     </Link>
@@ -905,11 +905,11 @@ export default function Navbar() {
                           href={item.href}
                           className="group p-2.5 rounded-xl border border-transparent hover:border-slate-200/80 hover:bg-slate-50/80 transition-all duration-150 flex items-start gap-3"
                         >
-                          <div className="w-9 h-9 rounded-xl bg-[#EEF8FF] text-[#0094C6] group-hover:bg-[#0094C6] group-hover:text-white flex items-center justify-center shrink-0 transition-colors mt-0.5 shadow-2xs">
+                          <div className="w-9 h-9 rounded-xl bg-[#EEF8FF] text-[#2DDAE6] group-hover:bg-[#2DDAE6] group-hover:text-white flex items-center justify-center shrink-0 transition-colors mt-0.5 shadow-2xs">
                             <ItemIcon className="w-4 h-4 transition-transform group-hover:scale-110" />
                           </div>
                           <div className="flex-1 min-w-0">
-                            <h4 className="text-sm font-bold text-slate-900 group-hover:text-[#0094C6] transition-colors leading-snug">
+                            <h4 className="text-sm font-bold text-slate-900 group-hover:text-[#2DDAE6] transition-colors leading-snug">
                               {item.title}
                             </h4>
                             <p className="text-xs text-slate-500 leading-snug line-clamp-2 mt-0.5">
@@ -939,7 +939,7 @@ export default function Navbar() {
                   </div>
                   <Link
                     href="/contact-us"
-                    className="px-5 py-2.5 rounded-xl text-xs font-bold text-white bg-[#0094C6] hover:bg-black transition-all duration-200 shrink-0 shadow-sm"
+                    className="px-5 py-2.5 rounded-xl text-xs font-bold text-white bg-[#2DDAE6] hover:bg-black transition-all duration-200 shrink-0 shadow-sm"
                   >
                     <span>Talk to an Expert →</span>
                   </Link>
@@ -967,7 +967,7 @@ export default function Navbar() {
                 className="w-full flex items-center justify-between py-2 text-base font-semibold text-slate-800"
               >
                 <span>Solutions</span>
-                <ChevronDown className={`w-4 h-4 transition-transform ${openDropdown === "solutions" ? "rotate-180 text-[#0094C6]" : ""}`} />
+                <ChevronDown className={`w-4 h-4 transition-transform ${openDropdown === "solutions" ? "rotate-180 text-[#2DDAE6]" : ""}`} />
               </button>
               {openDropdown === "solutions" && (
                 <div className="pl-3 mt-1 space-y-3 border-l-2 border-[#1DCCD8]">
@@ -981,7 +981,7 @@ export default function Navbar() {
                           <Link
                             key={item.title}
                             href={item.href}
-                            className="block text-sm text-slate-700 hover:text-[#0094C6] font-medium"
+                            className="block text-sm text-slate-700 hover:text-[#2DDAE6] font-medium"
                           >
                             {item.title}
                           </Link>
@@ -1001,7 +1001,7 @@ export default function Navbar() {
                 className="w-full flex items-center justify-between py-2 text-base font-semibold text-slate-800"
               >
                 <span>Industries</span>
-                <ChevronDown className={`w-4 h-4 transition-transform ${openDropdown === "industries" ? "rotate-180 text-[#0094C6]" : ""}`} />
+                <ChevronDown className={`w-4 h-4 transition-transform ${openDropdown === "industries" ? "rotate-180 text-[#2DDAE6]" : ""}`} />
               </button>
               {openDropdown === "industries" && (
                 <div className="pl-3 mt-1 space-y-3 border-l-2 border-[#1DCCD8]">
@@ -1015,7 +1015,7 @@ export default function Navbar() {
                           <Link
                             key={item.title}
                             href={item.href}
-                            className="block text-sm text-slate-700 hover:text-[#0094C6] font-medium"
+                            className="block text-sm text-slate-700 hover:text-[#2DDAE6] font-medium"
                           >
                             {item.title}
                           </Link>
@@ -1035,7 +1035,7 @@ export default function Navbar() {
                 className="w-full flex items-center justify-between py-2 text-base font-semibold text-slate-800"
               >
                 <span>Services</span>
-                <ChevronDown className={`w-4 h-4 transition-transform ${openDropdown === "services" ? "rotate-180 text-[#0094C6]" : ""}`} />
+                <ChevronDown className={`w-4 h-4 transition-transform ${openDropdown === "services" ? "rotate-180 text-[#2DDAE6]" : ""}`} />
               </button>
               {openDropdown === "services" && (
                 <div className="pl-3 mt-1 space-y-1 border-l-2 border-[#1DCCD8]">
@@ -1043,7 +1043,7 @@ export default function Navbar() {
                     <Link
                       key={child.label}
                       href={child.href}
-                      className="block py-1.5 text-sm text-slate-600 hover:text-[#0094C6] font-medium transition-colors"
+                      className="block py-1.5 text-sm text-slate-600 hover:text-[#2DDAE6] font-medium transition-colors"
                     >
                       {child.label}
                     </Link>

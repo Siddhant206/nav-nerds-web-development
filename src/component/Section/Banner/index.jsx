@@ -18,22 +18,22 @@ export default function Banner() {
     {
       value: "10+",
       label: "Years Experience",
-      icon: <Clock className="w-4 h-4 text-[#0094C6]" />,
+      icon: <Clock className="w-4 h-4 text-[#2DDAE6]" />,
     },
     {
       value: "50+",
       label: "Cloud Deployments",
-      icon: <Zap className="w-4 h-4 text-[#0094C6]" />,
+      icon: <Zap className="w-4 h-4 text-[#2DDAE6]" />,
     },
     {
       value: "100%",
       label: "Certified AL Engineers",
-      icon: <ShieldCheck className="w-4 h-4 text-[#0094C6]" />,
+      icon: <ShieldCheck className="w-4 h-4 text-[#2DDAE6]" />,
     },
     {
       value: "24/7",
       label: "Dedicated Support",
-      icon: <Users className="w-4 h-4 text-[#0094C6]" />,
+      icon: <Users className="w-4 h-4 text-[#2DDAE6]" />,
     },
   ];
 
@@ -47,18 +47,18 @@ export default function Banner() {
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-[#1DCCD8]/40 shadow-xs mb-4">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#1DCCD8] opacity-75" />
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#0094C6]" />
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#2DDAE6]" />
             </span>
             <span className="text-xs sm:text-sm font-semibold text-slate-800">
               Microsoft Dynamics 365{" "}
-              <span className="text-[#0094C6]">· Certified Partner</span>
+              <span className="text-[#2DDAE6]">· Certified Partner</span>
             </span>
           </div>
 
           {/* Clean Sentence-Case Headline */}
           <h1 className="text-3xl sm:text-4xl lg:text-[2.65rem] xl:text-[2.95rem] font-extrabold tracking-tight text-slate-900 leading-[1.14] mb-4">
             Get the best solutions for business growth with{" "}
-            <span className="text-[#0094C6] block sm:inline">
+            <span className="text-[#2DDAE6] block sm:inline">
               Microsoft Dynamics 365
             </span>
           </h1>
@@ -74,7 +74,7 @@ export default function Banner() {
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 mb-8 w-full sm:w-auto">
             <Link
               href="/contact-us"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full text-sm font-bold text-white bg-[#0094C6] hover:bg-black transition-all duration-300 shadow-md shadow-[#0094C6]/25 hover:scale-105 active:scale-95"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full text-sm font-bold text-white bg-[#2DDAE6] hover:bg-black transition-all duration-300 shadow-md shadow-[#2DDAE6]/25 hover:scale-105 active:scale-95"
             >
               <span>Book a Free Consultation</span>
               <ArrowRight className="w-4 h-4" />
@@ -111,7 +111,7 @@ export default function Banner() {
         <div className="lg:col-span-7 relative w-full flex items-center justify-center">
           {/* Top-Right Floating AI Pill Badge */}
           <div className="absolute -top-3.5 -right-2 z-20 hidden sm:flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/95 backdrop-blur-md border border-slate-200 shadow-lg text-xs font-bold text-slate-800 animate-in fade-in zoom-in duration-300">
-            <Sparkles className="w-3.5 h-3.5 text-[#0094C6]" />
+            <Sparkles className="w-3.5 h-3.5 text-[#2DDAE6]" />
             <span>AI Copilot Ready</span>
           </div>
 
@@ -161,7 +161,7 @@ export default function Banner() {
 
           {/* Bottom-Left Floating Trust Badge */}
           <div className="absolute -bottom-3 -left-3 z-20 hidden sm:flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white/95 backdrop-blur-md border border-slate-200 shadow-lg text-xs font-bold text-slate-800">
-            <div className="w-5 h-5 rounded-md bg-[#EEF8FF] text-[#0094C6] flex items-center justify-center">
+            <div className="w-5 h-5 rounded-md bg-[#EEF8FF] text-[#2DDAE6] flex items-center justify-center">
               <ShieldCheck className="w-3.5 h-3.5" />
             </div>
             <span>Zero-Downtime Migration</span>
