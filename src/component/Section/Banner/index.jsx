@@ -51,7 +51,7 @@ export default function Banner() {
             </span>
             <span className="text-xs sm:text-sm font-semibold text-slate-800">
               Microsoft Dynamics 365{" "}
-              <span className="text-[#2DDAE6]">· Certified Partner</span>
+              <span className="text-[#2DDAE6]">· Certified Specialists</span>
             </span>
           </div>
 

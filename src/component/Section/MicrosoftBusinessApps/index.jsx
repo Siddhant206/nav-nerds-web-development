@@ -217,11 +217,15 @@ export default function MicrosoftBusinessApps() {
               onClick={() => setActiveTabId(tab.id)}
               className={`group flex flex-col items-center justify-center p-4 rounded-2xl border transition-all duration-200 cursor-pointer text-center ${
                 isActive
-                  ? "bg-gradient-to-br from-[#2E2856] via-[#3B336A] to-[#252048] text-white border-[#2E2856] shadow-xl shadow-indigo-950/20 -translate-y-1"
+                  ? "bg-white border-[#2DDAE6] shadow-lg shadow-[#2DDAE6]/15 -translate-y-1 ring-2 ring-[#2DDAE6]/25 text-slate-900"
                   : "bg-white hover:bg-slate-50/80 border-slate-200/90 hover:border-slate-300 text-slate-800 shadow-2xs hover:shadow-sm"
               }`}
             >
-              <div className="w-12 h-12 flex items-center justify-center mb-2.5 transition-transform duration-200 group-hover:scale-105">
+              <div
+                className={`w-12 h-12 rounded-xl flex items-center justify-center mb-2.5 transition-colors duration-200 ${
+                  isActive ? "bg-[#EEF8FF]" : "bg-slate-50 group-hover:bg-[#EEF8FF]/60"
+                }`}
+              >
                 <Image
                   src={tab.tabIcon}
                   alt={tab.name}
@@ -232,7 +236,7 @@ export default function MicrosoftBusinessApps() {
               </div>
               <span
                 className={`text-sm font-bold tracking-tight transition-colors ${
-                  isActive ? "text-white" : "text-slate-800 group-hover:text-[#2DDAE6]"
+                  isActive ? "text-[#2DDAE6]" : "text-slate-800 group-hover:text-[#2DDAE6]"
                 }`}
               >
                 {tab.name}

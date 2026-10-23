@@ -530,16 +530,44 @@ export default function Navbar() {
           {/* Vertical Divider */}
           <div className="h-6 w-px bg-slate-300/90 mx-3 sm:mx-3.5" />
 
-          {/* Microsoft Solutions Partner Lockup */}
-          <div className="flex items-center select-none shrink-0">
-            <Image
-              src="/microsoft-solutions-partner.svg"
-              alt="Microsoft Solutions Partner"
-              width={140}
-              height={34}
-              className="h-7 sm:h-8 w-auto object-contain"
-              priority
-            />
+          {/* Microsoft, Power BI & Power Apps Ecosystem Badges */}
+          <div className="flex items-center gap-2 select-none shrink-0" title="Microsoft, Power BI and Power Apps">
+            {/* Microsoft 4-Tile Icon */}
+            <div className="flex items-center gap-1.5">
+              <svg width="18" height="18" viewBox="0 0 21 21" fill="none" className="shrink-0">
+                <rect x="1" y="1" width="9" height="9" fill="#F25022" />
+                <rect x="11" y="1" width="9" height="9" fill="#7FBA00" />
+                <rect x="1" y="11" width="9" height="9" fill="#00A4EF" />
+                <rect x="11" y="11" width="9" height="9" fill="#FFB900" />
+              </svg>
+              <span className="text-xs sm:text-sm font-bold text-slate-800 tracking-tight hidden min-[460px]:inline">
+                Microsoft
+              </span>
+            </div>
+
+            <div className="h-3.5 w-px bg-slate-300" />
+
+            {/* Power BI Icon */}
+            <div className="flex items-center justify-center" title="Power BI">
+              <Image
+                src="/menu-icons/power-bi.svg"
+                alt="Power BI"
+                width={18}
+                height={18}
+                className="w-4 h-4 sm:w-4.5 sm:h-4.5 object-contain"
+              />
+            </div>
+
+            {/* Power Apps Icon */}
+            <div className="flex items-center justify-center" title="Power Apps">
+              <Image
+                src="/menu-icons/power-apps.svg"
+                alt="Power Apps"
+                width={18}
+                height={18}
+                className="w-4 h-4 sm:w-4.5 sm:h-4.5 object-contain"
+              />
+            </div>
           </div>
         </div>
 
