@@ -66,8 +66,8 @@ export default function Navbar() {
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full bg-[#1DCCD8] transition-shadow duration-300 ${
-        isScrolled ? "shadow-md" : "shadow-sm"
+      className={`sticky top-0 z-50 w-full bg-[#EEF8FF] transition-all duration-300 ${
+        isScrolled ? "shadow-sm border-b border-slate-200/80" : "border-b border-slate-200/40"
       }`}
     >
       {/* Full width container spanning edge-to-edge */}
@@ -76,7 +76,7 @@ export default function Navbar() {
         <Link href="/" className="flex items-center gap-2 group shrink-0">
           <div className="relative overflow-hidden py-1">
             <Image
-              src="/logoWhite.webp"
+              src="/logoDark.webp"
               alt="NavNerds Logo"
               width={160}
               height={46}
@@ -104,8 +104,8 @@ export default function Navbar() {
                     onClick={() => setIsServicesOpen(!isServicesOpen)}
                     className={`flex items-center gap-1.5 px-3.5 py-2 rounded-full text-sm font-semibold transition-all duration-200 ${
                       pathname.startsWith("/services") || isServicesOpen
-                        ? "text-slate-950 bg-white/30 shadow-xs"
-                        : "text-white hover:text-slate-950 hover:bg-white/20"
+                        ? "text-[#0094C6] bg-white shadow-xs font-bold"
+                        : "text-slate-800 hover:text-[#0094C6] hover:bg-white/60"
                     }`}
                     aria-haspopup="true"
                     aria-expanded={isServicesOpen}
@@ -113,7 +113,7 @@ export default function Navbar() {
                     <span>{link.label}</span>
                     <svg
                       className={`w-3.5 h-3.5 transition-transform duration-200 ${
-                        isServicesOpen ? "rotate-180 text-slate-950" : "text-white"
+                        isServicesOpen ? "rotate-180 text-[#0094C6]" : "text-slate-600"
                       }`}
                       fill="none"
                       stroke="currentColor"
@@ -166,8 +166,8 @@ export default function Navbar() {
                   href={link.href}
                   className={`px-3.5 py-2 rounded-full text-sm font-semibold transition-all duration-200 ${
                     pathname === link.href
-                      ? "text-slate-950 bg-white/30 font-bold shadow-xs"
-                      : "text-white hover:text-slate-950 hover:bg-white/20"
+                      ? "text-[#0094C6] bg-white font-bold shadow-xs"
+                      : "text-slate-800 hover:text-[#0094C6] hover:bg-white/60"
                   }`}
                 >
                   {link.label}
@@ -176,11 +176,11 @@ export default function Navbar() {
             )}
           </nav>
 
-          {/* Let's Connect CTA Button (Far Right) */}
+          {/* Let's Connect CTA Button (Signature Cyan #1DCCD8 on #EEF8FF) */}
           <div className="hidden md:flex items-center shrink-0">
             <Link
               href="/contact-us"
-              className="group relative inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-bold text-white bg-slate-950 hover:bg-black transition-all duration-300 shadow-md hover:scale-105 active:scale-95"
+              className="group relative inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-bold text-white bg-[#1DCCD8] hover:bg-black transition-all duration-300 shadow-md shadow-[#1DCCD8]/25 hover:scale-105 active:scale-95"
             >
               <span>Let’s Connect</span>
               <svg
@@ -199,7 +199,7 @@ export default function Navbar() {
             id="hamburger-btn"
             type="button"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 rounded-xl text-white hover:bg-white/20 transition-colors"
+            className="md:hidden p-2 rounded-xl text-slate-800 hover:bg-white transition-colors"
             aria-label="Toggle navigation menu"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -217,20 +217,20 @@ export default function Navbar() {
       {isMobileMenuOpen && (
         <div
           ref={mobileRef}
-          className="md:hidden w-full bg-[#1DCCD8] border-t border-white/20 shadow-2xl px-6 py-4 text-white animate-in fade-in slide-in-from-top-2 duration-200"
+          className="md:hidden w-full bg-[#EEF8FF] border-t border-slate-200 shadow-2xl px-6 py-4 text-slate-800 animate-in fade-in slide-in-from-top-2 duration-200"
         >
           <div className="space-y-1">
             {navLinks.map((link) =>
               link.children ? (
-                <div key={link.label} className="border-b border-white/20 pb-2">
+                <div key={link.label} className="border-b border-slate-200/80 pb-2">
                   <button
                     type="button"
                     onClick={() => setIsServicesOpen(!isServicesOpen)}
-                    className="w-full flex items-center justify-between py-2 text-base font-semibold text-white"
+                    className="w-full flex items-center justify-between py-2 text-base font-semibold text-slate-800"
                   >
                     <span>{link.label}</span>
                     <svg
-                      className={`w-4 h-4 transition-transform ${isServicesOpen ? "rotate-180 text-slate-950" : ""}`}
+                      className={`w-4 h-4 transition-transform ${isServicesOpen ? "rotate-180 text-[#0094C6]" : ""}`}
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -239,12 +239,12 @@ export default function Navbar() {
                     </svg>
                   </button>
                   {isServicesOpen && (
-                    <div className="pl-3 mt-1 space-y-1 border-l-2 border-white/40">
+                    <div className="pl-3 mt-1 space-y-1 border-l-2 border-[#1DCCD8]">
                       {link.children.map((child) => (
                         <Link
                           key={child.label}
                           href={child.href}
-                          className="block py-1.5 text-sm text-white/90 hover:text-slate-950 font-medium transition-colors"
+                          className="block py-1.5 text-sm text-slate-600 hover:text-[#0094C6] font-medium transition-colors"
                         >
                           {child.label}
                         </Link>
@@ -256,8 +256,8 @@ export default function Navbar() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className={`block py-2 text-base font-semibold border-b border-white/20 ${
-                    pathname === link.href ? "text-slate-950 font-bold" : "text-white hover:text-slate-950"
+                  className={`block py-2 text-base font-semibold border-b border-slate-200/80 ${
+                    pathname === link.href ? "text-[#0094C6] font-bold" : "text-slate-800 hover:text-[#0094C6]"
                   }`}
                 >
                   {link.label}
@@ -269,7 +269,7 @@ export default function Navbar() {
           <div className="pt-4">
             <Link
               href="/contact-us"
-              className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-sm font-bold text-white bg-slate-950 hover:bg-black shadow-md"
+              className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-sm font-bold text-white bg-[#1DCCD8] hover:bg-black shadow-md"
             >
               <span>Let’s Connect</span>
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
