@@ -36,7 +36,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 20) {
+      if (window.scrollY > 10) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -65,23 +65,22 @@ export default function Navbar() {
   }, [pathname]);
 
   return (
-    <header className="sticky top-0 z-50 w-full px-3 sm:px-6 lg:px-8 pt-3 pb-2 transition-all duration-300">
-      <div
-        className={`max-w-7xl mx-auto rounded-2xl transition-all duration-300 px-4 sm:px-6 py-2.5 flex items-center justify-between ${
-          isScrolled
-            ? "bg-[#1DCCD8] shadow-[0_10px_25px_rgba(29,204,216,0.35)] border border-white/40"
-            : "bg-[#1DCCD8] shadow-[0_6px_20px_rgba(29,204,216,0.25)] border border-white/30"
-        }`}
-      >
+    <header
+      className={`sticky top-0 z-50 w-full bg-[#1DCCD8] transition-shadow duration-300 ${
+        isScrolled ? "shadow-md" : "shadow-sm"
+      }`}
+    >
+      {/* Full-width container with centered inner content (Zero outer gaps) */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
         {/* Brand Logo */}
         <Link href="/" className="flex items-center gap-2 group">
           <div className="relative overflow-hidden py-1">
             <Image
               src="/logoWhite.webp"
               alt="NavNerds Logo"
-              width={150}
-              height={44}
-              className="object-contain h-10 w-auto transition-transform duration-300 group-hover:scale-105"
+              width={160}
+              height={46}
+              className="object-contain h-10 sm:h-11 w-auto transition-transform duration-300 group-hover:scale-105"
               priority
             />
           </div>
@@ -101,7 +100,7 @@ export default function Navbar() {
                 <button
                   type="button"
                   onClick={() => setIsServicesOpen(!isServicesOpen)}
-                  className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-sm font-semibold transition-all duration-200 ${
+                  className={`flex items-center gap-1.5 px-3.5 py-2 rounded-full text-sm font-semibold transition-all duration-200 ${
                     pathname.startsWith("/services") || isServicesOpen
                       ? "text-slate-950 bg-white/30 shadow-xs"
                       : "text-white hover:text-slate-950 hover:bg-white/20"
@@ -125,7 +124,7 @@ export default function Navbar() {
                 {/* Services Dropdown Card */}
                 {isServicesOpen && (
                   <div className="absolute top-full left-0 pt-2 w-80 animate-in fade-in slide-in-from-top-2 duration-200">
-                    <div className="rounded-2xl bg-white border border-slate-200 shadow-[0_20px_50px_rgba(0,0,0,0.18)] p-2">
+                    <div className="rounded-2xl bg-white border border-slate-200 shadow-2xl p-2">
                       <div className="px-3 py-2 border-b border-slate-100 mb-1">
                         <p className="text-[11px] font-bold uppercase tracking-wider text-[#0094C6]">
                           Enterprise Solutions
@@ -163,7 +162,7 @@ export default function Navbar() {
               <Link
                 key={link.label}
                 href={link.href}
-                className={`px-3.5 py-1.5 rounded-full text-sm font-semibold transition-all duration-200 ${
+                className={`px-3.5 py-2 rounded-full text-sm font-semibold transition-all duration-200 ${
                   pathname === link.href
                     ? "text-slate-950 bg-white/30 font-bold shadow-xs"
                     : "text-white hover:text-slate-950 hover:bg-white/20"
@@ -175,11 +174,11 @@ export default function Navbar() {
           )}
         </nav>
 
-        {/* Right CTA Button (High-Contrast Slate/Black against #1DCCD8) */}
+        {/* Right CTA Button */}
         <div className="hidden md:flex items-center gap-3">
           <Link
             href="/contact-us"
-            className="group relative inline-flex items-center gap-2 px-5 py-2 rounded-full text-sm font-bold text-white bg-slate-950 hover:bg-black transition-all duration-300 shadow-md hover:scale-105 active:scale-95"
+            className="group relative inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-bold text-white bg-slate-950 hover:bg-black transition-all duration-300 shadow-md hover:scale-105 active:scale-95"
           >
             <span>Let’s Connect</span>
             <svg
@@ -211,11 +210,11 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Drawer Menu */}
+      {/* Mobile Drawer Menu (Edge-to-Edge Container) */}
       {isMobileMenuOpen && (
         <div
           ref={mobileRef}
-          className="md:hidden mt-2 rounded-2xl bg-[#1DCCD8] border border-white/40 shadow-2xl p-4 text-white animate-in fade-in slide-in-from-top-3 duration-200"
+          className="md:hidden w-full bg-[#1DCCD8] border-t border-white/20 shadow-2xl px-6 py-4 text-white animate-in fade-in slide-in-from-top-2 duration-200"
         >
           <div className="space-y-1">
             {navLinks.map((link) =>
