@@ -4,6 +4,7 @@ import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import Image from "next/image";
 import Link from 'next/link';
+import { ArrowRight } from "lucide-react";
 import { H2, H3, P } from "@/component/UI/typography";
 const MotionH2 = motion.create(H2);
 const MotionH3 = motion.create(H3);
@@ -12,75 +13,59 @@ const MotionP = motion.create(P);
 const services = [
   {
     id: 1,
-    title: "Support",
-    description: "24/7 technical support and managed services to keep your Microsoft solutions running smoothly.",
-    link:"support",
+    title: "Support & SLA Care",
+    description: "24/7 technical troubleshooting, proactive system health audits, and guaranteed SLA support for Microsoft Dynamics 365.",
+    link: "support",
     icon: "/Icons/Support.webm",
-    bgColor: "bg-[#2DDAE6]",
-    textColor: "text-white"
   },
   {
     id: 2,
-    title: "Implementation",
-    description: "Professional deployment and configuration of Dynamics 365 and Microsoft 365 solutions.",
+    title: "Cloud Implementation",
+    description: "End-to-end architecture deployment, functional configuration, and user onboarding for Dynamics 365 Business Central.",
     link: "implementation",
     icon: "/Icons/Implementation.svg",
-    bgColor: "bg-white",
-    textColor: "text-black"
   },
   {
     id: 3,
-    title: "Integration",
-    description: "Connect Dynamics 365 and Microsoft 365 with your other business applications and platforms.",
+    title: "Ecosystem Integration",
+    description: "Seamless API & middleware integration connecting Business Central with CRM, Shopify, Power Platform, and enterprise tools.",
     link: "integration", 
     icon: "/Icons/Integration.webm",
-    bgColor: "bg-[#2DDAE6]",
-    textColor: "text-white"
   },
   {
     id: 4,
-    title: "Training",
-    description: "We teach administrators and end-users how to maximize new system capabilities and improve productivity.",
+    title: "Corporate Training",
+    description: "Hands-on role-based training programs empowering administrators and functional teams to maximize ERP ROI.",
     link: "training",
     icon: "/Icons/Training.webm",
-    bgColor: "bg-white",
-    textColor: "text-black"
   },
   {
     id: 5,
-    title: "Customization",
-    description: "We help you adapt the system to work your way. Drive efficiency, scalability, and seamless user adoption with our expert customization services.",
+    title: "Custom AL Engineering",
+    description: "Tailored AL extensions, custom report designs, and automated business workflows adapted to your proprietary processes.",
     link: "customization",
     icon: "/Icons/Customization.webm",
-    bgColor: "bg-white",
-    textColor: "text-black"
   },
   {
     id: 6,
-    title: "Website Development",
-    description: "We build modern, scalable web applications and enterprise portals tailored to your business needs.",
+    title: "Enterprise Web Portals",
+    description: "High-performance customer, vendor, and employee self-service portals integrated directly with your Business Central data.",
     link: "website-development",
     icon: "/Icons/Business-Central.svg",
-    bgColor: "bg-[#2DDAE6]",
-    textColor: "text-white"
   },
   {
     id: 7,
-    title: "Dedicated Resources",
-    description: "Skilled Microsoft consultants and developers available on-demand whenever or wherever you want to connect with us.",
+    title: "Dedicated Specialists",
+    description: "Direct on-demand access to certified senior Microsoft AL developers, functional architects, and project leads.",
     link: "dedicated-resources",
     icon: "/Icons/Dedicated-Resources.webm",
-    bgColor: "bg-white",
-    textColor: "text-gray-800"
   },
   {
     id: 8,
-    title: "Migration",
-    description: "Seamless setup and migration from ERPs & CRMs to Microsoft 365 tailored to your business needs.",
+    title: "Zero-Downtime Migration",
+    description: "Risk-free data migration from legacy NAV, GP, QuickBooks, or on-premise servers to modern Business Central Cloud.",
     link: "migration",
     icon: "/Icons/Migration.webm",
-    bgColor: "bg-[#2DDAE6]",
-    textColor: "text-white"
   }
 ];
 
@@ -98,8 +83,8 @@ const containerVariants = {
 const cardVariants = {
   hidden: {
     opacity: 0,
-    y: 50,
-    scale: 0.9
+    y: 40,
+    scale: 0.95
   },
   visible: {
     opacity: 1,
@@ -109,15 +94,14 @@ const cardVariants = {
       type: "spring",
       stiffness: 100,
       damping: 15,
-      duration: 0.6
+      duration: 0.5
     }
   }
 };
 
 const hoverVariants = {
   hover: {
-    scale: 1.05,
-    y: -5,
+    y: -4,
     transition: {
       type: "spring",
       stiffness: 300,
@@ -128,23 +112,11 @@ const hoverVariants = {
 
 const iconVariants = {
   hover: {
-    scale: 1.2,
-    rotate: 0,
+    scale: 1.1,
     transition: {
       type: "spring",
       stiffness: 400,
       damping: 10
-    }
-  }
-};
-
-const indicatorVariants = {
-  hover: {
-    width: "3rem",
-    opacity: 1,
-    transition: {
-      duration: 0.3,
-      ease: "easeOut"
     }
   }
 };
@@ -161,18 +133,6 @@ const textVariants = {
   }
 };
 
-const svgVariants = {
-  hidden: { pathLength: 0, opacity: 0 },
-  visible: {
-    pathLength: 1,
-    opacity: 0.8,
-    transition: {
-      pathLength: { duration: 2, ease: "easeInOut" },
-      opacity: { duration: 0.5 }
-    }
-  }
-};
-
 export default function ServicesSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.1 });
@@ -182,25 +142,29 @@ export default function ServicesSection() {
   const isServicesInView = useInView(servicesRef, { once: true });
 
   return (
-    <section className="py-10 px-4 max-w-7xl mx-auto overflow-hidden">
+    <section className="py-12 md:py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto overflow-hidden">
       {/* Services Header */}
       <motion.div
+        ref={titleRef}
         initial="hidden"
-        animate={isInView ? "visible" : "hidden"}
+        animate={isTitleInView ? "visible" : "hidden"}
         variants={textVariants}
-        className="max-w-2xl mr-auto text-black py-10 lg:pb-10 lg:pt-20 space-y-4 text-left"
+        className="max-w-3xl mr-auto text-black pb-8 pt-4 space-y-3 text-left"
       >
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#EEF8FF] border border-[#2DDAE6]/30 text-xs font-bold text-slate-800">
+          <span>Enterprise Services Catalog</span>
+        </div>
         <MotionH2
           variants={textVariants}
-          className="tracking-wide font-semibold"
+          className="tracking-tight font-extrabold text-3xl sm:text-4xl text-slate-900"
         >
-          Our Services
+          End-to-End Microsoft Dynamics 365 Services
         </MotionH2>
         <MotionP
           variants={textVariants}
-          className="text-gray-600"
+          className="text-slate-600 text-sm sm:text-base leading-relaxed"
         >
-          We offer professional ERP consulting services to help companies map their needs with ERP capabilities and select the best ERP vendor.
+          From initial architecture and zero-downtime migrations to custom AL development and 24/7 SLA support, our certified team ensures your ERP operates at peak performance.
         </MotionP>
       </motion.div>
 
@@ -214,71 +178,26 @@ export default function ServicesSection() {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 auto-rows-fr"
         >
           {services.map((service, index) => (
-            <Link  key={service.id}
-              href={`/services/${service.link}`}>
-            
-            <motion.div 
-              variants={cardVariants}
-              whileHover="hover"
-              className={`
-                ${service.bgColor} 
-                rounded-2xl p-6 shadow-lg cursor-pointer group relative h-64 overflow-hidden
-                backdrop-blur-sm border border-white/10
-              `}
-              style={{
-                boxShadow: service.bgColor === 'bg-white'
-                  ? '0 10px 40px rgba(0,0,0,0.1)'
-                  : '0 10px 40px rgba(0,148,198,0.3)'
-              }}
+            <Link
+              key={service.id}
+              href={`/services/${service.link}`}
+              className="h-full block group"
             >
-              {/* Animated Background Decorations */}
-              <motion.div
-                className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-white/20 to-white/5 rounded-full"
-                initial={{ x: 40, y: -40, scale: 0 }}
-                animate={{ x: 40, y: -40, scale: 1 }}
-                transition={{ delay: index * 0.1 + 0.5, type: "spring" }}
-                whileHover={{ scale: 1.2, rotate: 90 }}
-              />
-              <motion.div
-                className="absolute bottom-0 left-0 w-16 h-16 bg-gradient-to-tr from-white/15 to-white/5 rounded-full"
-                initial={{ x: -32, y: 32, scale: 0 }}
-                animate={{ x: -32, y: 32, scale: 1 }}
-                transition={{ delay: index * 0.1 + 0.7, type: "spring" }}
-                whileHover={{ scale: 1.3, rotate: -90 }}
-              />
-
-              {/* Shimmer Effect */}
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full"
-                animate={{ x: ['-100%', '100%'] }}
-                transition={{
-                  duration: 2,
-                  delay: index * 0.2 + 1,
-                  ease: "easeInOut"
+              <motion.div 
+                variants={cardVariants}
+                whileHover="hover"
+                className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl cursor-pointer relative h-full flex flex-col justify-between border border-slate-200/90 hover:border-[#2DDAE6] transition-all duration-300"
+                style={{
+                  boxShadow: '0 8px 30px rgba(0,0,0,0.04)'
                 }}
-              />
-
-              <motion.div
-                variants={hoverVariants}
-                className="relative z-10 h-full flex flex-col"
               >
-                <div className="flex items-center mb-4">
-                  <motion.div
-                    variants={iconVariants}
-                    className={`
-                      w-12 h-12 rounded-xl flex items-center justify-center text-2xl
-                      ${service.bgColor === 'bg-white'
-                        ? 'bg-gradient-to-br from-gray-50 to-gray-100 border border-gray-200 shadow-inner'
-                        : 'bg-white/20 backdrop-blur-sm border border-white/20'
-                      }
-                    `}
-                    whileHover={{
-                      boxShadow: service.bgColor === 'bg-white'
-                        ? "0 5px 20px rgba(0,0,0,0.1)"
-                        : "0 5px 20px rgba(255,255,255,0.3)"
-                    }}
-                  >
-                    <span>
+                {/* Top Row: Icon + Service Index Number */}
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <motion.div
+                      variants={iconVariants}
+                      className="w-12 h-12 rounded-xl flex items-center justify-center bg-[#EEF8FF] border border-cyan-100 shadow-xs"
+                    >
                       {typeof service.icon === "string" && service.icon.startsWith("/Icons") ? (
                         service.icon.endsWith(".webm") ? (
                           <video
@@ -287,77 +206,50 @@ export default function ServicesSection() {
                             loop
                             muted
                             playsInline
-                            className="h-16 w-auto object-contain"
+                            className="h-9 w-9 object-contain"
                           />
                         ) : (
                           <Image
                             src={service.icon}
-                            alt={`Our Microsoft 365 ${service.title} services`}
-                            width={160}
-                            height={50}
-                            className="object-contain bg-transparent h-16"
-                            priority
+                            alt={service.title}
+                            width={36}
+                            height={36}
+                            className="object-contain h-8 w-8"
                           />
                         )
                       ) : (
-                        <span className="text-3xl animate-pulse">{service.icon}</span>
+                        <span className="text-xl">{service.icon}</span>
                       )}
+                    </motion.div>
+
+                    <span className="text-xs font-mono font-bold text-slate-400 group-hover:text-[#2DDAE6] transition-colors">
+                      {`0${service.id} //`}
                     </span>
-                  </motion.div>
+                  </div>
+
+                  <MotionH3
+                    className="text-slate-900 font-bold text-lg mb-2 group-hover:text-[#2DDAE6] transition-colors tracking-tight"
+                    whileHover={{ x: 2 }}
+                    transition={{ type: "spring", stiffness: 300 }}
+                  >
+                    {service.title}
+                  </MotionH3>
+
+                  <MotionP
+                    className="text-slate-600 text-sm leading-relaxed"
+                    whileHover={{ x: 2 }}
+                    transition={{ type: "spring", stiffness: 300, delay: 0.05 }}
+                  >
+                    {service.description}
+                  </MotionP>
                 </div>
 
-                <MotionH3
-                  className={`${service.textColor}`}
-                  whileHover={{ x: 2 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  {service.title}
-                </MotionH3>
-
-                <MotionP
-                  className={`flex-grow ${service.textColor === 'text-white' ? 'text-white/90' : 'text-gray-600'
-                    }`}
-                  whileHover={{ x: 2 }}
-                  transition={{ type: "spring", stiffness: 300, delay: 0.1 }}
-                >
-                  {service.description}
-                </MotionP>
-
-                {/* Animated Hover Indicator */}
-                <div className="mt-4 overflow-hidden">
-                  <motion.div
-                    className={`h-1 rounded-full ${service.textColor === 'text-white'
-                        ? 'bg-gradient-to-r from-white/60 to-white/20'
-                        : 'bg-gradient-to-r from-[#2DDAE6] to-[#12C1CE]'
-                      }`}
-                    initial={{ width: 0, opacity: 0 }}
-                    variants={indicatorVariants}
-                    whileHover="hover"
-                  />
+                {/* Bottom Row: Link Indicator Arrow */}
+                <div className="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-slate-700 group-hover:text-[#2DDAE6] transition-colors">
+                  <span>Explore Service</span>
+                  <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
                 </div>
               </motion.div>
-
-              {/* Floating Particles */}
-              {[...Array(3)].map((_, i) => (
-                <motion.div
-                  key={i}
-                  className="absolute w-1 h-1 bg-white/30 rounded-full"
-                  style={{
-                    left: `${20 + i * 30}%`,
-                    top: `${30 + i * 20}%`
-                  }}
-                  animate={{
-                    y: [0, -10, 0],
-                    opacity: [0.5, 1, 0.5]
-                  }}
-                  transition={{
-                    duration: 2 + i,
-                    repeat: Infinity,
-                    delay: i * 0.5
-                  }}
-                />
-              ))}
-            </motion.div>
             </Link>
           ))}
         </motion.div>
