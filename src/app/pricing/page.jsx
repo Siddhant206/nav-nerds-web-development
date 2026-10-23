@@ -9,7 +9,7 @@ export default function PricingPage() {
     const plans = [
         {
             title: "Trust & Trial Package",
-            price: "$499",
+            // price: "$499",
             desc: "30 Hours of Expert BC Services. Use hours however you need: customizations, bug fixes, training, reports, integrations.",
             features: [
                 "30 Hours of Expert BC Services",
@@ -18,7 +18,7 @@ export default function PricingPage() {
                 "Reports or Workflows",
                 "Light Integrations",
             ],
-            cta: "Try for $499",
+            cta: "Start Trial",
         },
         {
             title: "Growth Plan",
@@ -68,7 +68,7 @@ export default function PricingPage() {
                 <H1 className="mb-4">Pricing</H1>
                 <P className="max-w-2xl mx-auto mb-4">
                     At Navnerds, we understand that trusting a new team takes time—so we’ve created a Trust & Trial Package to let you experience our expertise in{" "}
-                    <span className="text-blue-600 font-semibold underline decoration-wavy underline-offset-4">Microsoft Dynamics 365 Business Central</span> without long-term commitments.
+                    <span className="text-[#2DDAE6] font-semibold underline decoration-wavy underline-offset-4">Microsoft Dynamics 365 Business Central</span> without long-term commitments.
                 </P>  
             </header>
 
@@ -85,7 +85,7 @@ export default function PricingPage() {
                             className="flex flex-col hover:bg-white justify-between border border-gray-400 ease-in-out duration-200 p-6 rounded-xl shadow-sm hover:shadow-md transition"
                         >
                             <div> <H3 className="text-gray-800 mb-2">{plan.title}</H3>
-                                <div className="text-2xl font-bold text-blue-700 mb-2">{plan.price}</div>
+                                {plan.price && <div className="text-2xl font-bold text-[#2DDAE6] mb-2">{plan.price}</div>}
                                 <P className="text-gray-600 mb-4">{plan.desc}</P>
                                 <ul className="text-sm text-gray-700 list-disc list-inside mb-4">
                                     {plan.features.map((feature, i) => (

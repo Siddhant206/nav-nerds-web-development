@@ -64,7 +64,7 @@ const FAQ = () => {
         {
             id: 7,
             question: "Do you offer a trial period for your services?",
-            answer: "Yes! We offer a 'Starter Plan' (Trial & Trust) at $499. This allows you to experience our expertise and working style with a low-risk, small-scale project before committing to a larger engagement."
+            answer: "Yes! We offer a 'Starter Plan' (Trial & Trust). This allows you to experience our expertise and working style with a low-risk, small-scale project before committing to a larger engagement."
         },
         {
             id: 8,
@@ -79,7 +79,7 @@ const FAQ = () => {
         {
             id: 10,
             question: "What is the difference between your Growth and Enterprise plans?",
-            answer: "Our Growth Plan ($60/hr) is designed for scaling businesses needing steady development and support. The Enterprise Plan ($90/hr) is for larger organizations requiring complex architecture, deep integrations, and high-priority, multi-resource support."
+            answer: "Our Growth Plan is designed for scaling businesses needing steady development and support. The Enterprise Plan is for larger organizations requiring complex architecture, deep integrations, and high-priority, multi-resource support."
         },
         {
             id: 11,

@@ -9,7 +9,7 @@ const plans = [
   {
     title: "Starter Plan",
     subtitle: "Trial & Trust",
-    price: "499",
+    // price: "499",
     planInfo: (
       <svg
         width="40"
