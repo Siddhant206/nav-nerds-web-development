@@ -26,9 +26,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
 
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <GoogleTagManager gtmId="GTM-PN6PVXLB" />
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased   `} >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`} suppressHydrationWarning>
         <FloatingContacts />
         <Navbar />
         {children}
