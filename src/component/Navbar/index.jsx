@@ -70,111 +70,113 @@ export default function Navbar() {
         isScrolled ? "shadow-md" : "shadow-sm"
       }`}
     >
-      {/* Full-width container with centered inner content (Zero outer gaps) */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
-        {/* Brand Logo */}
-        <Link href="/" className="flex items-center gap-2 group">
-          <div className="relative overflow-hidden py-1">
-            <Image
-              src="/logoWhite.webp"
-              alt="NavNerds Logo"
-              width={160}
-              height={46}
-              className="object-contain h-10 sm:h-11 w-auto transition-transform duration-300 group-hover:scale-105"
-              priority
-            />
-          </div>
-        </Link>
+        {/* Left Side: Logo + Navigation Links */}
+        <div className="flex items-center gap-6 lg:gap-10">
+          {/* Brand Logo */}
+          <Link href="/" className="flex items-center gap-2 group shrink-0">
+            <div className="relative overflow-hidden py-1">
+              <Image
+                src="/logoWhite.webp"
+                alt="NavNerds Logo"
+                width={160}
+                height={46}
+                className="object-contain h-10 sm:h-11 w-auto transition-transform duration-300 group-hover:scale-105"
+                priority
+              />
+            </div>
+          </Link>
 
-        {/* Desktop Navigation Links */}
-        <nav className="hidden md:flex items-center gap-1 lg:gap-2">
-          {navLinks.map((link) =>
-            link.children ? (
-              <div
-                key={link.label}
-                ref={dropdownRef}
-                className="relative"
-                onMouseEnter={() => setIsServicesOpen(true)}
-                onMouseLeave={() => setIsServicesOpen(false)}
-              >
-                <button
-                  type="button"
-                  onClick={() => setIsServicesOpen(!isServicesOpen)}
-                  className={`flex items-center gap-1.5 px-3.5 py-2 rounded-full text-sm font-semibold transition-all duration-200 ${
-                    pathname.startsWith("/services") || isServicesOpen
-                      ? "text-slate-950 bg-white/30 shadow-xs"
-                      : "text-white hover:text-slate-950 hover:bg-white/20"
-                  }`}
-                  aria-haspopup="true"
-                  aria-expanded={isServicesOpen}
+          {/* Desktop Navigation Links (Aligned to Left beside Logo) */}
+          <nav className="hidden md:flex items-center gap-1 lg:gap-2">
+            {navLinks.map((link) =>
+              link.children ? (
+                <div
+                  key={link.label}
+                  ref={dropdownRef}
+                  className="relative"
+                  onMouseEnter={() => setIsServicesOpen(true)}
+                  onMouseLeave={() => setIsServicesOpen(false)}
                 >
-                  <span>{link.label}</span>
-                  <svg
-                    className={`w-3.5 h-3.5 transition-transform duration-200 ${
-                      isServicesOpen ? "rotate-180 text-slate-950" : "text-white"
+                  <button
+                    type="button"
+                    onClick={() => setIsServicesOpen(!isServicesOpen)}
+                    className={`flex items-center gap-1.5 px-3.5 py-2 rounded-full text-sm font-semibold transition-all duration-200 ${
+                      pathname.startsWith("/services") || isServicesOpen
+                        ? "text-slate-950 bg-white/30 shadow-xs"
+                        : "text-white hover:text-slate-950 hover:bg-white/20"
                     }`}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
+                    aria-haspopup="true"
+                    aria-expanded={isServicesOpen}
                   >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
+                    <span>{link.label}</span>
+                    <svg
+                      className={`w-3.5 h-3.5 transition-transform duration-200 ${
+                        isServicesOpen ? "rotate-180 text-slate-950" : "text-white"
+                      }`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
 
-                {/* Services Dropdown Card */}
-                {isServicesOpen && (
-                  <div className="absolute top-full left-0 pt-2 w-80 animate-in fade-in slide-in-from-top-2 duration-200">
-                    <div className="rounded-2xl bg-white border border-slate-200 shadow-2xl p-2">
-                      <div className="px-3 py-2 border-b border-slate-100 mb-1">
-                        <p className="text-[11px] font-bold uppercase tracking-wider text-[#0094C6]">
-                          Enterprise Solutions
-                        </p>
-                      </div>
-                      <div className="space-y-0.5">
-                        {link.children.map((child) => (
-                          <Link
-                            key={child.label}
-                            href={child.href}
-                            className="group flex flex-col px-3 py-2 rounded-xl transition-all hover:bg-slate-50"
-                          >
-                            <span className="text-sm font-semibold text-slate-800 group-hover:text-[#0094C6] transition-colors flex items-center justify-between">
-                              {child.label}
-                              <svg
-                                className="w-3.5 h-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-[#0094C6]"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                              >
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                              </svg>
-                            </span>
-                            <span className="text-[11px] text-slate-500 group-hover:text-slate-600">
-                              {child.desc}
-                            </span>
-                          </Link>
-                        ))}
+                  {/* Services Dropdown Card */}
+                  {isServicesOpen && (
+                    <div className="absolute top-full left-0 pt-2 w-80 animate-in fade-in slide-in-from-top-2 duration-200">
+                      <div className="rounded-2xl bg-white border border-slate-200 shadow-2xl p-2">
+                        <div className="px-3 py-2 border-b border-slate-100 mb-1">
+                          <p className="text-[11px] font-bold uppercase tracking-wider text-[#0094C6]">
+                            Enterprise Solutions
+                          </p>
+                        </div>
+                        <div className="space-y-0.5">
+                          {link.children.map((child) => (
+                            <Link
+                              key={child.label}
+                              href={child.href}
+                              className="group flex flex-col px-3 py-2 rounded-xl transition-all hover:bg-slate-50"
+                            >
+                              <span className="text-sm font-semibold text-slate-800 group-hover:text-[#0094C6] transition-colors flex items-center justify-between">
+                                {child.label}
+                                <svg
+                                  className="w-3.5 h-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-[#0094C6]"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  viewBox="0 0 24 24"
+                                >
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                </svg>
+                              </span>
+                              <span className="text-[11px] text-slate-500 group-hover:text-slate-600">
+                                {child.desc}
+                              </span>
+                            </Link>
+                          ))}
+                        </div>
                       </div>
                     </div>
-                  </div>
-                )}
-              </div>
-            ) : (
-              <Link
-                key={link.label}
-                href={link.href}
-                className={`px-3.5 py-2 rounded-full text-sm font-semibold transition-all duration-200 ${
-                  pathname === link.href
-                    ? "text-slate-950 bg-white/30 font-bold shadow-xs"
-                    : "text-white hover:text-slate-950 hover:bg-white/20"
-                }`}
-              >
-                {link.label}
-              </Link>
-            )
-          )}
-        </nav>
+                  )}
+                </div>
+              ) : (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className={`px-3.5 py-2 rounded-full text-sm font-semibold transition-all duration-200 ${
+                    pathname === link.href
+                      ? "text-slate-950 bg-white/30 font-bold shadow-xs"
+                      : "text-white hover:text-slate-950 hover:bg-white/20"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              )
+            )}
+          </nav>
+        </div>
 
-        {/* Right CTA Button */}
+        {/* Right Side: Let's Connect CTA Button */}
         <div className="hidden md:flex items-center gap-3">
           <Link
             href="/contact-us"
@@ -210,7 +212,7 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Drawer Menu (Edge-to-Edge Container) */}
+      {/* Mobile Drawer Menu */}
       {isMobileMenuOpen && (
         <div
           ref={mobileRef}
