@@ -11,15 +11,13 @@ export const metadata = generateMetadata(pagesMetadata.home);
 
 export default function Home() {
   return (
-    <main className="max-w-screen overflow-hidden">
+    <main className="max-w-screen overflow-hidden bg-[url(/HomePageBg.webp)] bg-cover bg-no-repeat bg-top min-h-screen">
       <Banner />
-      <div className="bg-[url(/HomePageBg.webp)] bg-cover bg-no-repeat bg-bottom min-h-screen">
-        <ServicesSection />
-        <Packages />
-        <IndustryExpertise />
-        <MicrosoftBusinessApps />
-        <IndustrySpecializations />
-      </div>
+      <ServicesSection />
+      <Packages />
+      <IndustryExpertise />
+      <MicrosoftBusinessApps />
+      <IndustrySpecializations />
     </main>
   );
 }

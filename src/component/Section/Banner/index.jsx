@@ -38,7 +38,7 @@ export default function Banner() {
   ];
 
   return (
-    <section className="relative min-h-[85vh] lg:min-h-[88vh] flex items-center overflow-hidden bg-[#EEF8FF] pt-8 pb-14 lg:py-16 px-4 sm:px-6 lg:px-8">
+    <section className="relative min-h-[85vh] lg:min-h-[88vh] flex items-center overflow-hidden bg-gradient-to-b from-white/70 via-transparent to-transparent pt-8 pb-14 lg:py-16 px-4 sm:px-6 lg:px-8">
       {/* Main 2-Column Split Content Container */}
       <div className="relative z-10 max-w-7xl 2xl:max-w-[1400px] mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-12 items-center">
         {/* Left Column (Shifted Left, Compact 5 Cols): Value Proposition & CTAs */}
@@ -56,7 +56,7 @@ export default function Banner() {
           </div>
 
           {/* Clean Sentence-Case Headline */}
-          <h1 className="text-3xl sm:text-4xl lg:text-[2.65rem] xl:text-[2.95rem] font-extrabold tracking-tight text-slate-900 leading-[1.14] mb-4">
+          <h1 className="text-3xl sm:text-4xl lg:text-[2.65rem] xl:text-[2.95rem] font-bold tracking-tight text-slate-900 leading-[1.14] mb-4">
             Get the best solutions for business growth with{" "}
             <span className="text-[#2DDAE6] block sm:inline">
               Microsoft Dynamics 365
@@ -116,7 +116,7 @@ export default function Banner() {
           </div>
 
           {/* Big Laptop / Browser Glass Container */}
-          <div className="w-full rounded-2xl sm:rounded-3xl border border-slate-200/90 bg-white p-2.5 sm:p-3 shadow-[0_25px_60px_rgba(0,148,198,0.15)] hover:shadow-[0_30px_70px_rgba(0,148,198,0.22)] transition-all duration-300">
+          <div className="w-full rounded-2xl sm:rounded-3xl border border-slate-200/90 bg-white p-2.5 sm:p-3 shadow-[0_25px_60px_rgba(45,218,230,0.18)] hover:shadow-[0_30px_70px_rgba(45,218,230,0.28)] transition-all duration-300">
             {/* Top Browser Bar */}
             <div className="flex items-center justify-between px-3.5 py-2 bg-slate-50 rounded-t-xl sm:rounded-t-2xl border-b border-slate-100 mb-2">
               <div className="flex items-center gap-1.5">
