@@ -56,7 +56,7 @@ export default function Banner() {
           </div>
 
           {/* Clean Sentence-Case Headline */}
-          <h1 className="text-2xl sm:text-3xl lg:text-[2.35rem] xl:text-[2.6rem] font-semibold tracking-tight text-slate-900 leading-[1.18] mb-4">
+          <h1 className="text-xl sm:text-2xl lg:text-[1.95rem] xl:text-[2.15rem] font-semibold tracking-tight text-slate-900 leading-[1.22] mb-3.5">
             Get the best solutions for business growth with{" "}
             <span className="text-[#2DDAE6] block sm:inline">
               Microsoft Dynamics 365
