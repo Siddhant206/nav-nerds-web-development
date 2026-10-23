@@ -38,13 +38,8 @@ export default function Banner() {
   ];
 
   return (
-    <section className="relative min-h-[85vh] lg:min-h-[88vh] flex items-center overflow-hidden bg-gradient-to-b from-[#EEF8FF] via-[#F4F9FD] to-white pt-10 pb-16 lg:py-20 px-4 sm:px-6 lg:px-8">
-      {/* 1. Subtle Enterprise Background Pattern & Soft Glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(#0094c6_1px,transparent_1px)] [background-size:24px_24px] opacity-15 pointer-events-none" />
-      <div className="absolute top-1/4 right-0 w-[550px] h-[550px] bg-[#1DCCD8]/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-10 left-10 w-80 h-80 bg-[#0094C6]/10 rounded-full blur-3xl pointer-events-none" />
-
-      {/* 2. Main 2-Column Split Content Container */}
+    <section className="relative min-h-[85vh] lg:min-h-[88vh] flex items-center overflow-hidden bg-[#EEF8FF] pt-10 pb-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+      {/* Main 2-Column Split Content Container */}
       <div className="relative z-10 max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
         {/* Left Column (55%): Value Proposition & CTAs */}
         <div className="lg:col-span-7 flex flex-col items-start text-left">

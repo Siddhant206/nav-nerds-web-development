@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <main className="max-w-screen overflow-hidden">
       <Banner />
-      <div className="min-h-screen bg-gradient-to-b from-white via-slate-50/60 to-[#EEF8FF]/40">
+      <div className="bg-[url(/HomePageBg.webp)] bg-cover bg-no-repeat bg-bottom min-h-screen">
         <ServicesSection />
         <Packages />
         <IndustryExpertise />
