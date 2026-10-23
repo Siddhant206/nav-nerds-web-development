@@ -116,14 +116,14 @@ const FloatingContacts = () => {
                         whileTap="tap"
                         variants={iconVariants}
                     >
-                        <Link
+                        <a
                             href={icon.href}
                             target={icon.href.startsWith("http") ? "_blank" : "_self"}
                             rel="noopener noreferrer"
                             aria-label={icon.label}
                         >
                             {icon.svg}
-                        </Link>
+                        </a>
                     </motion.div>
                 ))}
             </div>

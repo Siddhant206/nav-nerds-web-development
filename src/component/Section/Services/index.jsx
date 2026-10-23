@@ -23,7 +23,7 @@ const services = [
     title: "Cloud Implementation",
     description: "End-to-end architecture deployment, functional configuration, and user onboarding for Dynamics 365 Business Central.",
     link: "implementation",
-    icon: "/Icons/Implementation.svg",
+    icon: "/Icons/Implementation.webm",
   },
   {
     id: 3,
@@ -51,7 +51,7 @@ const services = [
     title: "Enterprise Web Portals",
     description: "High-performance customer, vendor, and employee self-service portals integrated directly with your Business Central data.",
     link: "website-development",
-    icon: "/Icons/Business-Central.svg",
+    icon: "/Icons/Vaule-Icon.webm",
   },
   {
     id: 7,

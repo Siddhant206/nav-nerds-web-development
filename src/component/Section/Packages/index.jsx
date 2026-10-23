@@ -1,117 +1,147 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
-import { H2, H4, P } from "@/component/UI/typography";
+import { Check, ArrowRight, Sparkles } from "lucide-react";
+import { H2, P } from "@/component/UI/typography";
 
 const plans = [
   {
     title: "Starter Plan",
-    subtitle: "Trial & Trust",
-    // price: "499",
-    planInfo: (
-      <svg
-        width="40"
-        height="19"
-        viewBox="0 0 40 19"
-        fill="none"
-        className="absolute top-0 right-2"
-      >
-        <path
-          d="M10 0L12.2451 6.90983H19.5106L13.6327 11.1803L15.8779 18.0902L10 13.8197L4.12215 18.0902L6.36729 11.1803L0.489435 6.90983H7.75486L10 0Z"
-          fill="#1DCCD8"
-        />
-        <path
-          d="M30 0L32.2451 6.90983H39.5106L33.6327 11.1803L35.8779 18.0902L30 13.8197L24.1221 18.0902L26.3673 11.1803L20.4894 6.90983H27.7549L30 0Z"
-          fill="#1DCCD8"
-        />
-      </svg>
-    ),
-
-    image: "/Packages/Starter.webp",
+    badge: "Trial & Trust",
+    description: "Low-risk starter engagement to experience our Business Central expertise firsthand.",
+    features: [
+      "30 Hours of Expert BC Services",
+      "Customizations, Setup, or Bug Fixes",
+      "Training & Functional Consulting",
+      "Light API & App Integrations",
+    ],
+    cta: "Start Trial",
+    popular: false,
   },
   {
     title: "Growth Plan",
-    subtitle: "Scale & Streamline",
-    price: "60/hr",
-    image: "/Packages/Growth.webp",
+    badge: "Scale & Streamline",
+    description: "Full implementation and setup designed for growing mid-market businesses.",
+    features: [
+      "Full Financial & Inventory Setup",
+      "Sales, Purchase & Warehouse Mapping",
+      "CRM & eCommerce Integrations",
+      "Post-Go-Live 30 Days Support",
+    ],
+    cta: "Start Scaling",
+    popular: true,
   },
   {
     title: "Enterprise Plan",
-    subtitle: "Optimize & Expand",
-    price: "90/hr",
-    image: "/Packages/Enterprise.webp",
+    badge: "Optimize & Expand",
+    description: "Advanced architecture, multi-entity setup, and dedicated hypercare support.",
+    features: [
+      "Multi-Company, Currency & Entities",
+      "Manufacturing & Project Modules",
+      "Power BI Dashboards & Reporting",
+      "60 Days Dedicated Hypercare Support",
+    ],
+    cta: "Go Enterprise",
+    popular: false,
   },
   {
     title: "HRMS Plan",
-    subtitle: "People & Payroll Simplified",
-    price: "0.99/Employee",
-    image: "/Packages/Hrms.webp",
+    badge: "People & Payroll",
+    description: "Modern HRMS integrated directly with Microsoft Dynamics 365 Business Central.",
+    features: [
+      "Biometric Attendance & Leave Sync",
+      "Automated Payroll & Statutory Compliance",
+      "Custom Appraisal & Exit Workflows",
+      "Direct BC General Ledger Sync",
+    ],
+    cta: "Simplify HR",
+    popular: false,
   },
 ];
 
 export default function Packages() {
-  const [hoveredIndex, setHoveredIndex] = useState(null);
-
   return (
-    <section className="py-10 md:py-10 px-6">
-      <div className="max-w-7xl mx-auto">
-        <div className="max-w-2xl mr-auto text-black pb-4 space-y-4 text-left">
-          <H2 className="tracking-wide font-semibold text-gray-900">
-            Our Packages{" "}
-          </H2>
-          <P>
-            We offer comprehensive pricing for each business segment.
-          </P>
+    <section className="py-12 md:py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      {/* Header */}
+      <div className="max-w-3xl mr-auto text-left pb-8 space-y-3">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#EEF8FF] border border-[#2DDAE6]/30 text-xs font-bold text-slate-800">
+          <Sparkles className="w-3.5 h-3.5 text-[#2DDAE6]" />
+          <span>Transparent Packages</span>
         </div>
+        <H2 className="tracking-tight font-extrabold text-3xl sm:text-4xl text-slate-900">
+          Our Implementation & Support Packages
+        </H2>
+        <P className="text-slate-600 text-sm sm:text-base leading-relaxed">
+          Predictable scopes tailored for every stage of your business growth—from low-risk trial packages to multi-entity enterprise rollouts.
+        </P>
+      </div>
 
-        {/* Packages Card */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4  mx-auto gap-6">
-          {plans.map((plan, index) => (
-            <div
-              key={index}
-              onMouseEnter={() => setHoveredIndex(index)}
-              onMouseLeave={() => setHoveredIndex(null)}
-              // className={`rounded-xl bg-white shadow-md transition-all duration-300 ease-in-out overflow-hidden
-              //   ${hoveredIndex === index ? "scale-[1.02] shadow-lg" : "hover:scale-[1.02]"}
-              // `}
-              className="relative max-w-80 h-80 md:h-96 "
-            >
-              <Image
-                src={plan.image}
-                alt={plan.title}
-                width={400}
-                height={300}
-                className="object-cover rounded-lg"
-              />
-              <div className="absolute top-40 md:top-44 left-0 right-0 border h-36 bg-white rounded-3xl p-4 overflow-y-scroll scrollbar-hide">
-                <H4 className="text-gray-900 text-center">
-                  {plan.title}
-                </H4>
-                <P className="font-bold text-center mb-5 text-gray-900 italic">
-                  -"{plan.subtitle}"
-                </P>
+      {/* Packages Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+        {plans.map((plan, index) => (
+          <div
+            key={index}
+            className={`relative rounded-2xl bg-white p-6 border transition-all duration-300 flex flex-col justify-between ${
+              plan.popular
+                ? "border-[#2DDAE6] shadow-xl shadow-[#2DDAE6]/10 ring-2 ring-[#2DDAE6]/30 -translate-y-1"
+                : "border-slate-200/90 shadow-sm hover:shadow-xl hover:border-[#2DDAE6] hover:-translate-y-1"
+            }`}
+            style={{
+              boxShadow: plan.popular
+                ? "0 12px 36px rgba(45, 218, 230, 0.15)"
+                : "0 8px 24px rgba(0, 0, 0, 0.04)",
+            }}
+          >
+            {/* Top Popular Pill */}
+            {plan.popular && (
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full bg-[#2DDAE6] text-slate-950 font-extrabold text-[11px] shadow-sm uppercase tracking-wider">
+                Most Popular
+              </div>
+            )}
 
-                <div className="flex justify-center items-center ">
-                  {/* <div>
-                    {plan.price && (
-                      <p className="font-bold text-black text-base">
-                        ${plan.price.toLocaleString()}
-                      </p>
-                    )}
-                  </div> */}
-                  <Link
-                    href={"/pricing"}
-                    className="px-3 py-2 text-sm bg-gray-100 hover:bg-black text-black hover:text-white transition-colors duration-500 transform-fill rounded-full border border-gray-200"
-                  >
-                    Schedule a free demo now
-                  </Link>
-                </div>
+            <div>
+              {/* Badge */}
+              <div className="inline-flex items-center px-2.5 py-1 rounded-md bg-[#EEF8FF] text-[#2DDAE6] font-bold text-xs mb-3">
+                {plan.badge}
+              </div>
+
+              {/* Title & Desc */}
+              <h3 className="text-xl font-extrabold text-slate-900 tracking-tight mb-2">
+                {plan.title}
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-6">
+                {plan.description}
+              </p>
+
+              {/* Feature List */}
+              <div className="space-y-3 pt-4 border-t border-slate-100 mb-6">
+                {plan.features.map((feature, i) => (
+                  <div key={i} className="flex items-start gap-2.5 text-left">
+                    <div className="w-4 h-4 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5">
+                      <Check className="w-3 h-3" />
+                    </div>
+                    <span className="text-xs sm:text-sm text-slate-700 font-medium leading-snug">
+                      {feature}
+                    </span>
+                  </div>
+                ))}
               </div>
             </div>
-          ))}
-        </div>
+
+            {/* CTA Button */}
+            <Link
+              href="/pricing"
+              className={`w-full text-center py-2.5 px-4 rounded-xl font-bold text-sm transition-all duration-200 flex items-center justify-center gap-2 ${
+                plan.popular
+                  ? "bg-[#2DDAE6] text-slate-950 hover:bg-black hover:text-white shadow-md shadow-[#2DDAE6]/25"
+                  : "bg-slate-900 text-white hover:bg-[#2DDAE6] hover:text-slate-950"
+              }`}
+            >
+              <span>{plan.cta}</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        ))}
       </div>
     </section>
   );

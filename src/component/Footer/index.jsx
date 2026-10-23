@@ -25,14 +25,14 @@ function Footer() {
   ];
 
   const services = [
-    "Support",
-    "Training",
-    "Migration",
-    "Integration",
-    "Customization", 
-    "Implementation", 
-    "Dedicated-Resources",
-    "Website-Development",
+    { text: "Support", href: "/services/support" },
+    { text: "Training", href: "/services/training" },
+    { text: "Migration", href: "/services/migration" },
+    { text: "Integration", href: "/services/integration" },
+    { text: "Customization", href: "/services/customization" },
+    { text: "Implementation", href: "/services/implementation" },
+    { text: "Dedicated Resources", href: "/services/dedicated-resources" },
+    { text: "Website Development", href: "/services/website-development" },
   ];
   const industry = [
     "Travel",
@@ -75,9 +75,8 @@ function Footer() {
         <H3 className="text-gray-800">
           Get In Touch
         </H3>
-        <P className="text-sm sm:text-base lg:text-xl">
-          Contact Us For your needs we have the best team and right minds to
-          deliver projects end-to-end.
+        <P className="text-sm sm:text-base lg:text-lg text-slate-600 max-w-xl mx-auto">
+          Ready to modernize your ERP? Our certified architects deliver end-to-end Dynamics 365 projects with zero disruption.
         </P>
         <Link
           href={"/contact-us"}
@@ -108,9 +107,9 @@ function Footer() {
           <nav aria-label="Our Services">
             <ul className="space-y-2">
               {services.map((service) => (
-                <li key={service}>
-                  <AnimatedLink href={`/services/${service.toLocaleLowerCase()}`}>
-                    {service}
+                <li key={service.href}>
+                  <AnimatedLink href={service.href}>
+                    {service.text}
                   </AnimatedLink>
                 </li>
               ))}
