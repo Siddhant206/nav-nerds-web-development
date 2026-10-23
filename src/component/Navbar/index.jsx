@@ -9,42 +9,6 @@ import {
   ArrowRight,
   Sparkles
 } from "lucide-react";
-import {
-  BCIcon,
-  FinanceIcon,
-  SupplyChainIcon,
-  HumanResourceIcon,
-  CommerceIcon,
-  ProjectOpsIcon,
-  SalesIcon,
-  MarketingIcon,
-  FieldServiceIcon,
-  CustomerServiceIcon,
-  CustomerEngagementIcon,
-  StartupIcon,
-  SmallBusinessIcon,
-  MidSizeIcon,
-  EnterpriseIcon,
-  ContiniaIcon,
-  InsightWorksIcon,
-  SanaIcon,
-  TaskletIcon,
-  ShopifyIcon,
-  YavrioIcon,
-  FabricIcon,
-  PowerBIIcon,
-  CopilotIcon,
-  AzureAIIcon,
-  DynamicsNAVIcon,
-  DynamicsCRMIcon,
-  DynamicsAXIcon,
-  DynamicsGPIcon,
-  DynamicsERPIcon,
-  DynamicsFOIcon,
-  PowerAppsIcon,
-  PowerAutomateIcon,
-  PowerVirtualAgentsIcon
-} from "./DynamicsIcons";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -69,7 +33,7 @@ export default function Navbar() {
     }, 150);
   };
 
-  // Solutions Mega Menu Data (Exact Dynamics Square UK Architecture with authentic Microsoft stickers)
+  // Solutions Mega Menu Data (Exact Dynamics Square UK Architecture with authentic official product icons)
   const solutionTabs = [
     { id: "company-size", label: "Company By Size" },
     { id: "erp", label: "AI-Powered ERP" },
@@ -86,25 +50,25 @@ export default function Navbar() {
         title: "Startup",
         desc: "Smart ERP solutions to kickstart your growth",
         href: "/contact-us",
-        icon: <StartupIcon />,
+        icon: "/menu-icons/store.png",
       },
       {
         title: "Small Business",
         desc: "Simplifying business for small, ambitious teams",
         href: "/contact-us",
-        icon: <SmallBusinessIcon />,
+        icon: "/menu-icons/storefront.png",
       },
       {
         title: "Mid Size",
         desc: "Powering growth for mid-sized businesses.",
         href: "/contact-us",
-        icon: <MidSizeIcon />,
+        icon: "/menu-icons/group-3535.png",
       },
       {
         title: "Enterprise",
         desc: "Advanced ERP solutions for large, global enterprises",
         href: "/contact-us",
-        icon: <EnterpriseIcon />,
+        icon: "/menu-icons/factory.png",
       },
     ],
     "erp": [
@@ -112,37 +76,37 @@ export default function Navbar() {
         title: "Business Central",
         desc: "All-in-one solution for all your business practices",
         href: "/services/implementation",
-        icon: <BCIcon />,
+        icon: "/menu-icons/dynamics-365-businesscentral.svg",
       },
       {
         title: "Finance",
         desc: "Improve your finance practices",
         href: "/services/customization",
-        icon: <FinanceIcon />,
+        icon: "/menu-icons/dynamics-365-finance.svg",
       },
       {
         title: "Supply Chain",
         desc: "Optimize operations and drive agile Supply Chain",
         href: "/services/integration",
-        icon: <SupplyChainIcon />,
+        icon: "/menu-icons/dynamics-365-supplychainmanagement.svg",
       },
       {
         title: "Human Resource",
         desc: "Optimize Your Resource Utilization",
         href: "/services/dedicated-resources",
-        icon: <HumanResourceIcon />,
+        icon: "/menu-icons/dynamics-365-HRM.svg",
       },
       {
         title: "Commerce",
         desc: "Unify Your Back-Office, In-Store, And Digital Experience",
         href: "/services/integration",
-        icon: <CommerceIcon />,
+        icon: "/menu-icons/dynamics-365-commerce.svg",
       },
       {
         title: "Project Operations",
         desc: "Automate and streamline your projects",
         href: "/services/dedicated-resources",
-        icon: <ProjectOpsIcon />,
+        icon: "/menu-icons/dynamics-365-project-management.svg",
       },
     ],
     "crm": [
@@ -150,31 +114,31 @@ export default function Navbar() {
         title: "Sales",
         desc: "Drive end-to-end sales practices",
         href: "/contact-us",
-        icon: <SalesIcon />,
+        icon: "/menu-icons/dynamics-365-sales.svg",
       },
       {
         title: "Marketing",
         desc: "Maximize ROI with integrated Marketing",
         href: "/contact-us",
-        icon: <MarketingIcon />,
+        icon: "/menu-icons/dynamics-365-marketing.svg",
       },
       {
         title: "Field Service",
         desc: "Drive connected and collaborated field service",
         href: "/services/support",
-        icon: <FieldServiceIcon />,
+        icon: "/menu-icons/dynamics-365-fieldservice.svg",
       },
       {
         title: "Customer Service",
         desc: "Drive omnichannel customer experience",
         href: "/services/support",
-        icon: <CustomerServiceIcon />,
+        icon: "/menu-icons/dynamics-365-customer-service.svg",
       },
       {
         title: "Customer Engagement",
         desc: "Transform Your Marketing Operations",
         href: "/contact-us",
-        icon: <CustomerEngagementIcon />,
+        icon: "/menu-icons/dynamics-365-customer-engagement.svg",
       },
     ],
     "integrations": [
@@ -182,49 +146,49 @@ export default function Navbar() {
         title: "Continia integration",
         desc: "Scan, analyse, and process documents with optimum quality",
         href: "/services/integration",
-        icon: <ContiniaIcon />,
+        icon: "/menu-icons/continia.png",
       },
       {
         title: "Insight Works",
         desc: "Optimise your inventory and distribution operations effortlessly",
         href: "/services/integration",
-        icon: <InsightWorksIcon />,
+        icon: "/menu-icons/Insight_Work.png",
       },
       {
         title: "Sana Commerce",
         desc: "Avail a cloud e-commerce solution to supercharge your online store",
         href: "/services/integration",
-        icon: <SanaIcon />,
+        icon: "/menu-icons/Sana_Commerce.png",
       },
       {
         title: "Tasklet's Mobile WMS",
         desc: "Optimize warehouse operations, simplify inventory, boost profits",
         href: "/services/integration",
-        icon: <TaskletIcon />,
+        icon: "/menu-icons/taskley-logo-im.png",
       },
       {
         title: "Continia OCR",
         desc: "Transform document management, streamline processing, manage easily",
         href: "/services/integration",
-        icon: <ContiniaIcon />,
+        icon: "/menu-icons/continia.png",
       },
       {
         title: "Continia Expense Management",
         desc: "Monitor corporate expenses, eliminate manual errors with Continia",
         href: "/services/integration",
-        icon: <ContiniaIcon />,
+        icon: "/menu-icons/continia.png",
       },
       {
         title: "Shopify Connector",
         desc: "Synchronize orders, inventory, and customers across platforms",
         href: "/services/integration",
-        icon: <ShopifyIcon />,
+        icon: "/menu-icons/shopify-integration-logo.svg",
       },
       {
         title: "Yavrio Integration",
         desc: "Connect banking data to ERP for automated workflows",
         href: "/services/integration",
-        icon: <YavrioIcon />,
+        icon: "/menu-icons/image-541.png",
       },
     ],
     "data-ai": [
@@ -232,25 +196,25 @@ export default function Navbar() {
         title: "Microsoft Fabric",
         desc: "Transform Data with Microsoft Fabric Solutions",
         href: "/services/integration",
-        icon: <FabricIcon />,
+        icon: "/menu-icons/microsoft-fabric.png",
       },
       {
         title: "Power BI",
         desc: "Create powerful visual insights, analytics",
         href: "/services/integration",
-        icon: <PowerBIIcon />,
+        icon: "/menu-icons/power-bi.svg",
       },
       {
         title: "D365 Copilot",
         desc: "AI-powered assistance to automate tasks and improve decisions",
         href: "/services/customization",
-        icon: <CopilotIcon />,
+        icon: "/menu-icons/copilate-small.png",
       },
       {
         title: "Machine Learning / Azure",
         desc: "Build scalable enterprise-grade machine learning solutions",
         href: "/services/website-development",
-        icon: <AzureAIIcon />,
+        icon: "/menu-icons/machine-learning.svg",
       },
     ],
     "legacy-dynamics": [
@@ -258,37 +222,37 @@ export default function Navbar() {
         title: "Dynamics NAV",
         desc: "A flexible ERP solution for SMBs",
         href: "/services/migration",
-        icon: <DynamicsNAVIcon />,
+        icon: "/menu-icons/NAV.png",
       },
       {
         title: "Dynamics CRM",
         desc: "Increase Revenue and Customer Satisfaction",
         href: "/services/migration",
-        icon: <DynamicsCRMIcon />,
+        icon: "/menu-icons/CRM.png",
       },
       {
         title: "Dynamics AX",
         desc: "The Most Complete, Agile And Powerful ERP",
         href: "/services/migration",
-        icon: <DynamicsAXIcon />,
+        icon: "/menu-icons/AX.png",
       },
       {
         title: "Dynamics GP",
         desc: "Accounting software designed for SMEs",
         href: "/services/migration",
-        icon: <DynamicsGPIcon />,
+        icon: "/menu-icons/GP.png",
       },
       {
         title: "Dynamics ERP",
         desc: "Streamline Entire Business Management with Ease",
         href: "/services/migration",
-        icon: <DynamicsERPIcon />,
+        icon: "/menu-icons/ERP.png",
       },
       {
         title: "Dynamics F&O",
         desc: "Accelerate your Finance and Inventory more Efficiently",
         href: "/services/migration",
-        icon: <DynamicsFOIcon />,
+        icon: "/menu-icons/F&Q.png",
       },
     ],
     "ai-intelligent-apps": [
@@ -296,19 +260,19 @@ export default function Navbar() {
         title: "Power Apps",
         desc: "Build web & mobile apps with zero or minimal code",
         href: "/services/customization",
-        icon: <PowerAppsIcon />,
+        icon: "/menu-icons/power-apps.svg",
       },
       {
         title: "Power Automate",
         desc: "Automate your processes to improve workflows",
         href: "/services/customization",
-        icon: <PowerAutomateIcon />,
+        icon: "/menu-icons/power-automate.svg",
       },
       {
         title: "Power Virtual Agents",
         desc: "Create powerful AI Bots to maximize productivity",
         href: "/services/customization",
-        icon: <PowerVirtualAgentsIcon />,
+        icon: "/menu-icons/virtual-agent.svg",
       },
     ],
   };
@@ -560,15 +524,21 @@ export default function Navbar() {
               </div>
 
               {/* Column 2: Middle 2-Column Horizontal Solutions Grid */}
-              <div className="col-span-6 grid grid-cols-2 gap-x-6 gap-y-3 items-start content-start">
+              <div className="col-span-6 grid grid-cols-2 gap-x-6 gap-y-3.5 items-start content-start">
                 {solutionContent[activeSolutionTab]?.map((item) => (
                   <Link
                     key={item.title}
                     href={item.href}
                     className="group p-2.5 rounded-xl border border-transparent hover:border-slate-200/80 hover:bg-slate-50/80 transition-all duration-150 flex items-start gap-3.5"
                   >
-                    <div className="shrink-0 transition-transform duration-200 group-hover:scale-105 mt-0.5">
-                      {item.icon}
+                    <div className="w-9 h-9 shrink-0 flex items-center justify-center transition-transform duration-200 group-hover:scale-105 mt-0.5">
+                      <Image
+                        src={item.icon}
+                        alt={item.title}
+                        width={36}
+                        height={36}
+                        className="w-full h-full object-contain"
+                      />
                     </div>
                     <div className="flex-1 min-w-0">
                       <h4 className="text-sm font-bold text-slate-900 group-hover:text-[#0094C6] transition-colors leading-snug">
@@ -582,19 +552,19 @@ export default function Navbar() {
                 ))}
               </div>
 
-              {/* Column 3: Right Sidebar (Essential Tool + Forbes Council + AI Card) */}
-              <div className="col-span-3 pl-4 border-l border-slate-100 flex flex-col justify-between space-y-3.5">
+              {/* Column 3: Right Sidebar (Essential Tool + AI Card) */}
+              <div className="col-span-3 pl-4 border-l border-slate-100 flex flex-col justify-between space-y-4">
                 <div>
-                  <h3 className="text-xs font-bold text-slate-800 tracking-tight uppercase mb-2.5">
+                  <h3 className="text-xs font-bold text-slate-800 tracking-tight uppercase mb-3">
                     Essential Tool
                   </h3>
 
                   {/* Card 1: Cost Estimator */}
-                  <div className="p-4 rounded-2xl bg-[#F8FAFC] border border-slate-100">
+                  <div className="p-4 rounded-2xl bg-[#F8FAFC] border border-slate-100/90 hover:border-slate-200 transition-colors">
                     <h4 className="text-sm font-bold text-slate-900 mb-1">
                       Get Your ERP Cost Estimate
                     </h4>
-                    <p className="text-xs text-slate-500 leading-relaxed mb-3">
+                    <p className="text-xs text-slate-500 leading-relaxed mb-4">
                       Quick, free, and tailored to your business.
                     </p>
                     <Link
@@ -607,23 +577,12 @@ export default function Navbar() {
                   </div>
                 </div>
 
-                {/* Card 2: Forbes Official Member Executive Authority */}
-                <div className="relative rounded-2xl overflow-hidden shadow-sm border border-slate-800 bg-[#12141A] transition-transform duration-200 hover:scale-[1.02]">
-                  <Image
-                    src="/forbes-card.webp"
-                    alt="Forbes Technology Council Official Member 2025"
-                    width={320}
-                    height={94}
-                    className="w-full h-auto object-contain block"
-                  />
-                </div>
-
-                {/* Card 3: Deep Indigo AI Card */}
+                {/* Card 2: Deep Indigo AI Card */}
                 <Link
                   href="/contact-us"
                   className="group block p-4 rounded-2xl bg-gradient-to-br from-[#1E1B4B] via-[#2A2665] to-[#141235] text-white border border-indigo-900/40 shadow-sm hover:shadow-md transition-all"
                 >
-                  <div className="flex items-center justify-between mb-1.5">
+                  <div className="flex items-center justify-between mb-2">
                     <div className="flex items-center gap-1.5 text-xs font-bold text-white">
                       <Sparkles className="w-3.5 h-3.5 text-indigo-300" />
                       <span>AI in Dynamics 365</span>
