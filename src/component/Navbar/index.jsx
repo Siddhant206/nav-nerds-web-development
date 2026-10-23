@@ -512,19 +512,36 @@ export default function Navbar() {
       }`}
     >
       <div className="w-full px-4 sm:px-8 lg:px-12 py-3 flex items-center justify-between">
-        {/* Far Left: NavNerds Logo */}
-        <Link href="/" className="flex items-center gap-2 group shrink-0">
-          <div className="relative overflow-hidden py-1">
+        {/* Far Left: NavNerds Logo + Divider + Microsoft Solutions Partner */}
+        <div className="flex items-center shrink-0">
+          <Link href="/" className="flex items-center group shrink-0">
+            <div className="relative overflow-hidden py-1">
+              <Image
+                src="/logoDark.webp"
+                alt="NavNerds Logo"
+                width={140}
+                height={38}
+                className="object-contain h-7 sm:h-8 w-auto transition-transform duration-300 group-hover:scale-105"
+                priority
+              />
+            </div>
+          </Link>
+
+          {/* Vertical Divider */}
+          <div className="h-6 w-px bg-slate-300/90 mx-3 sm:mx-3.5" />
+
+          {/* Microsoft Solutions Partner Lockup */}
+          <div className="flex items-center select-none shrink-0">
             <Image
-              src="/logoDark.webp"
-              alt="NavNerds Logo"
-              width={160}
-              height={46}
-              className="object-contain h-10 sm:h-11 w-auto transition-transform duration-300 group-hover:scale-105"
+              src="/microsoft-solutions-partner.svg"
+              alt="Microsoft Solutions Partner"
+              width={140}
+              height={34}
+              className="h-7 sm:h-8 w-auto object-contain"
               priority
             />
           </div>
-        </Link>
+        </div>
 
         {/* Far Right Group: Navigation Menu Links + Let's Connect Button */}
         <div className="flex items-center gap-4 lg:gap-8">
